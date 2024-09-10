@@ -1,6 +1,6 @@
 plugins-to-test.json
-error_log.txt
+error-log.txt
+failed-plugins.txt
 wp-public-data
 node_modules
 blueprint.json
-failed_plugins.txt

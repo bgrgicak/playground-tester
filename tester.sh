@@ -1,5 +1,28 @@
 #!/bin/bash
 
+# Get the number of plugins to test (optional)
+n=""
+while getopts ":n:" opt; do
+  case $opt in
+    n)
+      n="$OPTARG"
+      if ! [[ "$n" =~ ^[0-9]+$ ]] ; then
+        echo "Error: -n argument must be a positive integer" >&2
+        exit 1
+      fi
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+
 check_dependencies() {
     if ! command -v git &> /dev/null
     then
@@ -29,7 +52,7 @@ check_dependencies() {
 # This function will create a JSON file with the name and slug of each plugin that is available in the wp-public-data repository.
 generate_test_data() {
     echo "Generating test data..."
-    find wp-public-data/plugins -name '*.json' -exec cat {} + | jq -s 'map({name, slug, requires_plugins})' > plugins-to-test.json
+    find wp-public-data/plugins -name '*.json' -exec cat {} + | jq -s 'map({name, slug, requires_plugins, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) | sort_by(-.active_installs, -.downloads)' > plugins-to-test.json
     echo "Test data generated successfully."
 }
 
@@ -77,14 +100,21 @@ prepare_environment() {
 }
 
 cleanup() {
-    rm -f error_log.txt
-    rm -f failed_plugins.txt
+    rm -f error-log.txt
+    rm -f failed-plugins.txt
 }
 
 run_tests() {
     echo "Running tests..."
 
-    jq -r '.[] | {slug: .slug, requires_plugins: (.requires_plugins // [])} | @json' plugins-to-test.json | while read -r plugin_info; do
+    # Check if n is set and use it to limit the number of items to test
+    if [ -n "$n" ]; then
+        jq_command=".[:$n]"
+    else
+        jq_command="."
+    fi
+
+    jq -r "$jq_command | .[] | {slug: .slug, requires_plugins: (.requires_plugins // [])} | @json" plugins-to-test.json | while read -r plugin_info; do
         slug=$(echo "$plugin_info" | jq -r '.slug')
         requires_plugins=$(echo "$plugin_info" | jq -r '.requires_plugins | join(", ")')
 
@@ -102,8 +132,8 @@ run_tests() {
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"
-            echo "$output" >> error_log.txt
-            echo "$slug" >> failed_plugins.txt
+            echo "$output" >> error-log.txt
+            echo "$slug" >> failed-plugins.txt
         fi
     done
 }
