@@ -78,6 +78,7 @@ prepare_environment() {
 
 cleanup() {
     rm -f error_log.txt
+    rm -f failed_plugins.txt
 }
 
 run_tests() {
