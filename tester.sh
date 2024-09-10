@@ -83,27 +83,26 @@ cleanup() {
 run_tests() {
     echo "Running tests..."
 
-    # Read the JSON file and extract names, slugs and requires_plugins
     jq -r '.[] | {slug: .slug, requires_plugins: (.requires_plugins // [])} | @json' plugins-to-test.json | while read -r plugin_info; do
         slug=$(echo "$plugin_info" | jq -r '.slug')
         requires_plugins=$(echo "$plugin_info" | jq -r '.requires_plugins | join(", ")')
 
-        # Create an array with the slug and required plugins
-        plugins=("$slug")
+        plugins=()
         if [ -n "$requires_plugins" ]; then
             IFS=', ' read -r -a required_array <<< "$requires_plugins"
             plugins+=("${required_array[@]}")
         fi
-        # Convert plugins array to JSON string
+        plugins+=("$slug")
         plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
 
-        echo "{ \"plugins\": [\"$slug\"] }" > blueprint.json
+        echo "{ \"plugins\": $plugins_json }" > blueprint.json
         output=$(bun node_modules/@wp-playground/cli/cli.js run-blueprint --blueprint=blueprint.json 2>&1)
         if echo "$output" | grep -q "Blueprint executed"; then
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"
             echo "$output" >> error_log.txt
+            echo "$slug" >> failed_plugins.txt
         fi
     done
 }

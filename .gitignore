@@ -3,3 +3,4 @@ error_log.txt
 wp-public-data
 node_modules
 blueprint.json
+failed_plugins.txt
