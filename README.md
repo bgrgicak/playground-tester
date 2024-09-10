@@ -13,7 +13,7 @@ This script checks if plugins from WordPress.org are compatible with WordPress P
 
 1. Clone the repository:
    ```
-   git clone https://github.com/wp-playground/tester.git
+   git clone https://github.com/bgrgicak/playground-tester.git
    ```
 2. Install dependencies:
    ```
