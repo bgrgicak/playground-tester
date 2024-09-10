@@ -1,0 +1,5 @@
+plugins-to-test.json
+error_log.txt
+wp-public-data
+node_modules
+blueprint.json

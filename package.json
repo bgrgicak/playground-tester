@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@wp-playground/cli": "^0.9.39"
+  }
+}
