@@ -36,3 +36,4 @@ Plugins are sorted by active installs and downloads starting from the most popul
 ## Options
 
 - `-n`: Number of plugins to test.
+- `-p`: Plugin name to test.
