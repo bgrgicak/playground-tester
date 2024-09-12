@@ -1,8 +1,5 @@
 plugins-to-test.json
-error-log.txt
-failed-plugins.txt
 wp-public-data
 node_modules
-blueprint.json
-temp/
+temp
 .DS_Store

@@ -67,11 +67,6 @@ prepare_environment() {
         mkdir temp
     fi
 
-    if [ ! -d "failed-plugins" ]; then
-        echo "Creating failed-plugins folder..."
-        mkdir failed-plugins
-    fi
-
     local generate_data=false
     # Check if wp-public-data folder exists
     # If the folder does not exist, clone the repository from GitHub.
@@ -142,6 +137,13 @@ run_tests() {
         plugins+=("$slug")
         plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
 
+        log_folder="logs/$current_timestamp/"
+
+        # Create folder for logs if it doesn't exist
+        if [ ! -d "$log_folder" ]; then
+            echo "Creating folder for $log_folder..."
+            mkdir -p "$log_folder"
+        fi
 
         blueprint_file_name="temp/blueprint-${slug}-${current_timestamp}.json"
 
@@ -151,15 +153,7 @@ run_tests() {
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"
-
-            # Create folder for the plugin if it doesn't exist
-            if [ ! -d "logs/$slug/$current_timestamp" ]; then
-                echo "Creating folder for $slug..."
-                mkdir -p "logs/$slug/$current_timestamp"
-            fi
-
-            echo "$output" >> "logs/$slug/$current_timestamp/error.log"
-            echo "$slug" >> "failed-plugins/$current_timestamp.txt"
+            echo "$output" >> "$log_folder/$slug"
         fi
 
         rm "$blueprint_file_name"
