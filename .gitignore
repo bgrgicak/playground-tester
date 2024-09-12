@@ -5,3 +5,4 @@ wp-public-data
 node_modules
 blueprint.json
 temp/
+.DS_Store
