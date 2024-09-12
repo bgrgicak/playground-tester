@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Get the number of plugins to test (optional)
+# Initialize variables
 n=""
-while getopts ":n:" opt; do
+plugin_name=""
+
+# Parse command line options
+while getopts ":n:p:" opt; do
   case $opt in
     n)
       n="$OPTARG"
@@ -10,6 +13,9 @@ while getopts ":n:" opt; do
         echo "Error: -n argument must be a positive integer" >&2
         exit 1
       fi
+      ;;
+    p)
+      plugin_name="$OPTARG"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -21,7 +27,6 @@ while getopts ":n:" opt; do
       ;;
   esac
 done
-
 
 check_dependencies() {
     if ! command -v git &> /dev/null
@@ -52,7 +57,7 @@ check_dependencies() {
 # This function will create a JSON file with the name and slug of each plugin that is available in the wp-public-data repository.
 generate_test_data() {
     echo "Generating test data..."
-    find wp-public-data/plugins -name '*.json' -exec cat {} + | jq -s 'map({name, slug, requires_plugins, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) | sort_by(-.active_installs, -.downloads)' > plugins-to-test.json
+    find wp-public-data/plugins -name '*.json' -exec cat {} + | jq -s 'map({name, slug, requires_plugins, blueprints, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) | sort_by(-.active_installs, -.downloads)' > plugins-to-test.json
     echo "Test data generated successfully."
 }
 
@@ -125,17 +130,14 @@ run_tests() {
         jq_command="."
     fi
 
-    jq -r "$jq_command | .[] | {slug: .slug, requires_plugins: (.requires_plugins // [])} | @json" plugins-to-test.json | while read -r plugin_info; do
+    jq -r "$jq_command | .[] | {slug: .slug, requires_plugins: (.requires_plugins // []), blueprints: (.blueprints // [])} | @json" plugins-to-test.json | while read -r plugin_info; do
         slug=$(echo "$plugin_info" | jq -r '.slug')
-        requires_plugins=$(echo "$plugin_info" | jq -r '.requires_plugins | join(", ")')
 
-        plugins=()
-        if [ -n "$requires_plugins" ]; then
-            IFS=', ' read -r -a required_array <<< "$requires_plugins"
-            plugins+=("${required_array[@]}")
+        if [ -n "$plugin_name" ] && [ "$plugin_name" != "$slug" ]; then
+            continue
         fi
-        plugins+=("$slug")
-        plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
+
+        blueprint_url=$(echo "$plugin_info" | jq -r '.blueprints[0].url')
 
         log_folder="logs/$current_timestamp/"
 
@@ -147,7 +149,20 @@ run_tests() {
 
         blueprint_file_name="temp/blueprint-${slug}-${current_timestamp}.json"
 
-        echo "{ \"plugins\": $plugins_json }" > "$blueprint_file_name"
+        if [ "$blueprint_url" != "null" ]; then
+            curl -s -o "$blueprint_file_name" "$blueprint_url"
+        else
+            requires_plugins=$(echo "$plugin_info" | jq -r '.requires_plugins | join(", ")')
+            plugins=()
+            if [ -n "$requires_plugins" ]; then
+                IFS=', ' read -r -a required_array <<< "$requires_plugins"
+                plugins+=("${required_array[@]}")
+            fi
+            plugins+=("$slug")
+            plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
+            echo "{ \"plugins\": $plugins_json }" > "$blueprint_file_name"
+        fi
+
         output=$(bun node_modules/@wp-playground/cli/cli.js run-blueprint --blueprint="$blueprint_file_name" 2>&1)
         if echo "$output" | grep -q "Blueprint executed"; then
             echo "Plugin $slug: Success"
