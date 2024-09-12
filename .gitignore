@@ -4,3 +4,4 @@ failed-plugins.txt
 wp-public-data
 node_modules
 blueprint.json
+temp/

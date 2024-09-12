@@ -57,8 +57,22 @@ generate_test_data() {
 }
 
 prepare_environment() {
-    local generate_data=false
+    if [ ! -d "logs" ]; then
+        echo "Creating logs folder..."
+        mkdir logs
+    fi
 
+    if [ ! -d "temp" ]; then
+        echo "Creating temp folder..."
+        mkdir temp
+    fi
+
+    if [ ! -d "failed-plugins" ]; then
+        echo "Creating failed-plugins folder..."
+        mkdir failed-plugins
+    fi
+
+    local generate_data=false
     # Check if wp-public-data folder exists
     # If the folder does not exist, clone the repository from GitHub.
     if [ ! -d "wp-public-data" ]; then
@@ -100,12 +114,14 @@ prepare_environment() {
 }
 
 cleanup() {
-    rm -f error-log.txt
-    rm -f failed-plugins.txt
+    rm -f temp/*
 }
 
 run_tests() {
     echo "Running tests..."
+
+    # Get current timestamp
+    current_timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 
     # Check if n is set and use it to limit the number of items to test
     if [ -n "$n" ]; then
@@ -126,19 +142,31 @@ run_tests() {
         plugins+=("$slug")
         plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
 
-        echo "{ \"plugins\": $plugins_json }" > blueprint.json
-        output=$(bun node_modules/@wp-playground/cli/cli.js run-blueprint --blueprint=blueprint.json 2>&1)
+
+        blueprint_file_name="temp/blueprint-${slug}-${current_timestamp}.json"
+
+        echo "{ \"plugins\": $plugins_json }" > "$blueprint_file_name"
+        output=$(bun node_modules/@wp-playground/cli/cli.js run-blueprint --blueprint="$blueprint_file_name" 2>&1)
         if echo "$output" | grep -q "Blueprint executed"; then
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"
-            echo "$output" >> error-log.txt
-            echo "$slug" >> failed-plugins.txt
+
+            # Create folder for the plugin if it doesn't exist
+            if [ ! -d "logs/$slug/$current_timestamp" ]; then
+                echo "Creating folder for $slug..."
+                mkdir -p "logs/$slug/$current_timestamp"
+            fi
+
+            echo "$output" >> "logs/$slug/$current_timestamp/error.log"
+            echo "$slug" >> "failed-plugins/$current_timestamp.txt"
         fi
+
+        rm "$blueprint_file_name"
     done
 }
 
 check_dependencies
 prepare_environment
-cleanup
 run_tests
+cleanup
