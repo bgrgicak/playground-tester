@@ -85,6 +85,7 @@ find "$log_folder_path" -type f ! -name "*.json" | while read -r file; do
                                 "OTHER"
                             end
                         ),
+                        plugin: ($file | split("/")[-1]),
                         details: ""
                     }]
                 elif length > 0 then
@@ -104,6 +105,9 @@ find "$log_folder_path" -type f ! -name "*.json" | while read -r file; do
         echo "$object" >> "$temp_file"
     done
 done
+
+# Remove the trailing comma from the last entry
+sed -i '' '$ s/,$//' "$temp_file"
 
 echo "]" >> "$temp_file"
 
