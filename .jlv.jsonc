@@ -1,0 +1,44 @@
+{
+    "fields": [
+        {
+            "title": "Type",
+            "kind": "any",
+            "ref": [
+                "$.type"
+            ],
+            "width": 10
+        },
+        {
+            "title": "Level",
+            "kind": "level",
+            "ref": [
+                "$.level"
+            ],
+            "width": 10
+        },
+        {
+            "title": "Message",
+            "kind": "message",
+            "ref": [
+                "$.message"
+            ],
+            "width": 0
+        },
+        {
+            "title": "Plugin",
+            "kind": "any",
+            "ref": [
+                "$.plugin"
+            ],
+            "width": 0
+        },
+        {
+            "title": "Details",
+            "kind": "any",
+            "ref": [
+                "$.details"
+            ],
+            "width": 0
+        }
+    ]
+}
