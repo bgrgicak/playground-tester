@@ -163,8 +163,8 @@ run_tests() {
             echo "{ \"plugins\": $plugins_json }" > "$blueprint_file_name"
         fi
 
-        output=$(bun node_modules/@wp-playground/cli/cli.js run-blueprint --blueprint="$blueprint_file_name" 2>&1)
-        if echo "$output" | grep -q "Blueprint executed"; then
+        output=$(bun  node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_file_name" 2>&1)
+        if [ -z "$output" ]; then
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"

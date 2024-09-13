@@ -17,6 +17,12 @@ fi
 # Generate output file name
 output_file="$log_folder_path/error-log.json"
 
+# Check if output file exists and remove its content if it does
+if [ -f "$output_file" ]; then
+    echo -n > "$output_file"
+fi
+
+
 # Process files and create a temporary file
 temp_file=$(mktemp)
 
@@ -26,10 +32,14 @@ first_file=true
 
 # Use find to get all non-json files and process them with jq
 find "$log_folder_path" -type f ! -name "*.json" | while read -r file; do
-    if [ "$first_file" = false ]; then
-        echo "," >> "$temp_file"
-    elif [ "$first_file" = true ]; then
+    if [ "$first_file" = true ]; then
         first_file=false
+    else
+        # Don't add a comma if the last file didn't have any errors to avoid invalid JSON.
+        last_char=$(tail -c 2 "$temp_file" | cut -c 1)
+        if [ "$last_char" != "," ]; then
+            echo "," >> "$temp_file"
+        fi
     fi
 
     first_entry=true
