@@ -1,0 +1,360 @@
+359 | 			} catch (error) {
+360 | 				if (!args.debug) {
+361 | 					throw error;
+362 | 				}
+363 | 				const phpLogs = php.readFileAsText(errorLogPath);
+364 | 				throw new Error(phpLogs, { cause: error });
+                ^
+error: [13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS `wp_b2s_user_contact`(
+          `id` int(5) NOT  NULL  AUTO_INCREMENT ,
+          `blog_user_id` int(11)  NOT  NULL ,
+          `name_mandant` varchar(100)  NOT  NULL ,
+          `created` datetime NOT  NULL DEFAULT  '0000-00-00 00:00:00',
+          `name_presse` varchar(100)  NOT  NULL ,
+          `anrede_presse` enum('0','1','2')  NOT  NULL DEFAULT  '0' COMMENT  '0=Frau,1=Herr 2=keine Angabe',
+          `vorname_presse` varchar(50)  NOT  NULL ,
+          `nachname_presse` varchar(50)  NOT  NULL ,
+          `strasse_presse` varchar(100)  NOT  NULL ,
+          `nummer_presse` varchar(5)  NOT  NULL DEFAULT  '',
+          `plz_presse` varchar(10)  NOT  NULL ,
+          `ort_presse` varchar(75)  NOT  NULL ,
+          `land_presse` varchar(3)  NOT  NULL DEFAULT  'DE',
+          `email_presse` varchar(75)  NOT  NULL ,
+          `telefon_presse` varchar(30)  NOT  NULL ,
+          `fax_presse` varchar(30)  NOT  NULL ,
+          `url_presse` varchar(150)  NOT  NULL ,
+          PRIMARY  KEY (`id`) ,
+          KEY `blog_user_id`(`blog_user_id`)) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: MySQL field type cannot be translated to SQLite: enum.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2282): WP_SQLite_DB->query('CREATE TABLE IF...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS `wp_b2s_user_contact`(
+          `id` int(5) NOT  NULL  AUTO_INCREMENT ,
+          `blog_user_id` int(11)  NOT  NULL ,
+          `name_mandant` varchar(100)  NOT  NULL ,
+          `created` datetime NOT  NULL DEFAULT  '0000-00-00 00:00:00',
+          `name_presse` varchar(100)  NOT  NULL ,
+          `anrede_presse` enum('0','1','2')  NOT  NULL DEFAULT  '0' COMMENT  '0=Frau,1=Herr 2=keine Angabe',
+          `vorname_presse` varchar(50)  NOT  NULL ,
+          `nachname_presse` varchar(50)  NOT  NULL ,
+          `strasse_presse` varchar(100)  NOT  NULL ,
+          `nummer_presse` varchar(5)  NOT  NULL DEFAULT  '',
+          `plz_presse` varchar(10)  NOT  NULL ,
+          `ort_presse` varchar(75)  NOT  NULL ,
+          `land_presse` varchar(3)  NOT  NULL DEFAULT  'DE',
+          `email_presse` varchar(75)  NOT  NULL ,
+          `telefon_presse` varchar(30)  NOT  NULL ,
+          `fax_presse` varchar(30)  NOT  NULL ,
+          `url_presse` varchar(150)  NOT  NULL ,
+          PRIMARY  KEY (`id`) ,
+          KEY `blog_user_id`(`blog_user_id`)) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci AUTO_INCREMENT=1 made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE wp_b2s_posts_insights MODIFY insight longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: MODIFY.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2348): WP_SQLite_DB->query('ALTER TABLE wp_...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE wp_b2s_posts_insights MODIFY insight longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE wp_b2s_network_insights MODIFY insight longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: MODIFY.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2371): WP_SQLite_DB->query('ALTER TABLE wp_...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE wp_b2s_network_insights MODIFY insight longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2380): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts_sched_details` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2381): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts_sched_details` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts_network_details` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2382): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts_network_details` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_user` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2383): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_user` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_user_contact` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2384): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_user_contact` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_user_network_settings` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2385): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_user_network_settings` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts_drafts` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2386): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts_drafts` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts_favorites` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2387): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts_favorites` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_posts_insights` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2388): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_posts_insights` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:28:57 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_b2s_network_insights` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CHANGE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/blog2social/includes/Loader.php(2389): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-includes/class-wp-hook.php(324): B2S_Loader->activatePlugin(false)
+#3 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#4 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_blog2s...', false)
+#6 /internal/eval.php(20): activate_plugin('blog2social/blo...')
+#7 {main}</pre>
+ for query ALTER TABLE `wp_b2s_network_insights` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; made by activate_plugin, do_action('activate_blog2social/blog2social.php'), WP_Hook->do_action, WP_Hook->apply_filters, B2S_Loader->activatePlugin, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+
+305 | 					try {
+306 | 						const result = await run(playground);
+307 | 						onStepCompleted(result, step);
+308 | 					} catch (e) {
+309 | 						logger.error(e);
+310 | 						throw new Error(
+                  ^
+error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"blog2social"}}) : Plugin /wordpress/wp-content/plugins/blog2social could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+ cause: {}
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+
+Bun v1.1.15 (macOS arm64)

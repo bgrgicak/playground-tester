@@ -1,0 +1,158 @@
+359 | 			} catch (error) {
+360 | 				if (!args.debug) {
+361 | 					throw error;
+362 | 				}
+363 | 				const phpLogs = php.readFileAsText(errorLogPath);
+364 | 				throw new Error(phpLogs, { cause: error });
+                ^
+error: [13-Sep-2024 07:52:06 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_ahm_download_stats` ADD `version` varchar(255) NOT NULL</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: ADD.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(155): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(131): WPDM\__\Installer->addColumn('ahm_download_st...', 'version', 'varchar(255) NO...')
+#3 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(35): WPDM\__\Installer::updateDB()
+#4 /wordpress/wp-content/plugins/download-manager/download-manager.php(221): WPDM\__\Installer::init()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): WPDM\WordPressDownloadManager->install(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_downlo...', false)
+#9 /internal/eval.php(20): activate_plugin('download-manage...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_ahm_download_stats` ADD `version` varchar(255) NOT NULL made by activate_plugin, do_action('activate_download-manager/download-manager.php'), WP_Hook->do_action, WP_Hook->apply_filters, WPDM\WordPressDownloadManager->install, WPDM\__\Installer::init, WPDM\__\Installer::updateDB, WPDM\__\Installer->addColumn, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 07:52:06 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_ahm_download_stats` ADD `agent` TEXT</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: ADD.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(155): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(132): WPDM\__\Installer->addColumn('ahm_download_st...', 'agent', 'TEXT')
+#3 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(35): WPDM\__\Installer::updateDB()
+#4 /wordpress/wp-content/plugins/download-manager/download-manager.php(221): WPDM\__\Installer::init()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): WPDM\WordPressDownloadManager->install(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_downlo...', false)
+#9 /internal/eval.php(20): activate_plugin('download-manage...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_ahm_download_stats` ADD `agent` TEXT made by activate_plugin, do_action('activate_download-manager/download-manager.php'), WP_Hook->do_action, WP_Hook->apply_filters, WPDM\WordPressDownloadManager->install, WPDM\__\Installer::init, WPDM\__\Installer::updateDB, WPDM\__\Installer->addColumn, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 07:52:06 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_ahm_download_stats` ADD `filename` TEXT</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: ADD.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(155): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(133): WPDM\__\Installer->addColumn('ahm_download_st...', 'filename', 'TEXT')
+#3 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(35): WPDM\__\Installer::updateDB()
+#4 /wordpress/wp-content/plugins/download-manager/download-manager.php(221): WPDM\__\Installer::init()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): WPDM\WordPressDownloadManager->install(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_downlo...', false)
+#9 /internal/eval.php(20): activate_plugin('download-manage...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_ahm_download_stats` ADD `filename` TEXT made by activate_plugin, do_action('activate_download-manager/download-manager.php'), WP_Hook->do_action, WP_Hook->apply_filters, WPDM\WordPressDownloadManager->install, WPDM\__\Installer::init, WPDM\__\Installer::updateDB, WPDM\__\Installer->addColumn, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 07:52:06 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_ahm_emails` ADD `request_status` INT(1) NOT NULL</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: ADD.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(155): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(134): WPDM\__\Installer->addColumn('ahm_emails', 'request_status', 'INT(1) NOT NULL')
+#3 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(35): WPDM\__\Installer::updateDB()
+#4 /wordpress/wp-content/plugins/download-manager/download-manager.php(221): WPDM\__\Installer::init()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): WPDM\WordPressDownloadManager->install(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_downlo...', false)
+#9 /internal/eval.php(20): activate_plugin('download-manage...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_ahm_emails` ADD `request_status` INT(1) NOT NULL made by activate_plugin, do_action('activate_download-manager/download-manager.php'), WP_Hook->do_action, WP_Hook->apply_filters, WPDM\WordPressDownloadManager->install, WPDM\__\Installer::init, WPDM\__\Installer::updateDB, WPDM\__\Installer->addColumn, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 07:52:06 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_ahm_asset_links` ADD UNIQUE(`asset_key`)</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: INSERT INTO _mysql_data_types_cache (`table`, `column_or_index`, `mysql_type`)
+				VALUES (:table, :column, :datatype)
+				ON CONFLICT(`table`, `column_or_index`) DO UPDATE SET `mysql_type` = :datatype
+			 | parameters: wp_ahm_asset_links, wp_ahm_asset_links__(, UNIQUE</li>
+<li>Executing: CREATE UNIQUE INDEX &quot;wp_ahm_asset_links__(&quot; ON &quot;wp_ahm_asset_links&quot; () | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near ")": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(176): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(135): WPDM\__\Installer->uniqueKey('ahm_asset_links', 'asset_key')
+#3 /wordpress/wp-content/plugins/download-manager/src/__/Installer.php(35): WPDM\__\Installer::updateDB()
+#4 /wordpress/wp-content/plugins/download-manager/download-manager.php(221): WPDM\__\Installer::init()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): WPDM\WordPressDownloadManager->install(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_downlo...', false)
+#9 /internal/eval.php(20): activate_plugin('download-manage...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_ahm_asset_links` ADD UNIQUE(`asset_key`) made by activate_plugin, do_action('activate_download-manager/download-manager.php'), WP_Hook->do_action, WP_Hook->apply_filters, WPDM\WordPressDownloadManager->install, WPDM\__\Installer::init, WPDM\__\Installer::updateDB, WPDM\__\Installer->uniqueKey, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+
+305 | 					try {
+306 | 						const result = await run(playground);
+307 | 						onStepCompleted(result, step);
+308 | 					} catch (e) {
+309 | 						logger.error(e);
+310 | 						throw new Error(
+                  ^
+error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"download-manager"}}) : Plugin /wordpress/wp-content/plugins/download-manager could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+ cause: {}
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+
+Bun v1.1.15 (macOS arm64)

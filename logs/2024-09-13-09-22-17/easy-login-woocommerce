@@ -1,0 +1,34 @@
+359 | 			} catch (error) {
+360 | 				if (!args.debug) {
+361 | 					throw error;
+362 | 				}
+363 | 				const phpLogs = php.readFileAsText(errorLogPath);
+364 | 				throw new Error(phpLogs, { cause: error });
+                ^
+error: [13-Sep-2024 08:55:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php on line 21
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-login.php on line 508
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-login.php on line 524
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-includes/functions.php on line 7108
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Trying to access array offset on value of type bool in /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php on line 21
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-login.php on line 508
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-login.php on line 524
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-includes/functions.php on line 7108
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-includes/pluggable.php on line 1093
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-includes/pluggable.php on line 1094
+[13-Sep-2024 08:55:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /wordpress/wp-content/plugins/easy-login-woocommerce/includes/class-xoo-el-form-handler.php:21) in /wordpress/wp-includes/pluggable.php on line 1095
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+
+305 | 					try {
+306 | 						const result = await run(playground);
+307 | 						onStepCompleted(result, step);
+308 | 					} catch (e) {
+309 | 						logger.error(e);
+310 | 						throw new Error(
+                  ^
+error: Error when executing the blueprint step #2 ({"step":"login","username":"admin","password":"password"}) : Failed to log in as admin with password password
+ cause: {}
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+
+Bun v1.1.15 (macOS arm64)

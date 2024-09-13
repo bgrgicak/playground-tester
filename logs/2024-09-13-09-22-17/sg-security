@@ -1,0 +1,142 @@
+359 | 			} catch (error) {
+360 | 				if (!args.debug) {
+361 | 					throw error;
+362 | 				}
+363 | 				const phpLogs = php.readFileAsText(errorLogPath);
+364 | 				throw new Error(phpLogs, { cause: error });
+                ^
+error: [13-Sep-2024 07:28:21 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_sgs_log_events` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CONVERT.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_1_2_0.php(29): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_Service.php(88): SG_Security\Install_Service\Install_1_2_0->install()
+#3 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_Service.php(64): SG_Security\Install_Service\Install_Service->do_install()
+#4 /wordpress/wp-content/plugins/sg-security/core/Activator/Activator.php(58): SG_Security\Install_Service\Install_Service->install()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): SG_Security\Activator\Activator->activate(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_sg-sec...', false)
+#9 /internal/eval.php(20): activate_plugin('sg-security/sg-...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_sgs_log_events` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by activate_plugin, do_action('activate_sg-security/sg-security.php'), WP_Hook->do_action, WP_Hook->apply_filters, SG_Security\Activator\Activator->activate, SG_Security\Install_Service\Install_Service->install, SG_Security\Install_Service\Install_Service->do_install, SG_Security\Install_Service\Install_1_2_0->install, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 07:28:21 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE `wp_sgs_log_visitors` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: CONVERT.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_1_2_0.php(30): WP_SQLite_DB->query('ALTER TABLE `wp...')
+#2 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_Service.php(88): SG_Security\Install_Service\Install_1_2_0->install()
+#3 /wordpress/wp-content/plugins/sg-security/core/Install_Service/Install_Service.php(64): SG_Security\Install_Service\Install_Service->do_install()
+#4 /wordpress/wp-content/plugins/sg-security/core/Activator/Activator.php(58): SG_Security\Install_Service\Install_Service->install()
+#5 /wordpress/wp-includes/class-wp-hook.php(324): SG_Security\Activator\Activator->activate(false)
+#6 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_sg-sec...', false)
+#9 /internal/eval.php(20): activate_plugin('sg-security/sg-...')
+#10 {main}</pre>
+ for query ALTER TABLE `wp_sgs_log_visitors` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by activate_plugin, do_action('activate_sg-security/sg-security.php'), WP_Hook->do_action, WP_Hook->apply_filters, SG_Security\Activator\Activator->activate, SG_Security\Install_Service\Install_Service->install, SG_Security\Install_Service\Install_Service->do_install, SG_Security\Install_Service\Install_1_2_0->install, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+
+305 | 					try {
+306 | 						const result = await run(playground);
+307 | 						onStepCompleted(result, step);
+308 | 					} catch (e) {
+309 | 						logger.error(e);
+310 | 						throw new Error(
+                  ^
+error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"sg-security"}}) : Unreachable code should not be executed (evaluating 'original(...args)')
+ cause: {
+  "cause": {
+    "cause": {
+      "cause": {
+        "originalLine": 6400,
+        "originalColumn": 42
+      }
+    },
+    "betterMessage": "Unreachable code should not be executed (evaluating 'original(...args)')"
+  }
+}
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+RuntimeError: Unreachable code should not be executed (evaluating 'original(...args)')
+      at WASM  ([wasm code])
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
+      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at WASM  ([wasm code])
+      at WASM  ([wasm code])
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
+      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at WASM  ([wasm code])
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6857:43
+      at callUserCallback (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5109:5)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5209:5
+
+7543 | PHPLoader.debug = 'debug' in PHPLoader ? PHPLoader.debug : true;
+7544 | if (PHPLoader.debug && typeof Asyncify !== "undefined") {
+7545 |     const originalHandleSleep = Asyncify.handleSleep;
+7546 |     Asyncify.handleSleep = function (startAsync) {
+7547 |         if (!ABORT) {
+7548 |             Module["lastAsyncifyStackSource"] = new Error();
+                                                       ^
+error: Error
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7548:49
+      at php.wasm.wasm-function[__wrap_select] (native:1:1)
+      at php.wasm.wasm-function[RAND_poll] (native:1:1)
+      at php.wasm.wasm-function[rand_bytes] (native:1:1)
+      at php.wasm.wasm-function[rand_nopseudo_bytes] (native:1:1)
+      at php.wasm.wasm-function[RAND_bytes] (native:1:1)
+      at php.wasm.wasm-function[zif_openssl_random_pseudo_bytes] (native:1:1)
+      at php.wasm.wasm-function[zend_deprecated_function] (native:1:1)
+      at php.wasm.wasm-function[ZEND_DO_FCALL_BY_NAME_SPEC_RETVAL_USED_HANDLER] (native:1:1)
+      at php.wasm.wasm-function[execute_ex] (native:1:1)
+      at php.wasm.wasm-function[zend_execute] (native:1:1)
+      at php.wasm.wasm-function[zend_execute_scripts] (native:1:1)
+      at php.wasm.wasm-function[dynCall_iiiii] (native:1:1)
+      at 13679 (native:1:1)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
+      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at php.wasm.wasm-function[php_execute_script] (native:1:1)
+      at php.wasm.wasm-function[dynCall_ii] (native:1:1)
+      at 13682 (native:1:1)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
+      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at php.wasm.wasm-function[wasm_sapi_handle_request] (native:1:1)
+      at 10163 (native:1:1)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
+      at ccall (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6949:13)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:769:49
+      at new Promise (:1:11)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:756:25
+      at #handleRequest (/Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:744:47)
+
+Bun v1.1.15 (macOS arm64)

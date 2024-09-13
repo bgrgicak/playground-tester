@@ -1,0 +1,649 @@
+359 | 			} catch (error) {
+360 | 				if (!args.debug) {
+361 | 					throw error;
+362 | 				}
+363 | 				const phpLogs = php.readFileAsText(errorLogPath);
+364 | 				throw new Error(phpLogs, { cause: error });
+                ^
+error: [13-Sep-2024 08:49:36 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE OR REPLACE VIEW wp_uap_recipe_logs_view AS SELECT
+       r.ID AS recipe_log_id,
+       r.user_id,
+       r.date_time AS recipe_date_time,
+       r.completed AS recipe_completed,
+       r.run_number,
+       r.completed,
+       r.automator_recipe_id,
+       u.user_email,
+       u.display_name,
+       p.post_title AS recipe_title
+FROM wp_uap_recipe_log r
+    LEFT JOIN wp_users u
+    ON u.ID = r.user_id
+    JOIN wp_posts p
+        ON p.ID = r.automator_recipe_id</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown create type: OR REPLACE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(375): WP_SQLite_DB->query('CREATE OR REPLA...')
+#2 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(353): Uncanny_Automator\Automator_DB::create_views()
+#3 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(506): Uncanny_Automator\Automator_DB->automator_generate_views()
+#4 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(374): Uncanny_Automator\Automator_Load->initialize_automator_db()
+#5 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(117): Uncanny_Automator\Automator_Load->load_automator()
+#6 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(546): Uncanny_Automator\Automator_Load->__construct()
+#7 /wordpress/wp-content/plugins/uncanny-automator/uncanny-automator.php(113): Uncanny_Automator\Automator_Load::get_instance()
+#8 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#9 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('uncanny-automat...')
+#10 /internal/eval.php(20): activate_plugin('uncanny-automat...')
+#11 {main}</pre>
+ for query CREATE OR REPLACE VIEW wp_uap_recipe_logs_view AS SELECT
+       r.ID AS recipe_log_id,
+       r.user_id,
+       r.date_time AS recipe_date_time,
+       r.completed AS recipe_completed,
+       r.run_number,
+       r.completed,
+       r.automator_recipe_id,
+       u.user_email,
+       u.display_name,
+       p.post_title AS recipe_title
+FROM wp_uap_recipe_log r
+    LEFT JOIN wp_users u
+    ON u.ID = r.user_id
+    JOIN wp_posts p
+        ON p.ID = r.automator_recipe_id made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:49:36 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE OR REPLACE VIEW wp_uap_trigger_logs_view AS SELECT u.ID AS user_id, u.user_email,
+                            u.display_name,
+                            t.automator_trigger_id,
+                            t.date_time AS trigger_date,
+                            t.completed AS trigger_completed,
+                            t.automator_recipe_id,
+                            t.ID,
+                            pt.post_title AS trigger_title,
+                            tm.meta_value AS trigger_sentence,
+                            tm.run_number AS trigger_run_number,
+                            tm.run_time AS trigger_run_time,
+                            pm.meta_value AS trigger_total_times,
+                            p.post_title AS recipe_title,
+                            t.automator_recipe_log_id AS recipe_log_id,
+                            r.date_time AS recipe_date_time,
+                            r.completed AS recipe_completed,
+                            r.run_number AS recipe_run_number
+                        FROM wp_uap_trigger_log t
+                        LEFT JOIN wp_users u
+                        ON u.ID = t.user_id
+                        LEFT JOIN wp_posts p
+                        ON p.ID = t.automator_recipe_id
+                        LEFT JOIN wp_posts pt
+                        ON pt.ID = t.automator_trigger_id
+                        LEFT JOIN wp_uap_trigger_log_meta tm
+						ON tm.automator_trigger_log_id = t.ID AND tm.meta_key = 'sentence_human_readable'
+                        LEFT JOIN wp_uap_recipe_log r
+                        ON t.automator_recipe_log_id = r.ID
+                        LEFT JOIN wp_postmeta pm
+                        ON pm.post_id = t.automator_trigger_id AND pm.meta_key = 'NUMTIMES'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown create type: OR REPLACE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(380): WP_SQLite_DB->query('CREATE OR REPLA...')
+#2 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(353): Uncanny_Automator\Automator_DB::create_views()
+#3 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(506): Uncanny_Automator\Automator_DB->automator_generate_views()
+#4 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(374): Uncanny_Automator\Automator_Load->initialize_automator_db()
+#5 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(117): Uncanny_Automator\Automator_Load->load_automator()
+#6 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(546): Uncanny_Automator\Automator_Load->__construct()
+#7 /wordpress/wp-content/plugins/uncanny-automator/uncanny-automator.php(113): Uncanny_Automator\Automator_Load::get_instance()
+#8 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#9 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('uncanny-automat...')
+#10 /internal/eval.php(20): activate_plugin('uncanny-automat...')
+#11 {main}</pre>
+ for query CREATE OR REPLACE VIEW wp_uap_trigger_logs_view AS SELECT u.ID AS user_id, u.user_email,
+                            u.display_name,
+                            t.automator_trigger_id,
+                            t.date_time AS trigger_date,
+                            t.completed AS trigger_completed,
+                            t.automator_recipe_id,
+                            t.ID,
+                            pt.post_title AS trigger_title,
+                            tm.meta_value AS trigger_sentence,
+                            tm.run_number AS trigger_run_number,
+                            tm.run_time AS trigger_run_time,
+                            pm.meta_value AS trigger_total_times,
+                            p.post_title AS recipe_title,
+                            t.automator_recipe_log_id AS recipe_log_id,
+                            r.date_time AS recipe_date_time,
+                            r.completed AS recipe_completed,
+                            r.run_number AS recipe_run_number
+                        FROM wp_uap_trigger_log t
+                        LEFT JOIN wp_users u
+                        ON u.ID = t.user_id
+                        LEFT JOIN wp_posts p
+                        ON p.ID = t.automator_recipe_id
+                        LEFT JOIN wp_posts pt
+                        ON pt.ID = t.automator_trigger_id
+                        LEFT JOIN wp_uap_trigger_log_meta tm
+						ON tm.automator_trigger_log_id = t.ID AND tm.meta_key = 'sentence_human_readable'
+                        LEFT JOIN wp_uap_recipe_log r
+                        ON t.automator_recipe_log_id = r.ID
+                        LEFT JOIN wp_postmeta pm
+                        ON pm.post_id = t.automator_trigger_id AND pm.meta_key = 'NUMTIMES' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:49:36 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE OR REPLACE VIEW wp_uap_action_logs_view AS SELECT a.automator_action_id,
+					a.date_time AS action_date,
+					a.completed AS action_completed,
+					a.error_message,
+					a.automator_recipe_id,
+					a.ID AS action_log_id,
+					a.automator_recipe_log_id AS recipe_log_id,
+					r.date_time AS recipe_date_time,
+					r.completed AS recipe_completed,
+					r.run_number AS recipe_run_number,
+					pa.post_title AS action_title,
+					am.meta_value AS action_sentence,
+					p.post_title AS recipe_title,
+					u.ID AS user_id,
+					u.user_email,
+					u.display_name
+			FROM wp_uap_action_log a
+			LEFT JOIN wp_uap_recipe_log r
+			ON a.automator_recipe_log_id = r.ID
+			LEFT JOIN wp_posts p
+			ON p.ID = a.automator_recipe_id
+			JOIN wp_posts pa
+			ON pa.ID = a.automator_action_id
+			LEFT JOIN wp_uap_action_log_meta am
+			ON a.automator_action_id = am.automator_action_id AND am.automator_action_log_id = a.ID AND am.user_id = a.user_id AND am.meta_key = 'sentence_human_readable_html'
+			LEFT JOIN wp_users u
+			ON a.user_id = u.ID GROUP BY a.ID</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown create type: OR REPLACE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(385): WP_SQLite_DB->query('CREATE OR REPLA...')
+#2 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(353): Uncanny_Automator\Automator_DB::create_views()
+#3 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(506): Uncanny_Automator\Automator_DB->automator_generate_views()
+#4 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(374): Uncanny_Automator\Automator_Load->initialize_automator_db()
+#5 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(117): Uncanny_Automator\Automator_Load->load_automator()
+#6 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(546): Uncanny_Automator\Automator_Load->__construct()
+#7 /wordpress/wp-content/plugins/uncanny-automator/uncanny-automator.php(113): Uncanny_Automator\Automator_Load::get_instance()
+#8 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#9 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('uncanny-automat...')
+#10 /internal/eval.php(20): activate_plugin('uncanny-automat...')
+#11 {main}</pre>
+ for query CREATE OR REPLACE VIEW wp_uap_action_logs_view AS SELECT a.automator_action_id,
+					a.date_time AS action_date,
+					a.completed AS action_completed,
+					a.error_message,
+					a.automator_recipe_id,
+					a.ID AS action_log_id,
+					a.automator_recipe_log_id AS recipe_log_id,
+					r.date_time AS recipe_date_time,
+					r.completed AS recipe_completed,
+					r.run_number AS recipe_run_number,
+					pa.post_title AS action_title,
+					am.meta_value AS action_sentence,
+					p.post_title AS recipe_title,
+					u.ID AS user_id,
+					u.user_email,
+					u.display_name
+			FROM wp_uap_action_log a
+			LEFT JOIN wp_uap_recipe_log r
+			ON a.automator_recipe_log_id = r.ID
+			LEFT JOIN wp_posts p
+			ON p.ID = a.automator_recipe_id
+			JOIN wp_posts pa
+			ON pa.ID = a.automator_action_id
+			LEFT JOIN wp_uap_action_log_meta am
+			ON a.automator_action_id = am.automator_action_id AND am.automator_action_log_id = a.ID AND am.user_id = a.user_id AND am.meta_key = 'sentence_human_readable_html'
+			LEFT JOIN wp_users u
+			ON a.user_id = u.ID GROUP BY a.ID made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:49:36 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE OR REPLACE VIEW wp_uap_api_logs_view AS SELECT
+				api.ID,
+				api.date_time AS date,
+				u.user_email,
+				u.display_name,
+				u.ID AS user_id,
+				pr.post_title AS recipe_title,
+				rl.automator_recipe_id,
+				al.automator_recipe_log_id AS recipe_log_id,
+				rl.date_time AS recipe_date_time,
+				rl.completed AS recipe_completed,
+				rl.run_number AS recipe_run_number,
+				pa.post_title AS title,
+				asen.meta_value AS sentence,
+				al.automator_action_id as item_id,
+				al.completed AS completed,
+				al.error_message as error_message,
+				api.type,
+				api.item_log_id,
+				api.status,
+				api.params,
+				api.price,
+				api.balance,
+				api.notes,
+				api.time_spent,
+				api.endpoint
+				FROM wp_uap_api_log api
+				LEFT JOIN wp_uap_action_log al
+				ON al.ID = api.item_log_id
+				LEFT JOIN wp_uap_recipe_log rl
+				ON al.automator_recipe_log_id = rl.ID
+				LEFT JOIN wp_posts pr
+				ON pr.ID = al.automator_recipe_id
+				JOIN wp_posts pa
+				ON pa.ID = al.automator_action_id
+				LEFT JOIN wp_uap_action_log_meta asen
+				ON asen.automator_action_log_id = al.ID AND asen.meta_key = 'sentence_human_readable_html'
+				LEFT JOIN wp_users u
+				ON al.user_id = u.ID
+				WHERE api.type = 'action'
+				UNION SELECT
+				api.ID,
+				api.date_time AS date,
+				u.user_email,
+				u.display_name,
+				u.ID AS user_id,
+				pr.post_title AS recipe_title,
+				rl.automator_recipe_id,
+				tl.automator_recipe_log_id as recipe_log_id,
+				rl.date_time AS recipe_date_time,
+				rl.completed AS recipe_completed,
+				rl.run_number AS recipe_run_number,
+				pt.post_title AS title,
+				tsen.meta_value AS sentence,
+				tl.automator_trigger_id as item_id,
+				tl.completed AS completed,
+				'' as error_message,
+				api.type,
+				api.item_log_id,
+				api.status,
+				api.params,
+				api.price,
+				api.balance,
+				api.notes,
+				api.time_spent,
+				api.endpoint
+				FROM wp_uap_api_log api
+				LEFT JOIN wp_uap_trigger_log tl
+				ON tl.ID = api.item_log_id
+				LEFT JOIN wp_uap_recipe_log rl
+				ON tl.automator_recipe_log_id = rl.ID
+				LEFT JOIN wp_posts pr
+				ON pr.ID = tl.automator_recipe_id
+				JOIN wp_posts pt
+				ON pt.ID = tl.automator_trigger_id
+				LEFT JOIN wp_uap_trigger_log_meta tsen
+				ON tsen.automator_trigger_log_id = tl.ID AND tsen.meta_key = 'sentence_human_readable'
+				LEFT JOIN wp_users u
+				ON tl.user_id = u.ID
+				WHERE api.type = 'trigger'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown create type: OR REPLACE.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(390): WP_SQLite_DB->query('CREATE OR REPLA...')
+#2 /wordpress/wp-content/plugins/uncanny-automator/src/core/class-automator-db.php(353): Uncanny_Automator\Automator_DB::create_views()
+#3 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(506): Uncanny_Automator\Automator_DB->automator_generate_views()
+#4 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(374): Uncanny_Automator\Automator_Load->initialize_automator_db()
+#5 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(117): Uncanny_Automator\Automator_Load->load_automator()
+#6 /wordpress/wp-content/plugins/uncanny-automator/src/class-automator-load.php(546): Uncanny_Automator\Automator_Load->__construct()
+#7 /wordpress/wp-content/plugins/uncanny-automator/uncanny-automator.php(113): Uncanny_Automator\Automator_Load::get_instance()
+#8 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#9 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('uncanny-automat...')
+#10 /internal/eval.php(20): activate_plugin('uncanny-automat...')
+#11 {main}</pre>
+ for query CREATE OR REPLACE VIEW wp_uap_api_logs_view AS SELECT
+				api.ID,
+				api.date_time AS date,
+				u.user_email,
+				u.display_name,
+				u.ID AS user_id,
+				pr.post_title AS recipe_title,
+				rl.automator_recipe_id,
+				al.automator_recipe_log_id AS recipe_log_id,
+				rl.date_time AS recipe_date_time,
+				rl.completed AS recipe_completed,
+				rl.run_number AS recipe_run_number,
+				pa.post_title AS title,
+				asen.meta_value AS sentence,
+				al.automator_action_id as item_id,
+				al.completed AS completed,
+				al.error_message as error_message,
+				api.type,
+				api.item_log_id,
+				api.status,
+				api.params,
+				api.price,
+				api.balance,
+				api.notes,
+				api.time_spent,
+				api.endpoint
+				FROM wp_uap_api_log api
+				LEFT JOIN wp_uap_action_log al
+				ON al.ID = api.item_log_id
+				LEFT JOIN wp_uap_recipe_log rl
+				ON al.automator_recipe_log_id = rl.ID
+				LEFT JOIN wp_posts pr
+				ON pr.ID = al.automator_recipe_id
+				JOIN wp_posts pa
+				ON pa.ID = al.automator_action_id
+				LEFT JOIN wp_uap_action_log_meta asen
+				ON asen.automator_action_log_id = al.ID AND asen.meta_key = 'sentence_human_readable_html'
+				LEFT JOIN wp_users u
+				ON al.user_id = u.ID
+				WHERE api.type = 'action'
+				UNION SELECT
+				api.ID,
+				api.date_time AS date,
+				u.user_email,
+				u.display_name,
+				u.ID AS user_id,
+				pr.post_title AS recipe_title,
+				rl.automator_recipe_id,
+				tl.automator_recipe_log_id as recipe_log_id,
+				rl.date_time AS recipe_date_time,
+				rl.completed AS recipe_completed,
+				rl.run_number AS recipe_run_number,
+				pt.post_title AS title,
+				tsen.meta_value AS sentence,
+				tl.automator_trigger_id as item_id,
+				tl.completed AS completed,
+				'' as error_message,
+				api.type,
+				api.item_log_id,
+				api.status,
+				api.params,
+				api.price,
+				api.balance,
+				api.notes,
+				api.time_spent,
+				api.endpoint
+				FROM wp_uap_api_log api
+				LEFT JOIN wp_uap_trigger_log tl
+				ON tl.ID = api.item_log_id
+				LEFT JOIN wp_uap_recipe_log rl
+				ON tl.automator_recipe_log_id = rl.ID
+				LEFT JOIN wp_posts pr
+				ON pr.ID = tl.automator_recipe_id
+				JOIN wp_posts pt
+				ON pt.ID = tl.automator_trigger_id
+				LEFT JOIN wp_uap_trigger_log_meta tsen
+				ON tsen.automator_trigger_log_id = tl.ID AND tsen.meta_key = 'sentence_human_readable'
+				LEFT JOIN wp_users u
+				ON tl.user_id = u.ID
+				WHERE api.type = 'trigger' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[13-Sep-2024 08:49:36 UTC] PHP Warning:  Undefined array key "size_mb" in /wordpress/wp-content/plugins/uncanny-automator/src/core/lib/utilities/class-automator-system-report.php on line 470
+[13-Sep-2024 08:49:37 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+Stack trace:
+#0 {main}
+  thrown in /internal/eval.php on line 29
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+
+305 | 					try {
+306 | 						const result = await run(playground);
+307 | 						onStepCompleted(result, step);
+308 | 					} catch (e) {
+309 | 						logger.error(e);
+310 | 						throw new Error(
+                  ^
+error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"uncanny-automator"}}) : PHP.run() failed with exit code 255 and the following output: 
+ cause: {
+  "response": {
+    "headers": {
+      "x-powered-by": [
+        "PHP/8.3.0-dev"
+      ],
+      "content-type": [
+        "text/html; charset=UTF-8"
+      ]
+    },
+    "bytes": {
+      "0": 60,
+      "1": 98,
+      "2": 114,
+      "3": 32,
+      "4": 47,
+      "5": 62,
+      "6": 10,
+      "7": 60,
+      "8": 98,
+      "9": 62,
+      "10": 70,
+      "11": 97,
+      "12": 116,
+      "13": 97,
+      "14": 108,
+      "15": 32,
+      "16": 101,
+      "17": 114,
+      "18": 114,
+      "19": 111,
+      "20": 114,
+      "21": 60,
+      "22": 47,
+      "23": 98,
+      "24": 62,
+      "25": 58,
+      "26": 32,
+      "27": 32,
+      "28": 85,
+      "29": 110,
+      "30": 99,
+      "31": 97,
+      "32": 117,
+      "33": 103,
+      "34": 104,
+      "35": 116,
+      "36": 32,
+      "37": 69,
+      "38": 120,
+      "39": 99,
+      "40": 101,
+      "41": 112,
+      "42": 116,
+      "43": 105,
+      "44": 111,
+      "45": 110,
+      "46": 58,
+      "47": 32,
+      "48": 84,
+      "49": 104,
+      "50": 101,
+      "51": 32,
+      "52": 112,
+      "53": 108,
+      "54": 117,
+      "55": 103,
+      "56": 105,
+      "57": 110,
+      "58": 32,
+      "59": 103,
+      "60": 101,
+      "61": 110,
+      "62": 101,
+      "63": 114,
+      "64": 97,
+      "65": 116,
+      "66": 101,
+      "67": 100,
+      "68": 32,
+      "69": 117,
+      "70": 110,
+      "71": 101,
+      "72": 120,
+      "73": 112,
+      "74": 101,
+      "75": 99,
+      "76": 116,
+      "77": 101,
+      "78": 100,
+      "79": 32,
+      "80": 111,
+      "81": 117,
+      "82": 116,
+      "83": 112,
+      "84": 117,
+      "85": 116,
+      "86": 46,
+      "87": 32,
+      "88": 105,
+      "89": 110,
+      "90": 32,
+      "91": 47,
+      "92": 105,
+      "93": 110,
+      "94": 116,
+      "95": 101,
+      "96": 114,
+      "97": 110,
+      "98": 97,
+      "99": 108,
+      "100": 47,
+      "101": 101,
+      "102": 118,
+      "103": 97,
+      "104": 108,
+      "105": 46,
+      "106": 112,
+      "107": 104,
+      "108": 112,
+      "109": 58,
+      "110": 50,
+      "111": 57,
+      "112": 10,
+      "113": 83,
+      "114": 116,
+      "115": 97,
+      "116": 99,
+      "117": 107,
+      "118": 32,
+      "119": 116,
+      "120": 114,
+      "121": 97,
+      "122": 99,
+      "123": 101,
+      "124": 58,
+      "125": 10,
+      "126": 35,
+      "127": 48,
+      "128": 32,
+      "129": 123,
+      "130": 109,
+      "131": 97,
+      "132": 105,
+      "133": 110,
+      "134": 125,
+      "135": 10,
+      "136": 32,
+      "137": 32,
+      "138": 116,
+      "139": 104,
+      "140": 114,
+      "141": 111,
+      "142": 119,
+      "143": 110,
+      "144": 32,
+      "145": 105,
+      "146": 110,
+      "147": 32,
+      "148": 60,
+      "149": 98,
+      "150": 62,
+      "151": 47,
+      "152": 105,
+      "153": 110,
+      "154": 116,
+      "155": 101,
+      "156": 114,
+      "157": 110,
+      "158": 97,
+      "159": 108,
+      "160": 47,
+      "161": 101,
+      "162": 118,
+      "163": 97,
+      "164": 108,
+      "165": 46,
+      "166": 112,
+      "167": 104,
+      "168": 112,
+      "169": 60,
+      "170": 47,
+      "171": 98,
+      "172": 62,
+      "173": 32,
+      "174": 111,
+      "175": 110,
+      "176": 32,
+      "177": 108,
+      "178": 105,
+      "179": 110,
+      "180": 101,
+      "181": 32,
+      "182": 60,
+      "183": 98,
+      "184": 62,
+      "185": 50,
+      "186": 57,
+      "187": 60,
+      "188": 47,
+      "189": 98,
+      "190": 62,
+      "191": 60,
+      "192": 98,
+      "193": 114,
+      "194": 32,
+      "195": 47,
+      "196": 62,
+      "197": 10
+    },
+    "errors": "",
+    "exitCode": 255,
+    "httpStatusCode": 500
+  },
+  "source": "request"
+}
+
+      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+
+Bun v1.1.15 (macOS arm64)

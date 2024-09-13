@@ -1,0 +1,19 @@
+119 | 					const path = typeof args[1] === 'string' ? args[1] : null;
+120 | 					const formattedPrefix =
+121 | 						path !== null
+122 | 							? messagePrefix.replaceAll('{path}', path)
+123 | 							: messagePrefix;
+124 | 					throw new Error(`${formattedPrefix}: ${errmsg}`, {
+                 ^
+error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
+ cause: {
+  "name": "ErrnoError",
+  "errno": 44
+}
+
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/rethrow-file-system-error.ts:124:12
+      at readFileAsText (/Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/fs-helpers.ts:36:45)
+      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/rethrow-file-system-error.ts:113:19
+      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:363:25
+
+Bun v1.1.15 (macOS arm64)
