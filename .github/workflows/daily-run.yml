@@ -16,13 +16,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run tester.sh
-        run: sh tester.sh
+        run: ./tester.sh
 
       - name: Run parser.sh
-        run: sh parser.sh
+        run: ./parser.sh
 
       - name: Run reporter.sh
-        run: sh reporter.sh
+        run: ./reporter.sh
 
       - name: Commit and push changes
         run: |
