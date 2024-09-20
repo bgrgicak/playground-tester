@@ -1,0 +1,30 @@
+name: Daily Run
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run at 00:00 UTC every day
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run tester.sh
+        run: sh tester.sh
+
+      - name: Run parser.sh
+        run: sh parser.sh
+
+      - name: Run reporter.sh
+        run: sh reporter.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Daily update: $(date +'%Y-%m-%d')" || exit 0
+          git push
