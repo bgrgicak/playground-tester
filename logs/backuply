@@ -1,46 +1,47 @@
-119 | 					const path = typeof args[1] === 'string' ? args[1] : null;
-120 | 					const formattedPrefix =
-121 | 						path !== null
-122 | 							? messagePrefix.replaceAll('{path}', path)
-123 | 							: messagePrefix;
-124 | 					throw new Error(`${formattedPrefix}: ${errmsg}`, {
-                 ^
+
+105 |         return n.apply(this, o);
+106 |       } catch (a) {
+107 |         const l = typeof a == "object" ? a == null ? void 0 : a.errno : null;
+108 |         if (l in FileErrorCodes) {
+109 |           const c = FileErrorCodes[l], P = typeof o[1] == "string" ? o[1] : null, pe = P !== null ? t.replaceAll("{path}", P) : t;
+110 |           throw new Error(`${pe}: ${c}`, {
+                      ^
 error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
  cause: {
   "name": "ErrnoError",
   "errno": 44
 }
 
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/rethrow-file-system-error.ts:124:12
-      at readFileAsText (/Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/fs-helpers.ts:36:45)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/rethrow-file-system-error.ts:113:19
-      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:363:25
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:110:17
+      at readFileAsText (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:105:18
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:752
 RuntimeError: Unreachable code should not be executed (evaluating 'original(...args)')
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_iiiii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7327:14)
       at WASM  ([wasm code])
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_ii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7250:14)
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6857:43
-      at callUserCallback (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5109:5)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5209:5
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6774:45
+      at callUserCallback (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:5070:7)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:5160:7
 
-7543 | PHPLoader.debug = 'debug' in PHPLoader ? PHPLoader.debug : true;
-7544 | if (PHPLoader.debug && typeof Asyncify !== "undefined") {
-7545 |     const originalHandleSleep = Asyncify.handleSleep;
-7546 |     Asyncify.handleSleep = function (startAsync) {
-7547 |         if (!ABORT) {
-7548 |             Module["lastAsyncifyStackSource"] = new Error();
-                                                       ^
+7471 |   PHPLoader.debug = "debug" in PHPLoader ? PHPLoader.debug : true;
+7472 |   if (PHPLoader.debug && typeof Asyncify !== "undefined") {
+7473 |     const originalHandleSleep = Asyncify.handleSleep;
+7474 |     Asyncify.handleSleep = function(startAsync) {
+7475 |       if (!ABORT) {
+7476 |         Module["lastAsyncifyStackSource"] = new Error();
+                                                   ^
 error: Error
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7548:49
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7476:45
       at php.wasm.wasm-function[__wrap_select] (native:1:1)
       at php.wasm.wasm-function[RAND_poll] (native:1:1)
       at php.wasm.wasm-function[rand_bytes] (native:1:1)
@@ -53,24 +54,24 @@ error: Error
       at php.wasm.wasm-function[zend_execute_scripts] (native:1:1)
       at php.wasm.wasm-function[dynCall_iiiii] (native:1:1)
       at 13679 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at invoke_iiiii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8554:7)
       at php.wasm.wasm-function[php_execute_script] (native:1:1)
       at php.wasm.wasm-function[dynCall_ii] (native:1:1)
       at 13682 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at invoke_ii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8461:20)
       at php.wasm.wasm-function[wasm_sapi_handle_request] (native:1:1)
       at 10163 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at ccall (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6949:13)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:769:49
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at ccall (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8029:14)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:2273
       at new Promise (:1:11)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:756:25
-      at #handleRequest (/Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:744:47)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:1096:17
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:1967
+      at oe (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:1843)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:821:24
 
 Bun v1.1.15 (macOS arm64)

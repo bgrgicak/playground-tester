@@ -1,12 +1,13 @@
-359 | 			} catch (error) {
-360 | 				if (!args.debug) {
-361 | 					throw error;
-362 | 				}
-363 | 				const phpLogs = php.readFileAsText(errorLogPath);
-364 | 				throw new Error(phpLogs, { cause: error });
-                ^
-error: [13-Sep-2024 09:02:01 UTC] PHP Warning:  Undefined property: stdClass::$CONSTRAINT_NAME in /wordpress/wp-content/plugins/pw-woocommerce-gift-cards/includes/class-pw-gift-card-activity.php on line 174
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+
+15 | 				}
+16 | 				$zip->close();
+17 | 
+18 | 			`});const i=l.readFileAsBuffer("/tmp/build.zip");g.writeFileSync(o,i)}finally{n()}}function p(o,l){const n=l.map(i=>{const[f,b]=i.split(":");return{hostPath:y.resolve(process.cwd(),f),vfsPath:b}});for(const i of n)o.mkdir(i.vfsPath),o.mount(i.vfsPath,q(i.hostPath))}function w(){let o;t.blueprint?o=t.blueprint:o={preferredVersions:{php:t.php,wp:t.wp},login:t.login};const l=new D;let n="",i=!1;return l.addEventListener("progress",f=>{i||(f.detail.progress===100&&(i=!0),n=f.detail.caption||n||"Running the Blueprint",c.log(`\r\x1B[K${n.trim()} – ${f.detail.progress}%`),i&&c.log(`
+19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
+20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+error: [20-Sep-2024 13:12:48 UTC] PHP Warning:  Undefined property: stdClass::$CONSTRAINT_NAME in /wordpress/wp-content/plugins/pw-woocommerce-gift-cards/includes/class-pw-gift-card-activity.php on line 174
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -34,7 +35,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -62,7 +63,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -90,7 +91,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -118,7 +119,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -146,7 +147,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -174,7 +175,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -202,7 +203,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -230,7 +231,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -258,7 +259,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -286,7 +287,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -314,7 +315,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -342,7 +343,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -370,7 +371,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -398,7 +399,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -426,7 +427,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -454,7 +455,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -482,7 +483,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -510,7 +511,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -538,7 +539,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -566,7 +567,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -594,7 +595,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -622,7 +623,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -650,7 +651,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -678,7 +679,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -706,7 +707,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -734,7 +735,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -762,7 +763,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -790,7 +791,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -818,7 +819,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -846,7 +847,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -874,7 +875,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -902,7 +903,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -930,7 +931,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -958,7 +959,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -986,7 +987,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1014,7 +1015,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1042,7 +1043,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1070,7 +1071,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1098,7 +1099,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1126,7 +1127,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1154,7 +1155,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1182,7 +1183,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1210,7 +1211,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1238,7 +1239,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1266,7 +1267,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1294,7 +1295,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1322,7 +1323,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 13:12:48 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1350,23 +1351,24 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
  for query 
                 ALTER TABLE `wp_pimwick_gift_card_activity` DROP FOREIGN KEY ``;
              made by activate_plugin, do_action('activate_pw-woocommerce-gift-cards/pw-gift-cards.php'), WP_Hook->do_action, WP_Hook->apply_filters, PW_Gift_Card_Activity::plugin_activate, PW_Gift_Card_Activity::create_tables, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 09:02:01 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+[20-Sep-2024 13:12:48 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
 
-305 | 					try {
-306 | 						const result = await run(playground);
-307 | 						onStepCompleted(result, step);
-308 | 					} catch (e) {
-309 | 						logger.error(e);
-310 | 						throw new Error(
-                  ^
+11475 |         for (const [F, { run: z, step: l }] of Object.entries(I))
+11476 |           try {
+11477 |             const E = await z(A);
+11478 |             c(E, l);
+11479 |           } catch (E) {
+11480 |             throw me.error(E), new Error(
+                                       ^
 error: Error when executing the blueprint step #1 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"pw-woocommerce-gift-cards"}}) : PHP.run() failed with exit code 255 and the following output: 
  cause: {
   "response": {
+    "httpStatusCode": 500,
     "headers": {
       "x-powered-by": [
         "PHP/8.3.0-dev"
@@ -1575,13 +1577,12 @@ error: Error when executing the blueprint step #1 ({"step":"installPlugin","plug
       "196": 62,
       "197": 10
     },
-    "errors": "",
     "exitCode": 255,
-    "httpStatusCode": 500
+    "errors": ""
   },
   "source": "request"
 }
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
 
 Bun v1.1.15 (macOS arm64)

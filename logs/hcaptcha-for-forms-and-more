@@ -1,10 +1,11 @@
-246 | 		});
-247 | 	}
-248 | 
-249 | 	const { valid, errors } = validateBlueprint(blueprint);
-250 | 	if (!valid) {
-251 | 		const e = new Error(
-                  ^
+
+11429 |       caption: "Downloading the WordPress Importer plugin"
+11430 |     }
+11431 |   }));
+11432 |   const { valid: e, errors: d } = Pt(r);
+11433 |   if (!e) {
+11434 |     const A = new Error(
+                      ^
 error: Invalid blueprint: must have required property 'path' at /steps/1/pluginZipFile
  errors: [
   {
@@ -111,7 +112,7 @@ error: Invalid blueprint: must have required property 'path' at /steps/1/pluginZ
   }
 ]
 
-      at compileBlueprint (/Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:251:13)
-      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:251:28
+      at Ft (/Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11434:15)
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:19:136
 
 Bun v1.1.15 (macOS arm64)

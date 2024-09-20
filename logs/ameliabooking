@@ -1,11 +1,12 @@
-359 | 			} catch (error) {
-360 | 				if (!args.debug) {
-361 | 					throw error;
-362 | 				}
-363 | 				const phpLogs = php.readFileAsText(errorLogPath);
-364 | 				throw new Error(phpLogs, { cause: error });
-                ^
-error: [13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+
+15 | 				}
+16 | 				$zip->close();
+17 | 
+18 | 			`});const i=l.readFileAsBuffer("/tmp/build.zip");g.writeFileSync(o,i)}finally{n()}}function p(o,l){const n=l.map(i=>{const[f,b]=i.split(":");return{hostPath:y.resolve(process.cwd(),f),vfsPath:b}});for(const i of n)o.mkdir(i.vfsPath),o.mount(i.vfsPath,q(i.hostPath))}function w(){let o;t.blueprint?o=t.blueprint:o={preferredVersions:{php:t.php,wp:t.wp},login:t.login};const l=new D;let n="",i=!1;return l.addEventListener("progress",f=>{i||(f.detail.progress===100&&(i=!0),n=f.detail.caption||n||"Running the Blueprint",c.log(`\r\x1B[K${n.trim()} – ${f.detail.progress}%`),i&&c.log(`
+19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
+20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+error: [20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_users  (
@@ -83,7 +84,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                   UNIQUE KEY `email` (`email`),
                   UNIQUE KEY `id` (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_galleries (
@@ -125,7 +126,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `position` int(11) NOT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_coupons (
@@ -175,7 +176,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `expirationDate` DATETIME NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_locations (
@@ -229,7 +230,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                     `translations` TEXT NULL DEFAULT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_notifications (
@@ -291,7 +292,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `minimumTimeBeforeBooking` TEXT NULL DEFAULT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'email'</p>
@@ -319,8 +320,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'email' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 30
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 30
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'sms'</p>
@@ -348,8 +349,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'sms' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 39
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 39
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE entity = 'event'</p>
@@ -377,8 +378,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE entity = 'event' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 48
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 48
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_account_recovery'</p>
@@ -406,8 +407,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_account_recovery' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 64
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 64
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_panel_access'</p>
@@ -435,8 +436,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_panel_access' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 72
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 72
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_panel_recovery'</p>
@@ -464,8 +465,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_panel_recovery' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 80
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 80
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_package_purchased'</p>
@@ -493,8 +494,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_package_purchased' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 88
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 88
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_package_purchased'</p>
@@ -522,8 +523,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_package_purchased' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 97
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 97
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_package_canceled'</p>
@@ -551,8 +552,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_package_canceled' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 106
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 106
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_package_canceled'</p>
@@ -580,8 +581,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_package_canceled' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 115
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 115
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_cart'</p>
@@ -609,8 +610,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'customer_cart' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 124
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 124
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_cart'</p>
@@ -638,8 +639,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_cart' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 133
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 133
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'whatsapp'</p>
@@ -667,8 +668,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE type = 'whatsapp' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 140
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 140
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_cart' AND type = 'whatsapp'</p>
@@ -696,8 +697,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name = 'provider_cart' AND type = 'whatsapp' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 148
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 148
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name LIKE '%appointment_updated'</p>
@@ -725,8 +726,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name LIKE '%appointment_updated' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 154
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 154
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name LIKE '%event_updated'</p>
@@ -754,8 +755,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #10 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #11 {main}</pre>
  for query SELECT COUNT(*) AS count FROM wp_amelia_notifications WHERE name LIKE '%event_updated' made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Notification\NotificationsTableInsertRows::buildTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 159
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] PHP Warning:  Attempt to read property "count" on null in /wordpress/wp-content/plugins/ameliabooking/src/Infrastructure/WP/InstallActions/DB/Notification/NotificationsTableInsertRows.php on line 159
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -866,7 +867,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -977,7 +978,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1088,7 +1089,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1199,7 +1200,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1313,7 +1314,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1424,7 +1425,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1532,7 +1533,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1637,7 +1638,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1748,7 +1749,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1856,7 +1857,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -1967,7 +1968,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2075,7 +2076,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2186,7 +2187,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2297,7 +2298,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2414,7 +2415,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2531,7 +2532,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2648,7 +2649,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2765,7 +2766,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2882,7 +2883,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -2999,7 +3000,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3116,7 +3117,7 @@ We look forward to seeing you again soon,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3233,7 +3234,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3350,7 +3351,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3467,7 +3468,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3584,7 +3585,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3701,7 +3702,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3818,7 +3819,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -3935,7 +3936,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4046,7 +4047,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4157,7 +4158,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4268,7 +4269,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4382,7 +4383,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4493,7 +4494,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4601,7 +4602,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4712,7 +4713,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4820,7 +4821,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -4928,7 +4929,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5039,7 +5040,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5150,7 +5151,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5267,7 +5268,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5384,7 +5385,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5501,7 +5502,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5618,7 +5619,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5735,7 +5736,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5852,7 +5853,7 @@ We look forward to seeing you again soon,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -5969,7 +5970,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6086,7 +6087,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6203,7 +6204,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6320,7 +6321,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6437,7 +6438,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6542,7 +6543,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6647,7 +6648,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6752,7 +6753,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6860,7 +6861,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -6977,7 +6978,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7085,7 +7086,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7199,7 +7200,7 @@ Thank you, %company_name%',
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7310,7 +7311,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7421,7 +7422,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7526,7 +7527,7 @@ The <strong>%package_name%</strong> purchased by <strong>%customer_full_name%</s
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7631,7 +7632,7 @@ The %package_name% purchased by %customer_full_name% has been canceled.',
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7733,7 +7734,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7850,7 +7851,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -7952,7 +7953,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8066,7 +8067,7 @@ Thank you, %company_name%',
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8168,7 +8169,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8270,7 +8271,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8372,7 +8373,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8474,7 +8475,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8576,7 +8577,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8678,7 +8679,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8780,7 +8781,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8882,7 +8883,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -8984,7 +8985,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9086,7 +9087,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9188,7 +9189,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9290,7 +9291,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9392,7 +9393,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9494,7 +9495,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9596,7 +9597,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9698,7 +9699,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9800,7 +9801,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -9902,7 +9903,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10004,7 +10005,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10106,7 +10107,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10208,7 +10209,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10310,7 +10311,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10412,7 +10413,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10514,7 +10515,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10616,7 +10617,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10718,7 +10719,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10820,7 +10821,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -10922,7 +10923,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11024,7 +11025,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11126,7 +11127,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11228,7 +11229,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11330,7 +11331,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11432,7 +11433,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11534,7 +11535,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11654,7 +11655,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11777,7 +11778,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -11903,7 +11904,7 @@ Thank you for choosing our company,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12029,7 +12030,7 @@ Thank you,
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12131,7 +12132,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12233,7 +12234,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'appointment',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12350,7 +12351,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12467,7 +12468,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12590,7 +12591,7 @@ Thank you for choosing our company,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12713,7 +12714,7 @@ Thank you,
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12815,7 +12816,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>INSERT INTO wp_amelia_notifications 
@@ -12917,7 +12918,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                             'event',
                             'enabled'
                         ) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_categories (
@@ -12963,7 +12964,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `pictureThumbPath` varchar (767) NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_services (
@@ -13059,7 +13060,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `limitPerCustomer` TEXT NULL DEFAULT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_packages (
@@ -13133,7 +13134,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `limitPerCustomer` TEXT NULL DEFAULT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_packages_to_customers  (
@@ -13185,7 +13186,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                   `couponId` INT(11) DEFAULT NULL,
                   PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SELECT t1.providerId FROM wp_amelia_packages_customers_to_services t1
@@ -13216,7 +13217,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #11 {main}</pre>
  for query SELECT t1.providerId FROM wp_amelia_packages_customers_to_services t1
             WHERE t1.providerId NOT IN (SELECT t2.id FROM wp_amelia_users t2) made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\Bookable\PackagesCustomersServicesTable::alterTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_resources (
@@ -13258,7 +13259,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `countAdditionalPeople` TINYINT(1) DEFAULT 0,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_resources_to_entities (
@@ -13296,7 +13297,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `entityType` ENUM('service', 'location', 'employee') NOT NULL DEFAULT 'service',
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_appointments (
@@ -13358,7 +13359,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `parentId` INT(11) NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_events (
@@ -13472,7 +13473,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `aggregatedPrice` TINYINT(1) DEFAULT 1,
                    PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_amelia_events MODIFY recurringInterval int(11) DEFAULT 1</p>
@@ -13497,7 +13498,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #9 {main}</pre>
  for query ALTER TABLE wp_amelia_events MODIFY recurringInterval int(11) DEFAULT 1 made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_customer_bookings (
@@ -13561,7 +13562,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                     `actionsCompleted` TINYINT(1) NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_amelia_customer_bookings MODIFY appointmentId INT(11) NULL</p>
@@ -13586,7 +13587,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #9 {main}</pre>
  for query ALTER TABLE wp_amelia_customer_bookings MODIFY appointmentId INT(11) NULL made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_payments (
@@ -13652,7 +13653,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `transfers` text NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_amelia_payments MODIFY customerBookingId INT(11) NULL</p>
@@ -13677,7 +13678,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #9 {main}</pre>
  for query ALTER TABLE wp_amelia_payments MODIFY customerBookingId INT(11) NULL made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_notifications_to_entities (
@@ -13715,7 +13716,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `entity` ENUM('appointment', 'event') NOT NULL DEFAULT 'appointment',
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_amelia_notifications_log MODIFY userId INT(11) NULL</p>
@@ -13740,7 +13741,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('ameliabooking/a...')
 #9 {main}</pre>
  for query ALTER TABLE wp_amelia_notifications_log MODIFY userId INT(11) NULL made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_notifications_sms_history (
@@ -13800,7 +13801,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                     PRIMARY KEY (`id`),
                     UNIQUE KEY `id` (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_custom_fields (
@@ -13850,7 +13851,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `width` INT(11) NOT NULL DEFAULT 50,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_taxes (
@@ -13890,7 +13891,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                    `status` ENUM('hidden', 'visible') NOT NULL,
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 08:27:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 12:38:59 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE TABLE wp_amelia_taxes_to_entities (
@@ -13929,15 +13930,15 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                     PRIMARY KEY (`id`)
                 ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci made by activate_plugin, do_action('activate_ameliabooking/ameliabooking.php'), WP_Hook->do_action, WP_Hook->apply_filters, AmeliaBooking\Plugin::activation, AmeliaBooking\Infrastructure\WP\InstallActions\ActivationDatabaseHook::init, AmeliaBooking\Infrastructure\WP\InstallActions\DB\AbstractDatabaseTable::init, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
 
-305 | 					try {
-306 | 						const result = await run(playground);
-307 | 						onStepCompleted(result, step);
-308 | 					} catch (e) {
-309 | 						logger.error(e);
-310 | 						throw new Error(
-                  ^
+11475 |         for (const [F, { run: z, step: l }] of Object.entries(I))
+11476 |           try {
+11477 |             const E = await z(A);
+11478 |             c(E, l);
+11479 |           } catch (E) {
+11480 |             throw me.error(E), new Error(
+                                       ^
 error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"ameliabooking"}}) : Unreachable code should not be executed (evaluating 'original(...args)')
  cause: {
   "cause": {
@@ -13951,33 +13952,33 @@ error: Error when executing the blueprint step #0 ({"step":"installPlugin","plug
   }
 }
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
 RuntimeError: Unreachable code should not be executed (evaluating 'original(...args)')
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_iiiii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7327:14)
       at WASM  ([wasm code])
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_ii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7250:14)
       at WASM  ([wasm code])
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:43:13
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6857:43
-      at callUserCallback (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5109:5)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:5209:5
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:6774:45
+      at callUserCallback (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:5070:7)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:5160:7
 
-7543 | PHPLoader.debug = 'debug' in PHPLoader ? PHPLoader.debug : true;
-7544 | if (PHPLoader.debug && typeof Asyncify !== "undefined") {
-7545 |     const originalHandleSleep = Asyncify.handleSleep;
-7546 |     Asyncify.handleSleep = function (startAsync) {
-7547 |         if (!ABORT) {
-7548 |             Module["lastAsyncifyStackSource"] = new Error();
-                                                       ^
+7471 |   PHPLoader.debug = "debug" in PHPLoader ? PHPLoader.debug : true;
+7472 |   if (PHPLoader.debug && typeof Asyncify !== "undefined") {
+7473 |     const originalHandleSleep = Asyncify.handleSleep;
+7474 |     Asyncify.handleSleep = function(startAsync) {
+7475 |       if (!ABORT) {
+7476 |         Module["lastAsyncifyStackSource"] = new Error();
+                                                   ^
 error: Error
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7548:49
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7476:45
       at php.wasm.wasm-function[__wrap_select] (native:1:1)
       at php.wasm.wasm-function[RAND_poll] (native:1:1)
       at php.wasm.wasm-function[rand_bytes] (native:1:1)
@@ -13990,24 +13991,24 @@ error: Error
       at php.wasm.wasm-function[zend_execute_scripts] (native:1:1)
       at php.wasm.wasm-function[dynCall_iiiii] (native:1:1)
       at 13679 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at invoke_iiiii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7380:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at invoke_iiiii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8554:7)
       at php.wasm.wasm-function[php_execute_script] (native:1:1)
       at php.wasm.wasm-function[dynCall_ii] (native:1:1)
       at 13682 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at invoke_ii (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:7303:12)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at invoke_ii (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8461:20)
       at php.wasm.wasm-function[wasm_sapi_handle_request] (native:1:1)
       at 10163 (native:1:1)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6751:20
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/wasm-error-reporting.ts:102:9
-      at ccall (/Users/bero/Projects/wordpress-playground/packages/php-wasm/node/public/php_8_3.js:6949:13)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:769:49
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:7803:11
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:19:6
+      at ccall (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:8029:14)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:2273
       at new Promise (:1:11)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:756:25
-      at #handleRequest (/Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:744:47)
-      at /Users/bero/Projects/wordpress-playground/packages/php-wasm/universal/src/lib/php.ts:1096:17
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:1967
+      at oe (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1728:1843)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:821:24
 
 Bun v1.1.15 (macOS arm64)
