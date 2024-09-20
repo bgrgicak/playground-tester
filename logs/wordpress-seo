@@ -1,11 +1,12 @@
-359 | 			} catch (error) {
-360 | 				if (!args.debug) {
-361 | 					throw error;
-362 | 				}
-363 | 				const phpLogs = php.readFileAsText(errorLogPath);
-364 | 				throw new Error(phpLogs, { cause: error });
-                ^
-error: [13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+
+15 | 				}
+16 | 				$zip->close();
+17 | 
+18 | 			`});const i=l.readFileAsBuffer("/tmp/build.zip");g.writeFileSync(o,i)}finally{n()}}function p(o,l){const n=l.map(i=>{const[f,b]=i.split(":");return{hostPath:y.resolve(process.cwd(),f),vfsPath:b}});for(const i of n)o.mkdir(i.vfsPath),o.mount(i.vfsPath,q(i.hostPath))}function w(){let o;t.blueprint?o=t.blueprint:o={preferredVersions:{php:t.php,wp:t.wp},login:t.login};const l=new D;let n="",i=!1;return l.addEventListener("progress",f=>{i||(f.detail.progress===100&&(i=!0),n=f.detail.caption||n||"Running the Blueprint",c.log(`\r\x1B[K${n.trim()} – ${f.detail.progress}%`),i&&c.log(`
+19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
+20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+error: [20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE UNIQUE INDEX `wp_yoast_migrations_version` ON `wp_yoast_migrations`(`version`)</p>
@@ -38,7 +39,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #16 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #17 {main}</pre>
  for query CREATE UNIQUE INDEX `wp_yoast_migrations_version` ON `wp_yoast_migrations`(`version`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\Lib\Migrations\Adapter->create_schema_version_table, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `object_type_and_sub_type` ON `wp_yoast_indexable`(`object_type`, `object_sub_type`)</p>
@@ -75,7 +76,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #20 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #21 {main}</pre>
  for query CREATE INDEX `object_type_and_sub_type` ON `wp_yoast_indexable`(`object_type`, `object_sub_type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->up, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_table, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_indexes, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `permalink_hash` ON `wp_yoast_indexable`(`permalink_hash`)</p>
@@ -112,7 +113,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #20 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #21 {main}</pre>
  for query CREATE INDEX `permalink_hash` ON `wp_yoast_indexable`(`permalink_hash`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->up, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_table, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_indexes, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `created_at` datetime</p>
@@ -149,7 +150,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #20 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #21 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `created_at` datetime made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->up, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_table, Yoast\WP\Lib\Migrations\Migration->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP</p>
@@ -186,7 +187,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #20 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #21 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->up, Yoast\WP\SEO\Config\Migrations\WpYoastIndexable->add_table, Yoast\WP\Lib\Migrations\Migration->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `post_taxonomy` ON `wp_yoast_primary_term`(`post_id`, `taxonomy`)</p>
@@ -221,7 +222,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `post_taxonomy` ON `wp_yoast_primary_term`(`post_id`, `taxonomy`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastPrimaryTerm->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `post_term` ON `wp_yoast_primary_term`(`post_id`, `term_id`)</p>
@@ -256,7 +257,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `post_term` ON `wp_yoast_primary_term`(`post_id`, `term_id`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastPrimaryTerm->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_primary_term` ADD `created_at` datetime</p>
@@ -292,7 +293,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query ALTER TABLE `wp_yoast_primary_term` ADD `created_at` datetime made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastPrimaryTerm->up, Yoast\WP\Lib\Migrations\Migration->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_primary_term` ADD `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP</p>
@@ -328,7 +329,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query ALTER TABLE `wp_yoast_primary_term` ADD `updated_at` timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastPrimaryTerm->up, Yoast\WP\Lib\Migrations\Migration->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_timestamps, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `indexable_id` ON `wp_yoast_indexable_hierarchy`(`indexable_id`)</p>
@@ -363,7 +364,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `indexable_id` ON `wp_yoast_indexable_hierarchy`(`indexable_id`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexableHierarchy->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `ancestor_id` ON `wp_yoast_indexable_hierarchy`(`ancestor_id`)</p>
@@ -398,7 +399,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `ancestor_id` ON `wp_yoast_indexable_hierarchy`(`ancestor_id`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexableHierarchy->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `depth` ON `wp_yoast_indexable_hierarchy`(`depth`)</p>
@@ -433,7 +434,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `depth` ON `wp_yoast_indexable_hierarchy`(`depth`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\WpYoastIndexableHierarchy->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_yoast_migrations CONVERT TO CHARACTER SET utf8mb4</p>
@@ -466,7 +467,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #16 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #17 {main}</pre>
  for query ALTER TABLE wp_yoast_migrations CONVERT TO CHARACTER SET utf8mb4 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddCollationToTables->up, Yoast\WP\Lib\Migrations\Migration->query, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_yoast_indexable CONVERT TO CHARACTER SET utf8mb4</p>
@@ -499,7 +500,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #16 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #17 {main}</pre>
  for query ALTER TABLE wp_yoast_indexable CONVERT TO CHARACTER SET utf8mb4 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddCollationToTables->up, Yoast\WP\Lib\Migrations\Migration->query, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_yoast_indexable_hierarchy CONVERT TO CHARACTER SET utf8mb4</p>
@@ -532,7 +533,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #16 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #17 {main}</pre>
  for query ALTER TABLE wp_yoast_indexable_hierarchy CONVERT TO CHARACTER SET utf8mb4 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddCollationToTables->up, Yoast\WP\Lib\Migrations\Migration->query, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_yoast_primary_term CONVERT TO CHARACTER SET utf8mb4</p>
@@ -565,7 +566,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #16 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #17 {main}</pre>
  for query ALTER TABLE wp_yoast_primary_term CONVERT TO CHARACTER SET utf8mb4 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddCollationToTables->up, Yoast\WP\Lib\Migrations\Migration->query, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL</p>
@@ -600,7 +601,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable_hierarchy` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL</p>
@@ -635,7 +636,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable_hierarchy` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_primary_term` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL</p>
@@ -670,7 +671,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_primary_term` ADD `blog_id` bigint(20) DEFAULT 1 NOT NULL made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `language` varchar(32)</p>
@@ -705,7 +706,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `language` varchar(32) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `region` varchar(32)</p>
@@ -740,7 +741,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `region` varchar(32) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `schema_page_type` varchar(64)</p>
@@ -775,7 +776,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `schema_page_type` varchar(64) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `schema_article_type` varchar(64)</p>
@@ -810,8 +811,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `schema_article_type` varchar(64) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddColumnsToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] PHP Warning:  Undefined array key 0 in /wordpress/wp-content/plugins/wordpress-seo/lib/migrations/adapter.php on line 342
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] PHP Warning:  Undefined array key 0 in /wordpress/wp-content/plugins/wordpress-seo/lib/migrations/adapter.php on line 342
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `breadcrumb_title` `breadcrumb_title` text</p>
@@ -846,7 +847,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `breadcrumb_title` `breadcrumb_title` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\BreadcrumbTitleAndHierarchyReset->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `title` `title` text</p>
@@ -881,7 +882,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `title` `title` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `open_graph_title` `open_graph_title` text</p>
@@ -916,7 +917,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `open_graph_title` `open_graph_title` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `twitter_title` `twitter_title` text</p>
@@ -951,7 +952,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `twitter_title` `twitter_title` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `open_graph_image_source` `open_graph_image_source` text</p>
@@ -986,7 +987,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `open_graph_image_source` `open_graph_image_source` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `twitter_image_source` `twitter_image_source` text</p>
@@ -1021,7 +1022,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `twitter_image_source` `twitter_image_source` text made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `object_id_and_type` ON `wp_yoast_indexable`(`object_id`, `object_type`)</p>
@@ -1056,7 +1057,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `object_id_and_type` ON `wp_yoast_indexable`(`object_id`, `object_type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddIndexableObjectIdAndTypeIndex->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `has_ancestors` tinyint(1) DEFAULT '0'</p>
@@ -1091,7 +1092,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `has_ancestors` tinyint(1) DEFAULT '0' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddHasAncestorsColumn->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>
@@ -1135,7 +1136,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 			SET has_ancestors = 1
 			WHERE id IN ( SELECT indexable_id FROM wp_yoast_indexable_hierarchy )
 			 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddHasAncestorsColumn->up, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `permalink_hash` `permalink_hash` varchar(40)</p>
@@ -1170,7 +1171,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `permalink_hash` `permalink_hash` varchar(40) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ReplacePermalinkHashIndex->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SHOW KEYS FROM `wp_yoast_indexable`</p>
@@ -1206,7 +1207,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query SHOW KEYS FROM `wp_yoast_indexable` made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ReplacePermalinkHashIndex->up, Yoast\WP\Lib\Migrations\Adapter->has_index, Yoast\WP\Lib\Migrations\Adapter->indexes, Yoast\WP\Lib\Migrations\Adapter->select_all, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SHOW KEYS FROM `wp_yoast_indexable`</p>
@@ -1242,7 +1243,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query SHOW KEYS FROM `wp_yoast_indexable` made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ReplacePermalinkHashIndex->up, Yoast\WP\Lib\Migrations\Adapter->has_index, Yoast\WP\Lib\Migrations\Adapter->indexes, Yoast\WP\Lib\Migrations\Adapter->select_all, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `permalink_hash_and_object_type` ON `wp_yoast_indexable`(`permalink_hash`, `object_type`)</p>
@@ -1277,7 +1278,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `permalink_hash_and_object_type` ON `wp_yoast_indexable`(`permalink_hash`, `object_type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ReplacePermalinkHashIndex->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SHOW KEYS FROM `wp_yoast_seo_links`</p>
@@ -1313,7 +1314,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query SHOW KEYS FROM `wp_yoast_seo_links` made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Adapter->has_index, Yoast\WP\Lib\Migrations\Adapter->indexes, Yoast\WP\Lib\Migrations\Adapter->select_all, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `link_direction` ON `wp_yoast_seo_links`(`post_id`, `type`)</p>
@@ -1348,7 +1349,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `link_direction` ON `wp_yoast_seo_links`(`post_id`, `type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `indexable_id` int(11) UNSIGNED</p>
@@ -1383,7 +1384,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `indexable_id` int(11) UNSIGNED made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `target_indexable_id` int(11) UNSIGNED</p>
@@ -1418,7 +1419,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `target_indexable_id` int(11) UNSIGNED made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `height` int(11) UNSIGNED</p>
@@ -1453,7 +1454,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `height` int(11) UNSIGNED made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `width` int(11) UNSIGNED</p>
@@ -1488,7 +1489,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `width` int(11) UNSIGNED made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `size` int(11) UNSIGNED</p>
@@ -1523,7 +1524,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `size` int(11) UNSIGNED made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `language` varchar(32)</p>
@@ -1558,7 +1559,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `language` varchar(32) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_seo_links` ADD `region` varchar(32)</p>
@@ -1593,7 +1594,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_seo_links` ADD `region` varchar(32) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `indexable_link_direction` ON `wp_yoast_seo_links`(`indexable_id`, `type`)</p>
@@ -1628,7 +1629,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `indexable_link_direction` ON `wp_yoast_seo_links`(`indexable_id`, `type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateSEOLinksTable->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `post_status` `post_status` varchar(20)</p>
@@ -1663,7 +1664,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `post_status` `post_status` varchar(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateIndexableSubpagesIndex->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `subpages` ON `wp_yoast_indexable`(`post_parent`, `object_type`, `post_status`, `object_id`)</p>
@@ -1698,7 +1699,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `subpages` ON `wp_yoast_indexable`(`post_parent`, `object_type`, `post_status`, `object_id`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\CreateIndexableSubpagesIndex->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>SHOW KEYS FROM `wp_yoast_indexable`</p>
@@ -1734,7 +1735,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #19 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #20 {main}</pre>
  for query SHOW KEYS FROM `wp_yoast_indexable` made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddIndexesForProminentWordsOnIndexables->up, Yoast\WP\Lib\Migrations\Adapter->has_index, Yoast\WP\Lib\Migrations\Adapter->indexes, Yoast\WP\Lib\Migrations\Adapter->select_all, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `prominent_words` ON `wp_yoast_indexable`(`prominent_words_version`, `object_type`, `object_sub_type`, `post_status`)</p>
@@ -1769,7 +1770,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `prominent_words` ON `wp_yoast_indexable`(`prominent_words_version`, `object_type`, `object_sub_type`, `post_status`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddIndexesForProminentWordsOnIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `estimated_reading_time_minutes` int(11)</p>
@@ -1804,7 +1805,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `estimated_reading_time_minutes` int(11) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddEstimatedReadingTime->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `object_id` `object_id` bigint(20)</p>
@@ -1839,7 +1840,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `object_id` `object_id` bigint(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableIDColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `author_id` `author_id` bigint(20)</p>
@@ -1874,7 +1875,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `author_id` `author_id` bigint(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableIDColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` CHANGE `post_parent` `post_parent` bigint(20)</p>
@@ -1909,7 +1910,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` CHANGE `post_parent` `post_parent` bigint(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandIndexableIDColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_primary_term` CHANGE `post_id` `post_id` bigint(20)</p>
@@ -1944,7 +1945,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_primary_term` CHANGE `post_id` `post_id` bigint(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandPrimaryTermIDColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_primary_term` CHANGE `term_id` `term_id` bigint(20)</p>
@@ -1979,7 +1980,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_primary_term` CHANGE `term_id` `term_id` bigint(20) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\ExpandPrimaryTermIDColumnLengths->up, Yoast\WP\Lib\Migrations\Migration->change_column, Yoast\WP\Lib\Migrations\Adapter->change_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `version` int(11) DEFAULT 1</p>
@@ -2014,7 +2015,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `version` int(11) DEFAULT 1 made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddVersionColumnToIndexables->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `object_last_modified` datetime</p>
@@ -2049,7 +2050,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `object_last_modified` datetime made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddObjectTimestamps->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `object_published_at` datetime</p>
@@ -2084,7 +2085,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `object_published_at` datetime made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddObjectTimestamps->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE INDEX `published_sitemap_index` ON `wp_yoast_indexable`(`object_published_at`, `is_robots_noindex`, `object_type`, `object_sub_type`)</p>
@@ -2119,7 +2120,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query CREATE INDEX `published_sitemap_index` ON `wp_yoast_indexable`(`object_published_at`, `is_robots_noindex`, `object_type`, `object_sub_type`) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddObjectTimestamps->up, Yoast\WP\Lib\Migrations\Migration->add_index, Yoast\WP\Lib\Migrations\Adapter->add_index, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[20-Sep-2024 11:34:50 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_yoast_indexable` ADD `inclusive_language_score` int(3)</p>
@@ -2154,23 +2155,24 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #18 /internal/eval.php(20): activate_plugin('wordpress-seo/w...')
 #19 {main}</pre>
  for query ALTER TABLE `wp_yoast_indexable` ADD `inclusive_language_score` int(3) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wordpress-seo/wp-seo.php'), require_once('/plugins/wordpress-seo/wp-seo-main.php'), YoastSEO, Yoast\WP\Lib\Abstract_Main->load, Yoast\WP\SEO\Loader->load, Yoast\WP\SEO\Loader->load_initializers, Yoast\WP\SEO\Initializers\Migration_Runner->initialize, Yoast\WP\SEO\Initializers\Migration_Runner->run_free_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migrations, Yoast\WP\SEO\Initializers\Migration_Runner->run_migration, Yoast\WP\SEO\Config\Migrations\AddInclusiveLanguageScore->up, Yoast\WP\Lib\Migrations\Migration->add_column, Yoast\WP\Lib\Migrations\Adapter->add_column, Yoast\WP\Lib\Migrations\Adapter->execute_ddl, Yoast\WP\Lib\Migrations\Adapter->query, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[13-Sep-2024 07:22:23 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+[20-Sep-2024 11:34:50 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/cli/src/cli.ts:364:11
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
 
-305 | 					try {
-306 | 						const result = await run(playground);
-307 | 						onStepCompleted(result, step);
-308 | 					} catch (e) {
-309 | 						logger.error(e);
-310 | 						throw new Error(
-                  ^
+11475 |         for (const [F, { run: z, step: l }] of Object.entries(I))
+11476 |           try {
+11477 |             const E = await z(A);
+11478 |             c(E, l);
+11479 |           } catch (E) {
+11480 |             throw me.error(E), new Error(
+                                       ^
 error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"wordpress-seo"}}) : PHP.run() failed with exit code 255 and the following output: 
  cause: {
   "response": {
+    "httpStatusCode": 500,
     "headers": {
       "x-powered-by": [
         "PHP/8.3.0-dev"
@@ -2379,13 +2381,12 @@ error: Error when executing the blueprint step #0 ({"step":"installPlugin","plug
       "196": 62,
       "197": 10
     },
-    "errors": "",
     "exitCode": 255,
-    "httpStatusCode": 500
+    "errors": ""
   },
   "source": "request"
 }
 
-      at /Users/bero/Projects/wordpress-playground/packages/playground/blueprints/src/lib/compile.ts:310:13
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
 
 Bun v1.1.15 (macOS arm64)

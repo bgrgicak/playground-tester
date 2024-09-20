@@ -139,12 +139,10 @@ run_tests() {
 
         blueprint_url=$(echo "$plugin_info" | jq -r '.blueprints[0].url')
 
-        log_folder="logs/$current_timestamp/"
-
-        # Create folder for logs if it doesn't exist
-        if [ ! -d "$log_folder" ]; then
-            echo "Creating folder for $log_folder..."
-            mkdir -p "$log_folder"
+        log_file="logs/$slug"
+        # Empty the log file if it exists
+        if [ -f "$log_file" ]; then
+            echo "" > "$log_file"
         fi
 
         blueprint_file_name="temp/blueprint-${slug}-${current_timestamp}.json"
@@ -168,7 +166,7 @@ run_tests() {
             echo "Plugin $slug: Success"
         else
             echo "Plugin $slug: Error"
-            echo "$output" >> "$log_folder/$slug"
+            echo "$output" >> "$log_file"
         fi
 
         rm "$blueprint_file_name"
