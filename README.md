@@ -5,6 +5,9 @@ Plugins are sorted by active installs and downloads starting from the most popul
 
 [Playground Error Report](reports/playground_stats.md) are generated daily (TBD) and pushed to the `reports` folder.
 
+[SQL Errors Report](reports/sql-errors.md)
+[PHP Errors Report](reports/php-errors.md)
+
 [Plugin logs](logs/) are generated daily (TBD) and pushed to the `logs` folder. Each plugin has its own log file with errors from the last run. Use git history to see previous days logs.
 
 ## Dependencies
