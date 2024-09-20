@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *'  # Run at 00:00 UTC every day
   workflow_dispatch:  # Allow manual triggering
 
+permissions:
+  contents: write  # Add this line to grant write permissions
+
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
@@ -23,8 +26,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "bgrgicak"
           git add .
           git commit -m "Daily update: $(date +'%Y-%m-%d')" || exit 0
           git push
