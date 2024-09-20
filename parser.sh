@@ -131,4 +131,33 @@ function parse_logs_to_json() {
     echo "JSON output has been saved to $output_file"
 }
 
+function parse_json_to_csv() {
+    # Generate input and output file names
+    input_file="$log_folder_path/error-log.json"
+    output_file="$log_folder_path/error-log.csv"
+
+    # Check if input file exists
+    if [ ! -f "$input_file" ]; then
+        echo "Error: JSON input file '$input_file' not found"
+        return 1
+    fi
+
+    # Check if output file exists and remove its content if it does
+    if [ -f "$output_file" ]; then
+        echo -n > "$output_file"
+    fi
+
+    echo "plugin,message,level,type,details" > "$output_file"
+
+    jq -r '
+    .[] |
+    [.plugin, .message, .level, .type, .details] |
+    @csv
+    ' "$input_file" >> "$output_file"
+
+    echo "CSV output has been saved to $output_file"
+}
+
+
 parse_logs_to_json
+parse_json_to_csv
