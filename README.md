@@ -3,11 +3,9 @@
 This script checks if plugins from WordPress.org are compatible with WordPress Playground.
 Plugins are sorted by active installs and downloads starting from the most popular ones.
 
-## Stats
+[Playground Error Report](reports/playground_stats.md) are generated daily (TBD) and pushed to the `reports` folder.
 
-[Stats](reports/playground_stats.md) are generated daily (TBD) and pushed to the `reports` folder.
-
-[Logs](logs/) are generated daily (TBD) and pushed to the `logs` folder. Each plugin has its own log file with errors from the last run. Use git history to see previous days logs.
+[Plugin logs](logs/) are generated daily (TBD) and pushed to the `logs` folder. Each plugin has its own log file with errors from the last run. Use git history to see previous days logs.
 
 ## Dependencies
 
