@@ -38,4 +38,47 @@ function update_stats() {
     fi
 }
 
+
+function generate_sql_error_reports() {
+    # Generate the Markdown file
+    report_file="reports/sql-errors.md"
+
+    echo "# SQL Errors Report" > "$report_file"
+    echo "## Stats" >> "$report_file"
+    echo "| Message | Plugin | Level | Report link |" >> "$report_file"
+    echo "|---------|--------|-------|-------------|" >> "$report_file"
+
+    # Get all SQL errors from the JSON file, sort them, and keep only unique lines
+    unique_errors=$(jq -r '.[] | select(.type == "SQL") | "| \(.message) | \(.plugin) | \(.level) | [View logs](../logs/\(.plugin)) |"' logs/error-log.json | sort -u)
+
+    # Append only new unique lines to the report file
+    while IFS= read -r line; do
+        if ! grep -qF "$line" "$report_file"; then
+            echo "$line" >> "$report_file"
+        fi
+    done <<< "$unique_errors"
+}
+
+function generate_php_error_reports() {
+    # Generate the Markdown file
+    report_file="reports/php-errors.md"
+
+    echo "# PHP Errors Report" > "$report_file"
+    echo "## Stats" >> "$report_file"
+    echo "| Message | Plugin | Level | Logs |" >> "$report_file"
+    echo "|---------|--------|-------|-------------|" >> "$report_file"
+
+    # Get all PHP errors from the JSON file, sort them, and keep only unique lines
+    unique_errors=$(jq -r '.[] | select(.type == "PHP") | "| \(.message) | \(.plugin) | \(.level) | [View logs](../logs/\(.plugin)) |"' logs/error-log.json | sort -u)
+
+    # Append only new unique lines to the report file
+    while IFS= read -r line; do
+        if ! grep -qF "$line" "$report_file"; then
+            echo "$line" >> "$report_file"
+        fi
+    done <<< "$unique_errors"
+}
+
 update_stats
+generate_sql_error_reports
+generate_php_error_reports
