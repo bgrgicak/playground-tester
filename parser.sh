@@ -1,18 +1,6 @@
 #!/bin/bash
 
-# Check if a folder path is provided as an argument
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <log_folder_path>"
-    exit 1
-fi
-
-log_folder_path="$1"
-
-# Check if the provided path is a directory
-if [ ! -d "$log_folder_path" ]; then
-    echo "Error: '$log_folder_path' is not a valid directory"
-    exit 1
-fi
+log_folder_path="./logs/"
 
 function parse_logs_to_json() {
     # Generate output file name
