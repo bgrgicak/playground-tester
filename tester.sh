@@ -169,7 +169,6 @@ run_tests() {
         else
             echo "Plugin $slug: Error"
             echo "$output" >> "$log_file"
-            echo "Error: $output"
         fi
 
         rm "$blueprint_file_name"
