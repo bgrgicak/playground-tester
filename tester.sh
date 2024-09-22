@@ -57,7 +57,23 @@ check_dependencies() {
 # This function will create a JSON file with the name and slug of each plugin that is available in the wp-public-data repository.
 generate_test_data() {
     echo "Generating test data..."
-    find wp-public-data/plugins -name '*.json' -exec cat {} + | jq -s 'map({name, slug, requires_plugins, blueprints, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) | sort_by(-.active_installs, -.downloads)' > plugins-to-test.json
+
+    if [ -f "last_update_time.txt" ]; then
+        last_update=$(cat last_update_time.txt)
+    else
+        last_update="1970-01-01 00:00:00"  # Unix epoch start as default
+    fi
+
+    find wp-public-data/plugins -name '*.json' -exec cat {} + | \
+    jq -s --arg last_update "$last_update" '
+        def parse_date:
+          split(" ") | .[0] | split("-") | map(tonumber) as $ymd |
+          ($ymd[0] * 10000 + $ymd[1] * 100 + $ymd[2]);
+        map(select((.last_updated | parse_date) > ($last_update | parse_date)) |
+            {name, slug, requires_plugins, blueprints, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
+        sort_by(-.active_installs, -.downloads)
+    ' > plugins-to-test.json
+
     echo "Test data generated successfully."
 }
 
@@ -175,7 +191,14 @@ run_tests() {
     done
 }
 
+update_last_update_time() {
+    echo "Updating last update time..."
+    date "+%Y-%m-%d 00:00:00" > last_update_time.txt
+    echo "Last update time updated successfully."
+}
+
 check_dependencies
 prepare_environment
 run_tests
+update_last_update_time
 cleanup
