@@ -114,6 +114,8 @@ prepare_environment() {
                 repo_updated=true
             else
                 echo "Failed to update wp-public-data repository."
+                # temporary exit to prevent further errors
+                exit 1
             fi
         else
             echo "Repository is up to date."

@@ -32,9 +32,12 @@ jobs:
       - name: Run reporter.sh
         run: ./reporter.sh
 
-      - name: Commit and push changes
+      - name: GIT commit and push all changed files
         run: |
-          git config --local user.name "bgrgicak"
+          git config --global user.name "bgrgicak"
+          git config --global user.email "bgrgicak@users.noreply.github.com"
           git add .
-          git commit -m "Daily update: $(date +'%Y-%m-%d')" || exit 0
+          git commit -a -m "Daily update: $(date +'%Y-%m-%d')"
+          git fetch origin
+          git rebase --strategy-option=theirs origin/main
           git push
