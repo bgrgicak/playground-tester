@@ -146,6 +146,5 @@ function parse_json_to_csv() {
     echo "CSV output has been saved to $output_file"
 }
 
-
 parse_logs_to_json
 parse_json_to_csv
