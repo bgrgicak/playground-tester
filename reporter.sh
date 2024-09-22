@@ -32,12 +32,24 @@ function update_stats() {
     # Create the new line
     new_line="| $date | $failed_plugins | $sql_errors | $php_errors |"
 
-    # Check if the line already exists in the file
+    # Check if the line already exists in the file if not prepend it to the table
     if ! grep -qF "$new_line" "$report_file"; then
-        echo "$new_line" >> "$report_file"
+        # Read the entire file content into a variable
+        file_content=$(<"$report_file")
+
+        # Extract the header (including the line with dashes)
+        header=$(echo "$file_content" | sed -n '1,/^|------|--------|------------|------------|/p')
+
+        # Extract the content after the header
+        body=$(echo "$file_content" | sed '1,/^|------|--------|------------|------------|/d')
+
+        # Combine header, new line, and body
+        updated_content="${header}\n${new_line}\n${body}"
+
+        # Write the updated content back to the file
+        echo -e "$updated_content" > "$report_file"
     fi
 }
-
 
 function generate_sql_error_reports() {
     # Generate the Markdown file
