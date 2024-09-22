@@ -1,6 +1,6 @@
 #!/bin/bash
 
-log_folder_path="./logs/"
+log_folder_path="./logs"
 
 function parse_logs_to_json() {
     # Generate output file name

@@ -58,8 +58,8 @@ check_dependencies() {
 generate_test_data() {
     echo "Generating test data..."
 
-    if [ -f "last_update_time.txt" ]; then
-        last_update=$(cat last_update_time.txt)
+    if [ -f "last-update-time.txt" ]; then
+        last_update=$(cat last-update-time.txt)
     else
         last_update="1970-01-01 00:00:00"  # Unix epoch start as default
     fi
@@ -195,7 +195,7 @@ run_tests() {
 
 update_last_update_time() {
     echo "Updating last update time..."
-    date "+%Y-%m-%d 00:00:00" > last_update_time.txt
+    date "+%Y-%m-%d 00:00:00" > last-update-time.txt
     echo "Last update time updated successfully."
 }
 
