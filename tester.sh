@@ -164,9 +164,12 @@ run_tests() {
         output=$(bun  node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_file_name" 2>&1)
         if [ -z "$output" ]; then
             echo "Plugin $slug: Success"
+            # add empty file to logs folder
+            echo "" > "$log_file"
         else
             echo "Plugin $slug: Error"
             echo "$output" >> "$log_file"
+            echo "Error: $output"
         fi
 
         rm "$blueprint_file_name"
