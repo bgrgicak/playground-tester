@@ -26,7 +26,7 @@ function parse_logs_to_json() {
         else
             # Don't add a comma if the last file didn't have any errors to avoid invalid JSON.
             last_char=$(tail -c 2 "$temp_file" | cut -c 1)
-            if [ "$last_char" != "," ]; then
+            if [ "$last_char" != "," ] && [ "$last_char" != "[" ]; then
                 echo "," >> "$temp_file"
             fi
         fi
