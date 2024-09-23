@@ -1,0 +1,52 @@
+1353 |         ((c = this.progress) == null ? void 0 : c.loadingListener) ?? ft
+1354 |       ), u.status !== 200)
+1355 |         throw new Error(`Could not download "${t}"`);
+1356 |       return new File([await u.blob()], this.name);
+1357 |     } catch (u) {
+1358 |       throw new Error(
+                   ^
+error: Could not download "https://downloads.wordpress.org/plugin/auxin-elements.latest-stable.zip".
+				Check if the URL is correct and the server is reachable.
+				If it is reachable, the server might be blocking the request.
+				Check the browser console and network tabs for more information.
+
+				## Does the console show the error "No 'Access-Control-Allow-Origin' header"?
+
+				This means the server that hosts your file does not allow requests from other sites
+				(cross-origin requests, or CORS).	You need to move the asset to a server that allows
+				cross-origin file downloads. Learn more about CORS at
+				https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS.
+
+				If your file is on GitHub, load it from "raw.githubusercontent.com".
+				Here's how to do that:
+
+				1. Start with the original GitHub URL of the file. For example:
+				https://github.com/username/repository/blob/branch/filename.
+				2. Replace "github.com" with "raw.githubusercontent.com".
+				3. Remove the "/blob/" part of the URL.
+
+				The resulting URL should look like this:
+				https://raw.githubusercontent.com/username/repository/branch/filename
+
+				Error:
+				TimeoutError: The operation timed out
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:1358:13
+105 |         return n.apply(this, o);
+106 |       } catch (a) {
+107 |         const l = typeof a == "object" ? a == null ? void 0 : a.errno : null;
+108 |         if (l in FileErrorCodes) {
+109 |           const c = FileErrorCodes[l], P = typeof o[1] == "string" ? o[1] : null, pe = P !== null ? t.replaceAll("{path}", P) : t;
+110 |           throw new Error(`${pe}: ${c}`, {
+                      ^
+error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
+ cause: {
+  "name": "ErrnoError",
+  "errno": 44
+}
+
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:110:17
+      at readFileAsText (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
+      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:105:18
+      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:752
+
+Bun v1.1.15 (macOS arm64)

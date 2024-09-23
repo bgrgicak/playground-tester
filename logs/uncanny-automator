@@ -6,7 +6,7 @@
 19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
 20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-error: [20-Sep-2024 13:00:38 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+error: [23-Sep-2024 10:56:56 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE OR REPLACE VIEW wp_uap_recipe_logs_view AS SELECT
@@ -63,7 +63,7 @@ FROM wp_uap_recipe_log r
     ON u.ID = r.user_id
     JOIN wp_posts p
         ON p.ID = r.automator_recipe_id made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:00:38 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 10:56:56 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE OR REPLACE VIEW wp_uap_trigger_logs_view AS SELECT u.ID AS user_id, u.user_email,
@@ -148,7 +148,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
                         ON t.automator_recipe_log_id = r.ID
                         LEFT JOIN wp_postmeta pm
                         ON pm.post_id = t.automator_trigger_id AND pm.meta_key = 'NUMTIMES' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:00:38 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 10:56:56 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE OR REPLACE VIEW wp_uap_action_logs_view AS SELECT a.automator_action_id,
@@ -227,7 +227,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 			ON a.automator_action_id = am.automator_action_id AND am.automator_action_log_id = a.ID AND am.user_id = a.user_id AND am.meta_key = 'sentence_human_readable_html'
 			LEFT JOIN wp_users u
 			ON a.user_id = u.ID GROUP BY a.ID made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:00:39 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 10:56:56 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>CREATE OR REPLACE VIEW wp_uap_api_logs_view AS SELECT
@@ -412,8 +412,8 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 				LEFT JOIN wp_users u
 				ON tl.user_id = u.ID
 				WHERE api.type = 'trigger' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/uncanny-automator/uncanny-automator.php'), Uncanny_Automator\Automator_Load::get_instance, Uncanny_Automator\Automator_Load->__construct, Uncanny_Automator\Automator_Load->load_automator, Uncanny_Automator\Automator_Load->initialize_automator_db, Uncanny_Automator\Automator_DB->automator_generate_views, Uncanny_Automator\Automator_DB::create_views, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:00:39 UTC] PHP Warning:  Undefined array key "size_mb" in /wordpress/wp-content/plugins/uncanny-automator/src/core/lib/utilities/class-automator-system-report.php on line 470
-[20-Sep-2024 13:00:39 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+[23-Sep-2024 10:56:56 UTC] PHP Warning:  Undefined array key "size_mb" in /wordpress/wp-content/plugins/uncanny-automator/src/core/lib/utilities/class-automator-system-report.php on line 470
+[23-Sep-2024 10:56:57 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29

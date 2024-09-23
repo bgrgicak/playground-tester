@@ -6,12 +6,12 @@
 19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
 20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-error: [20-Sep-2024 12:42:09 UTC] PHP Warning:  file_get_contents(/wordpress/wp-content/plugins/wc-weight-based-shipping/plugin.php): Failed to open stream: No such file or directory in /wordpress/wp-includes/functions.php on line 6864
-[20-Sep-2024 12:42:09 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+error: [23-Sep-2024 10:34:07 UTC] PHP Warning:  file_get_contents(/wordpress/wp-content/plugins/wc-weight-based-shipping/plugin.php): Failed to open stream: No such file or directory in /wordpress/wp-includes/functions.php on line 6864
+[23-Sep-2024 10:34:07 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
-[20-Sep-2024 12:42:09 UTC] PHP Warning:  touch(): Unable to create file /wordpress/wp-content/uploads/wc-logs/fatal-errors-2024-09-20-fa8e00e92924f3ee84e6e2f3bdff3a2c.log because No such file or directory in /wordpress/wp-admin/includes/class-wp-filesystem-direct.php on line 529
+[23-Sep-2024 10:34:07 UTC] PHP Warning:  touch(): Unable to create file /wordpress/wp-content/uploads/wc-logs/fatal-errors-2024-09-23-9e42ff678247b9dce3e6c8c76b297afe.log because No such file or directory in /wordpress/wp-admin/includes/class-wp-filesystem-direct.php on line 529
 
       at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
 
@@ -348,40 +348,40 @@ error: Error when executing the blueprint step #1 ({"step":"activatePlugin","plu
       "310": 57,
       "311": 45,
       "312": 50,
-      "313": 48,
+      "313": 51,
       "314": 45,
-      "315": 102,
-      "316": 97,
-      "317": 56,
-      "318": 101,
-      "319": 48,
-      "320": 48,
-      "321": 101,
-      "322": 57,
-      "323": 50,
-      "324": 57,
-      "325": 50,
-      "326": 52,
-      "327": 102,
-      "328": 51,
-      "329": 101,
-      "330": 101,
-      "331": 56,
-      "332": 52,
+      "315": 57,
+      "316": 101,
+      "317": 52,
+      "318": 50,
+      "319": 102,
+      "320": 102,
+      "321": 54,
+      "322": 55,
+      "323": 56,
+      "324": 50,
+      "325": 52,
+      "326": 55,
+      "327": 98,
+      "328": 57,
+      "329": 100,
+      "330": 99,
+      "331": 101,
+      "332": 51,
       "333": 101,
       "334": 54,
-      "335": 101,
-      "336": 50,
-      "337": 102,
-      "338": 51,
-      "339": 98,
-      "340": 100,
-      "341": 102,
-      "342": 102,
-      "343": 51,
+      "335": 99,
+      "336": 56,
+      "337": 99,
+      "338": 55,
+      "339": 54,
+      "340": 98,
+      "341": 50,
+      "342": 57,
+      "343": 55,
       "344": 97,
-      "345": 50,
-      "346": 99,
+      "345": 102,
+      "346": 101,
       "347": 46,
       "348": 108,
       "349": 111,

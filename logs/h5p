@@ -6,7 +6,7 @@
 19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
 20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-error: [20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+error: [23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_contents` DEFAULT CHARACTER SET utf8mb4</p>
@@ -31,7 +31,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_contents` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_contents_libraries` DEFAULT CHARACTER SET utf8mb4</p>
@@ -56,7 +56,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_contents_libraries` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_results` DEFAULT CHARACTER SET utf8mb4</p>
@@ -81,7 +81,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_results` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_libraries` DEFAULT CHARACTER SET utf8mb4</p>
@@ -106,7 +106,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_libraries` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_libraries_libraries` DEFAULT CHARACTER SET utf8mb4</p>
@@ -131,7 +131,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_libraries_libraries` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_h5p_libraries_languages` DEFAULT CHARACTER SET utf8mb4</p>
@@ -156,7 +156,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE `wp_h5p_libraries_languages` DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::upgrade_120, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_h5p_contents DROP COLUMN author</p>
@@ -182,7 +182,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE wp_h5p_contents DROP COLUMN author made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::drop_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_h5p_contents DROP COLUMN keywords</p>
@@ -208,7 +208,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE wp_h5p_contents DROP COLUMN keywords made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::drop_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+[23-Sep-2024 11:03:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_h5p_contents DROP COLUMN description</p>
@@ -234,7 +234,7 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #8 /internal/eval.php(20): activate_plugin('h5p/h5p.php')
 #9 {main}</pre>
  for query ALTER TABLE wp_h5p_contents DROP COLUMN description made by activate_plugin, do_action('activate_h5p/h5p.php'), WP_Hook->do_action, WP_Hook->apply_filters, H5P_Plugin::activate, H5P_Plugin::check_for_updates, H5P_Plugin::drop_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[20-Sep-2024 13:05:25 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+[23-Sep-2024 11:03:04 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
