@@ -1,28 +1,35 @@
 #!/bin/bash
 
 # Initialize variables
-n=""
+limit=""
 plugin_name=""
+offset=""
 
 # Parse command line options
-while getopts ":n:p:" opt; do
-  case $opt in
-    n)
-      n="$OPTARG"
-      if ! [[ "$n" =~ ^[0-9]+$ ]] ; then
-        echo "Error: -n argument must be a positive integer" >&2
+while [[ "$#" -gt 0 ]]; do
+  case $1 in
+    --limit)
+      limit="$2"
+      if ! [[ "$limit" =~ ^[0-9]+$ ]] ; then
+        echo "Error: --limit argument must be a positive integer" >&2
         exit 1
       fi
+      shift 2
       ;;
-    p)
-      plugin_name="$OPTARG"
+    --offset)
+      offset="$2"
+      if ! [[ "$offset" =~ ^[0-9]+$ ]] ; then
+        echo "Error: --offset argument must be a positive integer" >&2
+        exit 1
+      fi
+      shift 2
       ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      exit 1
+    --plugin)
+      plugin_name="$2"
+      shift 2
       ;;
-    :)
-      echo "Option -$OPTARG requires an argument." >&2
+    *)
+      echo "Invalid option: $1" >&2
       exit 1
       ;;
   esac
@@ -139,9 +146,13 @@ run_tests() {
     # Get current timestamp
     current_timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 
-    # Check if n is set and use it to limit the number of items to test
-    if [ -n "$n" ]; then
-        jq_command=".[:$n]"
+    # Check if limit and offset are set and use them to limit the number of items to test
+    if [ -n "$limit" ] && [ -n "$offset" ]; then
+        jq_command=".[$offset:$((offset + limit))]"
+    elif [ -n "$limit" ]; then
+        jq_command=".[:$limit]"
+    elif [ -n "$offset" ]; then
+        jq_command=".[$offset:]"
     else
         jq_command="."
     fi
