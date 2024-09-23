@@ -87,7 +87,7 @@ function parse_logs_to_json() {
             if .details != "" then
                 .message = (
                     if (.type == "SQL") then
-                        (.details | gsub("<[^>]*>"; "") | split("Error message was: ")[1] | split("\n\nBacktrace:")[0])
+                        (.details | gsub("<[^>]*>"; "") | split("Error message was: ")[1] // empty | split("\n\nBacktrace:")[0])
                     elif (.type == "PHP") then
                         (.details | sub("^\\[[^\\]]+\\]\\s*PHP [^:]+:\\s*"; "") | split("\n")[0])
                     else
