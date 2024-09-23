@@ -1,6 +1,6 @@
 plugin,message,level,type,details
-"wp-appbox","include_once(): Failed opening 'admin/user-profiles.php' for inclusion (include_path='.::/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/:/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/plugins/') in /wordpress/wp-content/plugins/wp-appbox/wp-appbox.php on line 58","WARNING","PHP","[23-Sep-2024 07:47:41 UTC] PHP Warning:  include_once(): Failed opening 'admin/user-profiles.php' for inclusion (include_path='.::/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/:/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/plugins/') in /wordpress/wp-content/plugins/wp-appbox/wp-appbox.php on line 58"
-"wp-appbox","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 07:47:41 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+"wp-appbox","include_once(): Failed opening 'admin/user-profiles.php' for inclusion (include_path='.::/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/:/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/plugins/') in /wordpress/wp-content/plugins/wp-appbox/wp-appbox.php on line 58","WARNING","PHP","[23-Sep-2024 08:36:35 UTC] PHP Warning:  include_once(): Failed opening 'admin/user-profiles.php' for inclusion (include_path='.::/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/:/wordpress/wp-content/plugins/wp-appbox/inc/phpQuery/plugins/') in /wordpress/wp-content/plugins/wp-appbox/wp-appbox.php on line 58"
+"wp-appbox","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 08:36:35 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
@@ -473,7 +473,7 @@ error: Error when executing the blueprint step #0 ({""step"":""installPlugin"","
 
 Bun v1.1.15 (macOS arm64)
 "
-"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_democracy_q ADD in_foodles TEXT NOT NULL DEFAULT '';</p>
@@ -500,7 +500,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #5 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #6 {main}</pre>
  for query ALTER TABLE wp_democracy_q ADD in_foodles TEXT NOT NULL DEFAULT ''; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>DESC wp_democracy_q</p>
@@ -523,7 +523,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #6 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #7 {main}</pre>
  for query DESC wp_democracy_q made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>DESC wp_democracy_q</p>
@@ -546,7 +546,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #6 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #7 {main}</pre>
  for query DESC wp_democracy_q made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_democracy_q ADD roles_concerned TEXT NOT NULL DEFAULT '';</p>
@@ -573,7 +573,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #5 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #6 {main}</pre>
  for query ALTER TABLE wp_democracy_q ADD roles_concerned TEXT NOT NULL DEFAULT ''; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>DESC wp_democracy_q</p>
@@ -596,7 +596,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #6 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #7 {main}</pre>
  for query DESC wp_democracy_q made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>DESC wp_democracy_q</p>
@@ -619,7 +619,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #6 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #7 {main}</pre>
  for query DESC wp_democracy_q made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>ALTER TABLE wp_democracy_q ADD poll_comments TEXT NOT NULL DEFAULT '';</p>
@@ -646,7 +646,7 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #5 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #6 {main}</pre>
  for query ALTER TABLE wp_democracy_q ADD poll_comments TEXT NOT NULL DEFAULT ''; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 07:58:16 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
+"foodle-for-democracy-poll","Unknown query type: DESC.","FATAL","SQL","[23-Sep-2024 08:47:04 UTC] WordPress database error <div style=""clear:both"">&nbsp;</div>
 <div class=""queries"" style=""clear:both;margin-bottom:2px;border:red dotted thin;"">
 <p>MySQL query:</p>
 <p>DESC wp_democracy_q</p>
@@ -669,9 +669,9 @@ Error occurred at line 4117 in Function <code>handle_error</code>. Error message
 #6 /internal/eval.php(20): activate_plugin('foodle-for-demo...')
 #7 {main}</pre>
  for query DESC wp_democracy_q made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php'), maybe_add_column, WP_SQLite_DB->query, WP_SQLite_DB->print_error"
-"foodle-for-democracy-poll","unlink(/wordpress/wp-content/languages/plugins/foodle-for-democracy-poll-de_DE.l10n.php): No such file or directory in /wordpress/wp-content/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php on line 1223","WARNING","PHP","[23-Sep-2024 07:58:16 UTC] PHP Warning:  unlink(/wordpress/wp-content/languages/plugins/foodle-for-democracy-poll-de_DE.l10n.php): No such file or directory in /wordpress/wp-content/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php on line 1223"
-"foodle-for-democracy-poll","[23-Sep-2024 07:58:16 UTC] The plugin activiation conditions for Foodle (foodle-for-democracy-poll/foodle-for-democracy-poll.php) are not met!","INFO","OTHER","[23-Sep-2024 07:58:16 UTC] The plugin activiation conditions for Foodle (foodle-for-democracy-poll/foodle-for-democracy-poll.php) are not met!"
-"foodle-for-democracy-poll","[23-Sep-2024 07:58:16 UTC] array (
+"foodle-for-democracy-poll","unlink(/wordpress/wp-content/languages/plugins/foodle-for-democracy-poll-de_DE.l10n.php): No such file or directory in /wordpress/wp-content/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php on line 1223","WARNING","PHP","[23-Sep-2024 08:47:04 UTC] PHP Warning:  unlink(/wordpress/wp-content/languages/plugins/foodle-for-democracy-poll-de_DE.l10n.php): No such file or directory in /wordpress/wp-content/plugins/foodle-for-democracy-poll/foodle-for-democracy-poll.php on line 1223"
+"foodle-for-democracy-poll","[23-Sep-2024 08:47:04 UTC] The plugin activiation conditions for Foodle (foodle-for-democracy-poll/foodle-for-democracy-poll.php) are not met!","INFO","OTHER","[23-Sep-2024 08:47:04 UTC] The plugin activiation conditions for Foodle (foodle-for-democracy-poll/foodle-for-democracy-poll.php) are not met!"
+"foodle-for-democracy-poll","[23-Sep-2024 08:47:04 UTC] array (
   0 => 'foodle-for-democracy-poll/foodle-for-democracy-poll.php',
   1 => false,
 )
@@ -691,7 +691,7 @@ error: Error when executing the blueprint step #0 ({""step"":""installPlugin"","
       at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
 
 Bun v1.1.29 (Linux x64 baseline)
-","INFO","OTHER","[23-Sep-2024 07:58:16 UTC] array (
+","INFO","OTHER","[23-Sep-2024 08:47:04 UTC] array (
   0 => 'foodle-for-democracy-poll/foodle-for-democracy-poll.php',
   1 => false,
 )
@@ -1444,7 +1444,7 @@ Stack trace:
 11479 |           } catch (E) {
 11480 |             throw me.error(E), new Error(
                                        ^
-error: Error when executing the blueprint step #0 ({""step"":""installPlugin"",""pluginZipFile"":{""resource"":""wordpress.org/plugins"",""slug"":""cleantalk-spam-protect""}}) : PHP.run() failed with exit code 255 and the following output: 
+error: Error when executing the blueprint step #0 ({""step"":""installPlugin"",""pluginZipFile"":{""resource"":""wordpress.org/plugins"",""slug"":""cleantalk-spam-protect""}}) : PHP.run() failed with exit code 255 and the following output:
  cause: {
   ""response"": {
     ""httpStatusCode"": 500,
@@ -8422,7 +8422,7 @@ error: Error when executing the blueprint step #0 ({""step"":""installPlugin"","
 
 Bun v1.1.15 (macOS arm64)
 "
-"rate-my-post","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 07:43:18 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+"rate-my-post","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 08:32:16 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
@@ -8658,7 +8658,7 @@ error: Error when executing the blueprint step #2 ({""step"":""installPlugin"","
 
 Bun v1.1.29 (Linux x64 baseline)
 "
-"rsvpmaker","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 07:53:41 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+"rsvpmaker","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 08:42:26 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
@@ -23595,7 +23595,7 @@ error: Error when executing the blueprint step #2 ({""step"":""login"",""usernam
 
 Bun v1.1.15 (macOS arm64)
 "
-"super-rollback","Uncaught Error: Failed opening required '/wordpress/wp-content/plugins/super-rollback/includes/freemius/includes/managers/class-fs-debug-manager.php' (include_path='.:') in /wordpress/wp-content/plugins/super-rollback/includes/freemius/require.php:53","FATAL","PHP","[23-Sep-2024 08:02:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/wordpress/wp-content/plugins/super-rollback/includes/freemius/includes/managers/class-fs-debug-manager.php' (include_path='.:') in /wordpress/wp-content/plugins/super-rollback/includes/freemius/require.php:53
+"super-rollback","Uncaught Error: Failed opening required '/wordpress/wp-content/plugins/super-rollback/includes/freemius/includes/managers/class-fs-debug-manager.php' (include_path='.:') in /wordpress/wp-content/plugins/super-rollback/includes/freemius/require.php:53","FATAL","PHP","[23-Sep-2024 08:50:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/wordpress/wp-content/plugins/super-rollback/includes/freemius/includes/managers/class-fs-debug-manager.php' (include_path='.:') in /wordpress/wp-content/plugins/super-rollback/includes/freemius/require.php:53
 Stack trace:
 #0 /wordpress/wp-content/plugins/super-rollback/includes/freemius/start.php(514): require_once()
 #1 /wordpress/wp-content/plugins/super-rollback/includes/functions.php(8): require_once('/wordpress/wp-c...')
@@ -25248,7 +25248,7 @@ error: Error when executing the blueprint step #0 ({""step"":""installPlugin"","
 
 Bun v1.1.15 (macOS arm64)
 "
-"editor-custom-color-palette","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 07:56:17 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+"editor-custom-color-palette","Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29","FATAL","PHP","[23-Sep-2024 08:45:09 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
@@ -31373,7 +31373,7 @@ error: Error
 
 Bun v1.1.15 (macOS arm64)
 "
-"bookster","Uncaught Exception: Error Migrate Version 1.1: &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;","FATAL","PHP","[23-Sep-2024 07:56:09 UTC] PHP Fatal error:  Uncaught Exception: Error Migrate Version 1.1: &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
+"bookster","Uncaught Exception: Error Migrate Version 1.1: &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;","FATAL","PHP","[23-Sep-2024 08:45:00 UTC] PHP Fatal error:  Uncaught Exception: Error Migrate Version 1.1: &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt;
 &lt;div class=&quot;queries&quot; style=&quot;clear:both;margin-bottom:2px;border:red dotted thin;&quot;&gt;
 &lt;p&gt;MySQL query:&lt;/p&gt;
 &lt;p&gt;ALTER TABLE `wp_bookster_transactions` MODIFY appointment_id bigint(20) unsigned;&lt;/p&gt;
