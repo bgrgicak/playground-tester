@@ -1,4 +1,4 @@
-# WordPress Playground compatibility tester 
+# Playground compatibility tester 
 
 This script checks if plugins from WordPress.org are compatible with WordPress Playground.
 Plugins are sorted by active installs and downloads starting from the most popular ones.
