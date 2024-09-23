@@ -1,5 +1,5 @@
 # Playground Error Report
-This report shows the number of errors for each of the top 1000 WordPress.org plugins produces and how it changes over time.
+This report shows the number of errors for each of the top 1000 WordPress.org plugins produced and how it changes over time.
 ## Stats
 | Date | Failed | SQL Errors | PHP Errors | Tested Plugins | Failed Plugins | Error rate |
 |------|--------|------------|------------|---------------|----------------|------------|
