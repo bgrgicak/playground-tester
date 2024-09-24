@@ -95,7 +95,6 @@ prepare_environment() {
         mkdir temp
     fi
 
-    local generate_data=false
     # Check if wp-public-data folder exists
     # If the folder does not exist, clone the repository from GitHub.
     if [ ! -d "wp-public-data" ]; then
@@ -103,7 +102,6 @@ prepare_environment() {
         git clone https://github.com/dd32/wp-public-data
         if [ $? -eq 0 ]; then
             echo "Successfully cloned wp-public-data repository."
-            repo_updated=true
         else
             echo "Failed to clone wp-public-data repository. Exiting."
             exit 1
@@ -118,7 +116,6 @@ prepare_environment() {
             git pull origin trunk
             if [ $? -eq 0 ]; then
                 echo "Successfully updated wp-public-data repository."
-                repo_updated=true
             else
                 echo "Failed to update wp-public-data repository."
             fi
@@ -128,12 +125,7 @@ prepare_environment() {
         cd ..
     fi
 
-    # Check if plugins-to-test.json needs to be generated
-    if [ ! -f "plugins-to-test.json" ] || [ "$repo_updated" = true ]; then
-        generate_test_data
-    else
-        echo "plugins-to-test.json already exists and is up to date."
-    fi
+    generate_test_data
 }
 
 cleanup() {
