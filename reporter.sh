@@ -9,9 +9,6 @@ function update_stats() {
     # Date
     date=$(date +"%Y-%m-%d")
 
-    # Get the total number of failed plugins
-    failed_plugins=$(jq -r '.[] | .plugin' logs/error-log.json | sort -u | wc -l)
-
     # Get the number of SQL errors
     sql_errors=$(jq -r '.[] | select(.type == "SQL") | .type' logs/error-log.json | wc -l)
 
@@ -19,13 +16,13 @@ function update_stats() {
     php_errors=$(jq -r '.[] | select(.type == "PHP") | .type' logs/error-log.json | wc -l)
 
     # If a file has more then 1 character it means the plugin failed
-    failed_plugins_count=$(find logs/ -type f -size +1c | wc -l)
+    failed_plugins=$(find logs/ -type f -size +1c | wc -l)
 
     # Each tested plugin has a file in the logs folder
     tested_plugins=$(find logs/ -type f | wc -l)
 
     # Calculate the error rate
-    error_rate=$(echo "scale=2; $failed_plugins_count / $tested_plugins * 100" | bc)
+    error_rate=$(echo "scale=2; $failed_plugins / $tested_plugins * 100" | bc)
 
     # Create or update the Markdown file
     report_file="reports/playground_stats.md"
@@ -34,12 +31,12 @@ function update_stats() {
         echo "# Playground Error Report" > "$report_file"
         echo "This report shows the number of errors for each of the top 1000 WordPress.org plugins produces and how it changes over time." >> "$report_file"
         echo "## Stats" >> "$report_file"
-        echo "| Date | Failed | SQL Errors | PHP Errors | Tested Plugins | Failed Plugins | Error rate |" >> "$report_file"
-        echo "|------|--------|------------|------------|---------------|----------------|------------|" >> "$report_file"
+        echo "| Date | Failed plugins | SQL Errors | PHP Errors | Error rate |" >> "$report_file"
+        echo "|------|----------------|------------|------------|------------|" >> "$report_file"
     fi
 
     # Create the new line
-    new_line="| $date | $failed_plugins | $sql_errors | $php_errors | $tested_plugins | $failed_plugins_count | $error_rate |"
+    new_line="| $date | $failed_plugins | $sql_errors | $php_errors | $error_rate |"
 
     # Check if the line already exists in the file if not prepend it to the table
     if ! grep -qF "$new_line" "$report_file"; then
@@ -47,10 +44,10 @@ function update_stats() {
         file_content=$(<"$report_file")
 
         # Extract the header (including the line with dashes)
-        header=$(echo "$file_content" | sed -n '1,/^|------|--------|------------|------------|/p')
+        header=$(echo "$file_content" | sed -n '1,/^|------|----------------|------------|------------|------------|/p')
 
         # Extract the content after the header
-        body=$(echo "$file_content" | sed '1,/^|------|--------|------------|------------|/d')
+        body=$(echo "$file_content" | sed '1,/^|------|----------------|------------|------------|------------|/d')
 
         # Combine header, new line, and body
         updated_content="${header}\n${new_line}\n${body}"
