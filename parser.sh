@@ -17,18 +17,17 @@ function parse_logs_to_json() {
 
     echo "[" > "$temp_file"
 
-    first_file=true
-
     # Use find to get all non-json files and process them with jq
     find "$log_folder_path" -type f ! -name "*.json" | while read -r file; do
-        if [ "$first_file" = true ]; then
-            first_file=false
-        else
-            # Don't add a comma if the last file didn't have any errors to avoid invalid JSON.
-            last_char=$(tail -c 2 "$temp_file" | cut -c 1)
-            if [ "$last_char" != "," ] && [ "$last_char" != "[" ]; then
-                echo "," >> "$temp_file"
-            fi
+        # Check if file is empty or contains only whitespace
+        if [ ! -s "$file" ] || ! grep -q '[^[:space:]]' "$file"; then
+            continue  # Skip empty files or files with only whitespace
+        fi
+
+        # Don't add a comma if the last file didn't have any errors to avoid invalid JSON.
+        last_char=$(tail -c 2 "$temp_file" | cut -c 1)
+        if [ "$last_char" != "," ] && [ "$last_char" != "[" ]; then
+            echo "," >> "$temp_file"
         fi
 
         first_entry=true
@@ -108,8 +107,11 @@ function parse_logs_to_json() {
         done
     done
 
-    # Remove the trailing comma from the last entry
-    sed -i '' '$ s/,$//' "$temp_file"
+    last_char=$(tail -c 2 "$temp_file" | cut -c 1)
+    if [ "$last_char" = "," ]; then
+        # Remove the last two characters (comma and newline) and add the closing bracket
+        truncate -s -2 "$temp_file" >> "$temp_file"
+    fi
 
     echo "]" >> "$temp_file"
 
