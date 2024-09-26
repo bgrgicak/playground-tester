@@ -76,7 +76,7 @@ generate_test_data() {
         def parse_date:
           split(" ") | .[0] | split("-") | map(tonumber) as $ymd |
           ($ymd[0] * 10000 + $ymd[1] * 100 + $ymd[2]);
-        map(select((.last_updated | parse_date) > ($last_update | parse_date)) |
+        map(select((.last_updated | parse_date) >= ($last_update | parse_date)) |
             {name, slug, requires_plugins, blueprints, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
         sort_by(-.active_installs, -.downloads)
     ' > plugins-to-test.json
