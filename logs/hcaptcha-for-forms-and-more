@@ -112,7 +112,7 @@ error: Invalid blueprint: must have required property 'path' at /steps/1/pluginZ
   }
 ]
 
-      at Ft (/Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11434:15)
-      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:19:136
+      at Ft (/home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/blueprints/index.js:11434:15)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/cli/cli.js:19:136
 
-Bun v1.1.15 (macOS arm64)
+Bun v1.1.30 (Linux x64 baseline)

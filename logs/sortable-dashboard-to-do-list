@@ -1,0 +1,34 @@
+36481 |       for (let [x, original] of Object.entries(exports)) {
+36482 |         if (typeof original == "function") {
+36483 |           ret[x] = (...args) => {
+36484 |             Asyncify.exportCallStack.push(x);
+36485 |             try {
+36486 |               return original(...args);
+                             ^
+RuntimeError: Out of bounds call_indirect (evaluating 'original(...args)')
+      at php.wasm.wasm-function[zend_do_inherit_interfaces]
+      at php.wasm.wasm-function[zend_do_inheritance_ex]
+      at php.wasm.wasm-function[zend_register_internal_class_ex]
+      at php.wasm.wasm-function[zm_startup_core]
+      at php.wasm.wasm-function[]
+      at php.wasm.wasm-function[zend_startup_module_ex]
+      at php.wasm.wasm-function[zend_startup_module_zval]
+      at php.wasm.wasm-function[]
+      at php.wasm.wasm-function[zend_hash_apply]
+      at php.wasm.wasm-function[zend_startup_modules]
+      at php.wasm.wasm-function[]
+      at php.wasm.wasm-function[dynCall_i]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:36486:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_i (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:37035:14)
+      at php.wasm.wasm-function[php_module_startup]
+      at php.wasm.wasm-function[wasm_sapi_module_startup]
+      at php.wasm.wasm-function[]
+      at php.wasm.wasm-function[php_wasm_init]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:36486:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at ccall (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:36681:15)
+      at Y (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1277:30)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:957:40
+
+Bun v1.1.30 (Linux x64 baseline)

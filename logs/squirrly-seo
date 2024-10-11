@@ -6,8 +6,8 @@
 19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
 20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
-error: [23-Sep-2024 09:45:41 UTC] PHP Warning:  Undefined property: stdClass::$count in /wordpress/wp-content/plugins/squirrly-seo/models/Qss.php on line 264
-[23-Sep-2024 09:45:41 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+error: [11-Oct-2024 01:22:04 UTC] PHP Warning:  Undefined property: stdClass::$count in /wordpress/wp-content/plugins/squirrly-seo/models/Qss.php on line 264
+[11-Oct-2024 01:22:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
 <div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
 <p>MySQL query:</p>
 <p>ALTER TABLE `wp_qss` ADD COLUMN post VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT ''</p>
@@ -23,12 +23,12 @@ error: [23-Sep-2024 09:45:41 UTC] PHP Warning:  Undefined property: stdClass::$c
 </ol>
 </div>
 <div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
-Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "SET": syntax error.
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "SET": syntax error.
 </div>
 <p>Backtrace:</p>
 <pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
 #1 /wordpress/wp-content/plugins/squirrly-seo/models/Qss.php(266): WP_SQLite_DB->query('ALTER TABLE `wp...')
-#2 /wordpress/wp-content/plugins/squirrly-seo/classes/helpers/Tools.php(1318): SQ_Models_Qss::alterTable()
+#2 /wordpress/wp-content/plugins/squirrly-seo/classes/helpers/Tools.php(1319): SQ_Models_Qss::alterTable()
 #3 /wordpress/wp-includes/class-wp-hook.php(324): SQ_Classes_Helpers_Tools->sq_activate(false)
 #4 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
 #5 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
@@ -36,12 +36,12 @@ Error occurred at line 3786 in Function <code>handle_error</code>. Error message
 #7 /internal/eval.php(20): activate_plugin('squirrly-seo/sq...')
 #8 {main}</pre>
  for query ALTER TABLE `wp_qss` ADD COLUMN post VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' made by activate_plugin, do_action('activate_squirrly-seo/squirrly.php'), WP_Hook->do_action, WP_Hook->apply_filters, SQ_Classes_Helpers_Tools->sq_activate, SQ_Models_Qss::alterTable, WP_SQLite_DB->query, WP_SQLite_DB->print_error
-[23-Sep-2024 09:45:41 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
+[11-Oct-2024 01:22:04 UTC] PHP Fatal error:  Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29
 Stack trace:
 #0 {main}
   thrown in /internal/eval.php on line 29
 
-      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
 
 11475 |         for (const [F, { run: z, step: l }] of Object.entries(I))
 11476 |           try {
@@ -268,6 +268,6 @@ error: Error when executing the blueprint step #0 ({"step":"installPlugin","plug
   "source": "request"
 }
 
-      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
 
-Bun v1.1.15 (macOS arm64)
+Bun v1.1.30 (Linux x64 baseline)

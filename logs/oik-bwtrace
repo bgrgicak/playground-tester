@@ -6,14 +6,15 @@
 657 |   constructor(e, r, s) {
 658 |     super(e), this.response = r, this.source = s;
           ^
-error: PHP.run() failed with exit code 255 and the following output: PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /internal/eval.php:17
+error: PHP.run() failed with exit code 255 and the following output: PHP Warning:  require_once(/wordpress/wp-settings.php): Failed to open stream: No such file or directory in /wordpress/wp-config.php on line 102
+PHP Fatal error:  Uncaught Error: Failed opening required '/wordpress/wp-settings.php' (include_path='.:') in /wordpress/wp-config.php:102
 Stack trace:
-#0 /internal/eval.php(17): ZipArchive->extractTo('/tmp/unzipped-w...', '/wp-login.php')
-#1 /internal/eval.php(26): unzip('/tmp/file.zip', '/tmp/unzipped-w...', true)
+#0 /wordpress/wp-load.php(50): require_once()
+#1 /internal/eval.php(7): require('/wordpress/wp-l...')
 #2 {main}
-  thrown in /internal/eval.php on line 17
+  thrown in /wordpress/wp-config.php on line 102
 
       at new PHPExecutionFailureError (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:658:5)
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:980:19
 
-Bun v1.1.29 (Linux x64 baseline)
+Bun v1.1.30 (Linux x64 baseline)

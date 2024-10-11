@@ -1,0 +1,34 @@
+1425 |         throw new Error(
+1426 |           "PHP runtime has crashed – see the earlier error for details."
+1427 |         );
+1428 |       });
+1429 |     this.functionsMaybeMissingFromAsyncify = getFunctionsMaybeMissingFromAsyncify();
+1430 |     const o = n, a = "betterMessage" in o ? o.betterMessage : o.message, l = new Error(a);
+                                                                                    ^
+error: Out of bounds memory access (evaluating 'original(...args)')
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1430:78
+
+1402 |   try {
+1403 |     t = await new Promise((n, o) => {
+1404 |       var l;
+1405 |       e = (c) => {
+1406 |         logger.error(c), logger.error(c.error);
+1407 |         const P = new Error("Rethrown");
+                         ^
+error: Rethrown
+ cause: {}
+
+      at e (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1407:19)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:565:15
+      at invoke_ii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29620:14)
+      at php.wasm.wasm-function[wasm_sapi_handle_request]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29057:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at ccall (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29252:15)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1413:44
+      at new Promise (1:11)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1403:15
+      at oe (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1399:42)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:977:38
+
+Bun v1.1.30 (Linux x64 baseline)

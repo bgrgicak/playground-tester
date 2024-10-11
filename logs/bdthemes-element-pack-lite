@@ -1,1 +1,30 @@
 
+653 |   }
+654 | }
+655 | const STRING = "string", NUMBER = "number", __private__dont__use = Symbol("__private__dont__use");
+656 | class PHPExecutionFailureError extends Error {
+657 |   constructor(e, r, s) {
+658 |     super(e), this.response = r, this.source = s;
+          ^
+error: PHP.run() failed with exit code 255 and the following output: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 11 malformed database schema (wp_users) - string or blob too big in /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php:401
+Stack trace:
+#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(401): PDO->query('CREATE TABLE IF...')
+#1 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(232): WP_SQLite_Translator->__construct(Object(PDO))
+#2 /wordpress/wp-includes/class-wpdb.php(767): WP_SQLite_DB->db_connect()
+#3 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(29): wpdb->__construct('', '', '', '')
+#4 /internal/shared/sqlite-database-integration/wp-includes/sqlite/db.php(64): WP_SQLite_DB->__construct()
+#5 /internal/shared/mu-plugins/sqlite-database-integration.php(42): require_once('/internal/share...')
+#6 /internal/shared/preload/0-sqlite.php(56): require_once('/internal/share...')
+#7 /internal/shared/preload/0-sqlite.php(49): Playground_SQLite_Integration_Loader->load_sqlite_integration()
+#8 /wordpress/wp-includes/load.php(717): Playground_SQLite_Integration_Loader->__set('field_types', Array)
+#9 /wordpress/wp-settings.php(143): wp_set_wpdb_vars()
+#10 /wordpress/wp-config.php(102): require_once('/wordpress/wp-s...')
+#11 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#12 /internal/eval.php(7): require('/wordpress/wp-l...')
+#13 {main}
+  thrown in /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php on line 401
+
+      at new PHPExecutionFailureError (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:658:5)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:980:19
+
+Bun v1.1.30 (Linux x64 baseline)

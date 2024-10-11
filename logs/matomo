@@ -1,20 +1,50 @@
 
-105 |         return n.apply(this, o);
-106 |       } catch (a) {
-107 |         const l = typeof a == "object" ? a == null ? void 0 : a.errno : null;
-108 |         if (l in FileErrorCodes) {
-109 |           const c = FileErrorCodes[l], P = typeof o[1] == "string" ? o[1] : null, pe = P !== null ? t.replaceAll("{path}", P) : t;
-110 |           throw new Error(`${pe}: ${c}`, {
-                      ^
-error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
- cause: {
-  "name": "ErrnoError",
-  "errno": 44
-}
+1425 |         throw new Error(
+1426 |           "PHP runtime has crashed – see the earlier error for details."
+1427 |         );
+1428 |       });
+1429 |     this.functionsMaybeMissingFromAsyncify = getFunctionsMaybeMissingFromAsyncify();
+1430 |     const o = n, a = "betterMessage" in o ? o.betterMessage : o.message, l = new Error(a);
+                                                                                    ^
+error: Out of bounds memory access (evaluating 'original(...args)')
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1430:78
 
-      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:110:17
-      at readFileAsText (/Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
-      at /Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:105:18
-      at /Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:752
+1402 |   try {
+1403 |     t = await new Promise((n, o) => {
+1404 |       var l;
+1405 |       e = (c) => {
+1406 |         logger.error(c), logger.error(c.error);
+1407 |         const P = new Error("Rethrown");
+                         ^
+error: Rethrown
+ cause: {}
 
-Bun v1.1.15 (macOS arm64)
+      at e (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1407:19)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:565:15
+      at invoke_iii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:7228:14)
+      at php.wasm.wasm-function[phar_compile_file]
+      at php.wasm.wasm-function[zend_include_or_eval]
+      at php.wasm.wasm-function[ZEND_INCLUDE_OR_EVAL_SPEC_TMPVAR_HANDLER]
+      at php.wasm.wasm-function[execute_ex]
+      at php.wasm.wasm-function[zend_execute]
+      at php.wasm.wasm-function[zend_execute_scripts]
+      at php.wasm.wasm-function[dynCall_iiiii]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_iiiii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:7327:14)
+      at php.wasm.wasm-function[php_execute_script]
+      at php.wasm.wasm-function[dynCall_ii]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at invoke_ii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:7250:14)
+      at php.wasm.wasm-function[wasm_sapi_handle_request]
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
+      at ccall (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6861:15)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1413:44
+      at new Promise (1:11)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1403:15
+      at oe (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1399:42)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:977:38
+
+Bun v1.1.30 (Linux x64 baseline)

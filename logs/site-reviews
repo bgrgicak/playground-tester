@@ -1,1 +1,20 @@
 
+105 |         return n.apply(this, o);
+106 |       } catch (a) {
+107 |         const l = typeof a == "object" ? a == null ? void 0 : a.errno : null;
+108 |         if (l in FileErrorCodes) {
+109 |           const c = FileErrorCodes[l], P = typeof o[1] == "string" ? o[1] : null, pe = P !== null ? t.replaceAll("{path}", P) : t;
+110 |           throw new Error(`${pe}: ${c}`, {
+                      ^
+error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
+ cause: {
+  "name": "ErrnoError",
+  "errno": 44
+}
+
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:110:17
+      at readFileAsText (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:105:18
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/cli/cli.js:20:752
+
+Bun v1.1.30 (Linux x64 baseline)
