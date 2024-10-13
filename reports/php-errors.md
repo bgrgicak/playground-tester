@@ -22,13 +22,13 @@
 | Trying to access array offset on null in /wordpress/wp-content/plugins/wordfence/lib/wfDB.php on line 162 | wordfence | WARNING | [View logs](../logs/wordfence) |
 | Uncaught Error: Call to undefined function get_home_path() in /wordpress/wp-content/plugins/wptouch/core/class-wptouch-pro.php:1320 | wptouch | FATAL | [View logs](../logs/wptouch) |
 | Uncaught Error: Call to undefined method WP_SQLite_Translator::prepare() in /wordpress/wp-content/plugins/wordfence/lib/wfConfig.php:823 | wordfence | FATAL | [View logs](../logs/wordfence) |
-| Uncaught Error: Class 'WpOrg\Requests\Response' not found in /wordpress/wp-includes/Requests/src/Requests.php:724 | quicker | FATAL | [View logs](../logs/quicker) |
 | Uncaught Error: Failed opening required '/wordpress/wp-content/plugins/super-rollback/includes/freemius/includes/managers/class-fs-debug-manager.php' (include_path='.:') in /wordpress/wp-content/plugins/super-rollback/includes/freemius/require.php:53 | super-rollback | FATAL | [View logs](../logs/super-rollback) |
 | Uncaught Error: Undefined constant "Cleantalk\Common\DNS_A" in /wordpress/wp-content/plugins/cleantalk-spam-protect/lib/Cleantalk/Common/Helper.php:550 | cleantalk-spam-protect | FATAL | [View logs](../logs/cleantalk-spam-protect) |
 | Uncaught Exception: Error Migrate Version 1.1: &lt;div style=&quot;clear:both&quot;&gt;&nbsp;&lt;/div&gt; | bookster | FATAL | [View logs](../logs/bookster) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | adrotate | FATAL | [View logs](../logs/adrotate) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | aeroscroll-gallery | FATAL | [View logs](../logs/aeroscroll-gallery) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | aesirx-analytics | FATAL | [View logs](../logs/aesirx-analytics) |
+| Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | disable-xml-rpc-api | FATAL | [View logs](../logs/disable-xml-rpc-api) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | duplicate-wp-page-post | FATAL | [View logs](../logs/duplicate-wp-page-post) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | easy-facebook-likebox | FATAL | [View logs](../logs/easy-facebook-likebox) |

@@ -1,20 +1,20 @@
 
-653 |   }
-654 | }
-655 | const STRING = "string", NUMBER = "number", __private__dont__use = Symbol("__private__dont__use");
-656 | class PHPExecutionFailureError extends Error {
-657 |   constructor(e, r, s) {
-658 |     super(e), this.response = r, this.source = s;
-          ^
-error: PHP.run() failed with exit code 255 and the following output: PHP Warning:  require_once(/wordpress/wp-settings.php): Failed to open stream: No such file or directory in /wordpress/wp-config.php on line 102
-PHP Fatal error:  Uncaught Error: Failed opening required '/wordpress/wp-settings.php' (include_path='.:') in /wordpress/wp-config.php:102
-Stack trace:
-#0 /wordpress/wp-load.php(50): require_once()
-#1 /internal/eval.php(7): require('/wordpress/wp-l...')
-#2 {main}
-  thrown in /wordpress/wp-config.php on line 102
+105 |         return n.apply(this, o);
+106 |       } catch (a) {
+107 |         const l = typeof a == "object" ? a == null ? void 0 : a.errno : null;
+108 |         if (l in FileErrorCodes) {
+109 |           const c = FileErrorCodes[l], P = typeof o[1] == "string" ? o[1] : null, pe = P !== null ? t.replaceAll("{path}", P) : t;
+110 |           throw new Error(`${pe}: ${c}`, {
+                      ^
+error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
+ cause: {
+  "name": "ErrnoError",
+  "errno": 44
+}
 
-      at new PHPExecutionFailureError (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:658:5)
-      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:980:19
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:110:17
+      at readFileAsText (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:105:18
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/cli/cli.js:20:752
 
 Bun v1.1.30 (Linux x64 baseline)

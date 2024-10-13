@@ -1,3 +1,4 @@
+
 653 |   }
 654 | }
 655 | const STRING = "string", NUMBER = "number", __private__dont__use = Symbol("__private__dont__use");
@@ -5,13 +6,7 @@
 657 |   constructor(e, r, s) {
 658 |     super(e), this.response = r, this.source = s;
           ^
-error: PHP.run() failed with exit code 255 and the following output: PHP Warning:  require_once(/wordpress/wp-settings.php): Failed to open stream: No such file or directory in /wordpress/wp-config.php on line 102
-PHP Fatal error:  Uncaught Error: Failed opening required '/wordpress/wp-settings.php' (include_path='.:') in /wordpress/wp-config.php:102
-Stack trace:
-#0 /wordpress/wp-load.php(50): require_once()
-#1 /internal/eval.php(7): require('/wordpress/wp-l...')
-#2 {main}
-  thrown in /wordpress/wp-config.php on line 102
+error: PHP.run() failed with exit code 255 and the following output: PHP Fatal error:  Allowed memory size of 0 bytes exhausted (tried to allocate 4096 bytes) in /internal/shared/preload/phpinfo.php on line 7
 
       at new PHPExecutionFailureError (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:658:5)
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:980:19

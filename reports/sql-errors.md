@@ -34,6 +34,10 @@
 | SQLSTATE[HY000]: General error: 1 no such table: wp_wfls_2fa_secrets. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_wfls_settings. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | SQLSTATE[HY000]: General error: 1 table wp_aeroscroll_gallery_settings has no column named serial_key_product_id. | aeroscroll-gallery | FATAL | [View logs](../logs/aeroscroll-gallery) |
+| SQLSTATE[HY000]: General error: 20 datatype mismatch. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
+| Syntax error: Unexpected token where in query SHOW TABLE STATUS where name like 'wp_contest_gal1ery'. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
+| Syntax error: Unexpected token where in query SHOW TABLE STATUS where name like 'wp_contest_gal1ery_comments'. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
+| Syntax error: Unexpected token where in query SHOW TABLE STATUS where name like 'wp_contest_gal1ery_entries'. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
 | Unknown create type: INDEX. | wordpress-seo | FATAL | [View logs](../logs/wordpress-seo) |
 | Unknown create type: OR REPLACE. | uncanny-automator | FATAL | [View logs](../logs/uncanny-automator) |
 | Unknown operation: ADD. | download-manager | FATAL | [View logs](../logs/download-manager) |
@@ -42,5 +46,6 @@
 | Unknown operation: CONVERT. | wordpress-seo | FATAL | [View logs](../logs/wordpress-seo) |
 | Unknown operation: DROP. | pw-woocommerce-gift-cards | FATAL | [View logs](../logs/pw-woocommerce-gift-cards) |
 | Unknown operation: MODIFY. | ameliabooking | FATAL | [View logs](../logs/ameliabooking) |
+| Unknown operation: MODIFY. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
 | Unknown show type: FIELDS FROM. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | Unknown show type: KEYS FROM. | wordpress-seo | FATAL | [View logs](../logs/wordpress-seo) |

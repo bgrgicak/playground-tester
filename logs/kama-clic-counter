@@ -1,4 +1,3 @@
-
 1425 |         throw new Error(
 1426 |           "PHP runtime has crashed – see the earlier error for details."
 1427 |         );
@@ -21,16 +20,16 @@ error: Rethrown
 
       at e (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1407:19)
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:565:15
-      at invoke_iiiii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:7327:14)
+      at invoke_iiiii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29609:14)
       at php.wasm.wasm-function[php_execute_script]
       at php.wasm.wasm-function[dynCall_ii]
-      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29057:22
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
-      at invoke_ii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:7250:14)
+      at invoke_ii (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29620:14)
       at php.wasm.wasm-function[wasm_sapi_handle_request]
-      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6666:22
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29057:22
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:556:18
-      at ccall (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:6861:15)
+      at ccall (/home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/node/index.js:29252:15)
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1413:44
       at new Promise (1:11)
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1403:15

@@ -1,4 +1,3 @@
-
 1425 |         throw new Error(
 1426 |           "PHP runtime has crashed – see the earlier error for details."
 1427 |         );
