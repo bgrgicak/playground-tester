@@ -48,6 +48,7 @@
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | wordpress-seo | FATAL | [View logs](../logs/wordpress-seo) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | wp-appbox | FATAL | [View logs](../logs/wp-appbox) |
 | Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | wp-edit | FATAL | [View logs](../logs/wp-edit) |
+| Uncaught Exception: The plugin generated unexpected output. in /internal/eval.php:29 | zotero-notes | FATAL | [View logs](../logs/zotero-notes) |
 | Uncaught TypeError: WebpConverter\Service\PathsGenerator::get_document_root(): Return value must be of type string, null returned in /wordpress/wp-content/plugins/webp-converter-for-media/src/Service/PathsGenerator.php:63 | webp-converter-for-media | FATAL | [View logs](../logs/webp-converter-for-media) |
 | Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, non-static method SU_FofsLog::get_default_status() cannot be called statically in /wordpress/wp-content/plugins/seo-ultimate/plugin/class.seo-ultimate.php:498 | seo-ultimate | FATAL | [View logs](../logs/seo-ultimate) |
 | Undefined array key "HTTP_USER_AGENT" in /wordpress/wp-content/plugins/aesirx-analytics/aesirx-analytics.php on line 367 | aesirx-analytics | WARNING | [View logs](../logs/aesirx-analytics) |
