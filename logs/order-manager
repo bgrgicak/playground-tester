@@ -1,0 +1,24 @@
+15 | 				}
+16 | 				$zip->close();
+17 | 
+18 | 			`});const i=l.readFileAsBuffer("/tmp/build.zip");g.writeFileSync(o,i)}finally{n()}}function p(o,l){const n=l.map(i=>{const[f,b]=i.split(":");return{hostPath:y.resolve(process.cwd(),f),vfsPath:b}});for(const i of n)o.mkdir(i.vfsPath),o.mount(i.vfsPath,q(i.hostPath))}function w(){let o;t.blueprint?o=t.blueprint:o={preferredVersions:{php:t.php,wp:t.wp},login:t.login};const l=new D;let n="",i=!1;return l.addEventListener("progress",f=>{i||(f.detail.progress===100&&(i=!0),n=f.detail.caption||n||"Running the Blueprint",c.log(`\r\x1B[K${n.trim()} – ${f.detail.progress}%`),i&&c.log(`
+19 | `))}),C(o,{progress:l})}const a=t._[0];["run-blueprint","server","build-snapshot"].includes(a)||(e.showHelp(),process.exit(1));const u=w();let s,d=!1;c.log("Starting a PHP server..."),j({port:t.port,onBind:async o=>{const l=`http://127.0.0.1:${o}`;c.log(`Setting up WordPress ${t.wp}`);let n;const i=new k;t.skipWordPressSetup||(i.addEventListener("progress",h=>{const m=Math.round(Math.min(100,100*h.detail.loaded/h.detail.total));t.quiet||c.log(`\rDownloading WordPress ${m}%...    `)}),n=await R(t.wp));const f=n&&y.join(H,`prebuilt-wp-content-for-wp-${n.version}.zip`),b=n?g.existsSync(f)?$(f):J(n.url,i):void 0;s=await A({siteUrl:l,createPhpRuntime:async()=>await Z(u.versions.php),wordPressZip:b,sqliteIntegrationPluginZip:Y(i),sapiName:"cli",createFiles:{"/internal/shared/ca-bundle.crt":O.join(`
+20 | `)},phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await M(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(I);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):E.forHttpCode(502,"WordPress is not ready yet")}})}G();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+error: [15-Oct-2024 01:17:13 UTC] PHP Warning:  preg_match(): Compilation failed: regular expression is too large at offset 40 in /wordpress/wp-includes/class-wp-rewrite.php on line 1940
+
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/cli/cli.js:20:776
+
+11475 |         for (const [F, { run: z, step: l }] of Object.entries(I))
+11476 |           try {
+11477 |             const E = await z(A);
+11478 |             c(E, l);
+11479 |           } catch (E) {
+11480 |             throw me.error(E), new Error(
+                                       ^
+error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org/plugins","slug":"order-manager"}}) : Plugin /wordpress/wp-content/plugins/order-manager could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+ cause: {}
+
+      at /home/runner/work/playground-tester/playground-tester/node_modules/@wp-playground/blueprints/index.js:11480:32
+
+Bun v1.1.30 (Linux x64 baseline)

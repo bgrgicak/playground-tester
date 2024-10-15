@@ -26,6 +26,7 @@
 | SQLSTATE[HY000]: General error: 1 no such table: wp_aeroscroll_gallery. | aeroscroll-gallery | FATAL | [View logs](../logs/aeroscroll-gallery) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_aeroscroll_gallery_imagegallery_images. | aeroscroll-gallery | FATAL | [View logs](../logs/aeroscroll-gallery) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_analytics_visitor_consent. | aesirx-analytics | FATAL | [View logs](../logs/aesirx-analytics) |
+| SQLSTATE[HY000]: General error: 1 no such table: wp_democracy_q. | foodle-for-democracy-poll | FATAL | [View logs](../logs/foodle-for-democracy-poll) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_wfBlocks7. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_wfBlocksAdv. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | SQLSTATE[HY000]: General error: 1 no such table: wp_wfConfig. | wordfence | FATAL | [View logs](../logs/wordfence) |
@@ -47,5 +48,6 @@
 | Unknown operation: DROP. | pw-woocommerce-gift-cards | FATAL | [View logs](../logs/pw-woocommerce-gift-cards) |
 | Unknown operation: MODIFY. | ameliabooking | FATAL | [View logs](../logs/ameliabooking) |
 | Unknown operation: MODIFY. | contest-gallery | FATAL | [View logs](../logs/contest-gallery) |
+| Unknown query type: DESC. | foodle-for-democracy-poll | FATAL | [View logs](../logs/foodle-for-democracy-poll) |
 | Unknown show type: FIELDS FROM. | wordfence | FATAL | [View logs](../logs/wordfence) |
 | Unknown show type: KEYS FROM. | wordpress-seo | FATAL | [View logs](../logs/wordpress-seo) |

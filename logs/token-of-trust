@@ -1,4 +1,3 @@
-
 1425 |         throw new Error(
 1426 |           "PHP runtime has crashed – see the earlier error for details."
 1427 |         );
@@ -6,7 +5,7 @@
 1429 |     this.functionsMaybeMissingFromAsyncify = getFunctionsMaybeMissingFromAsyncify();
 1430 |     const o = n, a = "betterMessage" in o ? o.betterMessage : o.message, l = new Error(a);
                                                                                     ^
-error: Out of bounds memory access (evaluating 'original(...args)')
+error: call_indirect to a null table entry (evaluating 'original(...args)')
       at /home/runner/work/playground-tester/playground-tester/node_modules/@php-wasm/universal/index.js:1430:78
 
 1402 |   try {
