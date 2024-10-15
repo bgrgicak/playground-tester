@@ -71,12 +71,15 @@ generate_test_data() {
         last_update="1970-01-01 00:00:00"  # Unix epoch start as default
     fi
 
+    # If a file has more than 1 character it means the plugin failed
+    failed_plugins=$(find logs/ -type f -size +1c | sed 's|logs/||' | jq -R -s -c 'split("\n")[:-1]')
+
     find wp-public-data/plugins -name '*.json' -exec cat {} + | \
-    jq -s --arg last_update "$last_update" '
+    jq -s --arg last_update "$last_update" --argjson failed_plugins "$failed_plugins" '
         def parse_date:
           split(" ") | .[0] | split("-") | map(tonumber) as $ymd |
           ($ymd[0] * 10000 + $ymd[1] * 100 + $ymd[2]);
-        map(select((.last_updated | parse_date) >= ($last_update | parse_date)) |
+        map(select(((.last_updated | parse_date) >= ($last_update | parse_date)) or (.slug as $slug | $failed_plugins | index($slug) != null)) |
             {name, slug, requires_plugins, blueprints, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
         sort_by(-.active_installs, -.downloads)
     ' > plugins-to-test.json
