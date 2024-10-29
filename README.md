@@ -17,10 +17,11 @@ Plugins are sorted by active installs and downloads starting from the most popul
 - `updater.sh` - Updates the list of plugins and themes (soon) to test. The update runs daily.
 - `runner.sh` - Tests a batch of items that haven't been tested for the longest time. It runs continuously.
    - `tester.sh` - Tests a single item and can run multiple tests.
+      - `blueprint-builder.sh` - Builds a base blueprint for the item.
       - Test script are located in `tests/[test-name].sh`.
-      - Raw results are stored in `logs/(plugin|theme)-[slug]/[test-name]/error.log`.
-      - Parsed results are stored in `logs/(plugin|theme)-[slug]/[test-name]/error.json`.
-      - A report for the plugin/theme is generated in `logs/(plugin|theme)-[slug]/[test-name]/report.md`.
+      - Raw results are stored in `logs/(plugin|theme)/[slug]/[test-name]/error.log`.
+      - Parsed results are stored in `logs/(plugin|theme)/[slug]/[test-name]/error.json`.
+      - A report for the plugin/theme is generated in `logs/(plugin|theme)/[slug]/[test-name]/report.md`.
       - After every test run new logs are pushed to git.
    - `parser.sh` - Parses the logs and extracts errors. It runs at the end of `tester.sh`.
 - `reporter.sh` - Generates a report from the logs. It runs daily and uses the current state of the logs.
