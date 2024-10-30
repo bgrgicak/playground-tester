@@ -7,11 +7,21 @@ item_type=""
 # Parse command line options
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    --plugin)
+    --plugins)
       item_path="$2"
       test_type="plugin"
       item_type="plugins"
       shift 2
+      ;;
+    --themes)
+      item_path="$2"
+      test_type="theme"
+      item_type="themes"
+      shift 2
+      ;;
+    *)
+      echo "Invalid option: $1" >&2
+      exit 1
       ;;
   esac
 done
@@ -21,7 +31,7 @@ blueprint_path=$(./scripts/blueprint-builder.sh $item_path $item_type)
 
 for test in $(ls tests/*.sh); do
     test_name=$(basename $test .sh)
-    log_folder="logs/$item_type/$item_path/$test_name"
+    log_folder="$item_path/$test_name"
     log_file="$log_folder/error.log"
     if [ ! -d "$log_folder" ]; then
         mkdir -p "$log_folder"
@@ -34,6 +44,8 @@ for test in $(ls tests/*.sh); do
     if [ -z "$result" ]; then
         echo -e "\033[32m✓\033[0m $test_name passed for $item_path"
         echo "" > "$log_file"
+        # Add empty error.json file to indicate that the test passed
+        echo "[]" > "$log_folder/error.json"
     else
         echo -e "\033[31m✗\033[0m $test_name failed for $item_path"
         echo "$result" > "$log_file"
@@ -43,4 +55,4 @@ for test in $(ls tests/*.sh); do
 done
 
 # get all error.json files and merge them into a single file
-jq -s 'flatten' logs/$item_type/$item_path/**/error.json > logs/$item_type/$item_path/errors.json
+jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
