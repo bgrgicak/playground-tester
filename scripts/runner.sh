@@ -43,6 +43,11 @@ run_batch() {
         awk '{print $NF}' |          # Get the path (last field)
         sed 's/\/error.json//')      # Remove error.json from path
 
+    # Update modified time of error.json files to the current time to prevent them from being picked up again
+    for folder in $folders; do
+        touch "$folder/error.json"
+    done
+
     for folder in $folders; do
         ./scripts/tester.sh --$item_type "$folder"
     done
