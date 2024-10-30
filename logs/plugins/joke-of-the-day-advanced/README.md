@@ -1,2 +1,0 @@
-# Playground tests for joke-of-the-day-advanced
-We are still awaiting the first test run for joke-of-the-day-advanced.

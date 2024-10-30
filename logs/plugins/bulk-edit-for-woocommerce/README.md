@@ -1,2 +1,0 @@
-# Playground tests for bulk-edit-for-woocommerce
-We are still awaiting the first test run for bulk-edit-for-woocommerce.

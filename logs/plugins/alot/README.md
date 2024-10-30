@@ -1,2 +1,0 @@
-# Playground tests for alot
-We are still awaiting the first test run for alot.
