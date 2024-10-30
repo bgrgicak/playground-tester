@@ -37,5 +37,10 @@ for test in $(ls tests/*.sh); do
     else
         echo -e "\033[31m✗\033[0m $test_name failed for $item_path"
         echo "$result" > "$log_file"
+        # parse results
+        ./scripts/raw-log-parser.sh --name $test_name --input $log_file --output "$log_folder/error.json" --type "$test_type"
     fi
 done
+
+# get all error.json files and merge them into a single file
+jq -s 'flatten' logs/$item_type/$item_path/**/error.json > logs/$item_type/$item_path/errors.json
