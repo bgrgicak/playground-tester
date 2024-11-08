@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@wp-playground/cli": "^0.9.42"
+    "@wp-playground/cli": "^1.0.10"
   }
 }
