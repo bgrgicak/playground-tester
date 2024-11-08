@@ -29,6 +29,19 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+if [ -z "$item_type" ]; then
+  echo "Error: --plugins or --themes option is required" >&2
+  exit 1
+fi
+
+temp_path="$(pwd)/temp"
+wordpress_path=""
+download_latest_wordpress() {
+  if [ ! -d "$wordpress_path" ]; then
+    wordpress_path=$(./scripts/build-wordpress.sh "$temp_path")
+  fi
+}
+
 run_batch() {
     echo "Running batch of ${batch_size} items..."
 
@@ -55,7 +68,7 @@ run_batch() {
     ./scripts/save-changes.sh --push
 
     for folder in $folders; do
-        ./scripts/tester.sh --$item_type "$folder"
+        ./scripts/tester.sh --$item_type "$folder" --wordpress "$wordpress_path"
         failed_tests=$?
         folder_name=$(basename "$folder")
         message=""
@@ -69,4 +82,5 @@ run_batch() {
     ./scripts/save-changes.sh --push
 }
 
+download_latest_wordpress
 run_batch

@@ -9,29 +9,24 @@
 #   --message <message> Commit message. Required for committing.
 #   --push             Push changes to git. Optional.
 
-src=""
+add=""
 message=""
 push=false
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    --src) src="$2"; shift 2;;
+    --add) src="$2"; shift 2;;
     --message) message="$2"; shift 2;;
     --push) push=true; shift 1;;
     -h|--help)
-      grep '^#' "$0" | grep -v '#!/bin/bash' | sed 's/^#//'
+      grep '^#' "$0" | grep -v '#!/bin/bash' | sed 's/^#//' | tail -n +3
       exit 0
       ;;
     *) echo "Invalid option: $1" >&2; exit 1;;
   esac
 done
 
-if [ -z "$src" ]; then
-  echo "Error: --src argument is required" >&2
-  exit 1
-fi
-
-if [ -n "$message" ]; then
-    git add "$src"
+if [ -n "$message" ] && [ -n "$add" ]; then
+    git add "$add"
     git commit -m "$message"
 fi
 if $push; then

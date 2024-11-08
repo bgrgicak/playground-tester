@@ -1,12 +1,28 @@
 #! /bin/bash
+#
+# Run tests for a single item
+# The tester will run a single item through all tests located in the tests/ folder.
+#
+# Test results of all tests will be saved in a error.json file in the item's folder.
+# The results of each test will be saved in a subfolder of the item's folder.
+#
+# Usage: ./scripts/tester.sh --plugins <path>
+#
+# Options:
+#   --plugins <path>   Path to the plugins folder.
+#   --themes <path>    Path to the themes folder.
 
 test_type=""
 item_path=""
 item_type=""
-
+wordpress_path=""
 # Parse command line options
 while [[ "$#" -gt 0 ]]; do
   case $1 in
+    -h|--help)
+      grep '^#' "$0" | grep -v '#!/bin/bash' | sed 's/^#//' | tail -n +3
+      exit 0
+      ;;
     --plugins)
       item_path="$2"
       test_type="plugin"
@@ -17,6 +33,10 @@ while [[ "$#" -gt 0 ]]; do
       item_path="$2"
       test_type="theme"
       item_type="themes"
+      shift 2
+      ;;
+    --wordpress)
+      wordpress_path="$2"
       shift 2
       ;;
     *)
@@ -38,7 +58,7 @@ for test in $(ls tests/*.sh); do
     fi
     echo "" > "$log_file"
 
-    result=$(./$test --blueprint $blueprint_path)
+    result=$(./$test --blueprint $blueprint_path --wordpress $wordpress_path)
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
     if [ -z "$result" ]; then
