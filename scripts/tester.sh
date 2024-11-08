@@ -56,3 +56,6 @@ done
 
 # get all error.json files and merge them into a single file
 jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
+
+failed_tests=$(cat "$item_path/error.json" | jq 'length')
+exit $failed_tests

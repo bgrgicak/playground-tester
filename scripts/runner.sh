@@ -43,14 +43,30 @@ run_batch() {
         awk '{print $NF}' |          # Get the path (last field)
         sed 's/\/error.json//')      # Remove error.json from path
 
-    # Update modified time of error.json files to the current time to prevent them from being picked up again
+    # Update all items in the current batch to prevent them from being picked up by another runner.
+    #
+    # We will only update the error.json file to the current time to indicate that the item is being processed
+    # without making any changes to the contents of the file and losing data.
     for folder in $folders; do
         touch "$folder/error.json"
+        folder_name=$(basename "$folder")
+        ./scripts/push-changes-to-git.sh --add $(basename "$folder") --message "⏳ $(basename "$folder") is being tested"
     done
+    ./scripts/push-changes-to-git.sh --push
 
     for folder in $folders; do
         ./scripts/tester.sh --$item_type "$folder"
+        failed_tests=$?
+        folder_name=$(basename "$folder")
+        message=""
+        if [ $failed_tests -gt 0 ]; then
+          message="✗ $folder_name has $failed_tests errors"
+        else
+          message="✓ $folder_name has no errors"
+        fi
+        ./scripts/push-changes-to-git.sh --add "$folder" --message "$message"
     done
+    ./scripts/push-changes-to-git.sh --push
 }
 
 run_batch
