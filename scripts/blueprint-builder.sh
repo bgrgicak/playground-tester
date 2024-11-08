@@ -24,7 +24,7 @@ blueprint_url=$(echo "$plugin_info" | jq -r '.blueprints[0].url // empty')
 if [ -n "$blueprint_url" ]; then
     # Use existing blueprint if available
     curl -s -o "$blueprint_path" "$blueprint_url"
-else
+elif [ "$item_type" = "plugins" ]; then
     # Create blueprint with required plugins
     requires_plugins=$(echo "$plugin_info" | jq -r '.requires_plugins // [] | join(", ")')
     plugins=()
@@ -33,8 +33,51 @@ else
         plugins+=("${required_array[@]}")
     fi
     plugins+=("$slug")
-    plugins_json=$(printf '%s\n' "${plugins[@]}" | jq -R . | jq -s .)
-    echo "{ \"plugins\": $plugins_json }" > "$blueprint_path"
+
+    # Create the blueprint structure using jq
+    jq -n --arg plugins "$(printf '%s\n' "${plugins[@]}")" '
+        {
+            steps: (
+                $plugins | split("\n") | map({
+                    step: "installPlugin",
+                    pluginData: {
+                        resource: "wordpress.org/plugins",
+                        slug: .
+                    },
+                    options: {
+                        activate: true
+                    }
+                })
+            )
+        }
+    ' > "$blueprint_path"
+elif [ "$item_type" = "themes" ]; then
+    # Create blueprint with required themes
+    requires_themes=$(echo "$plugin_info" | jq -r '.requires_themes // [] | join(", ")')
+    themes=()
+    if [ -n "$requires_themes" ]; then
+        IFS=', ' read -r -a required_array <<< "$requires_themes"
+        themes+=("${required_array[@]}")
+    fi
+    themes+=("$slug")
+
+    # Create the blueprint structure using jq
+    jq -n --arg themes "$(printf '%s\n' "${themes[@]}")" '
+        {
+            steps: (
+                $themes | split("\n") | map({
+                    step: "installTheme",
+                    themeData: {
+                        resource: "wordpress.org/themes",
+                        slug: .
+                    },
+                    options: {
+                        activate: true
+                    }
+                })
+            )
+        }
+    ' > "$blueprint_path"
 fi
 
 echo "$blueprint_path"

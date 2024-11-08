@@ -35,10 +35,10 @@ if [ -z "$item_type" ]; then
 fi
 
 temp_path="$(pwd)/temp"
-wordpress_path=""
+wordpress_path="$temp_path/wordpress"
 download_latest_wordpress() {
   if [ ! -d "$wordpress_path" ]; then
-    wordpress_path=$(./scripts/build-wordpress.sh "$temp_path")
+    ./scripts/build-wordpress.sh "$temp_path"
   fi
 }
 
@@ -63,12 +63,12 @@ run_batch() {
     for folder in $folders; do
         touch "$folder/error.json"
         folder_name=$(basename "$folder")
-        ./scripts/save-changes.sh --add $(basename "$folder") --message "⏳ $(basename "$folder") is being tested"
+        ./scripts/save-changes.sh --add $folder --message "⏳ $(basename "$folder") is being tested"
     done
     ./scripts/save-changes.sh --push
 
     for folder in $folders; do
-        ./scripts/tester.sh --$item_type "$folder" --wordpress "$wordpress_path"
+        ./scripts/tester.sh --$item_type $folder --wordpress "$wordpress_path"
         failed_tests=$?
         folder_name=$(basename "$folder")
         message=""

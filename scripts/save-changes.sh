@@ -14,7 +14,7 @@ message=""
 push=false
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    --add) src="$2"; shift 2;;
+    --add) add="$2"; shift 2;;
     --message) message="$2"; shift 2;;
     --push) push=true; shift 1;;
     -h|--help)
@@ -26,9 +26,9 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [ -n "$message" ] && [ -n "$add" ]; then
-    git add "$add"
-    git commit -m "$message"
+    git add -A $add
+    git commit -m "$message" --quiet
 fi
 if $push; then
-    git push
+    git push --quiet
 fi
