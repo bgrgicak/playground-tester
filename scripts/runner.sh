@@ -50,9 +50,9 @@ run_batch() {
     for folder in $folders; do
         touch "$folder/error.json"
         folder_name=$(basename "$folder")
-        ./scripts/push-changes-to-git.sh --add $(basename "$folder") --message "⏳ $(basename "$folder") is being tested"
+        ./scripts/save-changes.sh --add $(basename "$folder") --message "⏳ $(basename "$folder") is being tested"
     done
-    ./scripts/push-changes-to-git.sh --push
+    ./scripts/save-changes.sh --push
 
     for folder in $folders; do
         ./scripts/tester.sh --$item_type "$folder"
@@ -64,9 +64,9 @@ run_batch() {
         else
           message="✓ $folder_name has no errors"
         fi
-        ./scripts/push-changes-to-git.sh --add "$folder" --message "$message"
+        ./scripts/save-changes.sh --add "$folder" --message "$message"
     done
-    ./scripts/push-changes-to-git.sh --push
+    ./scripts/save-changes.sh --push
 }
 
 run_batch
