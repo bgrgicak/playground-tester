@@ -26,6 +26,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 if [ -n "$message" ] && [ -n "$add" ]; then
+    git update-index --no-assume-unchanged $add
     git add -A $add
     git commit -m "$message" --quiet
 fi
