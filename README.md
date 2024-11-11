@@ -14,17 +14,17 @@ Plugins are sorted by active installs and downloads starting from the most popul
 
 ## Overview
 
-- `updater.sh` - Updates the list of plugins and themes (soon) to test. The update runs daily.
-- `runner.sh` - Tests a batch of items that haven't been tested for the longest time. It runs continuously.
-   - `tester.sh` - Tests a single item and can run multiple tests.
-      - `blueprint-builder.sh` - Builds a base blueprint for the item.
+- `update-wp-public-data.sh` - Updates the list of plugins and themes (soon) to test. The update runs daily.
+- `run-batch.sh` - Tests a batch of items that haven't been tested for the longest time. It runs continuously.
+   - `run-tests.sh` - Tests a single item and can run multiple tests.
+      - `generate-blueprint.sh` - Builds a base blueprint for the item.
       - Test script are located in `tests/[test-name].sh`.
       - Raw results are stored in `logs/(plugin|theme)/[slug]/[test-name]/error.log`.
       - Parsed results are stored in `logs/(plugin|theme)/[slug]/[test-name]/error.json`.
-      - A report for the plugin/theme is generated in `logs/(plugin|theme)/[slug]/[test-name]/report.md`.
+      - (Soon) A report for the plugin/theme is generated in `logs/(plugin|theme)/[slug]/[test-name]/report.md`.
       - After every test run new logs are pushed to git.
-   - `parser.sh` - Parses the logs and extracts errors. It runs at the end of `tester.sh`.
-- `reporter.sh` - Generates a report from the logs. It runs daily and uses the current state of the logs.
+   - (Soon) `parser.sh` - Parses the logs and extracts errors. It runs at the end of `run-tests.sh`.
+- (Soon) `reporter.sh` - Generates a report from the logs. It runs daily and uses the current state of the logs.
 
 
 ## Dependencies
@@ -49,12 +49,12 @@ Plugins are sorted by active installs and downloads starting from the most popul
 
 1. Make sure the script is executable:
    ```
-   chmod +x tester.sh
+   chmod +x run-tests.sh
    ```
 
 2. Run the script:
    ```
-   ./tester.sh
+   ./run-tests.sh
    ```
 
 ## Options

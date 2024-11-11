@@ -68,7 +68,7 @@ run_batch() {
     ./scripts/save-changes.sh --push
 
     for folder in $folders; do
-        ./scripts/tester.sh --$item_type $folder --wordpress "$wordpress_path"
+        ./scripts/run-tests.sh --$item_type $folder --wordpress "$wordpress_path"
         failed_tests=$?
         folder_name=$(basename "$folder")
         message=""

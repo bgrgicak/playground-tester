@@ -23,8 +23,8 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run tester.sh
-        run: ./tester.sh
+      - name: Run run-tests.sh
+        run: ./run-tests.sh
 
       - name: Run parser.sh
         run: ./parser.sh
