@@ -509,6 +509,42 @@ Stack trace:
 #3 /internal/eval.php(20): activate_plugin('03talk-communit...')
 #4 {main}
   thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:27:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)
+#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()
+#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')
+#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:27:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)
+#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()
+#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')
+#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:33:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)
+#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')
+#3 /internal/eval.php(20): activate_plugin('03talk-communit...')
+#4 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:33:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)
+#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')
+#3 /internal/eval.php(20): activate_plugin('03talk-communit...')
+#4 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
 
     at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
@@ -533,19 +569,10 @@ Stack trace:
         httpStatusCode: 500,
         headers: {
           'x-powered-by': [ 'PHP/8.3.0-dev' ],
-          'set-cookie': [ 'PHPSESSID=c8eb4d367d1f41c71560d3cb05b9230d; path=/' ],
+          'set-cookie': [ 'PHPSESSID=f611e6fd86e2ce570408042adce88710; path=/' ],
           expires: [ 'Thu, 19 Nov 1981 08:52:00 GMT' ],
           'cache-control': [ 'no-store, no-cache, must-revalidate' ],
           pragma: [ 'no-cache' ],
           'content-type': [ 'text/html; charset=UTF-8' ]
         },
-        bytes: Uint8Array(0) [],
-        exitCode: 255,
-        errors: ''
-      },
-      source: 'request'
-    }
-  }
-}
-
-Node.js v23.1.0
+        bytes: Uint8Array(0)
