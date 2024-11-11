@@ -318,6 +318,102 @@ Stack trace:
 #5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
 #6 {main}
   thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 10:59:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)
+#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()
+#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')
+#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 10:59:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)
+#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()
+#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')
+#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:00:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)
+#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()
+#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')
+#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)
+#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()
+#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')
+#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)
+#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')
+#3 /internal/eval.php(20): activate_plugin('03talk-communit...')
+#4 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)
+#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')
+#3 /internal/eval.php(20): activate_plugin('03talk-communit...')
+#4 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)
+#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()
+#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')
+#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)
+#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()
+#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')
+#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)
+#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()
+#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')
+#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
+[11-Nov-2024 11:01:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)
+#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()
+#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')
+#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
 
     at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
@@ -342,7 +438,7 @@ Stack trace:
         httpStatusCode: 500,
         headers: {
           'x-powered-by': [ 'PHP/8.3.0-dev' ],
-          'set-cookie': [ 'PHPSESSID=34796fbe335ea54063baff8f44603994; path=/' ],
+          'set-cookie': [ 'PHPSESSID=ef44327b24ca1039d791e1bac7887297; path=/' ],
           expires: [ 'Thu, 19 Nov 1981 08:52:00 GMT' ],
           'cache-control': [ 'no-store, no-cache, must-revalidate' ],
           pragma: [ 'no-cache' ],
