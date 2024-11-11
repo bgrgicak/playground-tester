@@ -19,5 +19,5 @@ jobs:
       - uses: ./.github/actions/setup-node
 
       - name: Run theme batch
-        run: ./run-batch.sh --batch-size ${{ inputs.batch_size }} --themes
+        run: ./scripts/run-batch.sh --batch-size ${{ inputs.batch_size }} --themes
 

@@ -19,5 +19,5 @@ jobs:
       - uses: ./.github/actions/setup-node
 
       - name: Run plugin batch
-        run: ./run-batch.sh --batch-size ${{ inputs.batch_size }} --plugins
+        run: ./scripts/run-batch.sh --batch-size ${{ inputs.batch_size }} --plugins
 

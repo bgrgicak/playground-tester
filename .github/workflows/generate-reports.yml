@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run generate-reports.sh
-        run: ./generate-reports.sh
+        run: ./scripts/generate-reports.sh

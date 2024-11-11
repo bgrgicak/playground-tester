@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run update-available-themes-and-plugins.sh
-        run: ./update-available-themes-and-plugins.sh
+        run: ./scripts/update-available-themes-and-plugins.sh
