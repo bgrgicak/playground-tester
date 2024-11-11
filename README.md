@@ -32,8 +32,8 @@ Plugins are sorted by active installs and downloads starting from the most popul
 - Bash shell (available by default on most Unix-based systems, including Linux and macOS)
 - [`git`](https://git-scm.com/) version control system
 - [`jq`](https://stedolan.github.io/jq/): command-line JSON processor
-- [`bun`](https://bun.sh/): JavaScript runtime and toolkit
-
+- [`node`](https://nodejs.org/en): JavaScript runtime
+- [`nvm`](https://github.com/nvm-sh/nvm): Node Version Manager (it's shipped with the project in the `.nvm` folder)
 ## Installation
 
 1. Clone the repository:

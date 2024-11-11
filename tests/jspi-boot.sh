@@ -19,9 +19,18 @@ if [ -z "$blueprint_path" ]; then
     exit 1
 fi
 
+# Use Node 23 which supports JSPI
+source ~/.nvm/nvm.sh
+nvm install 23 --silent
+
 wordpress_args=""
 if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"
 fi
 
-node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_path" $wordpress_args 2>&1
+output=$(node --experimental-wasm-jspi ./node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_path" $wordpress_args 2>&1)
+
+# Switch back to the node version specified in .nvmrc
+nvm use $(cat .nvmrc) --silent
+
+echo "$output"
