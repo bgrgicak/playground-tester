@@ -565,8 +565,6 @@ Stack trace:
 #5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')
 #6 {main}
   thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17
-
-    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
-  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"002-ps-custom-post-type"},"options":{"activate":true}}) : PHP.run() failed with exit code 255 and the following out
+[11-Nov-2024 11:34:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
+Stack trace:
+#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)
