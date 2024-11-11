@@ -14,7 +14,7 @@ Plugins are sorted by active installs and downloads starting from the most popul
 
 ## Overview
 
-- `update-wp-public-data.sh` - Updates the list of plugins and themes (soon) to test. The update runs daily.
+- `update-available-themes-and-plugins.sh` - Updates the list of plugins and themes (soon) to test. The update runs daily.
 - `run-batch.sh` - Tests a batch of items that haven't been tested for the longest time. It runs continuously.
    - `run-tests.sh` - Tests a single item and can run multiple tests.
       - `generate-blueprint.sh` - Builds a base blueprint for the item.
