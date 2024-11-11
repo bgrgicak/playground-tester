@@ -1,14 +1,24 @@
 #! /bin/bash
 
-name=""
+test_name=""
+item_type=""
+item_name=""
 input=""
 output=""
 type=""
 # Parse command line options
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    --name)
-      name="$2"
+    --test-name)
+      test_name="$2"
+      shift 2
+      ;;
+    --item-type)
+      item_type="$2"
+      shift 2
+      ;;
+    --item-name)
+      item_name="$2"
       shift 2
       ;;
     --input)
@@ -41,7 +51,7 @@ temp_file=$(mktemp)
 echo "[" > "$temp_file"
 
 first_entry=true
-jq -Rs --arg input "$input" --arg name "$name" --arg type "$type" '
+jq -Rs --arg input "$input" --arg test_name "$test_name" --arg item_type "$item_type" --arg item_name "$item_name" '
 {
     filename: $input,
     plugin: ($input | split("/")[-1]),
@@ -82,9 +92,10 @@ jq -Rs --arg input "$input" --arg name "$name" --arg type "$type" '
                             "OTHER"
                         end
                     ),
-                    test: $name,
-                    $type: ($input | split("/")[-2]),
-                    details: $line
+                    test: $test_name,
+                    $item_type: $item_name,
+                    details: $line,
+                    log: $input
                 }]
             elif length > 0 then
                 .[:-1] + [(last | .details += (if .details == "" then "" else "\n" end) + $line)]

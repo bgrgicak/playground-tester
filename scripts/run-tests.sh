@@ -50,6 +50,7 @@ done
 blueprint_path=$(./scripts/generate-blueprint.sh $item_path $item_type)
 
 for test in $(ls tests/*.sh); do
+    item_name=$(basename $item_path)
     test_name=$(basename $test .sh)
     log_folder="$item_path/$test_name"
     log_file="$log_folder/error.log"
@@ -70,7 +71,7 @@ for test in $(ls tests/*.sh); do
         echo -e "\033[31m✗\033[0m $test_name failed for $item_path"
         echo "$result" > "$log_file"
         # parse results
-        ./scripts/parse-raw-logs.sh --name $test_name --input $log_file --output "$log_folder/error.json" --type "$test_type"
+        ./scripts/parse-raw-logs.sh --test-name $test_name --item-type "$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
     fi
 done
 
