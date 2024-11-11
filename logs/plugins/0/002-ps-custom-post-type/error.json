@@ -4,7 +4,7 @@
     "level": "WARNING",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Warning:  Undefined array key \"action\" in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 52"
   },
   {
@@ -12,7 +12,7 @@
     "level": "WARNING",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Warning:  Undefined array key \"action\" in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 61"
   },
   {
@@ -20,7 +20,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Fatal error:  Uncaught TypeError: rand(): Argument #2 ($max) must be of type int, float given in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php:116\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(116): rand(0, 9999999999.0)\n#1 /wordpress/wp-includes/class-wp-hook.php(324): conference_preinstall(false)\n#2 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)\n#3 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)\n#4 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_03talk...', false)\n#5 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 116"
   },
   {
@@ -28,7 +28,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -36,7 +36,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -44,7 +44,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -52,7 +52,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -60,7 +60,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:43:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -68,7 +68,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:46:45 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -76,7 +76,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:28:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -84,7 +84,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:28:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -92,7 +92,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:30:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -100,7 +100,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:31:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -108,7 +108,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:31:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -116,7 +116,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:33:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -124,7 +124,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:34:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -132,7 +132,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -140,7 +140,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -148,7 +148,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -156,7 +156,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -164,7 +164,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:39:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -172,7 +172,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:41:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -180,7 +180,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:45:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -188,7 +188,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:45:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -196,7 +196,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:46:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -204,7 +204,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -212,7 +212,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -220,7 +220,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -228,7 +228,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -236,7 +236,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -244,7 +244,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:09 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -252,7 +252,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -260,7 +260,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -268,7 +268,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -276,7 +276,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:59:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -284,7 +284,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:59:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -292,7 +292,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:00:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -300,7 +300,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -308,7 +308,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -316,7 +316,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -324,7 +324,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -332,7 +332,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -340,7 +340,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -348,7 +348,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -356,7 +356,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -364,7 +364,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -372,7 +372,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:52 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -380,7 +380,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:16:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -388,7 +388,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:17:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -396,7 +396,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:18:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -404,7 +404,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -412,7 +412,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -420,7 +420,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -428,7 +428,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -436,7 +436,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:27:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -444,7 +444,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:27:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -452,7 +452,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -460,7 +460,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -468,7 +468,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -476,7 +476,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:34:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -484,7 +484,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "asyncify-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:34:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n"
   },
   {
@@ -492,7 +492,7 @@
     "level": "WARNING",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Warning:  Undefined array key \"action\" in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 52"
   },
   {
@@ -500,7 +500,7 @@
     "level": "WARNING",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Warning:  Undefined array key \"action\" in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 61"
   },
   {
@@ -508,7 +508,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:38:18 UTC] PHP Fatal error:  Uncaught TypeError: rand(): Argument #2 ($max) must be of type int, float given in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php:116\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(116): rand(0, 9999999999.0)\n#1 /wordpress/wp-includes/class-wp-hook.php(324): conference_preinstall(false)\n#2 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)\n#3 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)\n#4 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_03talk...', false)\n#5 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 116"
   },
   {
@@ -516,7 +516,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -524,7 +524,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -532,7 +532,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -540,7 +540,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:40:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -548,7 +548,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:43:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -556,7 +556,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[08-Nov-2024 13:46:45 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -564,7 +564,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:28:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -572,7 +572,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:28:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -580,7 +580,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:30:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -588,7 +588,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:31:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -596,7 +596,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:31:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -604,7 +604,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:33:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -612,7 +612,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:34:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -620,7 +620,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -628,7 +628,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -636,7 +636,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -644,7 +644,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:35:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -652,7 +652,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:39:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -660,7 +660,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:41:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -668,7 +668,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:45:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -676,7 +676,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:45:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -684,7 +684,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:46:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -692,7 +692,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:11 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -700,7 +700,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -708,7 +708,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:49:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -716,7 +716,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -724,7 +724,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -732,7 +732,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:09 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -740,7 +740,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -748,7 +748,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -756,7 +756,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:50:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -764,7 +764,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:59:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -772,7 +772,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 10:59:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -780,7 +780,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:00:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -788,7 +788,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:01 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -796,7 +796,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -804,7 +804,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -812,7 +812,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:18 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -820,7 +820,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:21 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -828,7 +828,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -836,7 +836,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:01:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -844,7 +844,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -852,7 +852,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -860,7 +860,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:15:52 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -868,7 +868,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:16:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -876,7 +876,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:17:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -884,7 +884,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:18:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -892,7 +892,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -900,7 +900,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n#1 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(37): ps_combine_taxonomy_children->init()\n#2 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(594): ps_combine_taxonomy_children->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('028-ps-combine-...')\n#5 /internal/eval.php(20): activate_plugin('028-ps-combine-...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -908,7 +908,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -916,7 +916,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:26:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -924,7 +924,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:27:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -932,7 +932,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:27:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php on line 102 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(102): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 102)\n#1 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(60): ps_multi_languages->init()\n#2 /wordpress/wp-content/plugins/012-ps-multi-languages/ps-multi-languages.php(1383): ps_multi_languages->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('012-ps-multi-la...')\n#5 /internal/eval.php(20): activate_plugin('012-ps-multi-la...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -940,7 +940,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -948,7 +948,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php on line 31 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/03talk-community-conference/03TALK.php(31): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 31)\n#1 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#2 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('03talk-communit...')\n#3 /internal/eval.php(20): activate_plugin('03talk-communit...')\n#4 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -956,7 +956,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:33:59 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -964,7 +964,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:34:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php on line 39 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(39): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 39)\n#1 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(32): Ps_Custom_Post_Type->init()\n#2 /wordpress/wp-content/plugins/002-ps-custom-post-type/ps-custom-post_type.php(559): Ps_Custom_Post_Type->__construct()\n#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')\n#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('002-ps-custom-p...')\n#5 /internal/eval.php(20): activate_plugin('002-ps-custom-p...')\n#6 {main}\n  thrown in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php on line 17"
   },
   {
@@ -972,7 +972,7 @@
     "level": "FATAL",
     "type": "PHP",
     "test": "jspi-boot",
-    "plugin --item-name 002-ps-custom-post-type": "",
+    "plugin": "002-ps-custom-post-type",
     "details": "[11-Nov-2024 11:34:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17\nStack trace:\n#0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)\n"
   }
 ]
