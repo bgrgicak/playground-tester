@@ -568,4 +568,3 @@ Stack trace:
 [11-Nov-2024 11:34:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ZERO_ERROR_handler::_zerror_handler(), 4 passed in /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php on line 82 and exactly 5 expected in /wordpress/wp-content/plugins/0-errors/classes/ze-error-handler.class.php:17
 Stack trace:
 #0 /wordpress/wp-content/plugins/028-ps-combine-taxonomy-children/ps-combine-taxonomy-children.php(82): ZERO_ERROR_handler->_zerror_handler(2, 'Undefined array...', '/wordpress/wp-c...', 82)
-Node.js v18.18.2
