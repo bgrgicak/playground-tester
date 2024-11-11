@@ -1,1 +1,1 @@
-bun node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="logs/plugins//0/0mk-shortener/blueprint.json"  --skipWordPressSetup --mountBeforeInstall /Users/bero/Projects/playground-tester/temp/wordpress:/wordpress
+
