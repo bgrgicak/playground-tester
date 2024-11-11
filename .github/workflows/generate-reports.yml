@@ -1,4 +1,4 @@
-name: Update available themes and plugins
+name: Generate reports
 
 on:
   schedule:
