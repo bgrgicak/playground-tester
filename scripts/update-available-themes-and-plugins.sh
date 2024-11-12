@@ -59,3 +59,5 @@ update_list_of_items_to_test() {
 update_wp_public_data
 update_list_of_items_to_test "wp-public-data/plugins" "plugins"
 update_list_of_items_to_test "wp-public-data/themes" "themes"
+
+./scripts/save-changes.sh --add logs/ --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push
