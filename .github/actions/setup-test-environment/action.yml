@@ -8,6 +8,7 @@ runs:
       uses: actions/checkout@v4
 
     - name: Configure Git
+      shell: bash
       run: |
         git config --global user.name "bgrgicak"
         git config --global user.email "bgrgicak@users.noreply.github.com"
