@@ -68,12 +68,12 @@ for test in $(ls tests/*.sh); do
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
     if [ -z "$result" ]; then
-        echo -e "\033[32m✓\033[0m $test_name passed for $item_path"
+        echo -e "\033[32m✓\033[0m $item_name passed $test_name"
         echo "" > "$log_file"
         # Add empty error.json file to indicate that the test passed
         echo "[]" > "$log_folder/error.json"
     else
-        echo -e "\033[31m✗\033[0m $test_name failed for $item_path"
+        echo -e "\033[31m✗\033[0m $item_name failed $test_name"
         echo "$result" > "$log_file"
         # parse results
         ./scripts/parse-raw-logs.sh --test-name $test_name --item-type "$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"

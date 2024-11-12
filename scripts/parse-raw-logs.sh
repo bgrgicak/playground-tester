@@ -5,7 +5,6 @@ item_type=""
 item_name=""
 input=""
 output=""
-type=""
 # Parse command line options
 while [[ "$#" -gt 0 ]]; do
   case $1 in
@@ -27,10 +26,6 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     --output)
       output="$2"
-      shift 2
-      ;;
-    --type)
-      type="$2"
       shift 2
       ;;
     *)
