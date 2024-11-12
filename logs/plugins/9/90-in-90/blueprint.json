@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "90-in-90"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
