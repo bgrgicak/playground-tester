@@ -37,6 +37,7 @@ Plugins are sorted by active installs and downloads starting from the most popul
 - [`jq`](https://stedolan.github.io/jq/): command-line JSON processor
 - [`node`](https://nodejs.org/en): JavaScript runtime
 - [`nvm`](https://github.com/nvm-sh/nvm): Node Version Manager (it's shipped with the project in the `.nvm` folder)
+
 ## Installation
 
 1. Clone the repository:
@@ -48,20 +49,32 @@ Plugins are sorted by active installs and downloads starting from the most popul
    npm install
    ```
 
-## Running the Script
+## Running scripts
 
-1. Make sure the script is executable:
-   ```
-   chmod +x run-tests.sh
-   ```
+### Update available themes and plugins
 
-2. Run the script:
-   ```
-   ./run-tests.sh
-   ```
+```
+./scripts/update-available-themes-and-plugins.sh
+```
 
-## Options
+### Run a batch of tests
 
-- `-n`: Number of plugins to test.
-- `-p`: Plugin name to test.
+#### Plugins
+
+```
+./scripts/run-batch.sh --batch-size 100 --plugins
+```
+
+#### Themes
+
+```
+./scripts/run-batch.sh --batch-size 100 --themes
+```
+
+### Generate reports
+
+```
+./scripts/generate-reports.sh
+```
+
 
