@@ -42,7 +42,7 @@ Plugins are sorted by active installs and downloads starting from the most popul
 
 1. Clone the repository:
    ```
-   git clone https://github.com/bgrgicak/playground-tester.git
+   git clone --recurse-submodules https://github.com/bgrgicak/playground-tester.git
    ```
 2. Install dependencies:
    ```
