@@ -1,0 +1,39 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:979
+        const c = new PHPExecutionFailureError(
+                  ^
+
+PHPExecutionFailureError: PHP.run() failed with exit code 255 and the following output: 
+    at PHP.run (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:979:19)
+    at async c (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/wordpress/index.js:1:1595)
+    at async x (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/wordpress/index.js:1:1470)
+    at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:19:671)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  response: PHPResponse {
+    httpStatusCode: 500,
+    headers: {
+      'x-powered-by': [ 'PHP/8.3.0-dev' ],
+      'set-cookie': [ 'PHPSESSID=a42efcb2f68f6b2309f51edb3732eeac; path=/' ],
+      pragma: [ 'no-cache' ],
+      'content-type': [ 'text/html; charset=UTF-8' ],
+      expires: [ 'Wed, 11 Jan 1984 05:00:00 GMT' ],
+      'cache-control': [ 'no-cache, must-revalidate, max-age=0' ]
+    },
+    bytes: Uint8Array(2634) [
+       60,  33,  68,  79,  67,  84,  89,  80,  69,  32, 104, 116,
+      109, 108,  62,  10,  60, 104, 116, 109, 108,  32, 108,  97,
+      110, 103,  61,  34, 101, 110,  45,  85,  83,  34,  62,  10,
+       60, 104, 101,  97, 100,  62,  10,   9,  60, 109, 101, 116,
+       97,  32, 104, 116, 116, 112,  45, 101, 113, 117, 105, 118,
+       61,  34,  67, 111, 110, 116, 101, 110, 116,  45,  84, 121,
+      112, 101,  34,  32,  99, 111, 110, 116, 101, 110, 116,  61,
+       34, 116, 101, 120, 116,  47, 104, 116, 109, 108,  59,  32,
+       99, 104,  97, 114,
+      ... 2534 more items
+    ],
+    exitCode: 255,
+    errors: ''
+  },
+  source: 'request'
+}
+
+Node.js v18.18.2
