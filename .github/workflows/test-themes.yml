@@ -16,7 +16,10 @@ jobs:
   run-scripts:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup-test-environment/action.yml
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-test-environment/
 
       - name: Run theme batch
         run: ./scripts/run-batch.sh --batch-size ${{ inputs.batch_size }} --themes
