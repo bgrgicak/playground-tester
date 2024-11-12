@@ -1,8 +1,8 @@
 name: Test plugins
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes
+  # schedule:
+    # - cron: '*/10 * * * *'  # Run every 10 minutes
   workflow_dispatch:  # Allow manual triggering
     inputs:
       batch_size:
@@ -16,7 +16,7 @@ jobs:
   run-scripts:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/setup-test-environment/action.yml
 
       - name: Run plugin batch
         run: ./scripts/run-batch.sh --batch-size ${{ inputs.batch_size }} --plugins
