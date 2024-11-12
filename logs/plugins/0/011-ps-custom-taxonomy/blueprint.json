@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "011-ps-custom-taxonomy"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
