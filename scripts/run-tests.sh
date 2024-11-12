@@ -59,7 +59,12 @@ for test in $(ls tests/*.sh); do
     fi
     echo "" > "$log_file"
 
-    result=$(./$test --blueprint $blueprint_path --wordpress $wordpress_path)
+    # Each test gets its own copy of WordPress.
+    # This ensures each test starts with a clean WordPress installation.
+    temp_folder=$(mktemp -d)
+    cp -r "$wordpress_path" "$temp_folder/wordpress"
+
+    result=$(./$test --blueprint $blueprint_path --wordpress $temp_folder/wordpress)
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
     if [ -z "$result" ]; then
@@ -73,6 +78,8 @@ for test in $(ls tests/*.sh); do
         # parse results
         ./scripts/parse-raw-logs.sh --test-name $test_name --item-type "$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
     fi
+
+    rm -rf "$temp_folder"
 done
 
 # get all error.json files and merge them into a single file
