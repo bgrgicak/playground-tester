@@ -1,0 +1,3 @@
+[submodule "wp-public-data"]
+	path = wp-public-data
+	url = https://github.com/dd32/wp-public-data
