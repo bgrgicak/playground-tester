@@ -2,15 +2,16 @@ name: Test themes
 
 on:
   # schedule:
-    # - cron: '*/10 * * * *'  # Run every 10 minutes
-  workflow_dispatch:  # Allow manual triggering
+    # Run every 10 minutes with a 2 minute delay compared to plugin runs
+    # - cron: '2,12,22,32,42,52 * * * *'
+  workflow_dispatch:
     inputs:
       batch_size:
         type: number
         default: 100
 
 permissions:
-  contents: write  # Add this line to grant write permissions
+  contents: write
 
 jobs:
   run-scripts:

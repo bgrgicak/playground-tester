@@ -42,7 +42,7 @@ Plugins are sorted by active installs and downloads starting from the most popul
    ```
 2. Install dependencies:
    ```
-   bun install
+   npm install
    ```
 
 ## Running the Script

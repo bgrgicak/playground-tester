@@ -2,15 +2,16 @@ name: Test plugins
 
 on:
   # schedule:
-    # - cron: '*/10 * * * *'  # Run every 10 minutes
-  workflow_dispatch:  # Allow manual triggering
+    # Run every 10 minutes, 2 minutes ahead of theme runs
+    # - cron: '0,10,20,30,40,50 * * * *'
+  workflow_dispatch:
     inputs:
       batch_size:
         type: number
         default: 100
 
 permissions:
-  contents: write  # Add this line to grant write permissions
+  contents: write
 
 jobs:
   run-scripts:
