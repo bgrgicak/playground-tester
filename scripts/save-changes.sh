@@ -25,6 +25,10 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+if [ -n "$PLAYGROUND_TESTER_DISABLE_GIT" ]; then
+    exit 0
+fi
+
 if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add
     git commit --allow-empty -m "$message" --quiet

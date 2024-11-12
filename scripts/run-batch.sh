@@ -40,7 +40,7 @@ download_latest_wordpress() {
   if [ -d "$wordpress_path" ]; then
     rm -rf "$wordpress_path"
   fi
-  ./scripts/build-wordpress.sh "$temp_path"
+  ./scripts/build-wordpress.sh --output "$temp_path"
 }
 
 run_batch() {
@@ -64,9 +64,9 @@ run_batch() {
     for folder in $folders; do
         touch "$folder/error.json"
         folder_name=$(basename "$folder")
-        # ./scripts/save-changes.sh --add $folder --message "⏳ $(basename "$folder") is being tested"
+        ./scripts/save-changes.sh --add $folder --message "⏳ $(basename "$folder") is being tested"
     done
-    # ./scripts/save-changes.sh --push
+    ./scripts/save-changes.sh --push
 
     for folder in $folders; do
         ./scripts/run-tests.sh --$item_type $folder --wordpress "$wordpress_path"
@@ -78,9 +78,9 @@ run_batch() {
         else
           message="✅ $folder_name has no errors"
         fi
-        # ./scripts/save-changes.sh --add "$folder" --message "$message"
+        ./scripts/save-changes.sh --add "$folder" --message "$message"
     done
-    # ./scripts/save-changes.sh --push
+    ./scripts/save-changes.sh --push
 }
 
 download_latest_wordpress

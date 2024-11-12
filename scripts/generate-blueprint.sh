@@ -1,7 +1,26 @@
 #! /bin/bash
+#
+# Generate a blueprint for a given item.
+# The blueprint will install the item and any required dependencies.
+#
+# Usage:
+#   ./scripts/generate-blueprint.sh --item-path <path> --plugin|--theme
+#
+# --item-path <path> Path to the item.
+# --plugin|--theme Type of the item. Either "plugin" or "theme".
 
-item_path=$1
-item_type=$2
+source "./scripts/pre-script-run.sh"
+
+item_path=""
+item_type=""
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --plugin) item_type="plugins"; shift 1;;
+        --theme) item_type="themes"; shift 1;;
+        --item-path) item_path="$2"; shift 2;;
+        *) echo "Unknown option: $1"; exit 1;;
+    esac
+done
 
 blueprint_path="$item_path/blueprint.json"
 
@@ -11,7 +30,7 @@ fi
 
 slug=$(basename $item_path)
 
-plugin_info_path="wp-public-data/$item_type/$slug.json"
+plugin_info_path="$PLAYGROUND_TESTER_PATH/wp-public-data/$item_type/$slug.json"
 if [ ! -f "$plugin_info_path" ]; then
     echo "$item_type $slug not found in $plugin_info_path"
     exit 1

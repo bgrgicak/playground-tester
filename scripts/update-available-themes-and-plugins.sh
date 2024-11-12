@@ -3,34 +3,27 @@
 echo "Updating the list of plugins and themes..."
 
 update_wp_public_data() {
-    # Check if wp-public-data folder exists
-    # If the folder does not exist, clone the repository from GitHub.
+    # Check if wp-public-data submodule exists
     if [ ! -d "wp-public-data" ]; then
-        echo "wp-public-data folder not found. Cloning from GitHub..."
-        git clone https://github.com/dd32/wp-public-data
+        echo "wp-public-data submodule not found. Initializing..."
+        # Force add the submodule even if it's in .gitignore
+        git submodule add -f https://github.com/dd32/wp-public-data
+        git submodule update --init --recursive
         if [ $? -eq 0 ]; then
-            echo "Successfully cloned wp-public-data repository."
+            echo "Successfully initialized wp-public-data submodule."
         else
-            echo "Failed to clone wp-public-data repository. Exiting."
+            echo "Failed to initialize wp-public-data submodule. Exiting."
             exit 1
         fi
-    # If the folder exists, check if it is up to date.
+    # If the submodule exists, update it
     else
-        echo "wp-public-data folder already exists. Checking for updates..."
-        cd wp-public-data
-        git fetch origin trunk
-        if [ $(git rev-parse HEAD) != $(git rev-parse @{u}) ]; then
-            echo "Updates available. Pulling changes..."
-            git pull origin trunk
-            if [ $? -eq 0 ]; then
-                echo "Successfully updated wp-public-data repository."
-            else
-                echo "Failed to update wp-public-data repository."
-            fi
+        echo "wp-public-data submodule exists. Updating..."
+        git submodule update --remote --recursive wp-public-data
+        if [ $? -eq 0 ]; then
+            echo "Successfully updated wp-public-data submodule."
         else
-            echo "Repository is up to date."
+            echo "Failed to update wp-public-data submodule."
         fi
-        cd ..
     fi
 }
 

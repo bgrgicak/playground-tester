@@ -47,7 +47,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Build base blueprint used for all tests
-blueprint_path=$(./scripts/generate-blueprint.sh $item_path $item_type)
+blueprint_path=$(./scripts/generate-blueprint.sh --item-path $item_path --"$test_type")
 
 for test in $(ls tests/*.sh); do
     item_name=$(basename $item_path)
