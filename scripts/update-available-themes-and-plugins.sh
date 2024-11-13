@@ -63,7 +63,7 @@ update_list_of_items_to_test() {
 remove_items_not_in_wp_public_data() {
     local item_type=$1
     for item in $(ls logs/${item_type}/*); do
-        if [ ! -d "wp-public-data/${item_type}/${item}.json" ]; then
+        if [ ! -f "wp-public-data/${item_type}/${item}.json" ]; then
             echo "Removing ${item} from ${item_type}..."
             rm -rf "logs/${item_type}/${item}"
         fi
