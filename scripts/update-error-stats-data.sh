@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Generate stats from the logs.
+# Update error stats from log data.
 # This script will update the `data/error-stats.json` file with the current error stats.
 #
 # Each date will have the following stats:
@@ -12,7 +12,7 @@
 #
 # If the script is run multiple times in a day, it will update the existing entry for the current date.
 #
-# Usage: ./scripts/generate-error-stats.sh
+# Usage: ./scripts/update-error-stats.sh
 
 source ./scripts/pre-script-run.sh
 
