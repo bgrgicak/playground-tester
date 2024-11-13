@@ -1,7 +1,17 @@
 #! /bin/bash
+#
+# Run a batch of tests.
+#
+# Usage: ./scripts/run-batch.sh --batch-size <batch-size> --plugins|--themes
+#
+# --batch-size <batch-size> Number of items to test. (10 by default)
+# --plugins|--themes Type of items to test.
+
+source "./scripts/pre-script-run.sh"
 
 batch_size=10
 item_type=""
+test_type=""
 
 # Parse command line options
 while [[ "$#" -gt 0 ]]; do
@@ -15,10 +25,12 @@ while [[ "$#" -gt 0 ]]; do
       shift 2
       ;;
     --plugins)
+      test_type="plugin"
       item_type="plugins"
       shift 1
       ;;
     --themes)
+      test_type="theme"
       item_type="themes"
       shift 1
       ;;
@@ -28,11 +40,6 @@ while [[ "$#" -gt 0 ]]; do
       ;;
   esac
 done
-
-if [ -z "$item_type" ]; then
-  echo "Error: --plugins or --themes option is required" >&2
-  exit 1
-fi
 
 temp_path="$(pwd)/temp"
 wordpress_path="$temp_path/wordpress"
@@ -69,7 +76,7 @@ run_batch() {
     ./scripts/save-changes.sh --push
 
     for folder in $folders; do
-        ./scripts/run-tests.sh --$item_type $folder --wordpress "$wordpress_path"
+        ./scripts/run-tests.sh --$test_type $folder --wordpress "$wordpress_path"
         failed_tests=$?
         folder_name=$(basename "$folder")
         message=""

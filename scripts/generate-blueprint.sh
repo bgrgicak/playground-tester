@@ -30,7 +30,7 @@ fi
 
 slug=$(basename $item_path)
 
-plugin_info_path="$PLAYGROUND_TESTER_PATH/wp-public-data/$item_type/$slug.json"
+plugin_info_path="/wp-public-data/$item_type/$slug.json"
 if [ ! -f "$plugin_info_path" ]; then
     echo "$item_type $slug not found in $plugin_info_path"
     exit 1

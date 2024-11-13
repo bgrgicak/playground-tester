@@ -6,11 +6,11 @@
 # Test results of all tests will be saved in a error.json file in the item's folder.
 # The results of each test will be saved in a subfolder of the item's folder.
 #
-# Usage: ./scripts/run-tests.sh --plugins <path>
+# Usage: ./scripts/run-tests.sh --plugin|--theme <path> --wordpress <path>
 #
 # Options:
-#   --plugins <path>   Path to the plugins folder.
-#   --themes <path>    Path to the themes folder.
+#   --plugin|--theme <path> Path to the item we want to test.
+#   --wordpress <path> Path to the WordPress installation used for testing.
 
 test_type=""
 item_path=""
@@ -23,13 +23,13 @@ while [[ "$#" -gt 0 ]]; do
       grep '^#' "$0" | grep -v '#!/bin/bash' | sed 's/^#//' | tail -n +3
       exit 0
       ;;
-    --plugins)
+    --plugin)
       item_path="$2"
       test_type="plugin"
       item_type="plugins"
       shift 2
       ;;
-    --themes)
+    --theme)
       item_path="$2"
       test_type="theme"
       item_type="themes"
@@ -76,7 +76,7 @@ for test in $(ls tests/*.sh); do
         echo -e "\033[31m✗\033[0m $item_name failed $test_name"
         echo "$result" > "$log_file"
         # parse results
-        ./scripts/parse-raw-logs.sh --test-name $test_name --item-type "$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
+        ./scripts/parse-raw-logs.sh --test-name $test_name "--$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
     fi
 
     rm -rf "$temp_folder"

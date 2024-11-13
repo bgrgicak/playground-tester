@@ -21,23 +21,23 @@ function update_stats() {
     date=$(date +"%Y-%m-%d")
 
     # Get the number of SQL errors
-    sql_errors=$(jq -r '.[] | select(.type == "SQL") | .type' "$PLAYGROUND_TESTER_PATH/logs/*/*/*/error.json" | wc -l)
+    sql_errors=$(jq -r '.[] | select(.type == "SQL") | .type' "logs/*/*/*/error.json" | wc -l)
 
     # Get the number of PHP errors
     php_errors=$(jq -r '.[] | select(.type == "PHP") | input_filename' logs/*/*/*/error.json | wc -l)
 
     # If a file has more then 3 characters it means the plugin failed.
     # A successful test will have an empty json array.
-    failed_plugins=$(find "$PLAYGROUND_TESTER_PATH/logs/*/" -maxdepth 3 -mindepth 3 -type f -name "error.json" -size +3c | wc -l)
+    failed_plugins=$(find "logs/*/" -maxdepth 3 -mindepth 3 -type f -name "error.json" -size +3c | wc -l)
 
     # Each tested plugin has a file in the logs folder
-    tested_plugins=$(find "$PLAYGROUND_TESTER_PATH/logs/*/" -maxdepth 3 -mindepth 3 -type f -name "error.json" | wc -l)
+    tested_plugins=$(find "logs/*/" -maxdepth 3 -mindepth 3 -type f -name "error.json" | wc -l)
 
     # Calculate the error rate
     error_rate=$(echo "scale=2; $failed_plugins / $tested_plugins * 100" | bc)
 
     # Create or update the Markdown file
-    report_file="$PLAYGROUND_TESTER_PATH/reports/playground_stats.md"
+    report_file="reports/playground_stats.md"
 
     if [ ! -f "$report_file" ]; then
         echo "# Playground Error Report" > "$report_file"
@@ -71,7 +71,7 @@ function update_stats() {
 
 function generate_sql_error_reports() {
     # Generate the Markdown file
-    report_file="$PLAYGROUND_TESTER_PATH/reports/sql-errors.md"
+    report_file="reports/sql-errors.md"
 
     echo "# SQL Errors Report" > "$report_file"
     echo "## Stats" >> "$report_file"
@@ -79,7 +79,7 @@ function generate_sql_error_reports() {
     echo "|---------|--------|-------|------|------|" >> "$report_file"
 
     # Get all SQL errors from the JSON file, sort them, and keep only unique lines
-    unique_errors=$(jq -r '.[] | select(.type == "SQL") | "| \(.message) | \(if .plugin then "plugin" elif .theme then "theme" else "unknown" end) | \(.level) | \(.test) | [View logs](../\(.log)) |"' "$PLAYGROUND_TESTER_PATH/logs/*/*/*/error.json" | sort -u)
+    unique_errors=$(jq -r '.[] | select(.type == "SQL") | "| \(.message) | \(if .plugin then "plugin" elif .theme then "theme" else "unknown" end) | \(.level) | \(.test) | [View logs](../\(.log)) |"' "logs/*/*/*/error.json" | sort -u)
 
     # Append only new unique lines to the report file
     while IFS= read -r line; do
@@ -91,7 +91,7 @@ function generate_sql_error_reports() {
 
 function generate_php_error_reports() {
     # Generate the Markdown file
-    report_file="$PLAYGROUND_TESTER_PATH/reports/php-errors.md"
+    report_file="reports/php-errors.md"
 
     echo "# PHP Errors Report" > "$report_file"
     echo "## Stats" >> "$report_file"
@@ -99,7 +99,7 @@ function generate_php_error_reports() {
     echo "|---------|--------|-------|------|------|" >> "$report_file"
 
     # Get all PHP errors from the JSON file, sort them, and keep only unique lines
-    unique_errors=$(jq -r '.[] | select(.type == "PHP") | "| \(.message) | \(if .plugin then "plugin" elif .theme then "theme" else "unknown" end) | \(.level) | \(.test) | [View logs](../\(.log)) |"' "$PLAYGROUND_TESTER_PATH/logs/*/*/*/error.json" | sort -u)
+    unique_errors=$(jq -r '.[] | select(.type == "PHP") | "| \(.message) | \(if .plugin then "plugin" elif .theme then "theme" else "unknown" end) | \(.level) | \(.test) | [View logs](../\(.log)) |"' "logs/*/*/*/error.json" | sort -u)
 
     # Append only new unique lines to the report file
     while IFS= read -r line; do
@@ -110,7 +110,7 @@ function generate_php_error_reports() {
 }
 
 function push_reports() {
-    "$PLAYGROUND_TESTER_PATH/scripts/save-changes.sh" --add reports/ --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
+    "scripts/save-changes.sh" --add reports/ --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
 }
 
 update_stats

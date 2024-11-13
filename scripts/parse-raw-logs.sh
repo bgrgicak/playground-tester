@@ -1,4 +1,17 @@
 #! /bin/bash
+#
+# Parse raw logs from the Playground Tester and save them to a JSON file.
+#
+# Usage:
+#   ./scripts/parse-raw-logs.sh --test-name <test-name> --plugin|--theme --item-name <item-name> --input <input> --output <output>
+#
+# --test-name <test-name> Name of the test that was run. It must be a valid .sh file name inside the tests/ folder.
+# --plugin|--theme Type of the item that was tested.
+# --item-name <item-name> Name of the item that was tested.
+# --input <input> Path to the raw logs file.
+# --output <output> Path to the output JSON file.
+
+source "./scripts/pre-script-run.sh"
 
 test_name=""
 item_type=""
@@ -12,9 +25,13 @@ while [[ "$#" -gt 0 ]]; do
       test_name="$2"
       shift 2
       ;;
-    --item-type)
-      item_type="$2"
-      shift 2
+    --plugin)
+      item_type="plugins"
+      shift 1
+      ;;
+    --theme)
+      item_type="themes"
+      shift 1
       ;;
     --item-name)
       item_name="$2"

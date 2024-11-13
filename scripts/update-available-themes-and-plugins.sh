@@ -1,4 +1,15 @@
 #! /bin/bash
+#
+# Update the list of plugins and themes that are available for testing.
+#
+# The list of items is sourced from the https://github.com/dd32/wp-public-data repository.
+#
+# This script will update the list of plugins and themes from wp-public-data to ensure all items are available for testing.
+# It will also create a initial error.json log file for new items.
+#
+# If a item is removed from wp-public-data, it will be removed from the logs.
+
+source "./scripts/pre-script-run.sh"
 
 echo "Updating the list of plugins and themes..."
 
@@ -49,8 +60,20 @@ update_list_of_items_to_test() {
     done
 }
 
-update_wp_public_data
+remove_items_not_in_wp_public_data() {
+    local item_type=$1
+    for item in $(ls logs/${item_type}/*); do
+        if [ ! -d "wp-public-data/${item_type}/${item}.json" ]; then
+            echo "Removing ${item} from ${item_type}..."
+            rm -rf "logs/${item_type}/${item}"
+        fi
+    done
+}
+
+# update_wp_public_data
 update_list_of_items_to_test "wp-public-data/plugins" "plugins"
 update_list_of_items_to_test "wp-public-data/themes" "themes"
+remove_items_not_in_wp_public_data "plugins"
+remove_items_not_in_wp_public_data "themes"
 
 ./scripts/save-changes.sh --add logs/ --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push
