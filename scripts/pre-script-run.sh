@@ -32,11 +32,14 @@ source "$PLAYGROUND_TESTER_NVM_DIR/nvm.sh"
 # This is checking for -h or --help flag
 case "$1" in
     -h|--help)
+        echo '';
         sed '/^[^#]/q' "$0" | \
         grep '^#' | \
         grep -v '#!/bin/bash' | \
         sed 's/^#//' | \
+        sed 's/^ //' | \
         tail -n +3
+        echo '';
         exit 0
         ;;
 esac
