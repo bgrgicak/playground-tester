@@ -62,15 +62,21 @@ update_list_of_items_to_test() {
 
 remove_items_not_in_wp_public_data() {
     local item_type=$1
-    for item in $(ls logs/${item_type}/*); do
-        if [ ! -f "wp-public-data/${item_type}/${item}.json" ]; then
-            echo "Removing ${item} from ${item_type}..."
-            rm -rf "logs/${item_type}/${item}"
-        fi
+
+    echo "Removing ${item_type} not in wp-public-data..."
+
+    for letter_dir in "logs/${item_type}"/*/ ; do
+        for item_dir in "${letter_dir}"*/ ; do
+            item=$(basename "${item_dir}")
+            if [ ! -f "wp-public-data/${item_type}/${item}.json" ]; then
+                echo "Removing ${item} from ${item_type}..."
+                rm -rf "logs/${item_type}/${item:0:1}/${item}"
+            fi
+        done
     done
 }
 
-# update_wp_public_data
+update_wp_public_data
 update_list_of_items_to_test "wp-public-data/plugins" "plugins"
 update_list_of_items_to_test "wp-public-data/themes" "themes"
 remove_items_not_in_wp_public_data "plugins"
