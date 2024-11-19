@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "indonesian-word-of-the-day"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
