@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "interactive-divisional-maps-bangladesh"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
