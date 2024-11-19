@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "informerfrk-woo-facebook-messenger"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
