@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "innovage-bp-group-challenge"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
