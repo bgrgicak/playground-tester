@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "intense-turkiye-il-ilce-eklentisi-for-woocommmerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
