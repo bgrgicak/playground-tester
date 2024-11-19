@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-resize-for-chrome-and-safari"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
