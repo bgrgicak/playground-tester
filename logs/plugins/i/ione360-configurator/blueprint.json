@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ione360-configurator"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
