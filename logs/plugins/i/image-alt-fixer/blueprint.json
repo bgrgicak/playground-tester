@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-alt-fixer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
