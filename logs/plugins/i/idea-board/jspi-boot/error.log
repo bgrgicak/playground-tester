@@ -1,0 +1,73 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [19-Nov-2024 14:32:57 UTC] Automatic updates starting...
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 84
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 97
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::offsetSet($offset, $data) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 111
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 133
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::current() should either be compatible with Iterator::current(): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 151
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::next() should either be compatible with Iterator::next(): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 173
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::key() should either be compatible with Iterator::key(): mixed, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 162
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::valid() should either be compatible with Iterator::valid(): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 195
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::rewind() should either be compatible with Iterator::rewind(): void, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 184
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Return type of Recursive_ArrayAccess::count() should either be compatible with Countable::count(): int, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /wordpress/wp-content/plugins/idea-board/vendor/wp-session-manager/includes/class-recursive-arrayaccess.php on line 210
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Optional parameter $post_data declared before required parameter $board is implicitly treated as a required parameter in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/action/FileAction.php on line 41
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Optional parameter $post_id declared before required parameter $board is implicitly treated as a required parameter in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/action/FileAction.php on line 41
+[19-Nov-2024 14:32:57 UTC] PHP Deprecated:  Optional parameter $post_link declared before required parameter $post is implicitly treated as a required parameter in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/Link.php on line 77
+[19-Nov-2024 14:32:57 UTC] PHP Warning:  A non-numeric value encountered in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/Activator.php on line 52
+[19-Nov-2024 14:32:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ideapeople\board\create_function() in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/Activator.php:70
+Stack trace:
+#0 /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/Activator.php(24): ideapeople\board\Activator->notification('Plugin has been...')
+#1 /wordpress/wp-includes/class-wp-hook.php(324): ideapeople\board\Activator->register_activation_hook(false)
+#2 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_idea-b...', false)
+#5 /internal/eval.php(20): activate_plugin('idea-board/idea...')
+#6 {main}
+  thrown in /wordpress/wp-content/plugins/idea-board/src/ideapeople/board/Activator.php on line 70
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:575:9)
+    at process.processTimers (node:internal/timers:549:7)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"idea-board"},"options":{"activate":true}}) : PHP.run() failed with exit code 255 and the following output: 
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at listOnTimeout (node:internal/timers:575:9)
+      at process.processTimers (node:internal/timers:549:7)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: PHPExecutionFailureError: PHP.run() failed with exit code 255 and the following output: 
+        at PHP.run (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:979:19)
+        at runNextTicks (node:internal/process/task_queues:65:5)
+        at listOnTimeout (node:internal/timers:575:9)
+        at process.processTimers (node:internal/timers:549:7)
+        at async gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:31:39)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453) {
+      response: PHPResponse {
+        httpStatusCode: 500,
+        headers: {
+          'x-powered-by': [ 'PHP/8.3.0-dev' ],
+          'set-cookie': [
+            '_wp_session=5ce4dd51f29ac5433c11e7eeaab2f60f%7C%7C1732028577%7C%7C1732028217; expires=Tue, 19 Nov 2024 15:02:57 GMT; Max-Age=1800; path=/'
+          ],
+          'content-type': [ 'text/html; charset=UTF-8' ]
+        },
+        bytes: Uint8Array(0) [],
+        exitCode: 255,
+        errors: ''
+      },
+      source: 'request'
+    }
+  }
+}
+
+Node.js v23.2.0
