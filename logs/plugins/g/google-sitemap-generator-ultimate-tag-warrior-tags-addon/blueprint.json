@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "google-sitemap-generator-ultimate-tag-warrior-tags-addon"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
