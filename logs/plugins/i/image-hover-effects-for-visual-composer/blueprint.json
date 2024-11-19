@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-hover-effects-for-visual-composer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
