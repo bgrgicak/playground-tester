@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ikhokha-payment-gateway"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
