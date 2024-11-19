@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "insert-headers-and-footers-script"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
