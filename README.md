@@ -41,6 +41,10 @@ To see the exact errors generated Playground tests, check out [SQL Errors Report
    ```
 2. Install dependencies:
    ```
+   ./scripts/install-dependencies.sh
+   ```
+3. Install Node.js dependencies:
+   ```
    npm install
    ```
 
