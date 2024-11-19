@@ -26,6 +26,7 @@ while true; do
             ./scripts/run-batch.sh --plugins --batch-size 100
         "
     echo "Batch completed. Starting next batch in 3 seconds..."
+    ./scripts/save-changes.sh --push
     sleep 3
 done
 
