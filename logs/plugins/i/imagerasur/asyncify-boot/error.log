@@ -1,0 +1,33 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:1335
+      throw new Error(
+            ^
+
+Error: Could not download "https://downloads.wordpress.org/plugin/imagerasur.latest-stable.zip".
+				Check if the URL is correct and the server is reachable.
+				If it is reachable, the server might be blocking the request.
+				Check the browser console and network tabs for more information.
+
+				## Does the console show the error "No 'Access-Control-Allow-Origin' header"?
+
+				This means the server that hosts your file does not allow requests from other sites
+				(cross-origin requests, or CORS).	You need to move the asset to a server that allows
+				cross-origin file downloads. Learn more about CORS at
+				https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS.
+
+				If your file is on GitHub, load it from "raw.githubusercontent.com".
+				Here's how to do that:
+
+				1. Start with the original GitHub URL of the file. For example:
+				https://github.com/username/repository/blob/branch/filename.
+				2. Replace "github.com" with "raw.githubusercontent.com".
+				3. Remove the "/blob/" part of the URL.
+
+				The resulting URL should look like this:
+				https://raw.githubusercontent.com/username/repository/branch/filename
+
+				Error:
+				Error: Could not download "https://downloads.wordpress.org/plugin/imagerasur.latest-stable.zip"
+    at Et.resolve (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:1335:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+Node.js v18.18.2
