@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ilike-social-media-optimization"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
