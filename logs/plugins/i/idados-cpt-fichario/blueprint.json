@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "idados-cpt-fichario"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
