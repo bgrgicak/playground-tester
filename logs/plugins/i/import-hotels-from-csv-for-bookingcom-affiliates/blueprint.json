@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-hotels-from-csv-for-bookingcom-affiliates"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
