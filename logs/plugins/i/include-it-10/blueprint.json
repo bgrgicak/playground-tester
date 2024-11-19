@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "include-it-10"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
