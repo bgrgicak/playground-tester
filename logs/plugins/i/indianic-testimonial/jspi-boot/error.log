@@ -1,0 +1,100 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [19-Nov-2024 19:17:04 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE wp_inic_testimonial_template (
+		  id int(11) NOT NULL AUTO_INCREMENT,
+		  title varchar(512) NOT NULL,
+          no_of_testimonial int(11) NOT NULL,
+          list_per_page int(11) NOT NULL,
+          ord_by varchar(64) NOT NULL,
+		  filter_by_country varchar(512) NOT NULL,
+		  filter_by_tags varchar(512) NOT NULL,
+          custom_query varchar(1024) NOT NULL,
+          show_featured_at enum('no','top','bottom') NOT NULL DEFAULT 'no',
+          no_of_featured int(11) NOT NULL DEFAULT '1',
+		  featured_template text NOT NULL,
+          listing_template_odd text NOT NULL,
+          listing_template_even text NOT NULL,
+		  date_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		  PRIMARY KEY (id))</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: MySQL field type cannot be translated to SQLite: enum.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-admin/includes/upgrade.php(3238): WP_SQLite_DB->query('CREATE TABLE wp...')
+#2 /wordpress/wp-content/plugins/indianic-testimonial/testimonial.php(542): dbDelta(Array)
+#3 /wordpress/wp-content/plugins/indianic-testimonial/testimonial.php(572): iNicTestimonialInstall()
+#4 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#5 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('indianic-testim...')
+#6 /internal/eval.php(20): activate_plugin('indianic-testim...')
+#7 {main}</pre>
+ for query CREATE TABLE wp_inic_testimonial_template (
+		  id int(11) NOT NULL AUTO_INCREMENT,
+		  title varchar(512) NOT NULL,
+          no_of_testimonial int(11) NOT NULL,
+          list_per_page int(11) NOT NULL,
+          ord_by varchar(64) NOT NULL,
+		  filter_by_country varchar(512) NOT NULL,
+		  filter_by_tags varchar(512) NOT NULL,
+          custom_query varchar(1024) NOT NULL,
+          show_featured_at enum('no','top','bottom') NOT NULL DEFAULT 'no',
+          no_of_featured int(11) NOT NULL DEFAULT '1',
+		  featured_template text NOT NULL,
+          listing_template_odd text NOT NULL,
+          listing_template_even text NOT NULL,
+		  date_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		  PRIMARY KEY (id)) made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/indianic-testimonial/testimonial.php'), iNicTestimonialInstall, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[19-Nov-2024 19:17:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function create_function() in /wordpress/wp-content/plugins/indianic-testimonial/testimonial.php:576
+Stack trace:
+#0 /wordpress/wp-admin/includes/plugin.php(2387): include_once()
+#1 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('indianic-testim...')
+#2 /internal/eval.php(20): activate_plugin('indianic-testim...')
+#3 {main}
+  thrown in /wordpress/wp-content/plugins/indianic-testimonial/testimonial.php on line 576
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"indianic-testimonial"},"options":{"activate":true}}) : PHP.run() failed with exit code 255 and the following output: 
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: PHPExecutionFailureError: PHP.run() failed with exit code 255 and the following output: 
+        at PHP.run (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:979:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:31:39)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+      response: PHPResponse {
+        httpStatusCode: 500,
+        headers: {
+          'x-powered-by': [ 'PHP/8.3.0-dev' ],
+          'content-type': [ 'text/html; charset=UTF-8' ]
+        },
+        bytes: Uint8Array(0) [],
+        exitCode: 255,
+        errors: ''
+      },
+      source: 'request'
+    }
+  }
+}
+
+Node.js v23.2.0
