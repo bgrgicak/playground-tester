@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "intense-kargo-kurtarma-modu-for-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
