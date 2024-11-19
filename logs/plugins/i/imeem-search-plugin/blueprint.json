@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imeem-search-plugin"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
