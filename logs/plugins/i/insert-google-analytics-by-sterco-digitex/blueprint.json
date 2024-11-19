@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "insert-google-analytics-by-sterco-digitex"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
