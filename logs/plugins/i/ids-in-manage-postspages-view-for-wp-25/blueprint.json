@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ids-in-manage-postspages-view-for-wp-25"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
