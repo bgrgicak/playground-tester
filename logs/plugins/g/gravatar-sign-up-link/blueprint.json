@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "gravatar-sign-up-link"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
