@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "invox-call-tracking"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
