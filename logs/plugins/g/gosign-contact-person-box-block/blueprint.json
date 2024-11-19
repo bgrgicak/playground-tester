@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "gosign-contact-person-box-block"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
