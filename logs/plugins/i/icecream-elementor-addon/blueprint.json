@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "icecream-elementor-addon"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
