@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-hover-effects-css3"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
