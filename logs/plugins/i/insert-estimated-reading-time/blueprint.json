@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "insert-estimated-reading-time"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
