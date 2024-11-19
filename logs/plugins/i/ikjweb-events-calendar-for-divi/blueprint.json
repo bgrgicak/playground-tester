@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ikjweb-events-calendar-for-divi"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
