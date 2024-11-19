@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-watermark-and-remote-image-auto-download"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
