@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ifocus-sk-link-nest-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
