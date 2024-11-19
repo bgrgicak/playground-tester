@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ingenidev-code-widget-for-elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
