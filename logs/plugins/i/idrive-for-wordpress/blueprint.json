@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "idrive-for-wordpress"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
