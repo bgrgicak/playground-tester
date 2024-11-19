@@ -1,0 +1,34 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $variationID declared before required parameter $blockAttributes is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 2121
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $wproduct declared before required parameter $blockAttributes is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 2121
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $productData declared before required parameter $pagePrice is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 2921
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $variationID declared before required parameter $pagePrice is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 2921
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $updateProjectPrice declared before required parameter $pagePrice is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 2921
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $projectData declared before required parameter $productID is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/woocommerce-imaxel.php on line 3237
+[19-Nov-2024 17:33:46 UTC] PHP Deprecated:  Optional parameter $type declared before required parameter $title is implicitly treated as a required parameter in /wordpress/wp-content/plugins/imaxel-woocommerce/functions.php on line 32
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"imaxel-woocommerce"},"options":{"activate":true}}) : Plugin /wordpress/wp-content/plugins/imaxel-woocommerce could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: Error: Plugin /wordpress/wp-content/plugins/imaxel-woocommerce could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+        at gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:67:24)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166)
+  }
+}
+
+Node.js v23.2.0
