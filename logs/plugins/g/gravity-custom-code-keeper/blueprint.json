@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "gravity-custom-code-keeper"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
