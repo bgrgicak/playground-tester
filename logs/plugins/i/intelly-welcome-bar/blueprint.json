@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "intelly-welcome-bar"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
