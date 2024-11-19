@@ -11,7 +11,7 @@
 source "./scripts/pre-script-run.sh"
 
 if [ -z "$NVM_DIR" ]; then
-    export NVM_DIR="$HOME/.nvm"
+    export NVM_DIR="$(pwd)/.nvm"
 fi
 
 if [ -d "$NVM_DIR" ]; then
