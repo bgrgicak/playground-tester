@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "integracao-entre-woo-e-monetizze-powerful"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
