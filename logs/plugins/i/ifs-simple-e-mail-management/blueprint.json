@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ifs-simple-e-mail-management"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
