@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "improved-gd-image-editor"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
