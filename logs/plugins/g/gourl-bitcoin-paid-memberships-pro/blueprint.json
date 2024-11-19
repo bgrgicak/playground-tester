@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "gourl-bitcoin-paid-memberships-pro"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
