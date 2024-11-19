@@ -10,9 +10,7 @@
 
 source "./scripts/pre-script-run.sh"
 
-if [ -z "$NVM_DIR" ]; then
-    export NVM_DIR="$(pwd)/.nvm"
-fi
+NVM_DIR="$(pwd)/.nvm"
 
 if [ -d "$NVM_DIR" ]; then
     source "$NVM_DIR/nvm.sh"
