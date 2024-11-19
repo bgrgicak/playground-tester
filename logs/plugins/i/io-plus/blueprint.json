@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "io-plus"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
