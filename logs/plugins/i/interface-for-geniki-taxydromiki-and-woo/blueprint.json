@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "interface-for-geniki-taxydromiki-and-woo"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
