@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ie7-compatibility"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
