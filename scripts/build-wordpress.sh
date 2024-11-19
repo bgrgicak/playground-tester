@@ -23,12 +23,13 @@ if [ -z "$wordpress_path" ]; then
     exit 1
 fi
 
+zip_path="$wordpress_path/latest.zip"
 mkdir -p "$wordpress_path"
-rm -rf "$wordpress_path/wordpress" "$wordpress_path/latest.zip"
+rm -rf "$wordpress_path/wordpress" "$zip_path"
 node "$PLAYGROUND_CLI_PATH" build-snapshot \
     --quiet \
     --wp="https://wordpress.org/latest.zip" \
-    --outfile="$wordpress_path/latest.zip"
-unzip "$wordpress_path/latest.zip" -d "$wordpress_path"
-rm "$wordpress_path/latest.zip"
+    --outfile="$zip_path"
+unzip "$zip_path" -d "$wordpress_path"
+rm "$zip_path"
 echo "$wordpress_path/wordpress"
