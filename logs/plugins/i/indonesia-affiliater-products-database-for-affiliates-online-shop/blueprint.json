@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "indonesia-affiliater-products-database-for-affiliates-online-shop"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
