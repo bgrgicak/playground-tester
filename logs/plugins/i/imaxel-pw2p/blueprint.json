@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imaxel-pw2p"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
