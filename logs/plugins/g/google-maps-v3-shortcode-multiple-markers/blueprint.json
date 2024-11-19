@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "google-maps-v3-shortcode-multiple-markers"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
