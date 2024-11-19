@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-to-user-attribution-for-nextgen-gallery"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
