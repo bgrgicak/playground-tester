@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-point-selector-field-for-advanced-custom-fields"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
