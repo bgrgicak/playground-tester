@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imasters-wp-files-to-users"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
