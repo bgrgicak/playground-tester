@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "integration-of-caldera-forms-and-paystack"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
