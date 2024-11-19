@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ilmomasiina-event-manager"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
