@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ip-facebook-feed"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
