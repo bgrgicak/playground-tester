@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "intarium-receive-crypto-plugin-for-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
