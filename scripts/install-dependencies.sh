@@ -19,11 +19,10 @@ if [ -d "$NVM_DIR" ]; then
 fi
 
 # Install nvm if not installed
-if ! command -v nvm &> /dev/null
-then
-    if [ ! -d "$NVM_DIR" ]; then
-        mkdir -p "$NVM_DIR"
-    fi
+if [ ! -d "$NVM_DIR" ]; then
+    mkdir -p "$NVM_DIR"
+fi
+if [ ! -f "$NVM_DIR/nvm.sh" ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
     source "$NVM_DIR/nvm.sh"
 fi
