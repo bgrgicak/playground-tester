@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "invitation-code-for-contact-form-7"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
