@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "image-horizontal-reel-scroll-slideshow"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
