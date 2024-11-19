@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "idx-broker-platinum-wrapper-page-shortcode"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
