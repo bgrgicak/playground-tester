@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "idaterms-sort-terms-by-id-date"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
