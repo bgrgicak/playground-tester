@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iconic-delivery-slots-addon-google-calendar"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
