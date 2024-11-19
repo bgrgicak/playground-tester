@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "grab-latest-track-from-soundcloud"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
