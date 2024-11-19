@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "icons-with-links-widget"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
