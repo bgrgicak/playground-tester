@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "google-xml-sitemap-generator-by-anton-dachauer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
