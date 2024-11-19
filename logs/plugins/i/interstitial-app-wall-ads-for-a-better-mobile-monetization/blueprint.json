@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "interstitial-app-wall-ads-for-a-better-mobile-monetization"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
