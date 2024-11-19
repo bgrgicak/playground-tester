@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "idea-naver-analytics-simple"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
