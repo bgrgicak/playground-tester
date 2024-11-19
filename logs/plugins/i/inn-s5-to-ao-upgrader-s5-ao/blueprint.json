@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "inn-s5-to-ao-upgrader-s5-ao"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
