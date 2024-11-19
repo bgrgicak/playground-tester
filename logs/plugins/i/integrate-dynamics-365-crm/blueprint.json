@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "integrate-dynamics-365-crm"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
