@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "img-simple-site-options"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
