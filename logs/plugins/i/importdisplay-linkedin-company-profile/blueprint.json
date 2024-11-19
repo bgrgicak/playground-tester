@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "importdisplay-linkedin-company-profile"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
