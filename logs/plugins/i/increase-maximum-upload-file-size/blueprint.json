@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "increase-maximum-upload-file-size"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
