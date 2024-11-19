@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imagerecycle-pdf-image-compression"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
