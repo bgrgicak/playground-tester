@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-products-to-ok-ru"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
