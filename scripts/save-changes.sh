@@ -30,6 +30,9 @@ if [ "$PLAYGROUND_TESTER_DISABLE_GIT" = true ]; then
   exit 0
 fi
 
+# pull and rebase
+git pull --rebase --quiet
+
 if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add
     git commit --allow-empty -m "$message" --quiet
