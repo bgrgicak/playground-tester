@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "industrial-and-factorial-addons-for-kingcomposer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
