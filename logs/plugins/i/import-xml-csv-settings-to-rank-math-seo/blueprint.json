@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-xml-csv-settings-to-rank-math-seo"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
