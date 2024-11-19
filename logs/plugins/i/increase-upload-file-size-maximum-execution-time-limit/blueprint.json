@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "increase-upload-file-size-maximum-execution-time-limit"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
