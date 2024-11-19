@@ -1,0 +1,167 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [19-Nov-2024 20:17:03 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_im_order_info (
+        `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+        `uid` INT(10) NOT NULL,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `payer_email` varchar(100) NOT NULL DEFAULT '',
+        `street` varchar(255) NOT NULL DEFAULT '',
+        `city` varchar(255) NOT NULL DEFAULT '',
+        `state` varchar(255) NOT NULL DEFAULT '',
+        `zipcode` varchar(100) NOT NULL DEFAULT '',
+        `residence_country` varchar(255) NOT NULL DEFAULT '',
+        `transaction_subject` varchar(255) NOT NULL DEFAULT '',
+        `memo` varchar(255) DEFAULT NULL,
+        `item_name` varchar(255) DEFAULT NULL,
+        `item_number` varchar(255) DEFAULT NULL,
+        `quantity` char(10) DEFAULT NULL,
+        `payment_type` varchar(50) NOT NULL DEFAULT '',
+        `payer_status` varchar(50) NOT NULL DEFAULT '',
+        `payer_id` varchar(50) NOT NULL DEFAULT '',
+        `receiver_id` varchar(50) NOT NULL DEFAULT '',
+        `parent_txn_id` varchar(30) NOT NULL DEFAULT '',
+        `txn_id` varchar(30) NOT NULL DEFAULT '',
+        `txn_type` varchar(10) NOT NULL DEFAULT '',
+        `payment_status` varchar(50) NOT NULL DEFAULT '',
+        `pending_reason` varchar(50) DEFAULT NULL,
+        `mc_gross` varchar(10) NOT NULL DEFAULT '',
+        `mc_fee` varchar(10) NOT NULL DEFAULT '',
+        `tax` varchar(10) DEFAULT NULL,
+        `exchange_rate` varchar(25) DEFAULT NULL,
+        `mc_currency` varchar(20) NOT NULL DEFAULT '',
+        `reason_code` varchar(20) NOT NULL DEFAULT '',
+        `custom` varchar(255) NOT NULL DEFAULT '',
+        `test_ipn` varchar(20) NOT NULL DEFAULT '',
+        `payment_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+        `create_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+        PRIMARY KEY id (`id`)) ;</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Cannot combine AUTOINCREMENT and multiple primary keys in SQLite.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inc/im-db.php(91): WP_SQLite_DB->query('CREATE TABLE IF...')
+#2 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(93): include_once('/wordpress/wp-c...')
+#3 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(29): INK_Member->inc()
+#4 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(153): INK_Member::init()
+#5 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#6 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('inkmember-build...')
+#7 /internal/eval.php(20): activate_plugin('inkmember-build...')
+#8 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_im_order_info (
+        `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+        `uid` INT(10) NOT NULL,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `payer_email` varchar(100) NOT NULL DEFAULT '',
+        `street` varchar(255) NOT NULL DEFAULT '',
+        `city` varchar(255) NOT NULL DEFAULT '',
+        `state` varchar(255) NOT NULL DEFAULT '',
+        `zipcode` varchar(100) NOT NULL DEFAULT '',
+        `residence_country` varchar(255) NOT NULL DEFAULT '',
+        `transaction_subject` varchar(255) NOT NULL DEFAULT '',
+        `memo` varchar(255) DEFAULT NULL,
+        `item_name` varchar(255) DEFAULT NULL,
+        `item_number` varchar(255) DEFAULT NULL,
+        `quantity` char(10) DEFAULT NULL,
+        `payment_type` varchar(50) NOT NULL DEFAULT '',
+        `payer_status` varchar(50) NOT NULL DEFAULT '',
+        `payer_id` varchar(50) NOT NULL DEFAULT '',
+        `receiver_id` varchar(50) NOT NULL DEFAULT '',
+        `parent_txn_id` varchar(30) NOT NULL DEFAULT '',
+        `txn_id` varchar(30) NOT NULL DEFAULT '',
+        `txn_type` varchar(10) NOT NULL DEFAULT '',
+        `payment_status` varchar(50) NOT NULL DEFAULT '',
+        `pending_reason` varchar(50) DEFAULT NULL,
+        `mc_gross` varchar(10) NOT NULL DEFAULT '',
+        `mc_fee` varchar(10) NOT NULL DEFAULT '',
+        `tax` varchar(10) DEFAULT NULL,
+        `exchange_rate` varchar(25) DEFAULT NULL,
+        `mc_currency` varchar(20) NOT NULL DEFAULT '',
+        `reason_code` varchar(20) NOT NULL DEFAULT '',
+        `custom` varchar(255) NOT NULL DEFAULT '',
+        `test_ipn` varchar(20) NOT NULL DEFAULT '',
+        `payment_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+        `create_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+        PRIMARY KEY id (`id`)) ; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/inkmember-build-your-membership-site-easily/inkmember.php'), INK_Member::init, INK_Member->inc, include_once('/plugins/inkmember-build-your-membership-site-easily/inc/im-db.php'), WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[19-Nov-2024 20:17:03 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>ALTER TABLE wp_im_order_info MODIFY txn_type varchar(100);</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: Unknown operation: MODIFY.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inc/im-db.php(93): WP_SQLite_DB->query('ALTER TABLE wp_...')
+#2 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(93): include_once('/wordpress/wp-c...')
+#3 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(29): INK_Member->inc()
+#4 /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php(153): INK_Member::init()
+#5 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#6 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('inkmember-build...')
+#7 /internal/eval.php(20): activate_plugin('inkmember-build...')
+#8 {main}</pre>
+ for query ALTER TABLE wp_im_order_info MODIFY txn_type varchar(100); made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/inkmember-build-your-membership-site-easily/inkmember.php'), INK_Member::init, INK_Member->inc, include_once('/plugins/inkmember-build-your-membership-site-easily/inc/im-db.php'), WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[19-Nov-2024 20:17:03 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "THEME_SLUG" in /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php:55
+Stack trace:
+#0 /wordpress/wp-includes/class-wp-hook.php(324): INK_Member::Install(false)
+#1 /wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 /wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /wordpress/wp-admin/includes/plugin.php(703): do_action('activate_inkmem...', false)
+#4 /internal/eval.php(20): activate_plugin('inkmember-build...')
+#5 {main}
+  thrown in /wordpress/wp-content/plugins/inkmember-build-your-membership-site-easily/inkmember.php on line 55
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"inkmember-build-your-membership-site-easily"},"options":{"activate":true}}) : PHP.run() failed with exit code 255 and the following output: 
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: PHPExecutionFailureError: PHP.run() failed with exit code 255 and the following output: 
+        at PHP.run (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:979:19)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:31:39)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+      response: PHPResponse {
+        httpStatusCode: 500,
+        headers: {
+          'x-powered-by': [ 'PHP/8.3.0-dev' ],
+          'content-type': [ 'text/html; charset=UTF-8' ]
+        },
+        bytes: Uint8Array(0) [],
+        exitCode: 255,
+        errors: ''
+      },
+      source: 'request'
+    }
+  }
+}
+
+Node.js v23.2.0

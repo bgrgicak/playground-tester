@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "inkmember-build-your-membership-site-easily"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
