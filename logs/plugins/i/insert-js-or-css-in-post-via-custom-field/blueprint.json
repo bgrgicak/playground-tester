@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "insert-js-or-css-in-post-via-custom-field"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
