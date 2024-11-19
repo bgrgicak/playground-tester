@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "importacao-de-templates-plataforma-crie-voce-mesmo"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
