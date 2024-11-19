@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "infobvandevliet-nl"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
