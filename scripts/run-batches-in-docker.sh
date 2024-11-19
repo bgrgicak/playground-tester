@@ -6,15 +6,25 @@
 
 source "./scripts/pre-script-run.sh"
 
+# Build the Docker image
 docker build -t wordpress-test-runner .
+
+# Get Git config from host
+GIT_USER_NAME=$(git config --get user.name)
+GIT_USER_EMAIL=$(git config --get user.email)
 
 while true; do
     echo "Starting new batch in Docker..."
     docker run \
         --rm \
         -v "$(pwd):/app" \
-            wordpress-test-runner \
-            ./scripts/run-batch.sh --plugins --batch-size 10
+        -v ~/.ssh/github:/root/.ssh/id_rsa \
+        -v ~/.ssh/github.pub:/root/.ssh/id_rsa.pub \
+        wordpress-test-runner \
+        bash -c "
+            PLAYGROUND_TESTER_DISABLE_GIT=true
+            ./scripts/run-batch.sh --plugins --batch-size 100
+        "
     echo "Batch completed. Starting next batch in 3 seconds..."
     sleep 3
 done

@@ -8,7 +8,8 @@ RUN apk update && apk add --no-cache \
     jq \
     unzip \
     nodejs \
-    npm
+    npm \
+    openssh
 
 # Set bash as the default shell
 SHELL ["/bin/bash", "-c"]
