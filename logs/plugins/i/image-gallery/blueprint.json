@@ -1,0 +1,1 @@
+{"landingPage":"\/wp-admin\/edit.php?post_type=image&page=imagepress_admin_page","preferredVersions":{"php":"8.3","wp":"latest"},"phpExtensionBundles":["kitchen-sink"],"steps":[{"step":"installPlugin","pluginZipFile":{"resource":"wordpress.org\/plugins","slug":"image-gallery"},"options":{"activate":true}}]}
