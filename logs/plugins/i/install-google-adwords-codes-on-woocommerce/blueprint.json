@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "install-google-adwords-codes-on-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
