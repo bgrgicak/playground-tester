@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "index-wp-users-for-speed"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
