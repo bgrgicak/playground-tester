@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "integration-of-capsule-crm-for-contact-form-7"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
