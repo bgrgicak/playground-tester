@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-xml-csv-listings-to-inventor-wp"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
