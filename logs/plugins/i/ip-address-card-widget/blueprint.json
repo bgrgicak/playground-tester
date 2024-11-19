@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ip-address-card-widget"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
