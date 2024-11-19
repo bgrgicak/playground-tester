@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "international-telephone-input-with-flags-and-dial-codes"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
