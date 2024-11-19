@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-ning-users-and-post"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
