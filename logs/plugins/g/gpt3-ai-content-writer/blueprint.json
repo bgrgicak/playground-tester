@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "gpt3-ai-content-writer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
