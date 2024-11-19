@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "integration-for-contact-form-7-and-google-sheets"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
