@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "internal-link-flow-topical-authority-topical-map"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
