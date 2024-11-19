@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imakeable-cal"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
