@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "icons-factory"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
