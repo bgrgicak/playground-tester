@@ -66,6 +66,12 @@ To see the exact errors generated Playground tests, check out [SQL Errors Report
 ./scripts/run-batch.sh --batch-size 100 --themes
 ```
 
+#### Run in a loop
+
+```
+while sleep 2; do ./scripts/run-batch.sh --plugins --batch-size 100; done
+```
+
 ### Generate reports
 
 ```

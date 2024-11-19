@@ -1,4 +1,7 @@
 #! /bin/bash
+
+source "./scripts/pre-script-run.sh"
+
 blueprint_path=""
 wordpress_path=""
 # Parse command line options
@@ -11,6 +14,10 @@ while [[ "$#" -gt 0 ]]; do
     --wordpress)
       wordpress_path="$2"
       shift 2
+      ;;
+    *)
+      echo "Invalid option: $1" >&2
+      exit 1
       ;;
   esac
 done

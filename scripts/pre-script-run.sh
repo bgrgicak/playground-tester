@@ -27,9 +27,7 @@ if [ -z "$PLAYGROUND_TESTER_DISABLE_GIT" ]; then
     PLAYGROUND_TESTER_DISABLE_GIT=false
 fi
 
-if [ -d "$PLAYGROUND_TESTER_NVM_DIR" ] && [ ! command -v nvm &> /dev/null ]; then
-    source "$PLAYGROUND_TESTER_NVM_DIR/nvm.sh"
-fi
+source "$PLAYGROUND_TESTER_NVM_DIR/nvm.sh"
 
 # This is checking for -h or --help flag
 case "$1" in

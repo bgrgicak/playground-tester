@@ -12,6 +12,8 @@
 #   --plugin|--theme <path> Path to the item we want to test.
 #   --wordpress <path> Path to the WordPress installation used for testing.
 
+source "./scripts/pre-script-run.sh"
+
 test_type=""
 item_path=""
 item_type=""
@@ -48,6 +50,10 @@ done
 
 # Build base blueprint used for all tests
 blueprint_path=$(./scripts/generate-blueprint.sh --item-path $item_path --"$test_type")
+if [ $? -gt 0 ]; then
+    echo "Failed to generate blueprint with exit code $?"
+    exit 1
+fi
 
 for test in $(ls tests/*.sh); do
     item_name=$(basename $item_path)
@@ -65,6 +71,7 @@ for test in $(ls tests/*.sh); do
     cp -r "$wordpress_path" "$temp_folder/wordpress"
 
     result=$(./$test --blueprint $blueprint_path --wordpress $temp_folder/wordpress)
+
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
     if [ -z "$result" ]; then
@@ -85,5 +92,8 @@ done
 # get all error.json files and merge them into a single file
 jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
 
-failed_tests=$(cat "$item_path/error.json" | jq 'length')
+failed_tests=0
+if [ -f "$item_path/error.json" ]; then
+    failed_tests=$(cat "$item_path/error.json" | jq 'length')
+fi
 exit $failed_tests
