@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "import-batch-categories"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
