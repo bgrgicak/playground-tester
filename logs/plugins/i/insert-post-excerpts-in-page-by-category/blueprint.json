@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "insert-post-excerpts-in-page-by-category"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
