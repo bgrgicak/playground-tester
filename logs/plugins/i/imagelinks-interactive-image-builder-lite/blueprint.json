@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imagelinks-interactive-image-builder-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
