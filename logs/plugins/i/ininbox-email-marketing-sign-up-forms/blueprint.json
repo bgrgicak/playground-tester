@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ininbox-email-marketing-sign-up-forms"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
