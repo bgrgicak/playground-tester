@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "inn-object-cache-diagnosis-inn"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
