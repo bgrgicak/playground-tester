@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "itdah-htm-in-url"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
