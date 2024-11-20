@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "isosize-clothing-size-widget-for-retailers"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
