@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-custom-order-columns"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
