@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "n-media-woocommerce-checkout-fields"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
