@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "nationwide-test-of-the-emergency-alert-system"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
