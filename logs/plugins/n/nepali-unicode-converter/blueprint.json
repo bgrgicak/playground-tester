@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "nepali-unicode-converter"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
