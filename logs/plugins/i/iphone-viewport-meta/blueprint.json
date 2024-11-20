@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iphone-viewport-meta"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
