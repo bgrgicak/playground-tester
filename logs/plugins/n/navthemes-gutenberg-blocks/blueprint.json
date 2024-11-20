@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "navthemes-gutenberg-blocks"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
