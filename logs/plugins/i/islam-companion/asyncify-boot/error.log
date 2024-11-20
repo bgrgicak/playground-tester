@@ -1,0 +1,163 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [20-Nov-2024 00:56:11 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in /wordpress/wp-content/plugins/islam-companion/framework/application/Application.php on line 403
+[20-Nov-2024 05:56:11 Asia/Karachi] PHP Warning:  Undefined array key "DOCUMENT_ROOT" in /wordpress/wp-content/plugins/islam-companion/framework/configuration/DefaultConfiguration.php on line 261
+[20-Nov-2024 05:56:11 Asia/Karachi] PHP Deprecated:  str_replace(): Passing null to parameter #1 ($search) of type array|string is deprecated in /wordpress/wp-content/plugins/islam-companion/framework/configuration/DefaultConfiguration.php on line 278
+[20-Nov-2024 05:56:11 Asia/Karachi] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /wordpress/wp-content/plugins/islam-companion/framework/configuration/DefaultConfiguration.php on line 343
+[20-Nov-2024 05:56:11 Asia/Karachi] PHP Deprecated:  str_replace(): Passing null to parameter #2 ($replace) of type array|string is deprecated in /wordpress/wp-content/plugins/islam-companion/framework/configuration/DefaultConfiguration.php on line 343
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"islam-companion"},"options":{"activate":true}}) : 
+  "unreachable" WASM instruction executed.
+  
+  The typical reason is a PHP function missing from the ASYNCIFY_ONLY
+  list when building PHP.wasm.
+  
+  You will need to file a new issue in the WordPress Playground repository
+  and paste this error message there:
+  
+  https://github.com/WordPress/wordpress-playground/issues/new
+  
+  If you're a core developer, the typical fix is to:
+  
+  * Isolate a minimal reproduction of the error
+  * Add a reproduction of the error to php-asyncify.spec.ts in the WordPress Playground repository
+  * Run 'npm run fix-asyncify'
+  * Commit the changes, push to the repo, release updated NPM packages
+  
+  Below is a list of all the PHP functions found in the stack trace to
+  help with the minimal reproduction. If they're all already listed in
+  the Dockerfile, you'll need to trigger this error again with long stack
+  traces enabled. In node.js, you can do it using the --stack-trace-limit=100
+  CLI option: 
+  
+      * php.wasm.__wrap_select
+      * php.wasm.RAND_poll
+      * php.wasm.rand_status
+      * php.wasm.RAND_status
+      * php.wasm.Curl_ossl_seed
+      * php.wasm.Curl_ossl_random
+      * php.wasm.Curl_rand
+      * php.wasm.Curl_rand_hex
+  
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: Error: 
+    "unreachable" WASM instruction executed.
+    
+    The typical reason is a PHP function missing from the ASYNCIFY_ONLY
+    list when building PHP.wasm.
+    
+    You will need to file a new issue in the WordPress Playground repository
+    and paste this error message there:
+    
+    https://github.com/WordPress/wordpress-playground/issues/new
+    
+    If you're a core developer, the typical fix is to:
+    
+    * Isolate a minimal reproduction of the error
+    * Add a reproduction of the error to php-asyncify.spec.ts in the WordPress Playground repository
+    * Run 'npm run fix-asyncify'
+    * Commit the changes, push to the repo, release updated NPM packages
+    
+    Below is a list of all the PHP functions found in the stack trace to
+    help with the minimal reproduction. If they're all already listed in
+    the Dockerfile, you'll need to trigger this error again with long stack
+    traces enabled. In node.js, you can do it using the --stack-trace-limit=100
+    CLI option: 
+    
+        * php.wasm.__wrap_select
+        * php.wasm.RAND_poll
+        * php.wasm.rand_status
+        * php.wasm.RAND_status
+        * php.wasm.Curl_ossl_seed
+        * php.wasm.Curl_ossl_random
+        * php.wasm.Curl_rand
+        * php.wasm.Curl_rand_hex
+    
+        at PHP.oe (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1429:78)
+        at async PHP.run (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:976:17)
+        at async gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:31:39)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+      cause: Error: Rethrown
+          at UnhandledRejectionsTarget.e (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1406:19)
+          at [nodejs.internal.kHybridDispatch] (node:internal/event_target:757:20)
+          at UnhandledRejectionsTarget.dispatchEvent (node:internal/event_target:692:26)
+          at t.wasmExports.<computed> (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:565:15)
+          at invoke_vii (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:70531:7)
+          at php.wasm.php_call_shutdown_functions (wasm://wasm/php.wasm-039887fe:wasm-function[11406]:0x65b1ce)
+          at php.wasm.call (wasm://wasm/php.wasm-039887fe:wasm-function[6365]:0x45a47a)
+          at ret.<computed> (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:69957:22)
+          at t.wasmExports.<computed> (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:556:18)
+          at invoke_v (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:70564:7) {
+        cause: RuntimeError: unreachable
+            at php.wasm.RAND_bytes (wasm://wasm/php.wasm-039887fe:wasm-function[467]:0x379ae)
+            at php.wasm.Curl_ossl_random (wasm://wasm/php.wasm-039887fe:wasm-function[15368]:0x7e11e1)
+            at php.wasm.Curl_rand (wasm://wasm/php.wasm-039887fe:wasm-function[3400]:0x23c0ab)
+            at php.wasm.Curl_rand_hex (wasm://wasm/php.wasm-039887fe:wasm-function[4461]:0x2ffca9)
+            at php.wasm.curl_mime_init (wasm://wasm/php.wasm-039887fe:wasm-function[3248]:0x224e68)
+            at php.wasm.build_mime_structure_from_hash (wasm://wasm/php.wasm-039887fe:wasm-function[4246]:0x2db9a8)
+            at php.wasm._php_curl_setopt (wasm://wasm/php.wasm-039887fe:wasm-function[6494]:0x46b96a)
+            at php.wasm.zif_curl_setopt (wasm://wasm/php.wasm-039887fe:wasm-function[9187]:0x5a3d1b)
+            at php.wasm.ZEND_DO_FCALL_BY_NAME_SPEC_RETVAL_UNUSED_HANDLER (wasm://wasm/php.wasm-039887fe:wasm-function[14690]:0x797115)
+            at php.wasm.execute_ex (wasm://wasm/php.wasm-039887fe:wasm-function[13109]:0x71277f) {
+          cause: Error
+              at Asyncify.handleSleep (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:70768:45)
+              at _emscripten_sleep (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/node/index.js:68678:44)
+              at php.wasm.__wrap_select (wasm://wasm/php.wasm-039887fe:wasm-function[1367]:0xcfc57)
+              at php.wasm.RAND_poll (wasm://wasm/php.wasm-039887fe:wasm-function[6722]:0x48f865)
+              at php.wasm.rand_status (wasm://wasm/php.wasm-039887fe:wasm-function[10787]:0x61aef0)
+              at php.wasm.RAND_status (wasm://wasm/php.wasm-039887fe:wasm-function[1826]:0x113764)
+              at php.wasm.Curl_ossl_seed (wasm://wasm/php.wasm-039887fe:wasm-function[6870]:0x4a161c)
+              at php.wasm.Curl_ossl_random (wasm://wasm/php.wasm-039887fe:wasm-function[15368]:0x7e11c4)
+              at php.wasm.Curl_rand (wasm://wasm/php.wasm-039887fe:wasm-function[3400]:0x23c0ab)
+              at php.wasm.Curl_rand_hex (wasm://wasm/php.wasm-039887fe:wasm-function[4461]:0x2ffca9)
+        },
+        betterMessage: '\n' +
+          '"unreachable" WASM instruction executed.\n' +
+          '\n' +
+          'The typical reason is a PHP function missing from the ASYNCIFY_ONLY\n' +
+          'list when building PHP.wasm.\n' +
+          '\n' +
+          'You will need to file a new issue in the WordPress Playground repository\n' +
+          'and paste this error message there:\n' +
+          '\n' +
+          'https://github.com/WordPress/wordpress-playground/issues/new\n' +
+          '\n' +
+          "If you're a core developer, the typical fix is to:\n" +
+          '\n' +
+          '* Isolate a minimal reproduction of the error\n' +
+          '* Add a reproduction of the error to php-asyncify.spec.ts in the WordPress Playground repository\n' +
+          "* Run 'npm run fix-asyncify'\n" +
+          '* Commit the changes, push to the repo, release updated NPM packages\n' +
+          '\n' +
+          'Below is a list of all the PHP functions found in the stack trace to\n' +
+          "help with the minimal reproduction. If they're all already listed in\n" +
+          "the Dockerfile, you'll need to trigger this error again with long stack\n" +
+          'traces enabled. In node.js, you can do it using the --stack-trace-limit=100\n' +
+          'CLI option: \n' +
+          '\n' +
+          '    * php.wasm.__wrap_select\n' +
+          '    * php.wasm.RAND_poll\n' +
+          '    * php.wasm.rand_status\n' +
+          '    * php.wasm.RAND_status\n' +
+          '    * php.wasm.Curl_ossl_seed\n' +
+          '    * php.wasm.Curl_ossl_random\n' +
+          '    * php.wasm.Curl_rand\n' +
+          '    * php.wasm.Curl_rand_hex\n'
+      }
+    }
+  }
+}
+
+Node.js v18.18.2
