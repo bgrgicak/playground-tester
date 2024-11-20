@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "news-magazine-and-blog-elements"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
