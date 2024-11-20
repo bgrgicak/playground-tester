@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "isimpledesign-amazon-s3-music-player-plugin"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
