@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "n0tice-for-wordpress"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
