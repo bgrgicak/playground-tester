@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "nemesis-all-in-one"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
