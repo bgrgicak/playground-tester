@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ithoughts-html-snippets"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
