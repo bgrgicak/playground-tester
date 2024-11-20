@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "n-media-wp-simple-quiz"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
