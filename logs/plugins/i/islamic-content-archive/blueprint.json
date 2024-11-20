@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "islamic-content-archive"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
