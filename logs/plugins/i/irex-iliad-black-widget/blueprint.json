@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "irex-iliad-black-widget"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
