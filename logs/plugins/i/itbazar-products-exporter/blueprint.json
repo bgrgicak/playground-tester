@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "itbazar-products-exporter"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
