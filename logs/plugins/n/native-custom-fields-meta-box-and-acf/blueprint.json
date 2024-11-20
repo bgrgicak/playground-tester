@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "native-custom-fields-meta-box-and-acf"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
