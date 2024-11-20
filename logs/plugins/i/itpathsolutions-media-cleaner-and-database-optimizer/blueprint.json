@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "itpathsolutions-media-cleaner-and-database-optimizer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
