@@ -4,7 +4,7 @@
 # The blueprint will install the item and any required dependencies.
 #
 # Usage:
-#   ./scripts/generate-blueprint.sh --item-path <path> --plugin|--theme
+#   ./scripts/lib/blueprints/generate-blueprint.sh --item-path <path> --plugin|--theme
 #
 # --item-path <path> Path to the item.
 # --plugin|--theme Type of the item. Either "plugin" or "theme".

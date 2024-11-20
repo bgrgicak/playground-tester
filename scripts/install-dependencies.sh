@@ -10,7 +10,7 @@
 
 source "./scripts/pre-script-run.sh"
 
-NVM_DIR="$(pwd)/.nvm"
+NVM_DIR="$PLAYGROUND_TESTER_PATH/.nvm"
 
 if [ -d "$NVM_DIR" ]; then
     source "$NVM_DIR/nvm.sh"

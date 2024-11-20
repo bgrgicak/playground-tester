@@ -12,7 +12,7 @@
 # The script also sources the NVM configuration and adds support for the --help flag.
 
 if [ -z "$PLAYGROUND_TESTER_PATH" ]; then
-    PLAYGROUND_TESTER_PATH=$(cd "$(dirname "$0")/.." && pwd)
+    PLAYGROUND_TESTER_PATH=$(pwd | sed 's/\(playground-tester\).*/\1/')
 fi
 if [ -z "$PLAYGROUND_CLI_PATH" ]; then
     PLAYGROUND_CLI_PATH="$PLAYGROUND_TESTER_PATH/node_modules/@wp-playground/cli/cli.js"

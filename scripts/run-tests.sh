@@ -49,13 +49,13 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Build base blueprint used for all tests
-blueprint_path=$(./scripts/generate-blueprint.sh --item-path $item_path --"$test_type")
+blueprint_path=$(./scripts/lib/blueprints/generate-blueprint.sh --item-path $item_path --"$test_type")
 if [ $? -gt 0 ]; then
     echo "Failed to generate blueprint with exit code $?"
     exit 1
 fi
 
-for test in $(ls tests/*.sh); do
+for test in $(ls scripts/lib/playground-tests/*.sh); do
     item_name=$(basename $item_path)
     test_name=$(basename $test .sh)
     log_folder="$item_path/$test_name"
