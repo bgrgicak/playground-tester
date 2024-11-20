@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iso-2-utf-data-converter"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
