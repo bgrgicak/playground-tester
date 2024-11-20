@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ithabich-limit-registration-by-email-domain"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
