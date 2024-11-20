@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-user-email-set-up"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
