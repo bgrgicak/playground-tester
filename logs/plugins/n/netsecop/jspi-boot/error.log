@@ -1,0 +1,15 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:110
+          throw new Error(`${pe}: ${c}`, {
+                ^
+
+Error: Could not read "/wordpress/wp-content/debug.log": There is no such file or directory OR the parent directory does not exist.
+    at i.value (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:110:17)
+    at m.readFileAsText (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:126:39)
+    at i.value (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:105:18)
+    at PHP.readFileAsText (file:///Users/bero/Projects/playground-tester/node_modules/@php-wasm/universal/index.js:1049:22)
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:764)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: ErrnoError { name: 'ErrnoError', errno: 44 }
+}
+
+Node.js v23.2.0
