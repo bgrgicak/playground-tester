@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-floating-cart-for-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
