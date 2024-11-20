@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ned-interferer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
