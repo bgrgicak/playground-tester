@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "navthemes-export-single-order-data-woo-commerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
