@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-dev-livesmart-video-chat"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
