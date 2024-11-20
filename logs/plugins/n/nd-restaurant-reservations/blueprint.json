@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "nd-restaurant-reservations"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
