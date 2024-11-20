@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ivycat-ajax-slider"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
