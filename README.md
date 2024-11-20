@@ -85,5 +85,5 @@ while sleep 2; do ./scripts/run-batch.sh --plugins --batch-size 100; done
 ### Run unit tests
 
 ```
-./scripts/tests/test.sh
+./scripts/unit-tests/test.sh
 ```

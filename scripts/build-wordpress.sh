@@ -29,7 +29,6 @@ rm -rf "$wordpress_path/wordpress" "$zip_path"
 node "$PLAYGROUND_CLI_PATH" build-snapshot \
     --quiet \
     --wp="https://wordpress.org/latest.zip" \
-    --outfile="$zip_path"
-unzip "$zip_path" -d "$wordpress_path"
+    --outfile="$zip_path" > /dev/null
+unzip -qq "$zip_path" -d "$wordpress_path" > /dev/null 2>&1
 rm "$zip_path"
-echo "$wordpress_path/wordpress"

@@ -31,3 +31,6 @@ nvm install $(cat .nvmrc)
 
 # Install dependencies
 npm install
+
+# Build WordPress
+./scripts/build-wordpress.sh --output ./temp
