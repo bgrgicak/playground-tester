@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "isd-wordpress-rss-feed-plugin"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
