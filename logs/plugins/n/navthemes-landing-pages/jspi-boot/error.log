@@ -1,0 +1,53 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $post_id declared before required parameter $field is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/api/api-value.php on line 270
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $value declared before required parameter $field is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/api/api-value.php on line 398
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $post_id declared before required parameter $field is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/api/api-value.php on line 398
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $post_id declared before required parameter $field is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/api/api-value.php on line 483
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$fields is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/fields.php on line 136
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$locations is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/locations.php on line 130
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $key declared before required parameter $data is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/cache.php on line 399
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$cache is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/cache.php on line 281
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$deprecated is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/deprecated.php on line 228
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$json is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/json.php on line 185
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$local is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/local.php on line 884
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_loop::$loops is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/loop.php on line 26
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$loop is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/loop.php on line 270
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$revisions is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/revisions.php on line 413
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_validation::$errors is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/validation.php on line 26
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$validation is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/validation.php on line 212
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Optional parameter $key declared before required parameter $value is implicitly treated as a required parameter in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/ajax/class-acf-ajax.php on line 99
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_customizer::$preview_values is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-customizer.php on line 26
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_customizer::$preview_fields is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-customizer.php on line 27
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_customizer::$preview_errors is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-customizer.php on line 28
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$form_front is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-front.php on line 664
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_widget::$preview_values is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-widget.php on line 34
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_widget::$preview_reference is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-widget.php on line 35
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property acf_form_widget::$preview_errors is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/forms/form-widget.php on line 36
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$admin is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/admin/admin.php on line 190
+[20-Nov-2024 02:49:09 UTC] PHP Deprecated:  Creation of dynamic property ACF::$admin_tools is deprecated in /wordpress/wp-content/plugins/navthemes-landing-pages/admin/includes/admin/admin-tools.php on line 289
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"navthemes-landing-pages"},"options":{"activate":true}}) : Plugin /wordpress/wp-content/plugins/navthemes-landing-pages could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: Error: Plugin /wordpress/wp-content/plugins/navthemes-landing-pages could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+        at gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:67:24)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166)
+  }
+}
+
+Node.js v23.2.0
