@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "navilytics-heatmaps-and-user-recordings"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
