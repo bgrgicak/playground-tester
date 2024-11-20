@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "never-gonna-give-you-up"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
