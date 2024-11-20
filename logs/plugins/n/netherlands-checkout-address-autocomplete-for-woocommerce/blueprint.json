@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "netherlands-checkout-address-autocomplete-for-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
