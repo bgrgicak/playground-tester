@@ -33,35 +33,23 @@ fi
 
 # check if path is in a submodule
 if [[ "$add" == logs* ]]; then
-  # Navigate to the logs submodule directory
-  cd logs || exit 1
-
-  # remove logs/ from the path
-  add="${add#logs/}"
-
-  if [ -n "$add" ] && [ -n "$message" ]; then
-    # Add the specified files/directories
-    git add "$add"
-
-    # Check if there are changes to commit
-    if ! git diff --staged --quiet; then
-      # Commit the changes
-      git commit --allow-empty -m "$message" --quiet
-
-      # Push if requested
-      if [ "$push" = true ]; then
-        git push --quiet
-      fi
-    fi
-  fi
-else
-  git pull --rebase --quiet
-
-  if [ -n "$message" ] && [ -n "$add" ]; then
-      git add -A $add
-      git commit --allow-empty -m "$message" --quiet
-  fi
+  # Navigate to the logs submodule directory and commit the changes from there
+  push_flag=""
   if $push; then
-      git push --quiet
+    push_flag="--push"
   fi
+  cd ./logs
+  . ../scripts/save-changes.sh --add "${add#logs/}" --message "$message" $push_flag
+  cd ../
+  exit 0
+fi
+
+if [ -n "$message" ] && [ -n "$add" ]; then
+  git pull --rebase --quiet
+  git add -A $add
+  git commit --allow-empty -m "$message" --quiet
+fi
+
+if $push; then
+  git push --recurse-submodules=on-demand --quiet
 fi
