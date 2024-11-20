@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "nestplayer-mini-media-player"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
