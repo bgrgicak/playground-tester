@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-recent-posts-select-categories-by-thao-marky"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
