@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ipgp-ip-address-lookup-widget"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
