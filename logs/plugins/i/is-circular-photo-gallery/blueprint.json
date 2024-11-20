@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "is-circular-photo-gallery"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
