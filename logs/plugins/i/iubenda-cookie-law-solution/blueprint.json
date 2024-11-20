@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iubenda-cookie-law-solution"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
