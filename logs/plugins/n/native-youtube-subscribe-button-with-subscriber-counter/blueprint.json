@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "native-youtube-subscribe-button-with-subscriber-counter"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
