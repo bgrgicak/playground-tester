@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iweblab-hosting-manager"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
