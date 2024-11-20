@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ip-loc8"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
