@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "national-debt-clock-by-eth"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
