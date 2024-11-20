@@ -1,6 +1,7 @@
 #! /bin/bash
 #
 # Save changes to git
+# If the path is in the logs submodule, it will commit the changes to the submodule.
 #
 # Usage: ./scripts/save-changes.sh --src <path> --message <message> --push
 #
@@ -30,27 +31,37 @@ if [ "$PLAYGROUND_TESTER_DISABLE_GIT" = true ]; then
   exit 0
 fi
 
-# Update main repository and submodules
-git pull --rebase --quiet
-git submodule update --init --recursive --quiet
+# check if path is in a submodule
+if [[ "$add" == logs* ]]; then
+  # Navigate to the logs submodule directory
+  cd logs || exit 1
 
-if [ -n "$message" ] && [ -n "$add" ]; then
-    # Add all changes (including new files) in the specified path
-    git add -A $add
+  # remove logs/ from the path
+  add="${add#logs/}"
 
-    # Check if any of the changes are in submodules
-    if git status --porcelain | grep -q '^M.*\.\.'; then
-        # If there are submodule changes, stage them but only in the specified path
-        git add -u $add
+  if [ -n "$add" ] && [ -n "$message" ]; then
+    # Add the specified files/directories
+    git add "$add"
+
+    # Check if there are changes to commit
+    if ! git diff --staged --quiet; then
+      # Commit the changes
+      git commit --allow-empty -m "$message" --quiet
+
+      # Push if requested
+      if [ "$push" = true ]; then
+        git push --quiet
+      fi
     fi
+  fi
+else
+  git pull --rebase --quiet
 
-    git commit --allow-empty -m "$message" --quiet
-fi
-
-if $push; then
-    # Push changes in the main repository
-    git push --quiet
-
-    # Push changes in submodules if any
-    git submodule foreach 'git push --quiet || :'
+  if [ -n "$message" ] && [ -n "$add" ]; then
+      git add -A $add
+      git commit --allow-empty -m "$message" --quiet
+  fi
+  if $push; then
+      git push --quiet
+  fi
 fi
