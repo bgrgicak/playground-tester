@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "navayan-tinymce-pretty-code"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
