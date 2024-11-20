@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iqcalc-covid-19-isolation-and-quarantine-calculator"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
