@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "netforum-directory-with-importer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
