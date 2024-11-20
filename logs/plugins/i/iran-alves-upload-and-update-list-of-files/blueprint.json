@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "iran-alves-upload-and-update-list-of-files"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
