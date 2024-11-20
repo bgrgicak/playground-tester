@@ -1,0 +1,50 @@
+file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20
+`)},constants:R,phpIniEntries:{"openssl.cafile":"/internal/shared/ca-bundle.crt",allow_url_fopen:"1",disable_functions:""},hooks:{async beforeWordPressFiles(h){t.mountBeforeInstall&&p(h,t.mountBeforeInstall)}}});const v=await s.getPrimaryPhp();try{if(n&&!t.mountBeforeInstall&&g.writeFileSync(f,await q(v,"/wordpress")),t.mount&&p(v,t.mount),d=!0,u){const{php:h,reap:m}=await s.processManager.acquirePHPInstance();try{c.log("Running the Blueprint..."),await x(u,h),c.log("Finished running the blueprint")}finally{m()}}a==="build-snapshot"?(await r(t.outfile),c.log(`WordPress exported to ${t.outfile}`),process.exit(0)):a==="run-blueprint"?(c.log("Blueprint executed"),process.exit(0)):c.log(`WordPress is running on ${l}`)}catch(h){if(!t.debug)throw h;const m=v.readFileAsText(D);throw new Error(m,{cause:h})}},async handleRequest(o){return d?await s.request(o):I.forHttpCode(502,"WordPress is not ready yet")}})}Q();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: [20-Nov-2024 01:28:38 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>SELECT * FROM wp_ithink_logistics WHERE id = '1'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: SELECT * FROM wp_ithink_logistics WHERE id = :param0  | parameters: 1</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 3786 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 no such table: wp_ithink_logistics.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /internal/shared/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /wordpress/wp-includes/class-wpdb.php(3060): WP_SQLite_DB->query('SELECT * FROM w...')
+#2 /wordpress/wp-content/plugins/ithink-logistics-ecommerce-shipping-in-india/ithink-plugin.php(25): wpdb->get_row('SELECT * FROM w...')
+#3 /wordpress/wp-admin/includes/plugin.php(2387): include_once('/wordpress/wp-c...')
+#4 /wordpress/wp-admin/includes/plugin.php(673): plugin_sandbox_scrape('ithink-logistic...')
+#5 /internal/eval.php(20): activate_plugin('ithink-logistic...')
+#6 {main}</pre>
+ for query SELECT * FROM wp_ithink_logistics WHERE id = '1' made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/ithink-logistics-ecommerce-shipping-in-india/ithink-plugin.php'), WP_SQLite_DB->query, WP_SQLite_DB->print_error
+
+    at Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:788)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+  [cause]: Error: Error when executing the blueprint step #0 ({"step":"installPlugin","pluginData":{"resource":"wordpress.org/plugins","slug":"ithink-logistics-ecommerce-shipping-in-india"},"options":{"activate":true}}) : Plugin /wordpress/wp-content/plugins/ithink-logistics-ecommerce-shipping-in-india could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+      at Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12099:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+      at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+      at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166) {
+    [cause]: Error: Plugin /wordpress/wp-content/plugins/ithink-logistics-ecommerce-shipping-in-india could not be activated – WordPress exited with no error. Sometimes, when $_SERVER or site options are not configured correctly, WordPress exits early with a 301 redirect. Inspect the "debug" logs in the console for more details
+        at gr (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:67:24)
+        at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async Object.at [as installPlugin] (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:877:42)
+        at async d (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12165:30)
+        at async Object.run (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12096:23)
+        at async Qt (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/blueprints/index.js:12200:3)
+        at async Object.onBind (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:20:453)
+        at async j (file:///Users/bero/Projects/playground-tester/node_modules/@wp-playground/cli/cli.js:1:1166)
+  }
+}
+
+Node.js v23.2.0
