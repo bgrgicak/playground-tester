@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-facebook-pixel-with-standard-events-for-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
