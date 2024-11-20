@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "ippanel-sms-pro-for-gravity-forms"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
