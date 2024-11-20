@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "new-post-automatic-xml-backup-by-email"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
