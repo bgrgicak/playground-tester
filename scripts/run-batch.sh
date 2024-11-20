@@ -71,9 +71,9 @@ run_batch() {
     for folder in $folders; do
         touch "$folder/error.json"
         folder_name=$(basename "$folder")
-        ./scripts/save-changes.sh --add $folder --message "⏳ $(basename "$folder") is being tested"
+        ./scripts/save-changes.sh --add $folder --submodule logs --message "⏳ $(basename "$folder") is being tested"
     done
-    ./scripts/save-changes.sh --push
+    ./scripts/save-changes.sh --submodule logs --push
 
     for folder in $folders; do
         ./scripts/run-tests.sh --$test_type $folder --wordpress "$wordpress_path"
@@ -85,9 +85,9 @@ run_batch() {
         else
           message="✅ $folder_name has no errors"
         fi
-        ./scripts/save-changes.sh --add "$folder" --message "$message"
+        ./scripts/save-changes.sh --add "$folder" --submodule logs --message "$message"
     done
-    ./scripts/save-changes.sh --push
+    ./scripts/save-changes.sh --submodule logs --push
 }
 
 download_latest_wordpress
