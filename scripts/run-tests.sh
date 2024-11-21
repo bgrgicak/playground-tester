@@ -13,6 +13,8 @@
 #   --wordpress <path> Path to the WordPress installation used for testing.
 
 source "./scripts/pre-script-run.sh"
+source "./scripts/lib/log-parser/analyze-json-logs.sh"
+source "./scripts/lib/log-parser/parse-raw-logs.sh"
 
 test_type=""
 item_path=""
@@ -75,15 +77,19 @@ for test in $(ls scripts/lib/playground-tests/*.sh); do
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
     if [ -z "$result" ]; then
-        echo -e "\033[32m✓\033[0m $item_name passed $test_name"
         echo "" > "$log_file"
-        # Add empty error.json file to indicate that the test passed
         echo "[]" > "$log_folder/error.json"
     else
-        echo -e "\033[31m✗\033[0m $item_name failed $test_name"
         echo "$result" > "$log_file"
-        # parse results
-        ./scripts/parse-raw-logs.sh --test-name $test_name "--$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
+        parse_raw_logs --test-name $test_name --"$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
+
+    fi
+
+    fatal_errors=$(get_number_of_fatal_errors "$log_folder/error.json")
+    if [ $fatal_errors -gt 0 ]; then
+        echo -e "\033[31m✗\033[0m $item_name failed $test_name"
+    else
+        echo -e "\033[32m✓\033[0m $item_name passed $test_name"
     fi
 
     rm -rf "$temp_folder"
@@ -92,8 +98,4 @@ done
 # get all error.json files and merge them into a single file
 jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
 
-failed_tests=0
-if [ -f "$item_path/error.json" ]; then
-    failed_tests=$(cat "$item_path/error.json" | jq 'length')
-fi
-exit $failed_tests
+exit $(get_number_of_fatal_errors "$item_path/error.json")
