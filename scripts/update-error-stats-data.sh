@@ -15,44 +15,38 @@
 # Usage: ./scripts/update-error-stats.sh
 
 source ./scripts/pre-script-run.sh
+source ./scripts/lib/log-parser/analyze-json-logs.sh
 
-stats_dir="data"
-stats_file="$stats_dir/error-stats.json"
+playground_stats_dir="data"
+playground_stats_file="$playground_stats_dir/error-stats.json"
 
-add_error_stats_files_if_missing() {
-    if [ ! -d "$stats_dir" ]; then
+add_error_stat_files_if_missing() {
+    if [ ! -d "$playground_stats_dir" ]; then
         echo "Creating stats directory..."
-        mkdir "$stats_dir"
+        mkdir "$playground_stats_dir"
     fi
 
-    if [ ! -f "$stats_file" ]; then
+    if [ ! -f "$playground_stats_file" ]; then
         echo "Adding error rate stats files if missing..."
-        echo "{}" > "$stats_file"
+        echo "{}" > "$playground_stats_file"
     fi
-}
-
-get_log_files_count() {
-    item_type="$1"
-    # Remove first parameter from $@ so we can pass all additional parameters to find
-    shift
-    find logs/$item_type/*/ -name "error.json" -mindepth 2 -maxdepth 2 -type f "$@" | wc -l
 }
 
 update_error_stats() {
     echo "Updating error rate stats..."
 
-    plugins_tested=$(get_log_files_count plugins)
-    themes_tested=$(get_log_files_count themes)
+    local plugins_tested=$(get_log_files plugins | wc -l)
+    local themes_tested=$(get_log_files themes | wc -l)
 
     # Files without errors contain only [] and a newline.
     # We can check if the file has more than 3 characters to check if it has errors.
-    plugins_with_errors=$(get_log_files_count plugins -size +3c)
-    themes_with_errors=$(get_log_files_count themes -size +3c)
+    local plugins_with_errors=$(get_log_files plugins -size +3c | wc -l)
+    local themes_with_errors=$(get_log_files themes -size +3c | wc -l)
 
     # Create new entry using date as key, but keep full timestamp in value
-    date_key=$(date -u +"%Y-%m-%d")
-    timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-    new_entry=$(jq -n \
+    local date_key=$(date -u +"%Y-%m-%d")
+    local timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+    local new_entry=$(jq -n \
         --arg date "$date_key" \
         --arg timestamp "$timestamp" \
         --arg plugins_tested "$plugins_tested" \
@@ -70,9 +64,9 @@ update_error_stats() {
         }')
 
     # Create temp file in same directory as stats file
-    temp_file="${stats_file}.tmp.$$"
-    jq --argjson entry "$new_entry" '. * $entry' "$stats_file" > "$temp_file" && mv "$temp_file" "$stats_file"
+    local temp_file="${playground_stats_file}.tmp.$$"
+    jq --argjson entry "$new_entry" '. * $entry' "$playground_stats_file" > "$temp_file" && mv "$temp_file" "$playground_stats_file"
 }
 
-add_error_stats_files_if_missing
+add_error_stat_files_if_missing
 update_error_stats
