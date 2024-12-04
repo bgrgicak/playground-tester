@@ -32,9 +32,5 @@ nvm install $(cat .nvmrc)
 # Install dependencies
 npm install
 
-pwd
-
-ls -la "$PLAYGROUND_CLI_PATH"
-
 # Build WordPress
 ./scripts/build-wordpress.sh --output ./temp
