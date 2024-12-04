@@ -32,5 +32,13 @@ nvm install $(cat .nvmrc)
 # Install dependencies
 npm install
 
+ls -la
+
+ls -la node_modules
+
+ls -la node_modules/@wp-playground/
+
+ls -la node_modules/@wp-playground/cli/
+
 # Build WordPress
 ./scripts/build-wordpress.sh --output ./temp
