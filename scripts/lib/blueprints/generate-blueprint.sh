@@ -63,9 +63,9 @@ fi
 # Create blueprint with preferred PHP version
 blueprint=$(jq -n --arg php_version "$php_version" '
     {
-        preferredVersions: {
-            php: $php_version,
-            wp: "latest"
+        "preferredVersions": {
+            "php": $php_version,
+            "wp": "latest"
         }
     }
 ')
@@ -85,15 +85,15 @@ elif [ "$item_type" = "plugins" ]; then
     # Create plugin steps JSON and merge with existing blueprint
     plugin_steps=$(jq -n --arg plugins "$(printf '%s\n' "${plugins[@]}")" '
         {
-            steps: (
+            "steps": (
                 $plugins | split("\n") | map({
-                    step: "installPlugin",
-                    pluginData: {
-                        resource: "wordpress.org/plugins",
-                        slug: .
+                    "step": "installPlugin",
+                    "pluginData": {
+                        "resource": "wordpress.org/plugins",
+                        "slug": .
                     },
-                    options: {
-                        activate: true
+                    "options": {
+                        "activate": true
                     }
                 })
             )
@@ -113,15 +113,15 @@ elif [ "$item_type" = "themes" ]; then
     # Create theme steps JSON and merge with existing blueprint
     theme_steps=$(jq -n --arg themes "$(printf '%s\n' "${themes[@]}")" '
         {
-            steps: (
+            "steps": (
                 $themes | split("\n") | map({
-                    step: "installTheme",
-                    themeData: {
-                        resource: "wordpress.org/themes",
-                        slug: .
+                    "step": "installTheme",
+                    "themeData": {
+                        "resource": "wordpress.org/themes",
+                        "slug": .
                     },
-                    options: {
-                        activate: true
+                    "options": {
+                        "activate": true
                     }
                 })
             )

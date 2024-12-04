@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## TODO: Replace real plugin and theme with test ones
+
 # Source helper functions
 source "$(dirname "$0")/common-test-functions.sh"
 

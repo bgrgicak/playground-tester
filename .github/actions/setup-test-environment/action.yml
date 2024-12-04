@@ -1,0 +1,24 @@
+name: Setup Node Environment
+description: Sets up Node.js environment using .nvmrc
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Configure Git
+      shell: bash
+      run: |
+        git config --global user.name "botbero"
+        git config --global user.email "botbero@users.noreply.github.com"
+
+    - name: Set Node version
+      shell: bash
+      run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+
+    - name: Install Dependencies
+      shell: bash
+      run: ./scripts/install-dependencies.sh

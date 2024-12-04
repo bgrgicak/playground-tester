@@ -9,15 +9,13 @@ normalize_string() {
 }
 
 validate_output() {
-    local expected="$1"
-    local actual="$2"
-    local test_name="$3"
+    local test_name="$1"
+    local expected="$2"
+    local actual="$3"
 
     # Normalize both strings using the new function
     expected=$(normalize_string "$expected")
     actual=$(normalize_string "$actual")
-
-    echo "Validating output for test: $test_name"
 
     if [ "$expected" = "$actual" ]; then
         echo "✅ Test passed: $test_name"
@@ -35,7 +33,6 @@ run_test() {
     local script_path="$2"
     local expected_output="$3"
 
-    echo "Running test: $test_name"
     local actual_output=$(. $script_path)
-    validate_output "$expected_output" "$actual_output" "$test_name"
+    validate_output "$test_name" "$expected_output" "$actual_output"
 }

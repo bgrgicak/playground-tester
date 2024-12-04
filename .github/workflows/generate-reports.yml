@@ -1,0 +1,19 @@
+name: Generate reports
+
+on:
+  # schedule:
+    # - cron: '0 * * * *'  # Run every hour at minute 0
+  workflow_dispatch:
+
+jobs:
+
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Run generate-reports.sh
+        run: ./scripts/generate-reports.sh
