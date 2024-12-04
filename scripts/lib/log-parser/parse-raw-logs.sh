@@ -87,16 +87,16 @@ parse_raw_logs() {
     local first_entry=true
     jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type "$item_type" --arg item_name "$item_name" '
     {
-        filename: $input,
-        plugin: ($input | split("/")[-1]),
-        content: (
+        "filename": $input,
+        "plugin": ($input | split("/")[-1]),
+        "content": (
             split("\n") |
             reduce .[] as $line (
                 [];
                 if ($line | test("^\\[[0-9]{2}-[A-Za-z]{3}-[0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2} UTC\\]")) then
                     . + [{
-                        message: "",
-                        level: (
+                        "message": "",
+                        "level": (
                             if ($line | test("^\\[[^\\]]+\\]\\s*PHP Fatal error")) then
                                 "FATAL"
                             elif ($line | test("^\\[[^\\]]+\\]\\s*PHP Warning")) then
@@ -117,7 +117,7 @@ parse_raw_logs() {
                                 "INFO"
                             end
                         ),
-                        type: (
+                        "type": (
                             if ($line | test("^\\[[^\\]]+\\]\\s*WordPress database")) then
                                 "SQL"
                             elif ($line | test("^\\[[^\\]]+\\]\\s*PHP")) then
@@ -126,20 +126,20 @@ parse_raw_logs() {
                                 "OTHER"
                             end
                         ),
-                        test: $test_name,
-                        $item_type: $item_name,
-                        details: $line,
-                        log: $input
+                        "test": $test_name,
+                        ($item_type): $item_name,
+                        "details": $line,
+                        "log": $input
                     }]
                 elif ($line | test("^file:///.*\\.js:[0-9]+")) then
                     . + [{
-                        message: "",
-                        level: "ERROR",
-                        type: "PLAYGROUND",
-                        test: $test_name,
-                        $item_type: $item_name,
-                        details: $line,
-                        log: $input
+                        "message": "",
+                        "level": "ERROR",
+                        "type": "PLAYGROUND",
+                        "test": $test_name,
+                        ($item_type): $item_name,
+                        "details": $line,
+                        "log": $input
                     }]
                 elif length > 0 then
                     .[:-1] + [(last | .details += (if .details == "" then "" else "\n" end) + $line)]
