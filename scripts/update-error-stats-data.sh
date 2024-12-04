@@ -55,11 +55,11 @@ update_error_stats() {
         --arg themes_with_errors "$themes_with_errors" \
         '{
             ($date): {
-                timestamp: $timestamp,
-                plugins_tested: ($plugins_tested|tonumber),
-                themes_tested: ($themes_tested|tonumber),
-                plugins_with_errors: ($plugins_with_errors|tonumber),
-                themes_with_errors: ($themes_with_errors|tonumber),
+                "timestamp": $timestamp,
+                "plugins_tested": ($plugins_tested|tonumber),
+                "themes_tested": ($themes_tested|tonumber),
+                "plugins_with_errors": ($plugins_with_errors|tonumber),
+                "themes_with_errors": ($themes_with_errors|tonumber),
             }
         }')
 

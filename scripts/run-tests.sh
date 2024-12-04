@@ -54,6 +54,7 @@ done
 blueprint_path=$(./scripts/lib/blueprints/generate-blueprint.sh --item-path $item_path --"$test_type")
 if [ $? -gt 0 ]; then
     echo "Failed to generate blueprint with exit code $?"
+    echo "Error: $blueprint_path"
     exit 1
 fi
 
