@@ -33,7 +33,7 @@ php_fatal_test() {
         "$(get_number_of_fatal_errors $temp_file)"
     validate_output "A PHP error prefixed with 'Error:' should be parsed as a PHP error" \
         "1" \
-        "$(get_errors_by_level $temp_file "DEPRECATED" | jq 'length')"
+        "$(get_errors_by_level "DEPRECATED" $temp_file | jq 'length')"
 }
 
 # Run the tests

@@ -20,14 +20,18 @@ prepare_log_file() {
 
     # Remove the line that starts with "Node.js v"
     # This is output by the Playground CLI when it runs the tests
-    sed -i '' '/^Node.js v/d' $temp_file
+    sed -i.bak '/^Node.js v/d' $temp_file
 
     # If there is a "Error: " string before the start of a PHP error,
-    # move the error message to a new line
-    sed -i '\n' '/^Error: \[[0-9][0-9]-[A-Za-z][A-Za-z][A-Za-z]-[0-9][0-9][0-9][0-9] [0-9][0-9]:[0-9][0-9]:[0-9][0-9] UTC\]/s/^Error: //' $temp_file
+    # remove the "Error: " string
+    sed -i.bak '/^Error: \[[0-9][0-9]-[A-Za-z][A-Za-z][A-Za-z]-[0-9][0-9][0-9][0-9] [0-9][0-9]:[0-9][0-9]:[0-9][0-9] UTC\]/s/^Error: //' $temp_file
+
+    # Remove backup files created by sed
+    rm "${temp_file}.bak"
 
     cat $temp_file
 }
+
 parse_raw_logs() {
     local test_name=""
     local item_type=""
