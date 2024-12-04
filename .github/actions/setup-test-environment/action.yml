@@ -16,13 +16,6 @@ runs:
     - name: Set Node version
       shell: bash
       run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
-      id: nvm
 
-    - name: Install Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-
-    - name: Install dependencies
-      shell: bash
-      run: npm install
+    - name: Install Dependencies
+      run: ./scripts/install-dependencies.sh
