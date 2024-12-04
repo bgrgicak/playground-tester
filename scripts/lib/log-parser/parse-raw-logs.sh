@@ -134,7 +134,7 @@ parse_raw_logs() {
                 elif ($line | test("^file:///.*\\.js:[0-9]+")) then
                     . + [{
                         "message": "",
-                        "level": "ERROR",
+                        "level": "FATAL",
                         "type": "PLAYGROUND",
                         "test": $test_name,
                         ($item_type): $item_name,
