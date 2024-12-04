@@ -18,4 +18,5 @@ runs:
       run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
 
     - name: Install Dependencies
+      shell: bash
       run: ./scripts/install-dependencies.sh
