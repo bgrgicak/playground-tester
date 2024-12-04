@@ -28,18 +28,10 @@ get_errors_by_level() {
     cat "$log_file" | jq '[.[] | select(.level == "'"$level"'")]'
 }
 
-# Get all fatal errors from the JSON log file
+# Get the number of errors of a given level from the JSON log file
 #
 # Usage:
-#   get_fatal_errors <log-file>
-get_fatal_errors() {
-    get_errors_by_level "FATAL" "$1"
-}
-
-# Get the number of fatal errors from the JSON log file
-#
-# Usage:
-#   get_number_of_fatal_errors <log-file>
-get_number_of_fatal_errors() {
-    echo "$(get_fatal_errors "$1" | jq 'length')"
+#   get_number_of_errors_by_level <level> <log-file>
+get_number_of_errors_by_level() {
+    echo "$(get_errors_by_level "$1" "$2" | jq 'length')"
 }

@@ -58,7 +58,7 @@ if [ $? -gt 0 ]; then
     exit 1
 fi
 
-for test in $(ls scripts/lib/playground-tests/*.sh); do
+for test in scripts/lib/playground-tests/*.sh; do
     item_name=$(basename $item_path)
     test_name=$(basename $test .sh)
     log_folder="$item_path/$test_name"
@@ -86,7 +86,7 @@ for test in $(ls scripts/lib/playground-tests/*.sh); do
 
     fi
 
-    fatal_errors=$(get_number_of_fatal_errors "$log_folder/error.json")
+    fatal_errors=$(get_number_of_errors_by_level "FATAL" "$log_folder/error.json")
     if [ $fatal_errors -gt 0 ]; then
         echo -e "\033[31m✗\033[0m $item_name failed $test_name"
     else
@@ -99,4 +99,4 @@ done
 # get all error.json files and merge them into a single file
 jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
 
-exit $(get_number_of_fatal_errors "$item_path/error.json")
+exit $(get_number_of_errors_by_level "FATAL" "$item_path/error.json")
