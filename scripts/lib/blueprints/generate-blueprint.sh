@@ -63,9 +63,9 @@ fi
 # Create blueprint with preferred PHP version
 blueprint=$(jq -n --arg php_version "$php_version" '
     {
-        preferredVersions: {
-            php: $php_version,
-            wp: "latest"
+        "preferredVersions": {
+            "php": $php_version,
+            "wp": "latest"
         }
     }
 ')
