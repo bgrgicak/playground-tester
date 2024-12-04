@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      with:
+        submodules: recursive
 
       - name: Run update-error-stats-data.sh
         run: ./scripts/update-error-stats-data.sh
