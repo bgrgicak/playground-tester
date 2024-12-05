@@ -28,6 +28,7 @@ if [ -f "$blueprint_path" ]; then
     rm "$blueprint_path"
 fi
 
+
 slug=$(basename $item_path)
 
 item_info_path="./wp-public-data/$item_type/$slug.json"
