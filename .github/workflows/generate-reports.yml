@@ -15,5 +15,7 @@ jobs:
         with:
           submodules: recursive
 
+      - uses: ./.github/actions/setup-test-environment/
+
       - name: Run generate-reports.sh
         run: ./scripts/generate-reports.sh
