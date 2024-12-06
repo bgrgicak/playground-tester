@@ -6,11 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-
   run-scripts:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
