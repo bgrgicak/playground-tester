@@ -141,6 +141,26 @@ parse_raw_logs() {
                         "details": $line,
                         "log": $input
                     }]
+                elif ($line | test("^npm error")) then
+                    . + [{
+                        "message": "",
+                        "level": "FATAL",
+                        "type": "PLAYGROUND",
+                        "test": $test_name,
+                        ($item_type): $item_name,
+                        "details": $line,
+                        "log": $input
+                    }]
+                elif ($line | test("^Error when executing the blueprint step")) then
+                    . + [{
+                        "message": "",
+                        "level": "FATAL",
+                        "type": "PLAYGROUND",
+                        "test": $test_name,
+                        ($item_type): $item_name,
+                        "details": $line,
+                        "log": $input
+                    }]
                 elif length > 0 then
                     .[:-1] + [(last | .details += (if .details == "" then "" else "\n" end) + $line)]
                 else
