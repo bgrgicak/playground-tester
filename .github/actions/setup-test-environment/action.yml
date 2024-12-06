@@ -12,8 +12,13 @@ runs:
     - name: Configure Git
       shell: bash
       run: |
-        git config --global user.name "botbero"
-        git config --global user.email "botbero@users.noreply.github.com"
+        git config --global user.name "bgrgicak"
+        git config --global user.email "bgrgicak@users.noreply.github.com"
+
+    - name: Git Submodule Update
+      run: |
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
 
     - name: Set Node version
       shell: bash
