@@ -23,6 +23,12 @@ fi
 if [ -z "$PLAYGROUND_TESTER_DATA_PATH" ]; then
     PLAYGROUND_TESTER_DATA_PATH="$PLAYGROUND_TESTER_PATH/data"
 fi
+if [ -z "$PLAYGROUND_TESTER_TEMP_PATH" ]; then
+    PLAYGROUND_TESTER_TEMP_PATH="$PLAYGROUND_TESTER_PATH/temp"
+fi
+if [ -z "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
+    PLAYGROUND_TESTER_WORDPRESS_PATH="$PLAYGROUND_TESTER_TEMP_PATH/wordpress"
+fi
 
 # Set to true to disable git commits.
 # Useful for development and testing.

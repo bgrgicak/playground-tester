@@ -42,13 +42,11 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
-temp_path="$(pwd)/temp"
-wordpress_path="$temp_path/wordpress"
 download_latest_wordpress() {
-  if [ -d "$wordpress_path" ]; then
-    rm -rf "$wordpress_path"
+  if [ -d "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
+    rm -rf "$PLAYGROUND_TESTER_WORDPRESS_PATH"
   fi
-  ./scripts/build-wordpress.sh --output "$temp_path"
+  ./scripts/build-wordpress.sh --output "$PLAYGROUND_TESTER_TEMP_PATH"
 }
 
 run_batch() {
@@ -56,7 +54,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    folders=$(get_log_files "$item_type" \
+    local folders=$(get_log_files "$item_type" \
         -exec ls -ltr {} + |           # Sort numerically by time modified
         head -n "$batch_size" |      # Take only the number we need
         awk '{print $NF}' |          # Get the path (last field)
@@ -69,16 +67,16 @@ run_batch() {
 
     for folder in $folders; do
         touch "$folder/error.json"
-        folder_name=$(basename "$folder")
+        local folder_name=$(basename "$folder")
         save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
     done
     save_data --push
 
     for folder in $folders; do
-        ./scripts/run-tests.sh --$test_type $folder --wordpress "$wordpress_path"
-        failed_tests=$?
-        folder_name=$(basename "$folder")
-        message=""
+        ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH"
+        local failed_tests=$?
+        local folder_name=$(basename "$folder")
+        local message=""
         if [ $failed_tests -gt 0 ]; then
           message="❌ $folder_name has $failed_tests errors"
         else

@@ -50,6 +50,11 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+if [ ! -d "$wordpress_path" ]; then
+    echo "WordPress path does not exist: $wordpress_path"
+    exit 1
+fi
+
 # Build base blueprint used for all tests
 blueprint_path=$(./scripts/lib/blueprints/generate-blueprint.sh --item-path $item_path --"$test_type")
 if [ $? -gt 0 ]; then
