@@ -41,7 +41,8 @@ save_data() {
   fi
 
   if $push; then
-    git push --recurse-submodules=on-demand --quiet
+    # Always push to the 'main' branch
+    git push origin HEAD:refs/heads/main --recurse-submodules=on-demand --quiet
   fi
 
   cd ..
