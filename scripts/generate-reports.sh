@@ -12,6 +12,7 @@
 
 source "./scripts/pre-script-run.sh"
 source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/save-data.sh
 
 if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then
     mkdir "$PLAYGROUND_TESTER_DATA_PATH/reports"
@@ -73,11 +74,11 @@ function generate_playground_error_reports() {
 
 
 function push_reports() {
-    "scripts/save-changes.sh" --add "$PLAYGROUND_TESTER_DATA_PATH/reports" --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
+    save_data --add reports/ --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
 }
 
 update_stats
 generate_sql_error_reports
 generate_php_error_reports
 generate_playground_error_reports
-# push_reports
+push_reports

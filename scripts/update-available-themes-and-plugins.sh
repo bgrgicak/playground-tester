@@ -9,7 +9,9 @@
 #
 # If a item is removed from wp-public-data, it will be removed from the logs.
 
-source "./scripts/pre-script-run.sh"
+source ./scripts/pre-script-run.sh
+source ./scripts/save-data.sh
+
 
 echo "Updating the list of plugins and themes..."
 
@@ -82,4 +84,4 @@ update_list_of_items_to_test "wp-public-data/themes" "themes"
 remove_items_not_in_wp_public_data "plugins"
 remove_items_not_in_wp_public_data "themes"
 
-./scripts/save-changes.sh --add "$PLAYGROUND_TESTER_DATA_PATH/logs/." --submodule "$PLAYGROUND_TESTER_DATA_PATH/logs/" --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push
+save_data --add logs/. --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push

@@ -8,7 +8,8 @@
 # --plugins|--themes Type of items to test.
 
 source "./scripts/pre-script-run.sh"
-
+source ./scripts/save-data.sh
+source ./scripts/lib/log-parser/analyze-json-logs.sh
 batch_size=10
 item_type=""
 test_type=""
@@ -55,10 +56,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    #
-    # We want to check error.json files from the root of each item so we go 4 levels deep.
-    # There might be more error.json files in subfolders but we ignore them.
-    folders=$(find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -maxdepth 4 -mindepth 4 -type f -name "error.json" \
+    folders=$(get_log_files "$item_type" \
         -exec ls -ltr {} + |           # Sort numerically by time modified
         head -n "$batch_size" |      # Take only the number we need
         awk '{print $NF}' |          # Get the path (last field)
@@ -68,12 +66,13 @@ run_batch() {
     #
     # We will only update the error.json file to the current time to indicate that the item is being processed
     # without making any changes to the contents of the file and losing data.
+
     for folder in $folders; do
         touch "$folder/error.json"
         folder_name=$(basename "$folder")
-        ./scripts/save-changes.sh --add $folder --submodule logs --message "⏳ $(basename "$folder") is being tested"
+        save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
     done
-    ./scripts/save-changes.sh --submodule logs --push
+    save_data --push
 
     for folder in $folders; do
         ./scripts/run-tests.sh --$test_type $folder --wordpress "$wordpress_path"
@@ -85,9 +84,9 @@ run_batch() {
         else
           message="✅ $folder_name has no errors"
         fi
-        ./scripts/save-changes.sh --add "$folder" --submodule logs --message "$message"
+        save_data --add "$folder" --message "$message"
     done
-    ./scripts/save-changes.sh --submodule logs --push
+    save_data --push
 }
 
 download_latest_wordpress
