@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@wp-playground/cli": "^1.0.10"
+    "@wp-playground/cli": "^1.0.10",
+    "@wp-now/dec-2024": "npm:@wp-now/wp-now@0.1.74",
+    "@wp-now/dec-2023": "npm:@wp-now/wp-now@0.1.63"
   }
 }
