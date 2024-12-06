@@ -3,7 +3,9 @@
 source "./scripts/pre-script-run.sh"
 
 stop_wp_now() {
-    kill -SIGKILL $1
+    if [ -n "$1" ] && kill -0 "$1" 2>/dev/null; then
+        kill -SIGKILL "$1" > /dev/null 2>&1 || true
+    fi
 }
 
 print_wp_now_output() {
