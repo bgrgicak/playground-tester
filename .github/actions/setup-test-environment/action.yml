@@ -4,9 +4,6 @@ description: Sets up Node.js environment using .nvmrc
 runs:
   using: "composite"
   steps:
-    env:
-      GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
-
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
