@@ -15,9 +15,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.BOTBERO_TOKEN }}
           submodules: recursive
 
       - uses: ./.github/actions/setup-test-environment/
 
       - name: Run generate-reports.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
         run: ./scripts/generate-reports.sh
