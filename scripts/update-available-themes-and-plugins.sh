@@ -9,7 +9,9 @@
 #
 # If a item is removed from wp-public-data, it will be removed from the logs.
 
-source "./scripts/pre-script-run.sh"
+source ./scripts/pre-script-run.sh
+source ./scripts/save-data.sh
+
 
 echo "Updating the list of plugins and themes..."
 
@@ -47,7 +49,7 @@ update_list_of_items_to_test() {
     for item in $(ls "${src_dir}"); do
         item=$(echo $item | sed 's/.json//')
         first_letter=$(echo "${item:0:1}")
-        local log_dir="logs/${item_type}/${first_letter}/${item}"
+        local log_dir="$PLAYGROUND_TESTER_DATA_PATH/logs/${item_type}/${first_letter}/${item}"
 
         if [ ! -d "$log_dir" ]; then
             echo "Adding missing log files for ${item} to ${item_type}..."
@@ -65,12 +67,12 @@ remove_items_not_in_wp_public_data() {
 
     echo "Removing ${item_type} not in wp-public-data..."
 
-    for letter_dir in "logs/${item_type}"/*/ ; do
+    for letter_dir in "$PLAYGROUND_TESTER_DATA_PATH/logs/${item_type}"/*/ ; do
         for item_dir in "${letter_dir}"*/ ; do
             item=$(basename "${item_dir}")
             if [ ! -f "wp-public-data/${item_type}/${item}.json" ]; then
                 echo "Removing ${item} from ${item_type}..."
-                rm -rf "logs/${item_type}/${item:0:1}/${item}"
+                rm -rf "$PLAYGROUND_TESTER_DATA_PATH/logs/${item_type}/${item:0:1}/${item}"
             fi
         done
     done
@@ -82,4 +84,4 @@ update_list_of_items_to_test "wp-public-data/themes" "themes"
 remove_items_not_in_wp_public_data "plugins"
 remove_items_not_in_wp_public_data "themes"
 
-./scripts/save-changes.sh --add logs/. --submodule logs/ --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push
+save_data --add logs/. --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push

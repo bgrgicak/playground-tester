@@ -8,7 +8,8 @@
 # --plugins|--themes Type of items to test.
 
 source "./scripts/pre-script-run.sh"
-
+source ./scripts/save-data.sh
+source ./scripts/lib/log-parser/analyze-json-logs.sh
 batch_size=10
 item_type=""
 test_type=""
@@ -41,13 +42,11 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
-temp_path="$(pwd)/temp"
-wordpress_path="$temp_path/wordpress"
 download_latest_wordpress() {
-  if [ -d "$wordpress_path" ]; then
-    rm -rf "$wordpress_path"
+  if [ -d "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
+    rm -rf "$PLAYGROUND_TESTER_WORDPRESS_PATH"
   fi
-  ./scripts/build-wordpress.sh --output "$temp_path"
+  ./scripts/build-wordpress.sh --output "$PLAYGROUND_TESTER_TEMP_PATH"
 }
 
 run_batch() {
@@ -55,10 +54,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    #
-    # We want to check error.json files from the root of each item so we go 3 levels deep.
-    # There might be more error.json files in subfolders but we ignore them.
-    folders=$(find logs/$item_type/ -maxdepth 3 -mindepth 3 -type f -name "error.json" \
+    local folders=$(get_log_files "$item_type" \
         -exec ls -ltr {} + |           # Sort numerically by time modified
         head -n "$batch_size" |      # Take only the number we need
         awk '{print $NF}' |          # Get the path (last field)
@@ -68,26 +64,27 @@ run_batch() {
     #
     # We will only update the error.json file to the current time to indicate that the item is being processed
     # without making any changes to the contents of the file and losing data.
-    for folder in $folders; do
-        touch "$folder/error.json"
-        folder_name=$(basename "$folder")
-        ./scripts/save-changes.sh --add $folder --submodule logs --message "⏳ $(basename "$folder") is being tested"
-    done
-    ./scripts/save-changes.sh --submodule logs --push
 
     for folder in $folders; do
-        ./scripts/run-tests.sh --$test_type $folder --wordpress "$wordpress_path"
-        failed_tests=$?
-        folder_name=$(basename "$folder")
-        message=""
+        touch "$folder/error.json"
+        local folder_name=$(basename "$folder")
+        save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
+    done
+    save_data --push
+
+    for folder in $folders; do
+        ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH"
+        local failed_tests=$?
+        local folder_name=$(basename "$folder")
+        local message=""
         if [ $failed_tests -gt 0 ]; then
           message="❌ $folder_name has $failed_tests errors"
         else
           message="✅ $folder_name has no errors"
         fi
-        ./scripts/save-changes.sh --add "$folder" --submodule logs --message "$message"
+        save_data --add "$folder" --message "$message"
     done
-    ./scripts/save-changes.sh --submodule logs --push
+    save_data --push
 }
 
 download_latest_wordpress

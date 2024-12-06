@@ -1,6 +1,6 @@
 [submodule "wp-public-data"]
 	path = wp-public-data
 	url = https://github.com/dd32/wp-public-data
-[submodule "logs"]
-	path = logs
-	url = git@github.com:bgrgicak/playground-tester-logs.git
+[submodule "data"]
+	path = data
+	url = https://github.com/bgrgicak/Playground-compatibility-reports.git

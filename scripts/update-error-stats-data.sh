@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 # Update error stats from log data.
-# This script will update the `data/error-stats.json` file with the current error stats.
+# This script will update the `data/stats/error-stats.json` file with the current error stats.
 #
 # Each date will have the following stats:
 # - timestamp: The timestamp of the last log file processed.
@@ -17,7 +17,7 @@
 source ./scripts/pre-script-run.sh
 source ./scripts/lib/log-parser/analyze-json-logs.sh
 
-playground_stats_dir="data"
+playground_stats_dir="$PLAYGROUND_TESTER_DATA_PATH/stats"
 playground_stats_file="$playground_stats_dir/error-stats.json"
 
 add_error_stat_files_if_missing() {
@@ -40,8 +40,8 @@ update_error_stats() {
 
     # Files without errors contain only [] and a newline.
     # We can check if the file has more than 3 characters to check if it has errors.
-    local plugins_with_errors=$(get_log_files plugins -size +3c | wc -l)
-    local themes_with_errors=$(get_log_files themes -size +3c | wc -l)
+    local plugins_with_errors=$(get_log_files_with_errors plugins | wc -l)
+    local themes_with_errors=$(get_log_files_with_errors themes | wc -l)
 
     # Create new entry using date as key, but keep full timestamp in value
     local date_key=$(date -u +"%Y-%m-%d")

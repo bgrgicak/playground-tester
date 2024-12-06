@@ -15,7 +15,16 @@ get_log_files() {
     local item_type="$1"
     # Remove first parameter from $@ so we can pass all additional parameters to find
     shift
-    find logs/$item_type/*/ -name "error.json" -mindepth 2 -maxdepth 2 -type f "$@"
+    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -name "error.json" -mindepth 3 -maxdepth 3 -type f "$@"
+}
+
+# Get log files with errors
+# Usage:
+#   get_log_files_with_errors <item-type>
+get_log_files_with_errors() {
+    local item_type="$1"
+    shift
+    get_log_files "$item_type" -size +3c "$@"
 }
 
 # Get all errors of a given level from the JSON log file
@@ -25,7 +34,7 @@ get_log_files() {
 get_errors_by_level() {
     local level="$1"
     local log_file="$2"
-    cat "$log_file" | jq '[.[] | select(.level == "'"$level"'")]'
+    jq '[.[] | select(.level == "'"$level"'")]' "$log_file"
 }
 
 # Get the number of errors of a given level from the JSON log file
