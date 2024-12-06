@@ -16,6 +16,7 @@ runs:
         git config --global user.email "bgrgicak@users.noreply.github.com"
 
     - name: Git Submodule Update
+      shell: bash
       run: |
         git pull --recurse-submodules
         git submodule update --remote --recursive
