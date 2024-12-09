@@ -5,15 +5,18 @@ const baseURL =
   "http://127.0.0.1:5400/website-server/";
 
 export const playwrightConfig: PlaywrightTestConfig = {
-  testDir: "./e2e",
+  testDir: "./scripts/lib/playwright-tests/e2e",
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  retries: 3,
-  workers: 3,
+  retries: 2,
+  workers: 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["list"], ["json", { outputFile: "playwright-results.json" }]],
+  reporter: [
+    ["list"],
+    ["json", { outputFile: "playwright-report/playwright-results.json" }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

@@ -5,7 +5,8 @@ export class WebsitePage {
 
   // Wait for WordPress to load
   async waitForNestedIframes(page = this.page) {
-    await expect(
+    const slowExpect = expect.configure({ timeout: 300000 });
+    await slowExpect(
       page
         /* There are multiple viewports possible, so we need to select
 				   the one that is visible. */
@@ -14,9 +15,7 @@ export class WebsitePage {
         )
         .frameLocator("#wp")
         .locator("body")
-    ).not.toBeEmpty({
-      timeout: 120000,
-    });
+    ).not.toBeEmpty();
   }
 
   wordpress(page = this.page) {

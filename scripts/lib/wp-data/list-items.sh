@@ -16,7 +16,7 @@ list_top_n_items() {
 
   find "wp-public-data/$item_type" -name '*.json' -exec cat {} + | \
     jq -s '
-        map({slug, requires_plugins, requires, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
+        map({slug, name, requires_plugins, requires, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
         sort_by(-.active_installs, -.downloads) |
         .[:'$top_n_items']
     '
