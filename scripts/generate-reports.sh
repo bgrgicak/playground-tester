@@ -13,6 +13,8 @@
 source "./scripts/pre-script-run.sh"
 source ./scripts/lib/log-parser/analyze-json-logs.sh
 source ./scripts/save-data.sh
+source ./scripts/lib/wp-data/list-items.sh
+source ./scripts/lib/logs/error-reports.sh
 
 if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then
     mkdir "$PLAYGROUND_TESTER_DATA_PATH/reports"
@@ -77,8 +79,27 @@ function push_reports() {
     save_data --add reports/ --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
 }
 
+function generate_test_comparison_report() {
+    local item_type=$1
+    local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/test-comparison.md"
+
+    echo "| Improved $item_type |" > "$report_file"
+    echo "|----------------|" >> "$report_file"
+    local top_n_items=$(list_top_n_items "$item_type" 1000)
+    for item in $top_n_items; do
+        local error_count_2023=$(get_error_count "$item_type" "$item" "wp-now-dec-2023")
+        local error_count_2024=$(get_error_count "$item_type" "$item" "wp-now")
+
+        if [ "$error_count_2023" -gt 0 ] && [ "$error_count_2024" -eq 0 ]; then
+            echo "| $item |" >> "$report_file"
+        fi
+    done
+}
+
+
 update_stats
 generate_sql_error_reports
 generate_php_error_reports
 generate_playground_error_reports
+generate_test_comparison_report "plugins"
 push_reports
