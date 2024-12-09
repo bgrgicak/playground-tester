@@ -1,0 +1,7095 @@
+[
+    {
+        "slug": "contact-form-7",
+        "requires_plugins": [],
+        "requires": "6.6",
+        "active_installs": 10000000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-listings-and-ads",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.9",
+        "active_installs": 900000,
+        "downloads": 26409758
+    },
+    {
+        "slug": "classic-editor",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 10000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wordpress-seo",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 10000000,
+        "downloads": 0
+    },
+    {
+        "slug": "elementor",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 10000000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 7000000,
+        "downloads": 0
+    },
+    {
+        "slug": "litespeed-cache",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 6000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wpforms-lite",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 6000000,
+        "downloads": 0
+    },
+    {
+        "slug": "akismet",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 6000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wordfence",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 5000000,
+        "downloads": 355821864
+    },
+    {
+        "slug": "all-in-one-wp-migration",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 5000000,
+        "downloads": 0
+    },
+    {
+        "slug": "jetpack",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 4000000,
+        "downloads": 0
+    },
+    {
+        "slug": "really-simple-ssl",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 4000000,
+        "downloads": 0
+    },
+    {
+        "slug": "duplicate-post",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 4000000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-site-kit",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 4000000,
+        "downloads": 0
+    },
+    {
+        "slug": "all-in-one-seo-pack",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 3000000,
+        "downloads": 158649321
+    },
+    {
+        "slug": "wp-mail-smtp",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 3000000,
+        "downloads": 56787306
+    },
+    {
+        "slug": "duplicate-page",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 3000000,
+        "downloads": 28393207
+    },
+    {
+        "slug": "wordpress-importer",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 3000000,
+        "downloads": 0
+    },
+    {
+        "slug": "updraftplus",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 3000000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-analytics-for-wordpress",
+        "requires_plugins": [],
+        "requires": "5.6.0",
+        "active_installs": 3000000,
+        "downloads": 0
+    },
+    {
+        "slug": "seo-by-rank-math",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 3000000,
+        "downloads": 0
+    },
+    {
+        "slug": "redirection",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 2000000,
+        "downloads": 57163527
+    },
+    {
+        "slug": "tinymce-advanced",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 2000000,
+        "downloads": 34176200
+    },
+    {
+        "slug": "classic-widgets",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 2000000,
+        "downloads": 5715847
+    },
+    {
+        "slug": "header-footer-elementor",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-custom-fields",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "essential-addons-for-elementor-lite",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "insert-headers-and-footers",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "mailchimp-for-wp",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "limit-login-attempts-reloaded",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "hostinger",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 2000000,
+        "downloads": 0
+    },
+    {
+        "slug": "sg-cachepress",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 1000000,
+        "downloads": 81906473
+    },
+    {
+        "slug": "wp-smushit",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 1000000,
+        "downloads": 55683241
+    },
+    {
+        "slug": "wp-super-cache",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 1000000,
+        "downloads": 54592214
+    },
+    {
+        "slug": "google-sitemap-generator",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 1000000,
+        "downloads": 40628544
+    },
+    {
+        "slug": "autoptimize",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 1000000,
+        "downloads": 39925279
+    },
+    {
+        "slug": "ewww-image-optimizer",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 1000000,
+        "downloads": 37904169
+    },
+    {
+        "slug": "cookie-law-info",
+        "requires_plugins": [],
+        "requires": "5.0.0",
+        "active_installs": 1000000,
+        "downloads": 32279256
+    },
+    {
+        "slug": "cookie-notice",
+        "requires_plugins": [],
+        "requires": "4.9.6",
+        "active_installs": 1000000,
+        "downloads": 29432893
+    },
+    {
+        "slug": "loco-translate",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 1000000,
+        "downloads": 26863193
+    },
+    {
+        "slug": "redux-framework",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 1000000,
+        "downloads": 26760842
+    },
+    {
+        "slug": "wp-file-manager",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 1000000,
+        "downloads": 25215740
+    },
+    {
+        "slug": "disable-comments",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 1000000,
+        "downloads": 24912133
+    },
+    {
+        "slug": "regenerate-thumbnails",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 1000000,
+        "downloads": 21492418
+    },
+    {
+        "slug": "worker",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 1000000,
+        "downloads": 21351943
+    },
+    {
+        "slug": "custom-post-type-ui",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 1000000,
+        "downloads": 18547445
+    },
+    {
+        "slug": "complianz-gdpr",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 1000000,
+        "downloads": 16984144
+    },
+    {
+        "slug": "one-click-demo-import",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 1000000,
+        "downloads": 16270741
+    },
+    {
+        "slug": "better-search-replace",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 1000000,
+        "downloads": 14636618
+    },
+    {
+        "slug": "code-snippets",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 1000000,
+        "downloads": 11353133
+    },
+    {
+        "slug": "svg-support",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 1000000,
+        "downloads": 9268414
+    },
+    {
+        "slug": "wp-optimize",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "safe-svg",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "instagram-feed",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "astra-sites",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "maintenance",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "elementskit-lite",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "sg-security",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "envato-elements",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-multibyte-patch",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "duplicator",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wps-hide-login",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "loginizer",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-addons-for-gutenberg",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "w3-total-cache",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "all-in-one-wp-security-and-firewall",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "optinmonster",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-fastest-cache",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 1000000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-listings-and-ads",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.9",
+        "active_installs": 900000,
+        "downloads": 26409758
+    },
+    {
+        "slug": "smart-slider-3",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 900000,
+        "downloads": 17770562
+    },
+    {
+        "slug": "breadcrumb-navxt",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 900000,
+        "downloads": 14572021
+    },
+    {
+        "slug": "imagify",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 900000,
+        "downloads": 12700973
+    },
+    {
+        "slug": "flamingo",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 800000,
+        "downloads": 6778934
+    },
+    {
+        "slug": "woocommerce-services",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.4",
+        "active_installs": 800000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-gateway-stripe",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.4",
+        "active_installs": 800000,
+        "downloads": 0
+    },
+    {
+        "slug": "coming-soon",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 800000,
+        "downloads": 0
+    },
+    {
+        "slug": "better-wp-security",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 800000,
+        "downloads": 0
+    },
+    {
+        "slug": "mainwp-child",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 700000,
+        "downloads": 26490244
+    },
+    {
+        "slug": "polylang",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 700000,
+        "downloads": 20831209
+    },
+    {
+        "slug": "hello-dolly",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 700000,
+        "downloads": 14034979
+    },
+    {
+        "slug": "creame-whatsapp-me",
+        "requires_plugins": [],
+        "requires": "4.9.6",
+        "active_installs": 700000,
+        "downloads": 11649544
+    },
+    {
+        "slug": "under-construction-page",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 700000,
+        "downloads": 10674906
+    },
+    {
+        "slug": "duracelltomi-google-tag-manager",
+        "requires_plugins": [],
+        "requires": "3.4.0",
+        "active_installs": 700000,
+        "downloads": 10435711
+    },
+    {
+        "slug": "antispam-bee",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "tablepress",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "premium-addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "popup-maker",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "sucuri-scanner",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "user-role-editor",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "the-events-calendar",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-payments",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.0",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "disable-gutenberg",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "ninja-forms",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "post-types-order",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "yith-woocommerce-wishlist",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 700000,
+        "downloads": 0
+    },
+    {
+        "slug": "facebook-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.6",
+        "active_installs": 600000,
+        "downloads": 39164695
+    },
+    {
+        "slug": "broken-link-checker",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 600000,
+        "downloads": 18037834
+    },
+    {
+        "slug": "wp-pagenavi",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 600000,
+        "downloads": 12328545
+    },
+    {
+        "slug": "gtranslate",
+        "requires_plugins": [],
+        "requires": "2.8.1",
+        "active_installs": 600000,
+        "downloads": 11302489
+    },
+    {
+        "slug": "enable-media-replace",
+        "requires_plugins": [],
+        "requires": "4.9.7",
+        "active_installs": 600000,
+        "downloads": 10598076
+    },
+    {
+        "slug": "kirki",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 600000,
+        "downloads": 10522205
+    },
+    {
+        "slug": "header-footer-code-manager",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 600000,
+        "downloads": 6079656
+    },
+    {
+        "slug": "contact-form-cfdb7",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 600000,
+        "downloads": 5299898
+    },
+    {
+        "slug": "image-optimization",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 600000,
+        "downloads": 3120183
+    },
+    {
+        "slug": "woocommerce-paypal-payments",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.3",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-maintenance-mode",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "meta-box",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-wp-smtp",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "custom-css-js",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "siteorigin-panels",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "mailpoet",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "backwpup",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "ocean-extra",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-statistics",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "ml-slider",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 600000,
+        "downloads": 0
+    },
+    {
+        "slug": "shortcodes-ultimate",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 500000,
+        "downloads": 21003677
+    },
+    {
+        "slug": "creative-mail-by-constant-contact",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 500000,
+        "downloads": 20898347
+    },
+    {
+        "slug": "wpvivid-backuprestore",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 500000,
+        "downloads": 8752182
+    },
+    {
+        "slug": "official-facebook-pixel",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 500000,
+        "downloads": 7979222
+    },
+    {
+        "slug": "ga-google-analytics",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 500000,
+        "downloads": 7903647
+    },
+    {
+        "slug": "taxonomy-terms-order",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 500000,
+        "downloads": 7749320
+    },
+    {
+        "slug": "siteguard",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 500000,
+        "downloads": 4438448
+    },
+    {
+        "slug": "woocommerce-legacy-rest-api",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 500000,
+        "downloads": 1161855
+    },
+    {
+        "slug": "amp",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "malcare-security",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "forminator",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-reviews-plugin-for-google",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "so-widgets-bundle",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "fluentform",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "pixelyoursite",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "nextgen-gallery",
+        "requires_plugins": [],
+        "requires": "5.5.4",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-table-of-contents",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "click-to-chat-for-whatsapp",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 500000,
+        "downloads": 0
+    },
+    {
+        "slug": "coblocks",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 400000,
+        "downloads": 22515074
+    },
+    {
+        "slug": "formidable",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 400000,
+        "downloads": 21903912
+    },
+    {
+        "slug": "add-to-any",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 400000,
+        "downloads": 17229524
+    },
+    {
+        "slug": "megamenu",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 400000,
+        "downloads": 9576571
+    },
+    {
+        "slug": "really-simple-captcha",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 400000,
+        "downloads": 8839538
+    },
+    {
+        "slug": "password-protected",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 400000,
+        "downloads": 5020511
+    },
+    {
+        "slug": "header-footer",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 400000,
+        "downloads": 4629734
+    },
+    {
+        "slug": "metform",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 400000,
+        "downloads": 4195823
+    },
+    {
+        "slug": "font-awesome",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 400000,
+        "downloads": 3926130
+    },
+    {
+        "slug": "intuitive-custom-post-order",
+        "requires_plugins": [],
+        "requires": "3.5.0",
+        "active_installs": 400000,
+        "downloads": 2502634
+    },
+    {
+        "slug": "limit-login-attempts",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 400000,
+        "downloads": 2171238
+    },
+    {
+        "slug": "contact-form-7-honeypot",
+        "requires_plugins": [
+            "contact-form-7"
+        ],
+        "requires": "4.8",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "mailchimp-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.2",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "post-smtp",
+        "requires_plugins": [],
+        "requires": "5.6.0",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-analytics-dashboard-for-wp",
+        "requires_plugins": [],
+        "requires": "5.6.0",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-reset",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-checkout-field-editor-pro",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "admin-menu-editor",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "happy-elementor-addons",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "5.0",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "pinterest-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.6",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "kadence-blocks",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "royal-elementor-addons",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "webp-converter-for-media",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 400000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-pdf-invoices-packing-slips",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.4",
+        "active_installs": 300000,
+        "downloads": 16032681
+    },
+    {
+        "slug": "leadin",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 300000,
+        "downloads": 15854712
+    },
+    {
+        "slug": "ad-inserter",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 300000,
+        "downloads": 15446411
+    },
+    {
+        "slug": "translatepress-multilingual",
+        "requires_plugins": [],
+        "requires": "3.1.0",
+        "active_installs": 300000,
+        "downloads": 11039190
+    },
+    {
+        "slug": "black-studio-tinymce-widget",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 300000,
+        "downloads": 10935503
+    },
+    {
+        "slug": "woo-variation-swatches",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.9",
+        "active_installs": 300000,
+        "downloads": 7676840
+    },
+    {
+        "slug": "wp-migrate-db",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 300000,
+        "downloads": 6882581
+    },
+    {
+        "slug": "child-theme-configurator",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 300000,
+        "downloads": 6385806
+    },
+    {
+        "slug": "host-webfonts-local",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 300000,
+        "downloads": 6379617
+    },
+    {
+        "slug": "nextend-facebook-connect",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 300000,
+        "downloads": 5926076
+    },
+    {
+        "slug": "members",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 300000,
+        "downloads": 5113140
+    },
+    {
+        "slug": "widget-importer-exporter",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 300000,
+        "downloads": 4990774
+    },
+    {
+        "slug": "health-check",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 300000,
+        "downloads": 4642734
+    },
+    {
+        "slug": "cmb2",
+        "requires_plugins": [],
+        "requires": "3.8.0",
+        "active_installs": 300000,
+        "downloads": 4464957
+    },
+    {
+        "slug": "custom-fonts",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 300000,
+        "downloads": 4270869
+    },
+    {
+        "slug": "force-regenerate-thumbnails",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 300000,
+        "downloads": 4054093
+    },
+    {
+        "slug": "wpcf7-recaptcha",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 300000,
+        "downloads": 3307932
+    },
+    {
+        "slug": "webp-express",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 300000,
+        "downloads": 3268024
+    },
+    {
+        "slug": "wp-sitemap-page",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 300000,
+        "downloads": 2996892
+    },
+    {
+        "slug": "copy-delete-posts",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 300000,
+        "downloads": 2971436
+    },
+    {
+        "slug": "wp-rollback",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 300000,
+        "downloads": 2645134
+    },
+    {
+        "slug": "sticky-header-effects-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 300000,
+        "downloads": 2574635
+    },
+    {
+        "slug": "fast-indexing-api",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 300000,
+        "downloads": 1808843
+    },
+    {
+        "slug": "pretty-link",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "templately",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "shortpixel-image-optimiser",
+        "requires_plugins": [],
+        "requires": "4.8.0",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "pdf-embedder",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-seopress",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "jetpack-boost",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "userfeedback-lite",
+        "requires_plugins": [],
+        "requires": "5.9.0",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-google-maps",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "fluent-smtp",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "breeze",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "chaty",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "otter-blocks",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "newsletter",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "simple-custom-post-order",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "gutenberg",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "simple-history",
+        "requires_plugins": [],
+        "requires": "6.6",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "stops-core-theme-and-plugin-updates",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "wpcf7-redirect",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "gdpr-cookie-compliance",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 300000,
+        "downloads": 0
+    },
+    {
+        "slug": "query-monitor",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 12853670
+    },
+    {
+        "slug": "yith-woocommerce-compare",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 200000,
+        "downloads": 10401401
+    },
+    {
+        "slug": "woocommerce-google-analytics-integration",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.2",
+        "active_installs": 200000,
+        "downloads": 8105600
+    },
+    {
+        "slug": "cloudflare",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 200000,
+        "downloads": 8040663
+    },
+    {
+        "slug": "olympus-google-fonts",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 7942244
+    },
+    {
+        "slug": "custom-facebook-feed",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 200000,
+        "downloads": 7529489
+    },
+    {
+        "slug": "iwp-client",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 200000,
+        "downloads": 7246610
+    },
+    {
+        "slug": "use-any-font",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 6215401
+    },
+    {
+        "slug": "google-captcha",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 200000,
+        "downloads": 5587046
+    },
+    {
+        "slug": "woo-cart-abandonment-recovery",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 200000,
+        "downloads": 5330418
+    },
+    {
+        "slug": "responsive-lightbox",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 5292349
+    },
+    {
+        "slug": "call-now-button",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 200000,
+        "downloads": 5266045
+    },
+    {
+        "slug": "cmp-coming-soon-maintenance",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 200000,
+        "downloads": 5205941
+    },
+    {
+        "slug": "so-css",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 200000,
+        "downloads": 5061298
+    },
+    {
+        "slug": "wp-crontrol",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 4995836
+    },
+    {
+        "slug": "page-links-to",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 200000,
+        "downloads": 4562129
+    },
+    {
+        "slug": "all-404-redirect-to-homepage",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 200000,
+        "downloads": 4549397
+    },
+    {
+        "slug": "user-switching",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 3989901
+    },
+    {
+        "slug": "tawkto-live-chat",
+        "requires_plugins": [],
+        "requires": "2.7",
+        "active_installs": 200000,
+        "downloads": 3816478
+    },
+    {
+        "slug": "imsanity",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 200000,
+        "downloads": 3791057
+    },
+    {
+        "slug": "white-label-cms",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 200000,
+        "downloads": 3704740
+    },
+    {
+        "slug": "simple-page-ordering",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 200000,
+        "downloads": 3660293
+    },
+    {
+        "slug": "recent-posts-widget-with-thumbnails",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 200000,
+        "downloads": 3485270
+    },
+    {
+        "slug": "tiny-compress-images",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 200000,
+        "downloads": 3480024
+    },
+    {
+        "slug": "extendify",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 200000,
+        "downloads": 3464041
+    },
+    {
+        "slug": "aryo-activity-log",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 200000,
+        "downloads": 3347966
+    },
+    {
+        "slug": "easy-google-fonts",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 3333625
+    },
+    {
+        "slug": "post-views-counter",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 200000,
+        "downloads": 3315662
+    },
+    {
+        "slug": "kadence-starter-templates",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 200000,
+        "downloads": 3272433
+    },
+    {
+        "slug": "adminimize",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 2970214
+    },
+    {
+        "slug": "woosidebars",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 200000,
+        "downloads": 2862202
+    },
+    {
+        "slug": "php-compatibility-checker",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 200000,
+        "downloads": 2798765
+    },
+    {
+        "slug": "simple-301-redirects",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 200000,
+        "downloads": 2675545
+    },
+    {
+        "slug": "wp-mail-logging",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 2651274
+    },
+    {
+        "slug": "tiktok-for-business",
+        "requires_plugins": [],
+        "requires": "5.7.0",
+        "active_installs": 200000,
+        "downloads": 2593736
+    },
+    {
+        "slug": "post-duplicator",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 2547197
+    },
+    {
+        "slug": "cyr2lat",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 200000,
+        "downloads": 2390800
+    },
+    {
+        "slug": "customizer-export-import",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 200000,
+        "downloads": 2276894
+    },
+    {
+        "slug": "instant-images",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 2049419
+    },
+    {
+        "slug": "generateblocks",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 200000,
+        "downloads": 2049172
+    },
+    {
+        "slug": "search-regex",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 200000,
+        "downloads": 1840292
+    },
+    {
+        "slug": "post-type-switcher",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 1742443
+    },
+    {
+        "slug": "variation-swatches-woo",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 200000,
+        "downloads": 1710691
+    },
+    {
+        "slug": "mw-wp-form",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 200000,
+        "downloads": 1674855
+    },
+    {
+        "slug": "jeg-elementor-kit",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 1587316
+    },
+    {
+        "slug": "wpfront-scroll-top",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 1521866
+    },
+    {
+        "slug": "wp-headers-and-footers",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 1245969
+    },
+    {
+        "slug": "header-and-footer-scripts",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 1222019
+    },
+    {
+        "slug": "disable-xml-rpc",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 200000,
+        "downloads": 508151
+    },
+    {
+        "slug": "pojo-accessibility",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 200000,
+        "downloads": 489782
+    },
+    {
+        "slug": "wordpress-popular-posts",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "photo-gallery",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "speedycache",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "hide-my-wp",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-member",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "astra-widgets",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "unlimited-elements-for-elementor",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "ssl-insecure-content-fixer",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "supreme-modules-for-divi",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "backuply",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "optimole-wp",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "custom-post-type-permalinks",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-user-avatar",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "cartflows",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "filebird",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "loginpress",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "qi-addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-whatsapp-chat",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "honeypot",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "cleantalk-spam-protect",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "eps-301-redirects",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "menu-icons",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "popup-builder",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "gotmls",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "blocksy-companion",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-fancybox",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "burst-statistics",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-security-audit-log",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "favicon-by-realfavicongenerator",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "themeisle-companion",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "acf-content-analysis-for-yoast-seo",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 200000,
+        "downloads": 0
+    },
+    {
+        "slug": "buddypress",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 100000,
+        "downloads": 12946937
+    },
+    {
+        "slug": "redis-cache",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 10723486
+    },
+    {
+        "slug": "advanced-ads",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 9478276
+    },
+    {
+        "slug": "bbpress",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 8631689
+    },
+    {
+        "slug": "yet-another-related-posts-plugin",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 100000,
+        "downloads": 7667399
+    },
+    {
+        "slug": "relevanssi",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 6677990
+    },
+    {
+        "slug": "googleanalytics",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 6032003
+    },
+    {
+        "slug": "schema-and-structured-data-for-wp",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 100000,
+        "downloads": 5535985
+    },
+    {
+        "slug": "nginx-helper",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 100000,
+        "downloads": 5383696
+    },
+    {
+        "slug": "yith-woocommerce-quick-view",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 5345405
+    },
+    {
+        "slug": "cf7-conditional-fields",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 5066567
+    },
+    {
+        "slug": "custom-sidebars",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 4963529
+    },
+    {
+        "slug": "backupwordpress",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 100000,
+        "downloads": 4829282
+    },
+    {
+        "slug": "maxbuttons",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 4817193
+    },
+    {
+        "slug": "hummingbird-performance",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 4636871
+    },
+    {
+        "slug": "content-views-query-and-display-post-page",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 100000,
+        "downloads": 4488645
+    },
+    {
+        "slug": "image-widget",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 100000,
+        "downloads": 4452981
+    },
+    {
+        "slug": "wp-job-manager",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 4417304
+    },
+    {
+        "slug": "pods",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 4340664
+    },
+    {
+        "slug": "wp-all-import",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 4193734
+    },
+    {
+        "slug": "wp-asset-clean-up",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 100000,
+        "downloads": 4167609
+    },
+    {
+        "slug": "woocommerce-multilingual",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 4147313
+    },
+    {
+        "slug": "onesignal-free-web-push-notifications",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 100000,
+        "downloads": 4041369
+    },
+    {
+        "slug": "iubenda-cookie-law-solution",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 3965982
+    },
+    {
+        "slug": "list-category-posts",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 100000,
+        "downloads": 3852185
+    },
+    {
+        "slug": "autodescription",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 100000,
+        "downloads": 3846232
+    },
+    {
+        "slug": "wordpress-popup",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 3781709
+    },
+    {
+        "slug": "wp-db-backup",
+        "requires_plugins": [],
+        "requires": "3.6.0",
+        "active_installs": 100000,
+        "downloads": 3698364
+    },
+    {
+        "slug": "nitropack",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 3561064
+    },
+    {
+        "slug": "strong-testimonials",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 100000,
+        "downloads": 3532635
+    },
+    {
+        "slug": "xml-sitemap-feed",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 100000,
+        "downloads": 3329361
+    },
+    {
+        "slug": "google-language-translator",
+        "requires_plugins": [],
+        "requires": "2.9",
+        "active_installs": 100000,
+        "downloads": 3287035
+    },
+    {
+        "slug": "wp-postviews",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 3232356
+    },
+    {
+        "slug": "kliken-marketing-for-google",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 3191897
+    },
+    {
+        "slug": "simple-social-icons",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 3074122
+    },
+    {
+        "slug": "capability-manager-enhanced",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 2984651
+    },
+    {
+        "slug": "auto-terms-of-service-and-privacy-policy",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 100000,
+        "downloads": 2962905
+    },
+    {
+        "slug": "search-and-replace",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 2962434
+    },
+    {
+        "slug": "simple-custom-css",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 100000,
+        "downloads": 2860401
+    },
+    {
+        "slug": "uk-cookie-consent",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 100000,
+        "downloads": 2777799
+    },
+    {
+        "slug": "simple-lightbox",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 2663576
+    },
+    {
+        "slug": "codepress-admin-columns",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 100000,
+        "downloads": 2633447
+    },
+    {
+        "slug": "powerpack-lite-for-elementor",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 2630001
+    },
+    {
+        "slug": "tidio-live-chat",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 2563916
+    },
+    {
+        "slug": "cache-enabler",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 100000,
+        "downloads": 2451428
+    },
+    {
+        "slug": "peters-login-redirect",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 2436749
+    },
+    {
+        "slug": "web-stories",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 2424848
+    },
+    {
+        "slug": "404page",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 2424517
+    },
+    {
+        "slug": "foobox-image-lightbox",
+        "requires_plugins": [],
+        "requires": "3.5.1",
+        "active_installs": 100000,
+        "downloads": 2419639
+    },
+    {
+        "slug": "wp-all-export",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 2371665
+    },
+    {
+        "slug": "presto-player",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 2371243
+    },
+    {
+        "slug": "tracking-code-manager",
+        "requires_plugins": [],
+        "requires": "3.6.0",
+        "active_installs": 100000,
+        "downloads": 2309801
+    },
+    {
+        "slug": "quick-pagepost-redirect-plugin",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 2274463
+    },
+    {
+        "slug": "checkout-plugins-stripe-woo",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 100000,
+        "downloads": 2262729
+    },
+    {
+        "slug": "add-search-to-menu",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 100000,
+        "downloads": 2259473
+    },
+    {
+        "slug": "q2w3-fixed-widget",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 2252575
+    },
+    {
+        "slug": "custom-permalinks",
+        "requires_plugins": [],
+        "requires": "2.6",
+        "active_installs": 100000,
+        "downloads": 2183497
+    },
+    {
+        "slug": "woo-discount-rules",
+        "requires_plugins": [],
+        "requires": "4.6.1",
+        "active_installs": 100000,
+        "downloads": 2090277
+    },
+    {
+        "slug": "minimal-coming-soon-maintenance-mode",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 2049706
+    },
+    {
+        "slug": "statify",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 2042609
+    },
+    {
+        "slug": "async-javascript",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 1982495
+    },
+    {
+        "slug": "enable-jquery-migrate-helper",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 100000,
+        "downloads": 1979185
+    },
+    {
+        "slug": "pubsubhubbub",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 100000,
+        "downloads": 1896234
+    },
+    {
+        "slug": "wp-nested-pages",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 100000,
+        "downloads": 1896234
+    },
+    {
+        "slug": "yikes-inc-easy-custom-woocommerce-product-tabs",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 100000,
+        "downloads": 1835602
+    },
+    {
+        "slug": "menu-image",
+        "requires_plugins": [],
+        "requires": "4.4.0",
+        "active_installs": 100000,
+        "downloads": 1804298
+    },
+    {
+        "slug": "wp-meta-and-date-remover",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 100000,
+        "downloads": 1795889
+    },
+    {
+        "slug": "page-scroll-to-id",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 100000,
+        "downloads": 1755853
+    },
+    {
+        "slug": "facebook-messenger-customer-chat",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 100000,
+        "downloads": 1727599
+    },
+    {
+        "slug": "login-lockdown",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 1695844
+    },
+    {
+        "slug": "recent-posts-widget-extended",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 1693963
+    },
+    {
+        "slug": "kadence-woocommerce-email-designer",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 1693719
+    },
+    {
+        "slug": "sticky-menu-or-anything-on-scroll",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 100000,
+        "downloads": 1596710
+    },
+    {
+        "slug": "shortcoder",
+        "requires_plugins": [],
+        "requires": "4.9.0",
+        "active_installs": 100000,
+        "downloads": 1591656
+    },
+    {
+        "slug": "migrate-guru",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 1573818
+    },
+    {
+        "slug": "wp-sweep",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 1572557
+    },
+    {
+        "slug": "robin-image-optimizer",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 100000,
+        "downloads": 1530458
+    },
+    {
+        "slug": "genesis-blocks",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 100000,
+        "downloads": 1527759
+    },
+    {
+        "slug": "wp-force-ssl",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 1517441
+    },
+    {
+        "slug": "wp-downgrade",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 100000,
+        "downloads": 1474577
+    },
+    {
+        "slug": "all-in-one-favicon",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 100000,
+        "downloads": 1460924
+    },
+    {
+        "slug": "rocket-lazy-load",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 1449609
+    },
+    {
+        "slug": "intelly-related-posts",
+        "requires_plugins": [],
+        "requires": "3.6.0",
+        "active_installs": 100000,
+        "downloads": 1436457
+    },
+    {
+        "slug": "email-address-encoder",
+        "requires_plugins": [],
+        "requires": "2.0",
+        "active_installs": 100000,
+        "downloads": 1429657
+    },
+    {
+        "slug": "easy-theme-and-plugin-upgrades",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 100000,
+        "downloads": 1417469
+    },
+    {
+        "slug": "ele-custom-skin",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 1404417
+    },
+    {
+        "slug": "addquicktag",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 1357973
+    },
+    {
+        "slug": "vk-block-patterns",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 100000,
+        "downloads": 1334959
+    },
+    {
+        "slug": "advanced-custom-fields-font-awesome",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 100000,
+        "downloads": 1312969
+    },
+    {
+        "slug": "edit-author-slug",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 1256754
+    },
+    {
+        "slug": "head-footer-code",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 1235884
+    },
+    {
+        "slug": "xserver-typesquare-webfonts",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 100000,
+        "downloads": 1211555
+    },
+    {
+        "slug": "wp-whatsapp",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 100000,
+        "downloads": 1208739
+    },
+    {
+        "slug": "polldaddy",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 1192822
+    },
+    {
+        "slug": "connect-polylang-elementor",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 100000,
+        "downloads": 1192270
+    },
+    {
+        "slug": "public-post-preview",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 1140894
+    },
+    {
+        "slug": "heartbeat-control",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 100000,
+        "downloads": 1137153
+    },
+    {
+        "slug": "advanced-google-recaptcha",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 1121558
+    },
+    {
+        "slug": "cloudflare-flexible-ssl",
+        "requires_plugins": [],
+        "requires": "3.2.0",
+        "active_installs": 100000,
+        "downloads": 1106191
+    },
+    {
+        "slug": "string-locator",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 1103308
+    },
+    {
+        "slug": "complianz-terms-conditions",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 100000,
+        "downloads": 1103065
+    },
+    {
+        "slug": "display-posts-shortcode",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 100000,
+        "downloads": 1099412
+    },
+    {
+        "slug": "title-remover",
+        "requires_plugins": [],
+        "requires": "2.5",
+        "active_installs": 100000,
+        "downloads": 1092424
+    },
+    {
+        "slug": "widget-css-classes",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 100000,
+        "downloads": 1074585
+    },
+    {
+        "slug": "insert-php-code-snippet",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 100000,
+        "downloads": 1054609
+    },
+    {
+        "slug": "disable-admin-notices",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 100000,
+        "downloads": 1033638
+    },
+    {
+        "slug": "show-current-template",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 100000,
+        "downloads": 1024525
+    },
+    {
+        "slug": "https-redirection",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 1024513
+    },
+    {
+        "slug": "hotjar",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 1006189
+    },
+    {
+        "slug": "php-code-widget",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 100000,
+        "downloads": 977542
+    },
+    {
+        "slug": "sidebar-manager",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 947934
+    },
+    {
+        "slug": "meta-tag-manager",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 100000,
+        "downloads": 920284
+    },
+    {
+        "slug": "contact-form-7-simple-recaptcha",
+        "requires_plugins": [],
+        "requires": "4.1.2",
+        "active_installs": 100000,
+        "downloads": 868521
+    },
+    {
+        "slug": "seo-simple-pack",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 829835
+    },
+    {
+        "slug": "full-site-editing",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 815145
+    },
+    {
+        "slug": "invisible-recaptcha",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 812744
+    },
+    {
+        "slug": "tuxedo-big-file-uploads",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 783889
+    },
+    {
+        "slug": "manage-notification-emails",
+        "requires_plugins": [],
+        "requires": "4.0.0",
+        "active_installs": 100000,
+        "downloads": 742443
+    },
+    {
+        "slug": "template-kit-import",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 715367
+    },
+    {
+        "slug": "wp-parsidate",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 711766
+    },
+    {
+        "slug": "popups-for-divi",
+        "requires_plugins": [],
+        "requires": "4.0.0",
+        "active_installs": 100000,
+        "downloads": 619779
+    },
+    {
+        "slug": "cyr3lat",
+        "requires_plugins": [],
+        "requires": "2.3",
+        "active_installs": 100000,
+        "downloads": 601278
+    },
+    {
+        "slug": "simple-css",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 523624
+    },
+    {
+        "slug": "local-google-fonts",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 514279
+    },
+    {
+        "slug": "microsoft-clarity",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 486071
+    },
+    {
+        "slug": "make-column-clickable-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 464975
+    },
+    {
+        "slug": "duplicate-menu",
+        "requires_plugins": [],
+        "requires": "3.4.2",
+        "active_installs": 100000,
+        "downloads": 438604
+    },
+    {
+        "slug": "indexnow",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 409227
+    },
+    {
+        "slug": "skyboot-custom-icons-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 100000,
+        "downloads": 351643
+    },
+    {
+        "slug": "wp-post-page-clone",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 346601
+    },
+    {
+        "slug": "layout-grid",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 159353
+    },
+    {
+        "slug": "crowdsignal-forms",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 85397
+    },
+    {
+        "slug": "wc-custom-thank-you",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 100000,
+        "downloads": 42636
+    },
+    {
+        "slug": "page-optimize",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 34044
+    },
+    {
+        "slug": "aruba-hispeed-cache",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "file-manager-advanced",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "colibri-page-builder",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "social-icons-widget-by-wpzoom",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "flexible-shipping",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "templates-patterns-collection",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "envira-gallery-lite",
+        "requires_plugins": [],
+        "requires": "5.5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "custom-twitter-feeds",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-content-copy-protector",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "admin-site-enhancements",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "tenweb-speed-optimizer",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "squirrly-seo",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "mailin",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-products-filter",
+        "requires_plugins": [],
+        "requires": "6.0.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-database-cleaner",
+        "requires_plugins": [],
+        "requires": "3.1.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "404-to-301",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-mercadopago",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "youtube-embed-plus",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "everest-forms",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "jetpack-protect",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-order-export-lite",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "stackable-ultimate-gutenberg-blocks",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "vk-all-in-one-expansion-unit",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "give",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-consent-api",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "performance-lab",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "sassy-social-share",
+        "requires_plugins": [],
+        "requires": "2.5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "a3-lazy-load",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "omnisend",
+        "requires_plugins": [],
+        "requires": "4.7.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "auxin-elements",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "fileorganizer",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "check-email",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "mollie-payments-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "real-cookie-banner",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "widget-logic",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "duplicate-wp-page-post",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "3d-flipbook-dflip-lite",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "modula-best-grid-gallery",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "broken-link-checker-seo",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "block-bad-queries",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-access-manager",
+        "requires_plugins": [],
+        "requires": "5.2.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "ajax-search-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-nocaptcha-recaptcha",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-external-links",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "the-post-grid",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woolentor-addons",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "download-manager",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "cookiebot",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-staging",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "addon-elements-for-elementor-page-builder",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "gravity-forms-zero-spam",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "simple-local-avatars",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "contact-form-7-dynamic-text-extension",
+        "requires_plugins": [
+            "contact-form-7"
+        ],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "mystickymenu",
+        "requires_plugins": [],
+        "requires": "3.5.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "resmushit-image-optimizer",
+        "requires_plugins": [],
+        "requires": "4.0.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "widget-google-reviews",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "ads-txt",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "essential-blocks",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "bdthemes-element-pack-lite",
+        "requires_plugins": [],
+        "requires": "5.0.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "widget-options",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "embedpress",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "post-expirator",
+        "requires_plugins": [],
+        "requires": "6.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "foogallery",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "accelerated-mobile-pages",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "feeds-for-youtube",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "disable-remove-google-fonts",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "beaver-builder-lite-version",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-social-media-icons",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "vk-blocks",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "ti-woocommerce-wishlist",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "bdthemes-prime-slider-lite",
+        "requires_plugins": [],
+        "requires": "5.0.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-checkout-manager",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "gosmtp",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "ninjafirewall",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "themegrill-demo-importer",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "no-category-base-wpml",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "the-plus-addons-for-elementor-page-builder",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-stripe-payment",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "3.0.1",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "pagelayer",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "depicter",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 100000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-product-feed-pro",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 90000,
+        "downloads": 10000351
+    },
+    {
+        "slug": "wp-retina-2x",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 90000,
+        "downloads": 5347759
+    },
+    {
+        "slug": "download-monitor",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 90000,
+        "downloads": 5291678
+    },
+    {
+        "slug": "learnpress",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 90000,
+        "downloads": 4543817
+    },
+    {
+        "slug": "insta-gallery",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 90000,
+        "downloads": 3759370
+    },
+    {
+        "slug": "product-import-export-for-woo",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 90000,
+        "downloads": 3335970
+    },
+    {
+        "slug": "anti-spam",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 90000,
+        "downloads": 3307264
+    },
+    {
+        "slug": "flexible-checkout-fields",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 90000,
+        "downloads": 2582987
+    },
+    {
+        "slug": "enhanced-media-library",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 90000,
+        "downloads": 2552655
+    },
+    {
+        "slug": "tutor",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 90000,
+        "downloads": 2275255
+    },
+    {
+        "slug": "mailgun",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 90000,
+        "downloads": 2062923
+    },
+    {
+        "slug": "mobile-menu",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 90000,
+        "downloads": 1978417
+    },
+    {
+        "slug": "kk-star-ratings",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 1920988
+    },
+    {
+        "slug": "permalink-manager",
+        "requires_plugins": [],
+        "requires": "4.4.0",
+        "active_installs": 90000,
+        "downloads": 1856286
+    },
+    {
+        "slug": "official-statcounter-plugin-for-wordpress",
+        "requires_plugins": [],
+        "requires": "2.0.2",
+        "active_installs": 90000,
+        "downloads": 1811092
+    },
+    {
+        "slug": "iframe",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 90000,
+        "downloads": 1710509
+    },
+    {
+        "slug": "persian-woocommerce",
+        "requires_plugins": [],
+        "requires": "6.0.0",
+        "active_installs": 90000,
+        "downloads": 1691613
+    },
+    {
+        "slug": "nav-menu-roles",
+        "requires_plugins": [],
+        "requires": "4.5.0",
+        "active_installs": 90000,
+        "downloads": 1690560
+    },
+    {
+        "slug": "stream",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 90000,
+        "downloads": 1646301
+    },
+    {
+        "slug": "login-customizer",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 1600609
+    },
+    {
+        "slug": "add-from-server",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 90000,
+        "downloads": 1285928
+    },
+    {
+        "slug": "email-encoder-bundle",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 90000,
+        "downloads": 1154929
+    },
+    {
+        "slug": "regenerate-thumbnails-advanced",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 90000,
+        "downloads": 1153710
+    },
+    {
+        "slug": "mainwp-child-reports",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 90000,
+        "downloads": 1143877
+    },
+    {
+        "slug": "temporary-login-without-password",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 90000,
+        "downloads": 1123631
+    },
+    {
+        "slug": "better-font-awesome",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 90000,
+        "downloads": 1117995
+    },
+    {
+        "slug": "remove-footer-credit",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 90000,
+        "downloads": 1044676
+    },
+    {
+        "slug": "woocommerce-extra-checkout-fields-for-brazil",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 90000,
+        "downloads": 840423
+    },
+    {
+        "slug": "user-menus",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 90000,
+        "downloads": 824330
+    },
+    {
+        "slug": "change-wp-admin-login",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 90000,
+        "downloads": 754432
+    },
+    {
+        "slug": "disable-comments-rb",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 90000,
+        "downloads": 694577
+    },
+    {
+        "slug": "disable-json-api",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 90000,
+        "downloads": 673830
+    },
+    {
+        "slug": "resize-image-after-upload",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 90000,
+        "downloads": 613999
+    },
+    {
+        "slug": "disable-xml-rpc-api",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 579492
+    },
+    {
+        "slug": "one-user-avatar",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 90000,
+        "downloads": 268117
+    },
+    {
+        "slug": "blogvault-real-time-backup",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-slimstat",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "ht-mega-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "defender-security",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "go-live-update-urls",
+        "requires_plugins": [],
+        "requires": "6.2.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "acf-extended",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "jupiterx-core",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "real-time-find-and-replace",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "event-tickets",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-direct-checkout",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "featured-image-from-url",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "anywhere-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-square",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.5",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "ocean-social-sharing",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "auto-image-attributes-from-filename-with-bulk-updater",
+        "requires_plugins": [],
+        "requires": "3.5.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "matomo",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "responsive-menu",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "siteground-migrator",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "ninja-tables",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-import",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "real-media-library-lite",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 90000,
+        "downloads": 0
+    },
+    {
+        "slug": "yith-woocommerce-ajax-navigation",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 80000,
+        "downloads": 4302324
+    },
+    {
+        "slug": "theme-my-login",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 80000,
+        "downloads": 4033761
+    },
+    {
+        "slug": "rvg-optimize-database",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 80000,
+        "downloads": 3871518
+    },
+    {
+        "slug": "wp-dbmanager",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 2983593
+    },
+    {
+        "slug": "master-slider",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 80000,
+        "downloads": 2866177
+    },
+    {
+        "slug": "official-mailerlite-sign-up-forms",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 80000,
+        "downloads": 1772424
+    },
+    {
+        "slug": "backup-backup",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 80000,
+        "downloads": 1567140
+    },
+    {
+        "slug": "simple-sitemap",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 80000,
+        "downloads": 1556263
+    },
+    {
+        "slug": "advanced-excerpt",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 80000,
+        "downloads": 1489647
+    },
+    {
+        "slug": "login-recaptcha",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 80000,
+        "downloads": 1321704
+    },
+    {
+        "slug": "option-tree",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 80000,
+        "downloads": 1293041
+    },
+    {
+        "slug": "elementor-beta",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "5.8",
+        "active_installs": 80000,
+        "downloads": 1061165
+    },
+    {
+        "slug": "side-cart-woocommerce",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 80000,
+        "downloads": 927775
+    },
+    {
+        "slug": "advanced-cf7-db",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 906081
+    },
+    {
+        "slug": "wp-add-custom-css",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 900649
+    },
+    {
+        "slug": "simple-image-sizes",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 80000,
+        "downloads": 889904
+    },
+    {
+        "slug": "column-shortcodes",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 80000,
+        "downloads": 875671
+    },
+    {
+        "slug": "two-factor",
+        "requires_plugins": [],
+        "requires": "4.3",
+        "active_installs": 80000,
+        "downloads": 870763
+    },
+    {
+        "slug": "automatic-translator-addon-for-loco-translate",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 80000,
+        "downloads": 853755
+    },
+    {
+        "slug": "email-log",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 757904
+    },
+    {
+        "slug": "custom-typekit-fonts",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 80000,
+        "downloads": 610608
+    },
+    {
+        "slug": "userway-accessibility-widget",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 80000,
+        "downloads": 589075
+    },
+    {
+        "slug": "wp-show-posts",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 80000,
+        "downloads": 562864
+    },
+    {
+        "slug": "default-featured-image",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 80000,
+        "downloads": 410349
+    },
+    {
+        "slug": "wpdiscuz",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "wpdatatables",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "a2-optimized-wp",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "email-subscribers",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "ajax-search-lite",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "brizy",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "folders",
+        "requires_plugins": [],
+        "requires": "3.0.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "ai-engine",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-smart-wishlist",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "media-cleaner",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "import-users-from-csv-with-meta",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-ulike",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-smtp",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "buttonizer-multifunctional-button",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "mesmerize-companion",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-google-map-plugin",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "redirect-redirection",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "contact-form-7-image-captcha",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "events-manager",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-germanized",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 80000,
+        "downloads": 0
+    },
+    {
+        "slug": "wptouch",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 70000,
+        "downloads": 14491031
+    },
+    {
+        "slug": "advanced-woo-search",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.0",
+        "active_installs": 70000,
+        "downloads": 3913536
+    },
+    {
+        "slug": "wp-clone-by-wp-academy",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 70000,
+        "downloads": 3297385
+    },
+    {
+        "slug": "wp-piwik",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 70000,
+        "downloads": 2634876
+    },
+    {
+        "slug": "sydney-toolbox",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 70000,
+        "downloads": 2311497
+    },
+    {
+        "slug": "contextual-related-posts",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 70000,
+        "downloads": 2222744
+    },
+    {
+        "slug": "clearfy",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 70000,
+        "downloads": 2117891
+    },
+    {
+        "slug": "media-library-assistant",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 70000,
+        "downloads": 2053550
+    },
+    {
+        "slug": "wonderm00ns-simple-facebook-open-graph-tags",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 70000,
+        "downloads": 2041412
+    },
+    {
+        "slug": "instagram-widget-by-wpzoom",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 70000,
+        "downloads": 1956018
+    },
+    {
+        "slug": "boldgrid-backup",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 70000,
+        "downloads": 1800975
+    },
+    {
+        "slug": "interactive-3d-flipbook-powered-physics-engine",
+        "requires_plugins": [],
+        "requires": "4.3",
+        "active_installs": 70000,
+        "downloads": 1793489
+    },
+    {
+        "slug": "visual-portfolio",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 70000,
+        "downloads": 1789507
+    },
+    {
+        "slug": "wp-fail2ban",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 70000,
+        "downloads": 1688912
+    },
+    {
+        "slug": "insert-php",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 70000,
+        "downloads": 1549968
+    },
+    {
+        "slug": "facebook-pagelike-widget",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 70000,
+        "downloads": 1492187
+    },
+    {
+        "slug": "simple-author-box",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 70000,
+        "downloads": 1353609
+    },
+    {
+        "slug": "woo-smart-quick-view",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.0",
+        "active_installs": 70000,
+        "downloads": 1240558
+    },
+    {
+        "slug": "to-top",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 70000,
+        "downloads": 1116692
+    },
+    {
+        "slug": "genesis-enews-extended",
+        "requires_plugins": [],
+        "requires": "4.9.6",
+        "active_installs": 70000,
+        "downloads": 1103144
+    },
+    {
+        "slug": "astra-import-export",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 70000,
+        "downloads": 951209
+    },
+    {
+        "slug": "if-menu",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 70000,
+        "downloads": 937883
+    },
+    {
+        "slug": "colorlib-login-customizer",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 70000,
+        "downloads": 885875
+    },
+    {
+        "slug": "portfolio-post-type",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 70000,
+        "downloads": 860220
+    },
+    {
+        "slug": "pymntpl-paypal-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.7",
+        "active_installs": 70000,
+        "downloads": 754571
+    },
+    {
+        "slug": "boldgrid-easy-seo",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 70000,
+        "downloads": 751980
+    },
+    {
+        "slug": "conditional-menus",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 70000,
+        "downloads": 728125
+    },
+    {
+        "slug": "contact-form-entries",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 70000,
+        "downloads": 721859
+    },
+    {
+        "slug": "customizer-search",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 70000,
+        "downloads": 598996
+    },
+    {
+        "slug": "wps-limit-login",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 70000,
+        "downloads": 568717
+    },
+    {
+        "slug": "mousewheel-smooth-scroll",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 70000,
+        "downloads": 452454
+    },
+    {
+        "slug": "page-or-post-clone",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 70000,
+        "downloads": 452001
+    },
+    {
+        "slug": "dynamicconditions",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 70000,
+        "downloads": 424996
+    },
+    {
+        "slug": "scheduled-post-trigger",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 70000,
+        "downloads": 325968
+    },
+    {
+        "slug": "reviews-feed",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 70000,
+        "downloads": 298137
+    },
+    {
+        "slug": "live-sales-notifications-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-razorpay",
+        "requires_plugins": [],
+        "requires": "3.9.2",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "webappick-product-feed-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.4",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "metricool",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "customer-reviews-woocommerce",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "post-and-page-builder",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-hide-security-enhancer",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "users-customers-import-export-for-wp-woocommerce",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "omnisend-connect",
+        "requires_plugins": [],
+        "requires": "4.7.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "bookly-responsive-appointment-booking-tool",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "ameliabooking",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "blogger-importer",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-bulk-delete",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "webp-uploads",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "filester",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "independent-analytics",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "loftloader",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "smtp-mailer",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 70000,
+        "downloads": 0
+    },
+    {
+        "slug": "disqus-comment-system",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 60000,
+        "downloads": 4293873
+    },
+    {
+        "slug": "simple-share-buttons-adder",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 60000,
+        "downloads": 4133182
+    },
+    {
+        "slug": "companion-auto-update",
+        "requires_plugins": [],
+        "requires": "5.3.0",
+        "active_installs": 60000,
+        "downloads": 3966875
+    },
+    {
+        "slug": "addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 60000,
+        "downloads": 3903842
+    },
+    {
+        "slug": "wp-polls",
+        "requires_plugins": [],
+        "requires": "4.9.6",
+        "active_installs": 60000,
+        "downloads": 3581869
+    },
+    {
+        "slug": "wp-members",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 3523978
+    },
+    {
+        "slug": "wp-live-chat-support",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 60000,
+        "downloads": 3120991
+    },
+    {
+        "slug": "visualcomposer",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 60000,
+        "downloads": 2729134
+    },
+    {
+        "slug": "perfect-woocommerce-brands",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 60000,
+        "downloads": 2002731
+    },
+    {
+        "slug": "advanced-iframe",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 60000,
+        "downloads": 1997171
+    },
+    {
+        "slug": "yith-woocommerce-catalog-mode",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 60000,
+        "downloads": 1915607
+    },
+    {
+        "slug": "weight-based-shipping-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 60000,
+        "downloads": 1889396
+    },
+    {
+        "slug": "woo-advanced-shipment-tracking",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.3",
+        "active_installs": 60000,
+        "downloads": 1821407
+    },
+    {
+        "slug": "order-import-export-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 60000,
+        "downloads": 1641871
+    },
+    {
+        "slug": "wp-edit",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 60000,
+        "downloads": 1627133
+    },
+    {
+        "slug": "cms-tree-page-view",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 60000,
+        "downloads": 1510417
+    },
+    {
+        "slug": "woocommerce-ajax-filters",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 1459232
+    },
+    {
+        "slug": "getwid",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 60000,
+        "downloads": 1272250
+    },
+    {
+        "slug": "wp-store-locator",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 60000,
+        "downloads": 1267246
+    },
+    {
+        "slug": "variation-swatches-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 60000,
+        "downloads": 1230219
+    },
+    {
+        "slug": "wp-table-builder",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 60000,
+        "downloads": 1205549
+    },
+    {
+        "slug": "activecampaign-subscription-forms",
+        "requires_plugins": [],
+        "requires": "2.0",
+        "active_installs": 60000,
+        "downloads": 1187476
+    },
+    {
+        "slug": "search-exclude",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 60000,
+        "downloads": 1030857
+    },
+    {
+        "slug": "exclusive-addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 60000,
+        "downloads": 1027939
+    },
+    {
+        "slug": "quick-featured-images",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 60000,
+        "downloads": 1017133
+    },
+    {
+        "slug": "wordfence-login-security",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 60000,
+        "downloads": 1015256
+    },
+    {
+        "slug": "ooohboi-steroids-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 970350
+    },
+    {
+        "slug": "metronet-profile-picture",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 60000,
+        "downloads": 943495
+    },
+    {
+        "slug": "upload-max-file-size",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 60000,
+        "downloads": 915667
+    },
+    {
+        "slug": "embed-any-document",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 868270
+    },
+    {
+        "slug": "disable-emojis",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 60000,
+        "downloads": 867908
+    },
+    {
+        "slug": "categories-images",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 60000,
+        "downloads": 795316
+    },
+    {
+        "slug": "timeline-widget-addon-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 732164
+    },
+    {
+        "slug": "api-key-for-google-maps",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 709937
+    },
+    {
+        "slug": "headers-security-advanced-hsts-wp",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 60000,
+        "downloads": 633646
+    },
+    {
+        "slug": "theme-editor",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 60000,
+        "downloads": 598232
+    },
+    {
+        "slug": "html-editor-syntax-highlighter",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 562264
+    },
+    {
+        "slug": "navz-photo-gallery",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 60000,
+        "downloads": 527841
+    },
+    {
+        "slug": "wp-featherlight",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 503006
+    },
+    {
+        "slug": "shortcode-in-menus",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 60000,
+        "downloads": 471998
+    },
+    {
+        "slug": "re-add-underline-justify",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 60000,
+        "downloads": 464478
+    },
+    {
+        "slug": "disable-xml-rpc-pingback",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 60000,
+        "downloads": 383666
+    },
+    {
+        "slug": "wp-extra-file-types",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 316958
+    },
+    {
+        "slug": "contact-form-7-add-confirm",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 60000,
+        "downloads": 249780
+    },
+    {
+        "slug": "sakura-rs-wp-ssl",
+        "requires_plugins": [],
+        "requires": "4.7.0",
+        "active_installs": 60000,
+        "downloads": 153043
+    },
+    {
+        "slug": "weglot",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-2fa",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "hcaptcha-for-forms-and-more",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "internal-links",
+        "requires_plugins": [],
+        "requires": "5.9.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "blocks-animation",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-custom-fields-table-field",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-maximum-upload-file-size",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wpcat2tag-importer",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "blog2social",
+        "requires_plugins": [],
+        "requires": "4.7.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "simple-tags",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "imagemagick-engine",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-letsencrypt-ssl",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-smart-compare",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "google-calendar-events",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-currency-switcher",
+        "requires_plugins": [],
+        "requires": "4.9.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "site-reviews",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "user-registration",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "jetformbuilder",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "spotlight-social-photo-feeds",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-carousel-free",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "print-invoices-packing-slip-labels-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "3.0.1",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-dashboard",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "drag-and-drop-multiple-file-upload-contact-form-7",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "mailchimp",
+        "requires_plugins": [],
+        "requires": "6.1",
+        "active_installs": 60000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-simple-firewall",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 50000,
+        "downloads": 12011596
+    },
+    {
+        "slug": "social-networks-auto-poster-facebook-twitter-g",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 7371721
+    },
+    {
+        "slug": "all-in-one-event-calendar",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 3848570
+    },
+    {
+        "slug": "woocommerce-jetpack",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.8",
+        "active_installs": 50000,
+        "downloads": 3737036
+    },
+    {
+        "slug": "pirate-forms",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 3723524
+    },
+    {
+        "slug": "fast-velocity-minify",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 50000,
+        "downloads": 3333895
+    },
+    {
+        "slug": "simple-membership",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 2687191
+    },
+    {
+        "slug": "instagram-slider-widget",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 50000,
+        "downloads": 2544533
+    },
+    {
+        "slug": "stop-spammer-registrations-plugin",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 2392988
+    },
+    {
+        "slug": "amazon-s3-and-cloudfront",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 50000,
+        "downloads": 2144531
+    },
+    {
+        "slug": "robo-gallery",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 50000,
+        "downloads": 2011857
+    },
+    {
+        "slug": "super-progressive-web-apps",
+        "requires_plugins": [],
+        "requires": "3.6.0",
+        "active_installs": 50000,
+        "downloads": 1837419
+    },
+    {
+        "slug": "underconstruction",
+        "requires_plugins": [],
+        "requires": "2.7",
+        "active_installs": 50000,
+        "downloads": 1700698
+    },
+    {
+        "slug": "category-posts",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 50000,
+        "downloads": 1609389
+    },
+    {
+        "slug": "virtue-toolkit",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 50000,
+        "downloads": 1567864
+    },
+    {
+        "slug": "safe-redirect-manager",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 50000,
+        "downloads": 1544186
+    },
+    {
+        "slug": "printful-shipping-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 1539048
+    },
+    {
+        "slug": "simple-banner",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 50000,
+        "downloads": 1401705
+    },
+    {
+        "slug": "schema",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 1368703
+    },
+    {
+        "slug": "athemes-starter-sites",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 1355407
+    },
+    {
+        "slug": "yellow-pencil-visual-theme-customizer",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 1324316
+    },
+    {
+        "slug": "facebook-conversion-pixel",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 1139135
+    },
+    {
+        "slug": "reveal-ids-for-wp-admin-25",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 1083888
+    },
+    {
+        "slug": "wp-maintenance",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 1022968
+    },
+    {
+        "slug": "shariff",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 50000,
+        "downloads": 1005419
+    },
+    {
+        "slug": "styles-and-layouts-for-gravity-forms",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 1002552
+    },
+    {
+        "slug": "wpfront-notification-bar",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 905756
+    },
+    {
+        "slug": "widget-context",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 889369
+    },
+    {
+        "slug": "disable-google-fonts",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 50000,
+        "downloads": 881599
+    },
+    {
+        "slug": "auxin-portfolio",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 865745
+    },
+    {
+        "slug": "real-time-auto-find-and-replace",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 765582
+    },
+    {
+        "slug": "astra-bulk-edit",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 50000,
+        "downloads": 711863
+    },
+    {
+        "slug": "stop-user-enumeration",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 50000,
+        "downloads": 706655
+    },
+    {
+        "slug": "postmark-approved-wordpress-plugin",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 706402
+    },
+    {
+        "slug": "wp-htaccess-editor",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 684438
+    },
+    {
+        "slug": "hide-title",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 50000,
+        "downloads": 683233
+    },
+    {
+        "slug": "reset-astra-customizer",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 50000,
+        "downloads": 651257
+    },
+    {
+        "slug": "image-hover-effects-addon-for-elementor",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 623281
+    },
+    {
+        "slug": "acf-better-search",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 595277
+    },
+    {
+        "slug": "suretriggers",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 50000,
+        "downloads": 595146
+    },
+    {
+        "slug": "jwt-authentication-for-wp-rest-api",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 50000,
+        "downloads": 587710
+    },
+    {
+        "slug": "revision-control",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 549799
+    },
+    {
+        "slug": "what-the-file",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 50000,
+        "downloads": 534050
+    },
+    {
+        "slug": "wp-add-mime-types",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 50000,
+        "downloads": 528799
+    },
+    {
+        "slug": "woocommerce-advanced-free-shipping",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 513921
+    },
+    {
+        "slug": "export-all-urls",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 50000,
+        "downloads": 505215
+    },
+    {
+        "slug": "zapier",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 50000,
+        "downloads": 492900
+    },
+    {
+        "slug": "dynamic-visibility-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 50000,
+        "downloads": 484644
+    },
+    {
+        "slug": "display-php-version",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 480328
+    },
+    {
+        "slug": "login-logo",
+        "requires_plugins": [],
+        "requires": "5.1.2",
+        "active_installs": 50000,
+        "downloads": 437793
+    },
+    {
+        "slug": "zarinpal-woocommerce-payment-gateway",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 50000,
+        "downloads": 422190
+    },
+    {
+        "slug": "elegro-payment",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 50000,
+        "downloads": 417986
+    },
+    {
+        "slug": "remove-category-url",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 50000,
+        "downloads": 411199
+    },
+    {
+        "slug": "wp-scss",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 50000,
+        "downloads": 409571
+    },
+    {
+        "slug": "advanced-popups",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 394475
+    },
+    {
+        "slug": "adapta-rgpd",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 348699
+    },
+    {
+        "slug": "export-media-with-selected-content",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 50000,
+        "downloads": 345321
+    },
+    {
+        "slug": "zipaddr-jp",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 50000,
+        "downloads": 287800
+    },
+    {
+        "slug": "bing-webmaster-tools",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 277972
+    },
+    {
+        "slug": "smart-custom-fields",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 50000,
+        "downloads": 242630
+    },
+    {
+        "slug": "button-contact-vr",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 205877
+    },
+    {
+        "slug": "wp-revisions-control",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 50000,
+        "downloads": 199476
+    },
+    {
+        "slug": "wp-yandex-metrika",
+        "requires_plugins": [],
+        "requires": "5.2.9",
+        "active_installs": 50000,
+        "downloads": 169905
+    },
+    {
+        "slug": "pages-with-category-and-tag",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 50000,
+        "downloads": 81177
+    },
+    {
+        "slug": "cornerstone",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 59730
+    },
+    {
+        "slug": "calculated-fields-form",
+        "requires_plugins": [],
+        "requires": "3.0.5",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "yoast-test-helper",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "simple-cloudflare-turnstile",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "responsive-accordion-and-collapse",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "custom-taxonomy-order-ne",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "qi-blocks",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "missed-scheduled-posts-publisher",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-rss-aggregator",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "hide-page-and-post-title",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "bold-page-builder",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-login-woocommerce",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "clever-fox",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-blocks",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "feedzy-rss-feeds",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-digital-downloads",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-accessibility",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "contact-form-plugin",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "social-pug",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "dokan-lite",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.4",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-google-adwords-conversion-tracking-tag",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "404-to-homepage",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-product-filter",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "3.4.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-accordion-free",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-recipe-maker",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "kubio",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "sina-extension-for-elementor",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "4.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "phoenix-media-rename",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "convertkit",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "koko-analytics",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-cloudflare-page-cache",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "searchwp-live-ajax-search",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "ajax-load-more",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "woo-permalink-manager",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "gravity-forms-pdf-extended",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "booking",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "search-filter",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "all-in-one-schemaorg-rich-snippets",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-addons-for-contact-form-7",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "form-maker",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "profile-builder",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-category-excluder",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 50000,
+        "downloads": 0
+    },
+    {
+        "slug": "easy-facebook-likebox",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 40000,
+        "downloads": 3083864
+    },
+    {
+        "slug": "nimble-builder",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 2859136
+    },
+    {
+        "slug": "google-maps-widget",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 2422357
+    },
+    {
+        "slug": "ditty-news-ticker",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 40000,
+        "downloads": 2406454
+    },
+    {
+        "slug": "soliloquy-lite",
+        "requires_plugins": [],
+        "requires": "5.7.0",
+        "active_installs": 40000,
+        "downloads": 2331723
+    },
+    {
+        "slug": "wp-postratings",
+        "requires_plugins": [],
+        "requires": "4.9.6",
+        "active_installs": 40000,
+        "downloads": 2223535
+    },
+    {
+        "slug": "social-media-widget",
+        "requires_plugins": [],
+        "requires": "2.9.2",
+        "active_installs": 40000,
+        "downloads": 2131610
+    },
+    {
+        "slug": "quick-adsense",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 1971875
+    },
+    {
+        "slug": "fancybox-for-wordpress",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 1847653
+    },
+    {
+        "slug": "visitors-traffic-real-time-statistics",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 40000,
+        "downloads": 1622827
+    },
+    {
+        "slug": "woocommerce-shipstation-integration",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "6.4",
+        "active_installs": 40000,
+        "downloads": 1354947
+    },
+    {
+        "slug": "gutentor",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 40000,
+        "downloads": 1328394
+    },
+    {
+        "slug": "timber-library",
+        "requires_plugins": [],
+        "requires": "5.3.0",
+        "active_installs": 40000,
+        "downloads": 1314106
+    },
+    {
+        "slug": "wp-logo-showcase-responsive-slider-slider",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 1287732
+    },
+    {
+        "slug": "wp-video-lightbox",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 1234361
+    },
+    {
+        "slug": "popup-anything-on-click",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 40000,
+        "downloads": 1099195
+    },
+    {
+        "slug": "exclude-pages",
+        "requires_plugins": [],
+        "requires": "2.2.3",
+        "active_installs": 40000,
+        "downloads": 1031435
+    },
+    {
+        "slug": "bulk-delete",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 40000,
+        "downloads": 1030577
+    },
+    {
+        "slug": "wp-seo-structured-data-schema",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 1001773
+    },
+    {
+        "slug": "beautiful-and-responsive-cookie-consent",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 980081
+    },
+    {
+        "slug": "carousel-slider",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 40000,
+        "downloads": 974798
+    },
+    {
+        "slug": "learnpress-course-review",
+        "requires_plugins": [
+            "learnpress"
+        ],
+        "requires": "6.0",
+        "active_installs": 40000,
+        "downloads": 972955
+    },
+    {
+        "slug": "testimonial-free",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 957387
+    },
+    {
+        "slug": "wp-phpmyadmin-extension",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 40000,
+        "downloads": 870169
+    },
+    {
+        "slug": "image-watermark",
+        "requires_plugins": [],
+        "requires": "4.3",
+        "active_installs": 40000,
+        "downloads": 868722
+    },
+    {
+        "slug": "blossomthemes-toolkit",
+        "requires_plugins": [],
+        "requires": "4.4.0",
+        "active_installs": 40000,
+        "downloads": 859774
+    },
+    {
+        "slug": "surecart",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 40000,
+        "downloads": 856366
+    },
+    {
+        "slug": "site-offline",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 843203
+    },
+    {
+        "slug": "wp-jquery-lightbox",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 841115
+    },
+    {
+        "slug": "fluent-crm",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 827785
+    },
+    {
+        "slug": "shopengine",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 40000,
+        "downloads": 824771
+    },
+    {
+        "slug": "insert-pages",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 40000,
+        "downloads": 824285
+    },
+    {
+        "slug": "ajax-thumbnail-rebuild",
+        "requires_plugins": [],
+        "requires": "2.8",
+        "active_installs": 40000,
+        "downloads": 816133
+    },
+    {
+        "slug": "enhanced-text-widget",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 40000,
+        "downloads": 811966
+    },
+    {
+        "slug": "yaymail",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 805786
+    },
+    {
+        "slug": "mega-addons-for-visual-composer",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 40000,
+        "downloads": 786060
+    },
+    {
+        "slug": "woocommerce-correios",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 784890
+    },
+    {
+        "slug": "genesis-simple-hooks",
+        "requires_plugins": [],
+        "requires": "4.7.2",
+        "active_installs": 40000,
+        "downloads": 780874
+    },
+    {
+        "slug": "cryout-theme-settings",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 771219
+    },
+    {
+        "slug": "famethemes-demo-importer",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 755434
+    },
+    {
+        "slug": "wp-import-export-lite",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 40000,
+        "downloads": 714717
+    },
+    {
+        "slug": "acf-to-rest-api",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 697117
+    },
+    {
+        "slug": "wpide",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 687062
+    },
+    {
+        "slug": "woocommerce-conversion-tracking",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 40000,
+        "downloads": 675931
+    },
+    {
+        "slug": "secupress",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 40000,
+        "downloads": 665223
+    },
+    {
+        "slug": "optimus",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 659853
+    },
+    {
+        "slug": "content-control",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 40000,
+        "downloads": 657467
+    },
+    {
+        "slug": "cf7-google-sheets-connector",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 40000,
+        "downloads": 638913
+    },
+    {
+        "slug": "easy-watermark",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 632440
+    },
+    {
+        "slug": "http-headers",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 40000,
+        "downloads": 601265
+    },
+    {
+        "slug": "say-what",
+        "requires_plugins": [],
+        "requires": "6.2",
+        "active_installs": 40000,
+        "downloads": 592035
+    },
+    {
+        "slug": "themify-portfolio-post",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 40000,
+        "downloads": 589259
+    },
+    {
+        "slug": "piotnet-addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 567514
+    },
+    {
+        "slug": "wp-last-modified-info",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 522832
+    },
+    {
+        "slug": "wt-woocommerce-sequential-order-numbers",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 40000,
+        "downloads": 484196
+    },
+    {
+        "slug": "snazzy-maps",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 483951
+    },
+    {
+        "slug": "starbox",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 478315
+    },
+    {
+        "slug": "lightweight-social-icons",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 447846
+    },
+    {
+        "slug": "open-external-links-in-a-new-window",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 436654
+    },
+    {
+        "slug": "export-media-library",
+        "requires_plugins": [],
+        "requires": "4.7.10",
+        "active_installs": 40000,
+        "downloads": 426926
+    },
+    {
+        "slug": "remove-dashboard-access-for-non-admins",
+        "requires_plugins": [],
+        "requires": "3.1.0",
+        "active_installs": 40000,
+        "downloads": 397610
+    },
+    {
+        "slug": "username-changer",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 397211
+    },
+    {
+        "slug": "themesflat-addons-for-elementor",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 40000,
+        "downloads": 385508
+    },
+    {
+        "slug": "rss-for-yandex-turbo",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 40000,
+        "downloads": 372088
+    },
+    {
+        "slug": "dethemekit-for-elementor",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 40000,
+        "downloads": 363075
+    },
+    {
+        "slug": "wp-admin-ui-customize",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 40000,
+        "downloads": 356532
+    },
+    {
+        "slug": "addons-for-divi",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 351648
+    },
+    {
+        "slug": "disable-emails",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 40000,
+        "downloads": 333812
+    },
+    {
+        "slug": "disable-search",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 333106
+    },
+    {
+        "slug": "wp-404-auto-redirect-to-similar-post",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 320975
+    },
+    {
+        "slug": "really-simple-csv-importer",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 40000,
+        "downloads": 283580
+    },
+    {
+        "slug": "clean-image-filenames",
+        "requires_plugins": [],
+        "requires": "2.9",
+        "active_installs": 40000,
+        "downloads": 279991
+    },
+    {
+        "slug": "structured-content",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 40000,
+        "downloads": 273049
+    },
+    {
+        "slug": "visual-footer-credit-remover",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 231822
+    },
+    {
+        "slug": "wc-smart-cod",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 40000,
+        "downloads": 228766
+    },
+    {
+        "slug": "cyr-and-lat",
+        "requires_plugins": [],
+        "requires": "4.2",
+        "active_installs": 40000,
+        "downloads": 188377
+    },
+    {
+        "slug": "when-last-login",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 138468
+    },
+    {
+        "slug": "selfhost-google-fonts",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 137851
+    },
+    {
+        "slug": "wp-call-button",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "clear-cache-for-widgets",
+        "requires_plugins": [],
+        "requires": "3.8",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "gallery-custom-links",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "filter-everything",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "visibility-logic-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-post",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "advanced-product-fields-for-woocommerce",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "ithemes-sync",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "age-gate",
+        "requires_plugins": [],
+        "requires": "6.0.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "contact-form-7-multi-step-module",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "wpfront-user-role-editor",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "persian-woocommerce-sms",
+        "requires_plugins": [],
+        "requires": "5.8",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "change-admin-email-setting-without-outbound-email",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "content-aware-sidebars",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "klaviyo",
+        "requires_plugins": [],
+        "requires": "4.4",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "media-file-renamer",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "mystickyelements",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "persian-elementor",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "wcboost-variation-swatches",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "varnish-http-purge",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "oneclick-whatsapp-order",
+        "requires_plugins": [],
+        "requires": "5.3",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "h5p",
+        "requires_plugins": [],
+        "requires": "3.8.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "page-list",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "pc-robotstxt",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "post-grid",
+        "requires_plugins": [],
+        "requires": "5.0.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "ays-popup-box",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "download-plugins-dashboard",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "uncanny-automator",
+        "requires_plugins": [],
+        "requires": "5.4",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-database-backup",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "greenshift-animation-and-page-builder-blocks",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "simply-static",
+        "requires_plugins": [],
+        "requires": "6.3",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "yith-woocommerce-ajax-search",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "dominant-color-images",
+        "requires_plugins": [],
+        "requires": "6.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-responsive-menu",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "mappress-google-maps-for-wordpress",
+        "requires_plugins": [],
+        "requires": "5.9.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "ultimate-responsive-image-slider",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "seraphinite-accelerator",
+        "requires_plugins": [],
+        "requires": "4.5",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "crop-thumbnails",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "quiz-master-next",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "sierotki",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "custom-field-template",
+        "requires_plugins": [],
+        "requires": "2.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "woocommerce-delivery-notes",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "4.4",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "simply-schedule-appointments",
+        "requires_plugins": [],
+        "requires": "5.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "autocomplete-woocommerce-orders",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "superb-blocks",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 40000,
+        "downloads": 0
+    },
+    {
+        "slug": "wp-force-login",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 30000,
+        "downloads": 5299556
+    },
+    {
+        "slug": "bulletproof-security",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 30000,
+        "downloads": 4354846
+    },
+    {
+        "slug": "backup",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 3417410
+    },
+    {
+        "slug": "yith-woocommerce-zoom-magnifier",
+        "requires_plugins": [],
+        "requires": "6.4",
+        "active_installs": 30000,
+        "downloads": 2922782
+    },
+    {
+        "slug": "advanced-responsive-video-embedder",
+        "requires_plugins": [],
+        "requires": "6.6",
+        "active_installs": 30000,
+        "downloads": 2539444
+    },
+    {
+        "slug": "theme-check",
+        "requires_plugins": [],
+        "requires": "3.7",
+        "active_installs": 30000,
+        "downloads": 2383622
+    },
+    {
+        "slug": "sumome",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 30000,
+        "downloads": 2382371
+    },
+    {
+        "slug": "seo-ultimate",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 30000,
+        "downloads": 2331516
+    },
+    {
+        "slug": "constant-contact-forms",
+        "requires_plugins": [],
+        "requires": "5.2.0",
+        "active_installs": 30000,
+        "downloads": 2260246
+    },
+    {
+        "slug": "printfriendly",
+        "requires_plugins": [],
+        "requires": "4.9",
+        "active_installs": 30000,
+        "downloads": 2138740
+    },
+    {
+        "slug": "google-sitemap-plugin",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 30000,
+        "downloads": 2074290
+    },
+    {
+        "slug": "wp-analytify",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 30000,
+        "downloads": 2057932
+    },
+    {
+        "slug": "ultimate-faqs",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 1950027
+    },
+    {
+        "slug": "seo-image",
+        "requires_plugins": [],
+        "requires": "2.7",
+        "active_installs": 30000,
+        "downloads": 1877302
+    },
+    {
+        "slug": "stripe-payments",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 30000,
+        "downloads": 1776954
+    },
+    {
+        "slug": "visual-form-builder",
+        "requires_plugins": [],
+        "requires": "4.7",
+        "active_installs": 30000,
+        "downloads": 1708272
+    },
+    {
+        "slug": "debug-bar",
+        "requires_plugins": [],
+        "requires": "3.4",
+        "active_installs": 30000,
+        "downloads": 1627864
+    },
+    {
+        "slug": "wp-console",
+        "requires_plugins": [],
+        "requires": "5.3.12",
+        "active_installs": 30000,
+        "downloads": 1608958
+    },
+    {
+        "slug": "advanced-gutenberg",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 30000,
+        "downloads": 1537163
+    },
+    {
+        "slug": "zero-bs-crm",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 1503027
+    },
+    {
+        "slug": "zero-spam",
+        "requires_plugins": [],
+        "requires": "5.2",
+        "active_installs": 30000,
+        "downloads": 1311920
+    },
+    {
+        "slug": "google-maps-easy",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 30000,
+        "downloads": 1283347
+    },
+    {
+        "slug": "gwolle-gb",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 30000,
+        "downloads": 1282986
+    },
+    {
+        "slug": "rss-importer",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 30000,
+        "downloads": 1250434
+    },
+    {
+        "slug": "klarna-payments-for-woocommerce",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.0",
+        "active_installs": 30000,
+        "downloads": 1244197
+    },
+    {
+        "slug": "antivirus",
+        "requires_plugins": [],
+        "requires": "4.1",
+        "active_installs": 30000,
+        "downloads": 1229831
+    },
+    {
+        "slug": "wp-lightbox-2",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 30000,
+        "downloads": 1220388
+    },
+    {
+        "slug": "simple-social-buttons",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 30000,
+        "downloads": 1210415
+    },
+    {
+        "slug": "advanced-wp-reset",
+        "requires_plugins": [],
+        "requires": "4.0",
+        "active_installs": 30000,
+        "downloads": 1194439
+    },
+    {
+        "slug": "wp-customer-reviews",
+        "requires_plugins": [],
+        "requires": "3.0.0",
+        "active_installs": 30000,
+        "downloads": 1192193
+    },
+    {
+        "slug": "jquery-updater",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 1178937
+    },
+    {
+        "slug": "protect-uploads",
+        "requires_plugins": [],
+        "requires": "3.0.1",
+        "active_installs": 30000,
+        "downloads": 1158153
+    },
+    {
+        "slug": "thirstyaffiliates",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 1145223
+    },
+    {
+        "slug": "co-authors-plus",
+        "requires_plugins": [],
+        "requires": "5.7",
+        "active_installs": 30000,
+        "downloads": 1131590
+    },
+    {
+        "slug": "master-addons",
+        "requires_plugins": [
+            "elementor"
+        ],
+        "requires": "4.0",
+        "active_installs": 30000,
+        "downloads": 1129999
+    },
+    {
+        "slug": "spicebox",
+        "requires_plugins": [],
+        "requires": "3.3",
+        "active_installs": 30000,
+        "downloads": 1031490
+    },
+    {
+        "slug": "ag-custom-admin",
+        "requires_plugins": [],
+        "requires": "3.0",
+        "active_installs": 30000,
+        "downloads": 1014875
+    },
+    {
+        "slug": "wp-editor",
+        "requires_plugins": [],
+        "requires": "3.9",
+        "active_installs": 30000,
+        "downloads": 1002466
+    },
+    {
+        "slug": "blossomthemes-email-newsletter",
+        "requires_plugins": [],
+        "requires": "4.3",
+        "active_installs": 30000,
+        "downloads": 970903
+    },
+    {
+        "slug": "wp-paginate",
+        "requires_plugins": [],
+        "requires": false,
+        "active_installs": 30000,
+        "downloads": 969687
+    },
+    {
+        "slug": "wp-graphql",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 30000,
+        "downloads": 946585
+    },
+    {
+        "slug": "paypal-donations",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 30000,
+        "downloads": 928538
+    },
+    {
+        "slug": "bnfw",
+        "requires_plugins": [],
+        "requires": "4.8",
+        "active_installs": 30000,
+        "downloads": 904861
+    },
+    {
+        "slug": "woocustomizer",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 30000,
+        "downloads": 893803
+    },
+    {
+        "slug": "related-posts-thumbnails",
+        "requires_plugins": [],
+        "requires": "3.6",
+        "active_installs": 30000,
+        "downloads": 875274
+    },
+    {
+        "slug": "portfolio-filter-gallery",
+        "requires_plugins": [],
+        "requires": "3.2",
+        "active_installs": 30000,
+        "downloads": 865103
+    },
+    {
+        "slug": "woo-variation-gallery",
+        "requires_plugins": [
+            "woocommerce"
+        ],
+        "requires": "5.7",
+        "active_installs": 30000,
+        "downloads": 850525
+    },
+    {
+        "slug": "bj-lazy-load",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 30000,
+        "downloads": 841181
+    },
+    {
+        "slug": "rara-one-click-demo-import",
+        "requires_plugins": [],
+        "requires": "6.0",
+        "active_installs": 30000,
+        "downloads": 822293
+    },
+    {
+        "slug": "woocommerce-customizer",
+        "requires_plugins": [],
+        "requires": "5.6",
+        "active_installs": 30000,
+        "downloads": 815471
+    },
+    {
+        "slug": "essential-content-types",
+        "requires_plugins": [],
+        "requires": "5.9",
+        "active_installs": 30000,
+        "downloads": 791958
+    },
+    {
+        "slug": "easy-video-player",
+        "requires_plugins": [],
+        "requires": "5.5",
+        "active_installs": 30000,
+        "downloads": 786851
+    },
+    {
+        "slug": "block-options",
+        "requires_plugins": [],
+        "requires": "5.0",
+        "active_installs": 30000,
+        "downloads": 774607
+    },
+    {
+        "slug": "mp-timetable",
+        "requires_plugins": [],
+        "requires": "4.6",
+        "active_installs": 30000,
+        "downloads": 771730
+    },
+    {
+        "slug": "hide-admin-bar",
+        "requires_plugins": [],
+        "requires": "3.1",
+        "active_installs": 30000,
+        "downloads": 765375
+    },
+    {
+        "slug": "easy-social-icons",
+        "requires_plugins": [],
+        "requires": "3.5",
+        "active_installs": 30000,
+        "downloads": 751522
+    }
+]

@@ -14,23 +14,28 @@ const playgroundUrls = [
 
 // Read ../plugins-to-test.txt and store each line as a array item
 const currentDir = process.cwd();
-const pluginsToTest = fs
-  .readFileSync(
-    `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.txt`,
+const pluginsToTest = JSON.parse(
+  fs.readFileSync(
+    `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.json`,
     "utf8"
   )
-  .split("\n")
-  .splice(0, 12);
+).splice(0, 12);
 
 pluginsToTest.forEach((plugin) => {
   playgroundUrls.forEach((playgroundUrl) => {
-    test(`${playgroundUrl.name} - ${plugin} should load`, async ({
+    test(`${playgroundUrl.name} - ${plugin.slug} should load`, async ({
       website,
       wordpress,
     }) => {
       const url = "/wp-admin/plugins.php";
+      const slug = plugin.slug;
+      const plugins = [slug];
+      if (plugin.requires_plugins) {
+        plugins.push(...plugin.requires_plugins);
+      }
+      const pluginArgs = plugins.map((plugin) => `plugin=${plugin}`).join("&");
       const response = await website.goto(
-        `${playgroundUrl.url}?url=${url}&plugin=${plugin}`
+        `${playgroundUrl.url}?url=${url}&${pluginArgs}`
       );
       await website.waitForNestedIframes(website.page);
 
@@ -57,7 +62,7 @@ pluginsToTest.forEach((plugin) => {
         await website.waitForNestedIframes(website.page);
       }
 
-      await expect(wordpress.locator(`#deactivate-${plugin}`)).toContainText(
+      await expect(wordpress.locator(`#deactivate-${slug}`)).toContainText(
         "Deactivate"
       );
     });

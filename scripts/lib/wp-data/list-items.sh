@@ -16,8 +16,15 @@ list_top_n_items() {
 
   find "wp-public-data/$item_type" -name '*.json' -exec cat {} + | \
     jq -s '
-        map({slug, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
+        map({slug, requires_plugins, requires, active_installs: (.active_installs // 0), downloads: (.downloaded // 0)}) |
         sort_by(-.active_installs, -.downloads) |
         .[:'$top_n_items']
-    ' | jq -r '.[].slug'
+    '
+}
+
+list_top_n_item_slugs() {
+  local item_type=$1
+  local top_n_items=$2
+
+  list_top_n_items $item_type $top_n_items | jq -r '.[].slug'
 }

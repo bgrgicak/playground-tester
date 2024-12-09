@@ -85,7 +85,7 @@ function generate_test_comparison_report() {
 
     echo "| Improved $item_type |" > "$report_file"
     echo "|----------------|" >> "$report_file"
-    local top_n_items=$(list_top_n_items "$item_type" 1000)
+    local top_n_items=$(list_top_n_item_slugs "$item_type" 1000)
     for item in $top_n_items; do
         local error_count_2023=$(get_error_count "$item_type" "$item" "wp-now-dec-2023")
         local error_count_2024=$(get_error_count "$item_type" "$item" "wp-now")
