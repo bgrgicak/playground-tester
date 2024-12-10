@@ -2,31 +2,27 @@ import { test, expect } from "../playground-fixtures.ts";
 import fs from "fs";
 
 const playgroundUrls = [
-  // {
-  //   name: "Playground from December 2023",
-  //   url: "http://localhost:5400/website-server/",
-  //   oldUI: true,
-  //   wpVersion: 6.4,
-  // },
+  {
+    name: "Playground from December 2023",
+    url: "http://127.0.0.1:5400/website-server/",
+    oldUI: true,
+    wpVersion: 6.4,
+  },
   {
     name: "Playground from December 2024",
-    url: "http://localhost:5401/website-server/",
+    url: "http://127.0.0.1:5401/website-server/",
     oldUI: false,
     wpVersion: 6.6,
   },
 ];
 
 const currentDir = process.cwd();
-const pluginsWithTimeout = fs
-  .readFileSync(`${currentDir}/temp/temporary-error-report.md`, "utf8")
-  .split("\n");
-
 const pluginsToTest = JSON.parse(
   fs.readFileSync(
     `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.json`,
     "utf8"
   )
-).filter((plugin) => pluginsWithTimeout.includes(plugin.slug));
+);
 
 pluginsToTest.forEach((plugin) => {
   playgroundUrls.forEach((playgroundUrl) => {
@@ -83,9 +79,9 @@ pluginsToTest.forEach((plugin) => {
       ).toBeVisible();
       if ((await urlInput.inputValue()) !== url) {
         await urlInput.fill(url);
+        await urlInput.press("Enter");
+        await website.waitForNestedIframes(website.page);
       }
-      await urlInput.press("Enter");
-      await website.waitForNestedIframes(website.page);
 
       const deactivateButtonByLabel = await wordpress.getByLabel(
         `Deactivate ${plugin.name}`

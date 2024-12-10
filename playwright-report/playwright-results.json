@@ -1,0 +1,137 @@
+{
+  "config": {
+    "configFile": "/Users/bero/Projects/playground-tester/playwright.config.ts",
+    "rootDir": "/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/bero/Projects/playground-tester/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "website-boot.spec.ts",
+      "file": "website-boot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Playground from December 2024 - visitors-traffic-real-time-statistics should load",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "interrupted",
+                  "duration": 78329,
+                  "error": {
+                    "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible\u001b[22m\n",
+                    "stack": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible\u001b[22m\n\n    at WebsitePage.waitForNestedIframes (/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts:13:10)\n    at WebsitePage.goto (/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts:47:16)\n    at /Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/e2e/website-boot.spec.ts:50:7",
+                    "location": {
+                      "file": "/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts",
+                      "column": 10,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../website-page.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m       page\n \u001b[90m 12 |\u001b[39m         \u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m\"Report error\"\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m         \u001b[33m.\u001b[39mthen(() \u001b[33m=>\u001b[39m {\n \u001b[90m 15 |\u001b[39m           expect(\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"Playground failed to boot with an error.\"\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m         })\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts",
+                        "column": 10,
+                        "line": 13
+                      },
+                      "message": "Error: locator.waitFor: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../website-page.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m       page\n \u001b[90m 12 |\u001b[39m         \u001b[33m.\u001b[39mlocator(\u001b[32m\"h1\"\u001b[39m\u001b[33m,\u001b[39m { hasText\u001b[33m:\u001b[39m \u001b[32m\"Report error\"\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m         \u001b[33m.\u001b[39mthen(() \u001b[33m=>\u001b[39m {\n \u001b[90m 15 |\u001b[39m           expect(\u001b[36mfalse\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"Playground failed to boot with an error.\"\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m         })\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at WebsitePage.waitForNestedIframes (/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts:13:10)\u001b[22m\n\u001b[2m    at WebsitePage.goto (/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts:47:16)\u001b[22m\n\u001b[2m    at /Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/e2e/website-boot.spec.ts:50:7\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-10T12:09:32.007Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/bero/Projects/playground-tester/test-results/website-boot-Playground-fr-9d3dd-time-statistics-should-load-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/bero/Projects/playground-tester/scripts/lib/playwright-tests/website-page.ts",
+                    "column": 10,
+                    "line": 13
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "00251c339e68fee143d7-8d7c2eaaea74c32c52cb",
+          "file": "website-boot.spec.ts",
+          "line": 29,
+          "column": 9
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-12-10T12:09:31.202Z",
+    "duration": 80159.17599999998,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
