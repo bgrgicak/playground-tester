@@ -2,12 +2,12 @@ import { test, expect } from "../playground-fixtures.ts";
 import fs from "fs";
 
 const playgroundUrls = [
-  {
-    name: "Playground from December 2023",
-    url: "http://localhost:5400/website-server/",
-    oldUI: true,
-    wpVersion: 6.4,
-  },
+  // {
+  //   name: "Playground from December 2023",
+  //   url: "http://localhost:5400/website-server/",
+  //   oldUI: true,
+  //   wpVersion: 6.4,
+  // },
   {
     name: "Playground from December 2024",
     url: "http://localhost:5401/website-server/",
@@ -16,14 +16,17 @@ const playgroundUrls = [
   },
 ];
 
-// Read ../plugins-to-test.txt and store each line as a array item
 const currentDir = process.cwd();
+const pluginsWithTimeout = fs
+  .readFileSync(`${currentDir}/temp/temporary-error-report.md`, "utf8")
+  .split("\n");
+
 const pluginsToTest = JSON.parse(
   fs.readFileSync(
     `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.json`,
     "utf8"
   )
-);
+).filter((plugin) => pluginsWithTimeout.includes(plugin.slug));
 
 pluginsToTest.forEach((plugin) => {
   playgroundUrls.forEach((playgroundUrl) => {
@@ -42,14 +45,20 @@ pluginsToTest.forEach((plugin) => {
 
       const url = "/wp-admin/plugins.php";
       const slug = plugin.slug;
-      const plugins = [slug];
+      const plugins: string[] = [];
       if (plugin.requires_plugins) {
         plugins.push(...plugin.requires_plugins);
       }
+      plugins.push(slug);
       const pluginArgs = plugins.map((plugin) => `plugin=${plugin}`).join("&");
       await website.goto(
         `${playgroundUrl.url}?url=${url}&wp=${playgroundWpVersion}&${pluginArgs}`
       );
+      await website.waitForNestedIframes();
+
+      expect(website.page.locator("h1", { hasText: "Report error" }), {
+        message: "Playground failed to boot with an error.",
+      }).not.toBeVisible();
 
       // Check if WordPress loaded the error page on first load
       expect(wordpress.locator("body")).not.toHaveId("error-page");
@@ -74,9 +83,9 @@ pluginsToTest.forEach((plugin) => {
       ).toBeVisible();
       if ((await urlInput.inputValue()) !== url) {
         await urlInput.fill(url);
-        await urlInput.press("Enter");
-        await website.waitForNestedIframes(website.page);
       }
+      await urlInput.press("Enter");
+      await website.waitForNestedIframes(website.page);
 
       const deactivateButtonByLabel = await wordpress.getByLabel(
         `Deactivate ${plugin.name}`

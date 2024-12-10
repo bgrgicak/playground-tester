@@ -5,17 +5,28 @@ export class WebsitePage {
 
   // Wait for WordPress to load
   async waitForNestedIframes(page = this.page) {
-    const slowExpect = expect.configure({ timeout: 300000 });
-    await slowExpect(
+    const slowExpect = expect.configure({ timeout: 180000 });
+    await Promise.race([
+      // Create a promise that rejects if error page is visible
       page
-        /* There are multiple viewports possible, so we need to select
-				   the one that is visible. */
-        .frameLocator(
-          "#playground-viewport:visible,.playground-viewport:visible"
-        )
-        .frameLocator("#wp")
-        .locator("body")
-    ).not.toBeEmpty();
+        .locator("h1", { hasText: "Report error" })
+        .waitFor({ state: "visible" })
+        .then(() => {
+          expect(false, "Playground failed to boot with an error.").toBe(true);
+        }),
+      // Wait for WordPress iframe to load
+      slowExpect(
+        page
+          .frameLocator(
+            "#playground-viewport:visible,.playground-viewport:visible"
+          )
+          .frameLocator("#wp")
+          .locator("body"),
+        {
+          message: "Playground timed out during boot.",
+        }
+      ).not.toBeEmpty(),
+    ]);
   }
 
   wordpress(page = this.page) {

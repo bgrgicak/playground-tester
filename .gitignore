@@ -3,6 +3,5 @@ temp
 .DS_Store
 .nvm/
 /test-results/
-/playwright-report/
 /blob-report/
 /playwright/.cache/

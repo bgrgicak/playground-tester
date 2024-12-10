@@ -68,8 +68,7 @@ update_error_stats() {
     jq --argjson entry "$new_entry" '. * $entry' "$playground_stats_file" > "$temp_file" && mv "$temp_file" "$playground_stats_file"
 }
 
-function update_comparison_stats() {
-    echo "Updating comparison stats..."
+function generate_comparison_stats() {
     jq  '
         # Define function to clean ANSI escape sequences and replace newlines
         def clean_error:
@@ -104,15 +103,37 @@ function update_comparison_stats() {
             .[$data[$i].slug] += [$data[$i]]
         ) |
         to_entries |
-        map(select(.value | length == 2)) |  # Ensure both 2023 and 2024 entries exist
         map({
             title: .value[0].title,
             slug: .value[0].slug,
             result_2023: (.value | map(select(.year == "2023"))[0] | if .ok then "ok" else .error end),
             result_2024: (.value | map(select(.year == "2024"))[0] | if .ok then "ok" else .error end)
         })
-        ' \
-        playwright-report/playwright-results.json > data/stats/playground-2023-2024-error-comparison.json
+        ' "$1"
+}
+
+function update_comparison_stats() {
+    echo "Updating comparison stats..."
+    local initial_stats=$(mktemp)
+    generate_comparison_stats playwright-report/playwright-results-full-run.json > "$initial_stats"
+    local new_stats=$(mktemp)
+    generate_comparison_stats playwright-report/playwright-results-timeout-errors.json > "$new_stats"
+    jq -s '
+        .[0] as $initial |
+        .[1] as $new |
+        $initial |
+        map(
+            . as $item |
+            $new |
+            map(select(.slug == $item.slug)) |
+            if length > 0 then
+                $item + {result_2024: .[0].result_2024}
+            else
+                $item
+            end
+        )
+    ' "$initial_stats" "$new_stats" \
+        > data/stats/playground-2023-2024-error-comparison.json
 }
 
 update_comparison_stats
