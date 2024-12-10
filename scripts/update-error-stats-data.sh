@@ -68,5 +68,55 @@ update_error_stats() {
     jq --argjson entry "$new_entry" '. * $entry' "$playground_stats_file" > "$temp_file" && mv "$temp_file" "$playground_stats_file"
 }
 
-add_error_stat_files_if_missing
-update_error_stats
+function update_comparison_stats() {
+    echo "Updating comparison stats..."
+    jq  '
+        # Define function to clean ANSI escape sequences and replace newlines
+        def clean_error:
+            gsub("\u001b\\[[0-9;]*[a-zA-Z]|\\x1b\\[[0-9;]*[a-zA-Z]"; "") |
+            gsub("\\n"; " ");
+
+        [
+            .suites[0].specs |
+            .[] |
+            {
+                title: .title,
+                year: (.title | startswith("Playground from December 2023") | if . then "2023" else "2024" end),
+                slug: (.title |
+                    sub("Playground from December 2023 - "; "") |
+                    sub("Playground from December 2024 - "; "") |
+                    sub(" should load"; "")
+                ),
+                ok: .ok,
+                error: (
+                    if .tests[0].results[0].error.message then
+                        .tests[0].results[0].error.message | clean_error
+                    else
+                        null
+                    end
+                )
+            }
+        ] |
+        sort_by(.slug, .year) |
+        . as $data |
+        reduce range(0; length) as $i (
+            {};
+            .[$data[$i].slug] += [$data[$i]]
+        ) |
+        to_entries |
+        map(select(.value | length == 2)) |  # Ensure both 2023 and 2024 entries exist
+        map({
+            title: .value[0].title,
+            slug: .value[0].slug,
+            result_2023: (.value | map(select(.year == "2023"))[0] | if .ok then "ok" else .error end),
+            result_2024: (.value | map(select(.year == "2024"))[0] | if .ok then "ok" else .error end)
+        })
+        ' \
+        playwright-report/playwright-results.json > data/stats/playground-2023-2024-error-comparison.json
+}
+
+update_comparison_stats
+
+# add_error_stat_files_if_missing
+# update_error_stats
+# update_comparison_stats

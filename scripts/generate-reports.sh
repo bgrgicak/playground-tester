@@ -83,23 +83,66 @@ function generate_test_comparison_report() {
     local item_type=$1
     local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/test-comparison.md"
 
-    echo "| Improved $item_type |" > "$report_file"
-    echo "|----------------|" >> "$report_file"
-    local top_n_items=$(list_top_n_item_slugs "$item_type" 1000)
-    for item in $top_n_items; do
-        local error_count_2023=$(get_error_count "$item_type" "$item" "wp-now-dec-2023")
-        local error_count_2024=$(get_error_count "$item_type" "$item" "wp-now")
+    echo "# Test Comparison Report" > "$report_file"
+    echo "This report compares the test results for Playground from December 2023 and December 2024." >> "$report_file"
 
-        if [ "$error_count_2023" -gt 0 ] && [ "$error_count_2024" -eq 0 ]; then
-            echo "| $item |" >> "$report_file"
-        fi
-    done
+    # Calculate error rates
+    local total_2023=$(jq length data/stats/playground-2023-2024-error-comparison.json)
+    local errors_2023=$(jq '[.[] | select(.result_2023 != "ok")] | length' data/stats/playground-2023-2024-error-comparison.json)
+    local total_2024=$(jq length data/stats/playground-2023-2024-error-comparison.json)
+    local errors_2024=$(jq '[.[] | select(.result_2024 != "ok")] | length' data/stats/playground-2023-2024-error-comparison.json)
+
+    local error_rate_2023=$(echo "scale=2; ($errors_2023 / $total_2023) * 100" | bc)
+    local error_rate_2024=$(echo "scale=2; ($errors_2024 / $total_2024) * 100" | bc)
+    local improvement=$(echo "scale=2; $error_rate_2023 - $error_rate_2024" | bc)
+
+    echo "## Stats" >> "$report_file"
+    echo "| Year | Error Rate |" >> "$report_file"
+    echo "|------|------------|" >> "$report_file"
+    echo "| 2023 | ${error_rate_2023}% |" >> "$report_file"
+    echo "| 2024 | ${error_rate_2024}% |" >> "$report_file"
+    echo "| Improvement | ${improvement}% |" >> "$report_file"
+
+    echo "## Report" >> "$report_file"
+    echo "" >> "$report_file"
+    echo "| Test Item | 2023 Result | 2024 Result |" >> "$report_file"
+    echo "|-----------|-------------|-------------|" >> "$report_file"
+
+    jq -r '
+    . as $data |
+    map(select(.slug != null)) |  # Ensure slug is present
+    map({
+        title: .slug,
+        result_2023: (.result_2023 | if . == "ok" then "✅" else "❌" end),
+        result_2024: (.result_2024 | if . == "ok" then "✅" else "❌" end)
+    }) |
+    .[] |
+    "| \(.title) | \(.result_2023) | \(.result_2024) |"
+    ' data/stats/playground-2023-2024-error-comparison.json >> "$report_file"
 }
 
+function generate_temporary_error_report() {
+    local report_file="$PLAYGROUND_TESTER_PATH/temp/temporary-error-report.md"
+    jq -r '
+    . as $data |
+    map(select(.slug != null)) |  # Ensure slug is present
+    map({
+        title: .slug,
+        result_2023: .result_2023,
+        result_2024: .result_2024
+    }) |
+    .[] |
+    select((.result_2023 != "ok" or .result_2024 != "ok") and (false == (.result_2023 != "ok" and .result_2024 != "ok"))) |
+    "| \(.title) | \(.result_2023) | \(.result_2024) |"
+    ' data/stats/playground-2023-2024-error-comparison.json >> "$report_file"
+}
 
-update_stats
-generate_sql_error_reports
-generate_php_error_reports
-generate_playground_error_reports
-generate_test_comparison_report "plugins"
-push_reports
+generate_temporary_error_report
+
+
+# update_stats
+# generate_sql_error_reports
+# generate_php_error_reports
+# generate_playground_error_reports
+# generate_test_comparison_report "plugins"
+# push_reports

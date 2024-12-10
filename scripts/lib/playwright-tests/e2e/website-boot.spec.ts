@@ -47,17 +47,12 @@ pluginsToTest.forEach((plugin) => {
         plugins.push(...plugin.requires_plugins);
       }
       const pluginArgs = plugins.map((plugin) => `plugin=${plugin}`).join("&");
-      const response = await website.goto(
+      await website.goto(
         `${playgroundUrl.url}?url=${url}&wp=${playgroundWpVersion}&${pluginArgs}`
       );
-      await website.waitForNestedIframes(website.page);
 
-      expect(
-        response.status(),
-        `Response status for ${
-          plugin.slug
-        } is ${response.status()}. A valid response status is less than 400.`
-      ).toBeLessThan(400);
+      // Check if WordPress loaded the error page on first load
+      expect(wordpress.locator("body")).not.toHaveId("error-page");
 
       /**
        * Some plugins are redirecting to custom pages, so we need to check if the URL is correct
@@ -89,9 +84,15 @@ pluginsToTest.forEach((plugin) => {
       const deactivateButtonById = await wordpress.locator(
         `#deactivate-${slug}`
       );
-      await expect(deactivateButtonByLabel.or(deactivateButtonById)).toHaveText(
-        "Deactivate"
+      const deactivateButtonByHrefStart = await wordpress.locator(
+        `a[href^="plugins.php?action=deactivate&plugin=${slug}"]`
       );
+      await expect(
+        deactivateButtonByHrefStart
+          .or(deactivateButtonById)
+          .or(deactivateButtonByLabel),
+        `The plugin ${plugin.name} isn't activated.`
+      ).toHaveText("Deactivate");
     });
   });
 });

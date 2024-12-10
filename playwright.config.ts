@@ -7,10 +7,10 @@ const baseURL =
 export const playwrightConfig: PlaywrightTestConfig = {
   testDir: "./scripts/lib/playwright-tests/e2e",
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  retries: 2,
+  retries: 0,
   workers: 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [

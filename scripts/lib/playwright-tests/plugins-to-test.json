@@ -19,7 +19,7 @@
     "slug": "wordpress-seo",
     "name": "Yoast SEO",
     "requires_plugins": [],
-    "requires": "6.4",
+    "requires": "6.5",
     "active_installs": 10000000,
     "downloads": 0
   },
@@ -36,7 +36,7 @@
     "name": "WooCommerce",
     "requires_plugins": [],
     "requires": "6.5",
-    "active_installs": 7000000,
+    "active_installs": 8000000,
     "downloads": 0
   },
   {
@@ -112,14 +112,6 @@
     "downloads": 0
   },
   {
-    "slug": "all-in-one-seo-pack",
-    "name": "All in One SEO – Powerful SEO Plugin to Boost SEO Rankings &amp; Increase Traffic",
-    "requires_plugins": [],
-    "requires": "5.3",
-    "active_installs": 3000000,
-    "downloads": 158649321
-  },
-  {
     "slug": "wp-mail-smtp",
     "name": "WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin",
     "requires_plugins": [],
@@ -134,6 +126,14 @@
     "requires": "3.4",
     "active_installs": 3000000,
     "downloads": 28393207
+  },
+  {
+    "slug": "all-in-one-seo-pack",
+    "name": "All in One SEO – Powerful SEO Plugin to Boost SEO Rankings &amp; Increase Traffic",
+    "requires_plugins": [],
+    "requires": "5.3",
+    "active_installs": 3000000,
+    "downloads": 0
   },
   {
     "slug": "wordpress-importer",
@@ -168,14 +168,6 @@
     "downloads": 0
   },
   {
-    "slug": "redirection",
-    "name": "Redirection",
-    "requires_plugins": [],
-    "requires": "6.4",
-    "active_installs": 2000000,
-    "downloads": 57163527
-  },
-  {
     "slug": "tinymce-advanced",
     "name": "Advanced Editor Tools",
     "requires_plugins": [],
@@ -193,9 +185,9 @@
   },
   {
     "slug": "header-footer-elementor",
-    "name": "Elementor Header &amp; Footer Builder",
+    "name": "Ultimate Addons for Elementor (Formerly Elementor Header &amp; Footer Builder)",
     "requires_plugins": [],
-    "requires": "4.4",
+    "requires": "5.0",
     "active_installs": 2000000,
     "downloads": 0
   },
@@ -248,12 +240,12 @@
     "downloads": 0
   },
   {
-    "slug": "sg-cachepress",
-    "name": "Speed Optimizer &#8211; The All-In-One Performance-Boosting Plugin",
+    "slug": "redirection",
+    "name": "Redirection",
     "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 1000000,
-    "downloads": 81906473
+    "requires": "6.4",
+    "active_installs": 2000000,
+    "downloads": 0
   },
   {
     "slug": "wp-smushit",
@@ -270,14 +262,6 @@
     "requires": "6.5",
     "active_installs": 1000000,
     "downloads": 54592214
-  },
-  {
-    "slug": "google-sitemap-generator",
-    "name": "XML Sitemap Generator for Google",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 1000000,
-    "downloads": 40628544
   },
   {
     "slug": "autoptimize",
@@ -302,30 +286,6 @@
     "requires": "5.0.0",
     "active_installs": 1000000,
     "downloads": 32279256
-  },
-  {
-    "slug": "cookie-notice",
-    "name": "Cookie Notice &amp; Compliance for GDPR / CCPA",
-    "requires_plugins": [],
-    "requires": "4.9.6",
-    "active_installs": 1000000,
-    "downloads": 29432893
-  },
-  {
-    "slug": "loco-translate",
-    "name": "Loco Translate",
-    "requires_plugins": [],
-    "requires": "5.2",
-    "active_installs": 1000000,
-    "downloads": 26863193
-  },
-  {
-    "slug": "redux-framework",
-    "name": "Redux Framework",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 1000000,
-    "downloads": 26760842
   },
   {
     "slug": "wp-file-manager",
@@ -392,14 +352,6 @@
     "downloads": 14636618
   },
   {
-    "slug": "code-snippets",
-    "name": "Code Snippets",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 1000000,
-    "downloads": 11353133
-  },
-  {
     "slug": "svg-support",
     "name": "SVG Support",
     "requires_plugins": [],
@@ -419,7 +371,7 @@
     "slug": "safe-svg",
     "name": "Safe SVG",
     "requires_plugins": [],
-    "requires": "6.4",
+    "requires": "6.5",
     "active_installs": 1000000,
     "downloads": 0
   },
@@ -435,7 +387,7 @@
     "slug": "astra-sites",
     "name": "Starter Templates — Elementor, WordPress &amp; Beaver Builder Templates",
     "requires_plugins": [],
-    "requires": "4.4",
+    "requires": "6.6",
     "active_installs": 1000000,
     "downloads": 0
   },
@@ -464,6 +416,22 @@
     "downloads": 0
   },
   {
+    "slug": "cookie-notice",
+    "name": "Cookie Notice &amp; Compliance for GDPR / CCPA",
+    "requires_plugins": [],
+    "requires": "4.9.6",
+    "active_installs": 1000000,
+    "downloads": 0
+  },
+  {
+    "slug": "code-snippets",
+    "name": "Code Snippets",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 1000000,
+    "downloads": 0
+  },
+  {
     "slug": "envato-elements",
     "name": "Envato Elements &#8211; Photos &amp; Elementor Templates",
     "requires_plugins": [],
@@ -480,8 +448,16 @@
     "downloads": 0
   },
   {
+    "slug": "google-sitemap-generator",
+    "name": "XML Sitemap Generator for Google",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 1000000,
+    "downloads": 0
+  },
+  {
     "slug": "duplicator",
-    "name": "Duplicator &#8211; Migration &amp; Backup Plugin",
+    "name": "Duplicator &#8211; Backups &amp; Migration Plugin &#8211; Cloud Backups, Scheduled Backups, &amp; More",
     "requires_plugins": [],
     "requires": "4.9",
     "active_installs": 1000000,
@@ -500,6 +476,14 @@
     "name": "Loginizer",
     "requires_plugins": [],
     "requires": "3.0",
+    "active_installs": 1000000,
+    "downloads": 0
+  },
+  {
+    "slug": "redux-framework",
+    "name": "Redux Framework",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 1000000,
     "downloads": 0
   },
@@ -528,6 +512,14 @@
     "downloads": 0
   },
   {
+    "slug": "sg-cachepress",
+    "name": "Speed Optimizer &#8211; The All-In-One Performance-Boosting Plugin",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 1000000,
+    "downloads": 0
+  },
+  {
     "slug": "optinmonster",
     "name": "Popup Builder by OptinMonster &#8211; WordPress Popups for Optins, Email Newsletters and Lead Generation",
     "requires_plugins": [],
@@ -544,14 +536,12 @@
     "downloads": 0
   },
   {
-    "slug": "google-listings-and-ads",
-    "name": "Google for WooCommerce",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "5.9",
-    "active_installs": 900000,
-    "downloads": 26409758
+    "slug": "loco-translate",
+    "name": "Loco Translate",
+    "requires_plugins": [],
+    "requires": "5.2",
+    "active_installs": 1000000,
+    "downloads": 0
   },
   {
     "slug": "smart-slider-3",
@@ -570,12 +560,22 @@
     "downloads": 14572021
   },
   {
+    "slug": "google-listings-and-ads",
+    "name": "Google for WooCommerce",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "5.9",
+    "active_installs": 900000,
+    "downloads": 0
+  },
+  {
     "slug": "imagify",
     "name": "Imagify – Optimize Images &amp; Convert WebP &amp; AVIF | Compress Images Easily",
     "requires_plugins": [],
     "requires": "5.3",
     "active_installs": 900000,
-    "downloads": 12700973
+    "downloads": 0
   },
   {
     "slug": "flamingo",
@@ -584,6 +584,14 @@
     "requires": "6.4",
     "active_installs": 800000,
     "downloads": 6778934
+  },
+  {
+    "slug": "image-optimization",
+    "name": "Image Optimizer &#8211; Optimize Images and Convert to WebP or AVIF",
+    "requires_plugins": [],
+    "requires": "6.2",
+    "active_installs": 800000,
+    "downloads": 0
   },
   {
     "slug": "woocommerce-services",
@@ -601,7 +609,7 @@
     "requires_plugins": [
       "woocommerce"
     ],
-    "requires": "6.4",
+    "requires": "6.5",
     "active_installs": 800000,
     "downloads": 0
   },
@@ -610,6 +618,16 @@
     "name": "Website Builder by SeedProd — Theme Builder, Landing Page Builder, Coming Soon Page, Maintenance Mode",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 800000,
+    "downloads": 0
+  },
+  {
+    "slug": "woocommerce-payments",
+    "name": "WooPayments: Integrated WooCommerce Payments",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "6.0",
     "active_installs": 800000,
     "downloads": 0
   },
@@ -654,22 +672,6 @@
     "downloads": 11649544
   },
   {
-    "slug": "under-construction-page",
-    "name": "Under Construction",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 700000,
-    "downloads": 10674906
-  },
-  {
-    "slug": "duracelltomi-google-tag-manager",
-    "name": "GTM4WP &#8211; A Google Tag Manager (GTM) plugin for WordPress",
-    "requires_plugins": [],
-    "requires": "3.4.0",
-    "active_installs": 700000,
-    "downloads": 10435711
-  },
-  {
     "slug": "antispam-bee",
     "name": "Antispam Bee",
     "requires_plugins": [],
@@ -681,7 +683,7 @@
     "slug": "tablepress",
     "name": "TablePress &#8211; Tables in WordPress made easy",
     "requires_plugins": [],
-    "requires": "6.0",
+    "requires": "6.2",
     "active_installs": 700000,
     "downloads": 0
   },
@@ -726,12 +728,10 @@
     "downloads": 0
   },
   {
-    "slug": "woocommerce-payments",
-    "name": "WooPayments: Integrated WooCommerce Payments",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "6.0",
+    "slug": "duracelltomi-google-tag-manager",
+    "name": "GTM4WP &#8211; A Google Tag Manager (GTM) plugin for WordPress",
+    "requires_plugins": [],
+    "requires": "3.4.0",
     "active_installs": 700000,
     "downloads": 0
   },
@@ -747,7 +747,23 @@
     "slug": "ninja-forms",
     "name": "Ninja Forms &#8211; The Contact Form Builder That Grows With You",
     "requires_plugins": [],
-    "requires": "6.4",
+    "requires": "6.5",
+    "active_installs": 700000,
+    "downloads": 0
+  },
+  {
+    "slug": "under-construction-page",
+    "name": "Under Construction",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 700000,
+    "downloads": 0
+  },
+  {
+    "slug": "gtranslate",
+    "name": "Translate WordPress with GTranslate",
+    "requires_plugins": [],
+    "requires": "2.8.1",
     "active_installs": 700000,
     "downloads": 0
   },
@@ -786,30 +802,6 @@
     "downloads": 18037834
   },
   {
-    "slug": "wp-pagenavi",
-    "name": "WP-PageNavi",
-    "requires_plugins": [],
-    "requires": "3.2",
-    "active_installs": 600000,
-    "downloads": 12328545
-  },
-  {
-    "slug": "gtranslate",
-    "name": "Translate WordPress with GTranslate",
-    "requires_plugins": [],
-    "requires": "2.8.1",
-    "active_installs": 600000,
-    "downloads": 11302489
-  },
-  {
-    "slug": "enable-media-replace",
-    "name": "Enable Media Replace",
-    "requires_plugins": [],
-    "requires": "4.9.7",
-    "active_installs": 600000,
-    "downloads": 10598076
-  },
-  {
     "slug": "kirki",
     "name": "Kirki Customizer Framework",
     "requires_plugins": [],
@@ -824,22 +816,6 @@
     "requires": "4.9",
     "active_installs": 600000,
     "downloads": 6079656
-  },
-  {
-    "slug": "contact-form-cfdb7",
-    "name": "Contact Form 7 Database Addon &#8211; CFDB7",
-    "requires_plugins": [],
-    "requires": "4.8",
-    "active_installs": 600000,
-    "downloads": 5299898
-  },
-  {
-    "slug": "image-optimization",
-    "name": "Image Optimizer by Elementor – Optimize Images and Convert to WebP or AVIF",
-    "requires_plugins": [],
-    "requires": "6.2",
-    "active_installs": 600000,
-    "downloads": 3120183
   },
   {
     "slug": "woocommerce-paypal-payments",
@@ -860,10 +836,26 @@
     "downloads": 0
   },
   {
+    "slug": "enable-media-replace",
+    "name": "Enable Media Replace",
+    "requires_plugins": [],
+    "requires": "4.9.7",
+    "active_installs": 600000,
+    "downloads": 0
+  },
+  {
     "slug": "meta-box",
     "name": "Meta Box",
     "requires_plugins": [],
     "requires": "5.9",
+    "active_installs": 600000,
+    "downloads": 0
+  },
+  {
+    "slug": "contact-form-cfdb7",
+    "name": "Contact Form 7 Database Addon &#8211; CFDB7",
+    "requires_plugins": [],
+    "requires": "4.8",
     "active_installs": 600000,
     "downloads": 0
   },
@@ -904,6 +896,14 @@
     "name": "BackWPup – WordPress Backup &amp; Restore Plugin",
     "requires_plugins": [],
     "requires": "4.9",
+    "active_installs": 600000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-pagenavi",
+    "name": "WP-PageNavi",
+    "requires_plugins": [],
+    "requires": "4.6",
     "active_installs": 600000,
     "downloads": 0
   },
@@ -1004,14 +1004,6 @@
     "downloads": 0
   },
   {
-    "slug": "malcare-security",
-    "name": "MalCare WordPress Security Plugin &#8211; Malware Scanner, Cleaner, Security Firewall",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 500000,
-    "downloads": 0
-  },
-  {
     "slug": "forminator",
     "name": "Forminator Forms – Contact Form, Payment Form &amp; Custom Form Builder",
     "requires_plugins": [],
@@ -1084,28 +1076,12 @@
     "downloads": 22515074
   },
   {
-    "slug": "formidable",
-    "name": "Formidable Forms &#8211; Contact Form Plugin, Survey, Quiz, Payment, Calculator Form &amp; Custom Form Builder",
-    "requires_plugins": [],
-    "requires": "5.2",
-    "active_installs": 400000,
-    "downloads": 21903912
-  },
-  {
     "slug": "add-to-any",
     "name": "AddToAny Share Buttons",
     "requires_plugins": [],
     "requires": "4.5",
     "active_installs": 400000,
     "downloads": 17229524
-  },
-  {
-    "slug": "megamenu",
-    "name": "Max Mega Menu",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 400000,
-    "downloads": 9576571
   },
   {
     "slug": "really-simple-captcha",
@@ -1116,28 +1092,12 @@
     "downloads": 8839538
   },
   {
-    "slug": "password-protected",
-    "name": "Password Protected – Password Protect your WordPress Site, Pages, &amp; WooCommerce Products &#8211; Restrict Content, Protect WooCommerce Category, and more",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 400000,
-    "downloads": 5020511
-  },
-  {
     "slug": "header-footer",
     "name": "Head, Footer and Post Injections",
     "requires_plugins": [],
     "requires": "5.1",
     "active_installs": 400000,
     "downloads": 4629734
-  },
-  {
-    "slug": "metform",
-    "name": "MetForm &#8211; Contact Form, Survey, Quiz, &amp; Custom Form Builder for Elementor",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 400000,
-    "downloads": 4195823
   },
   {
     "slug": "font-awesome",
@@ -1164,12 +1124,28 @@
     "downloads": 2171238
   },
   {
+    "slug": "malcare-security",
+    "name": "MalCare WordPress Security Plugin &#8211; Malware Scanner, Cleaner, Security Firewall",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 400000,
+    "downloads": 0
+  },
+  {
     "slug": "contact-form-7-honeypot",
     "name": "Honeypot for Contact Form 7 — Protect Contact Form 7 spam with ease! [100% FREE Anti-Spam Plugin]",
     "requires_plugins": [
       "contact-form-7"
     ],
     "requires": "4.8",
+    "active_installs": 400000,
+    "downloads": 0
+  },
+  {
+    "slug": "megamenu",
+    "name": "Max Mega Menu",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 400000,
     "downloads": 0
   },
@@ -1252,10 +1228,34 @@
     "downloads": 0
   },
   {
+    "slug": "metform",
+    "name": "MetForm &#8211; Contact Form, Survey, Quiz, &amp; Custom Form Builder for Elementor",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 400000,
+    "downloads": 0
+  },
+  {
     "slug": "royal-elementor-addons",
     "name": "Royal Elementor Addons and Templates",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 400000,
+    "downloads": 0
+  },
+  {
+    "slug": "password-protected",
+    "name": "Password Protected – Password Protect your WordPress Site, Pages, &amp; WooCommerce Products &#8211; Restrict Content, Protect WooCommerce Category, and more",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 400000,
+    "downloads": 0
+  },
+  {
+    "slug": "formidable",
+    "name": "Formidable Forms &#8211; Contact Form Plugin, Survey, Quiz, Payment, Calculator Form &amp; Custom Form Builder",
+    "requires_plugins": [],
+    "requires": "5.2",
     "active_installs": 400000,
     "downloads": 0
   },
@@ -1276,14 +1276,6 @@
     "requires": "4.4",
     "active_installs": 300000,
     "downloads": 16032681
-  },
-  {
-    "slug": "leadin",
-    "name": "HubSpot &#8211; CRM, Email Marketing, Live Chat, Forms &amp; Analytics",
-    "requires_plugins": [],
-    "requires": "5.8",
-    "active_installs": 300000,
-    "downloads": 15854712
   },
   {
     "slug": "ad-inserter",
@@ -1342,22 +1334,6 @@
     "requires": "5.9",
     "active_installs": 300000,
     "downloads": 6379617
-  },
-  {
-    "slug": "nextend-facebook-connect",
-    "name": "Nextend Social Login and Register",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 300000,
-    "downloads": 5926076
-  },
-  {
-    "slug": "members",
-    "name": "Members &#8211; Membership &amp; User Role Editor Plugin",
-    "requires_plugins": [],
-    "requires": "6.0",
-    "active_installs": 300000,
-    "downloads": 5113140
   },
   {
     "slug": "widget-importer-exporter",
@@ -1459,7 +1435,7 @@
     "slug": "pretty-link",
     "name": "PrettyLinks &#8211; Affiliate Links, Link Branding, Link Tracking &amp; Marketing Plugin",
     "requires_plugins": [],
-    "requires": "5.1",
+    "requires": "6.0",
     "active_installs": 300000,
     "downloads": 0
   },
@@ -1512,6 +1488,14 @@
     "downloads": 0
   },
   {
+    "slug": "unlimited-elements-for-elementor",
+    "name": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+    "requires_plugins": [],
+    "requires": "3.5",
+    "active_installs": 300000,
+    "downloads": 0
+  },
+  {
     "slug": "wp-google-maps",
     "name": "WP Go Maps (formerly WP Google Maps)",
     "requires_plugins": [],
@@ -1528,6 +1512,14 @@
     "downloads": 0
   },
   {
+    "slug": "nextend-facebook-connect",
+    "name": "Nextend Social Login and Register",
+    "requires_plugins": [],
+    "requires": "4.9",
+    "active_installs": 300000,
+    "downloads": 0
+  },
+  {
     "slug": "breeze",
     "name": "Breeze &#8211; WordPress Cache Plugin",
     "requires_plugins": [],
@@ -1536,8 +1528,16 @@
     "downloads": 0
   },
   {
+    "slug": "backuply",
+    "name": "Backuply &#8211; Backup, Restore, Migrate and Clone",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 300000,
+    "downloads": 0
+  },
+  {
     "slug": "chaty",
-    "name": "Floating Chat Widget: Contact Chat Icons, Telegram Chat, Line Messenger, WeChat, Email, SMS, Call Button – Chaty",
+    "name": "Floating Chat Widget: Contact Chat Icons, Telegram Chat, Line Messenger, WeChat, Email, SMS, Call Button, WhatsApp – Chaty",
     "requires_plugins": [],
     "requires": "3.1",
     "active_installs": 300000,
@@ -1548,6 +1548,14 @@
     "name": "Otter Blocks &#8211; Gutenberg Blocks, Page Builder for Gutenberg Editor &amp; FSE",
     "requires_plugins": [],
     "requires": "6.2",
+    "active_installs": 300000,
+    "downloads": 0
+  },
+  {
+    "slug": "members",
+    "name": "Members &#8211; Membership &amp; User Role Editor Plugin",
+    "requires_plugins": [],
+    "requires": "6.0",
     "active_installs": 300000,
     "downloads": 0
   },
@@ -1571,7 +1579,7 @@
     "slug": "gutenberg",
     "name": "Gutenberg",
     "requires_plugins": [],
-    "requires": "6.5",
+    "requires": "6.6",
     "active_installs": 300000,
     "downloads": 0
   },
@@ -1608,6 +1616,14 @@
     "downloads": 0
   },
   {
+    "slug": "leadin",
+    "name": "HubSpot &#8211; CRM, Email Marketing, Live Chat, Forms &amp; Analytics",
+    "requires_plugins": [],
+    "requires": "5.8",
+    "active_installs": 300000,
+    "downloads": 0
+  },
+  {
     "slug": "query-monitor",
     "name": "Query Monitor &#8211; The developer tools panel for WordPress",
     "requires_plugins": [],
@@ -1624,30 +1640,12 @@
     "downloads": 10401401
   },
   {
-    "slug": "woocommerce-google-analytics-integration",
-    "name": "Google Analytics for WooCommerce",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "6.2",
-    "active_installs": 200000,
-    "downloads": 8105600
-  },
-  {
     "slug": "cloudflare",
     "name": "Cloudflare",
     "requires_plugins": [],
     "requires": "3.4",
     "active_installs": 200000,
     "downloads": 8040663
-  },
-  {
-    "slug": "olympus-google-fonts",
-    "name": "Fonts Plugin | Use Google Fonts, Adobe Fonts or Upload Fonts",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 200000,
-    "downloads": 7942244
   },
   {
     "slug": "custom-facebook-feed",
@@ -1698,28 +1696,12 @@
     "downloads": 5292349
   },
   {
-    "slug": "call-now-button",
-    "name": "Call Now Button &#8211; The #1 Click to Call Button for WordPress",
-    "requires_plugins": [],
-    "requires": "4.1",
-    "active_installs": 200000,
-    "downloads": 5266045
-  },
-  {
     "slug": "cmp-coming-soon-maintenance",
     "name": "CMP &#8211; Coming Soon &amp; Maintenance Plugin by NiteoThemes",
     "requires_plugins": [],
     "requires": "3.0",
     "active_installs": 200000,
     "downloads": 5205941
-  },
-  {
-    "slug": "so-css",
-    "name": "SiteOrigin CSS",
-    "requires_plugins": [],
-    "requires": "3.9",
-    "active_installs": 200000,
-    "downloads": 5061298
   },
   {
     "slug": "wp-crontrol",
@@ -1744,22 +1726,6 @@
     "requires": "4.5",
     "active_installs": 200000,
     "downloads": 4549397
-  },
-  {
-    "slug": "user-switching",
-    "name": "User Switching",
-    "requires_plugins": [],
-    "requires": "5.8",
-    "active_installs": 200000,
-    "downloads": 3989901
-  },
-  {
-    "slug": "tawkto-live-chat",
-    "name": "Tawk.To Live Chat",
-    "requires_plugins": [],
-    "requires": "2.7",
-    "active_installs": 200000,
-    "downloads": 3816478
   },
   {
     "slug": "imsanity",
@@ -1792,14 +1758,6 @@
     "requires": "4.6",
     "active_installs": 200000,
     "downloads": 3485270
-  },
-  {
-    "slug": "tiny-compress-images",
-    "name": "TinyPNG &#8211; JPEG, PNG &amp; WebP image compression",
-    "requires_plugins": [],
-    "requires": "3.4",
-    "active_installs": 200000,
-    "downloads": 3480024
   },
   {
     "slug": "extendify",
@@ -1898,28 +1856,12 @@
     "downloads": 2547197
   },
   {
-    "slug": "cyr2lat",
-    "name": "Cyr-To-Lat",
-    "requires_plugins": [],
-    "requires": "5.1",
-    "active_installs": 200000,
-    "downloads": 2390800
-  },
-  {
     "slug": "customizer-export-import",
     "name": "Customizer Export/Import",
     "requires_plugins": [],
     "requires": "3.6",
     "active_installs": 200000,
     "downloads": 2276894
-  },
-  {
-    "slug": "instant-images",
-    "name": "Instant Images &#8211; One Click Image Uploads from Unsplash, Openverse, Pixabay and Pexels",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 200000,
-    "downloads": 2049419
   },
   {
     "slug": "generateblocks",
@@ -1962,30 +1904,12 @@
     "downloads": 1674855
   },
   {
-    "slug": "jeg-elementor-kit",
-    "name": "Jeg Elementor Kit",
-    "requires_plugins": [
-      "elementor"
-    ],
-    "requires": "5.0",
-    "active_installs": 200000,
-    "downloads": 1587316
-  },
-  {
     "slug": "wpfront-scroll-top",
     "name": "WPFront Scroll Top",
     "requires_plugins": [],
     "requires": "5.0",
     "active_installs": 200000,
     "downloads": 1521866
-  },
-  {
-    "slug": "wp-headers-and-footers",
-    "name": "Insert Headers And Footers",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 200000,
-    "downloads": 1245969
   },
   {
     "slug": "header-and-footer-scripts",
@@ -2012,6 +1936,14 @@
     "downloads": 489782
   },
   {
+    "slug": "autodescription",
+    "name": "The SEO Framework – Fast, Automated, Effortless.",
+    "requires_plugins": [],
+    "requires": "6.0",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
     "slug": "wordpress-popular-posts",
     "name": "WordPress Popular Posts",
     "requires_plugins": [],
@@ -2020,10 +1952,28 @@
     "downloads": 0
   },
   {
+    "slug": "call-now-button",
+    "name": "Call Now Button &#8211; The #1 Click to Call Button for WordPress",
+    "requires_plugins": [],
+    "requires": "4.1",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
     "slug": "photo-gallery",
     "name": "Photo Gallery by 10Web &#8211; Mobile-Friendly Image Gallery",
     "requires_plugins": [],
     "requires": "4.6",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "jeg-elementor-kit",
+    "name": "Jeg Elementor Kit",
+    "requires_plugins": [
+      "elementor"
+    ],
+    "requires": "5.0",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2060,10 +2010,18 @@
     "downloads": 0
   },
   {
-    "slug": "unlimited-elements-for-elementor",
-    "name": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+    "slug": "cyr2lat",
+    "name": "Cyr-To-Lat",
     "requires_plugins": [],
-    "requires": "3.5",
+    "requires": "5.3",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "tiny-compress-images",
+    "name": "TinyPNG &#8211; JPEG, PNG &amp; WebP image compression",
+    "requires_plugins": [],
+    "requires": "3.4",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2080,14 +2038,6 @@
     "name": "Supreme Modules Lite &#8211; Divi Theme, Extra Theme and Divi Builder",
     "requires_plugins": [],
     "requires": "4.5",
-    "active_installs": 200000,
-    "downloads": 0
-  },
-  {
-    "slug": "backuply",
-    "name": "Backuply &#8211; Backup, Restore, Migrate and Clone",
-    "requires_plugins": [],
-    "requires": "4.7",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2140,10 +2090,26 @@
     "downloads": 0
   },
   {
+    "slug": "so-css",
+    "name": "SiteOrigin CSS",
+    "requires_plugins": [],
+    "requires": "3.9",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
     "slug": "qi-addons-for-elementor",
     "name": "Qi Addons For Elementor",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "user-switching",
+    "name": "User Switching",
+    "requires_plugins": [],
+    "requires": "5.9",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2164,6 +2130,22 @@
     "downloads": 0
   },
   {
+    "slug": "instant-images",
+    "name": "Instant Images &#8211; One-click Image Uploads from Unsplash, Openverse, Pixabay, Pexels, and Giphy",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "tawkto-live-chat",
+    "name": "Tawk.To Live Chat",
+    "requires_plugins": [],
+    "requires": "2.7",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
     "slug": "cleantalk-spam-protect",
     "name": "Spam protection, Anti-Spam, FireWall by CleanTalk",
     "requires_plugins": [],
@@ -2180,10 +2162,28 @@
     "downloads": 0
   },
   {
+    "slug": "wp-headers-and-footers",
+    "name": "Insert Headers And Footers",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
     "slug": "menu-icons",
     "name": "Menu Icons by ThemeIsle",
     "requires_plugins": [],
     "requires": "4.7",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "woocommerce-google-analytics-integration",
+    "name": "Google Analytics for WooCommerce",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "6.2",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2231,7 +2231,7 @@
     "slug": "wp-security-audit-log",
     "name": "WP Activity Log",
     "requires_plugins": [],
-    "requires": "5.0",
+    "requires": "5.5",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2240,6 +2240,14 @@
     "name": "Favicon by RealFaviconGenerator",
     "requires_plugins": [],
     "requires": "3.5",
+    "active_installs": 200000,
+    "downloads": 0
+  },
+  {
+    "slug": "olympus-google-fonts",
+    "name": "Fonts Plugin | Use Google Fonts, Adobe Fonts or Upload Fonts",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 200000,
     "downloads": 0
   },
@@ -2276,14 +2284,6 @@
     "downloads": 10723486
   },
   {
-    "slug": "advanced-ads",
-    "name": "Advanced Ads – Ad Manager &amp; AdSense",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 9478276
-  },
-  {
     "slug": "bbpress",
     "name": "bbPress",
     "requires_plugins": [],
@@ -2300,14 +2300,6 @@
     "downloads": 7667399
   },
   {
-    "slug": "relevanssi",
-    "name": "Relevanssi &#8211; A Better Search",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 100000,
-    "downloads": 6677990
-  },
-  {
     "slug": "googleanalytics",
     "name": "ShareThis Dashboard for Google Analytics",
     "requires_plugins": [],
@@ -2316,36 +2308,12 @@
     "downloads": 6032003
   },
   {
-    "slug": "schema-and-structured-data-for-wp",
-    "name": "Schema &amp; Structured Data for WP &amp; AMP",
-    "requires_plugins": [],
-    "requires": "4.5",
-    "active_installs": 100000,
-    "downloads": 5535985
-  },
-  {
     "slug": "nginx-helper",
     "name": "Nginx Helper",
     "requires_plugins": [],
     "requires": "3.0",
     "active_installs": 100000,
     "downloads": 5383696
-  },
-  {
-    "slug": "yith-woocommerce-quick-view",
-    "name": "YITH WooCommerce Quick View",
-    "requires_plugins": [],
-    "requires": "6.4",
-    "active_installs": 100000,
-    "downloads": 5345405
-  },
-  {
-    "slug": "cf7-conditional-fields",
-    "name": "Conditional Fields for Contact Form 7",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 5066567
   },
   {
     "slug": "custom-sidebars",
@@ -2380,22 +2348,6 @@
     "downloads": 4636871
   },
   {
-    "slug": "content-views-query-and-display-post-page",
-    "name": "Content Views &#8211; Post Grid &amp; Filter, Recent Posts, Category Posts &#8230; (Shortcode, Blocks, and Elementor Widgets)",
-    "requires_plugins": [],
-    "requires": "3.3",
-    "active_installs": 100000,
-    "downloads": 4488645
-  },
-  {
-    "slug": "image-widget",
-    "name": "Image Widget",
-    "requires_plugins": [],
-    "requires": "3.5",
-    "active_installs": 100000,
-    "downloads": 4452981
-  },
-  {
     "slug": "wp-job-manager",
     "name": "WP Job Manager",
     "requires_plugins": [],
@@ -2412,30 +2364,6 @@
     "downloads": 4340664
   },
   {
-    "slug": "wp-all-import",
-    "name": "Import any XML or CSV File to WordPress",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 4193734
-  },
-  {
-    "slug": "wp-asset-clean-up",
-    "name": "Asset CleanUp: Page Speed Booster",
-    "requires_plugins": [],
-    "requires": "4.5",
-    "active_installs": 100000,
-    "downloads": 4167609
-  },
-  {
-    "slug": "woocommerce-multilingual",
-    "name": "WooCommerce Multilingual &amp; Multicurrency with WPML",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 100000,
-    "downloads": 4147313
-  },
-  {
     "slug": "onesignal-free-web-push-notifications",
     "name": "OneSignal &#8211; Web Push Notifications",
     "requires_plugins": [],
@@ -2444,36 +2372,12 @@
     "downloads": 4041369
   },
   {
-    "slug": "iubenda-cookie-law-solution",
-    "name": "iubenda | All-in-one Compliance for GDPR / CCPA Cookie Consent + more",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 3965982
-  },
-  {
     "slug": "list-category-posts",
     "name": "List category posts",
     "requires_plugins": [],
     "requires": "3.3",
     "active_installs": 100000,
     "downloads": 3852185
-  },
-  {
-    "slug": "autodescription",
-    "name": "The SEO Framework – Fast, Automated, Effortless.",
-    "requires_plugins": [],
-    "requires": "5.9",
-    "active_installs": 100000,
-    "downloads": 3846232
-  },
-  {
-    "slug": "wordpress-popup",
-    "name": "Hustle &#8211; Email Marketing, Lead Generation, Optins, Popups",
-    "requires_plugins": [],
-    "requires": "6.4",
-    "active_installs": 100000,
-    "downloads": 3781709
   },
   {
     "slug": "wp-db-backup",
@@ -2524,30 +2428,12 @@
     "downloads": 3232356
   },
   {
-    "slug": "kliken-marketing-for-google",
-    "name": "AI Powered Marketing",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "5.8",
-    "active_installs": 100000,
-    "downloads": 3191897
-  },
-  {
     "slug": "simple-social-icons",
     "name": "Simple Social Icons",
     "requires_plugins": [],
     "requires": "4.0",
     "active_installs": 100000,
     "downloads": 3074122
-  },
-  {
-    "slug": "capability-manager-enhanced",
-    "name": "PublishPress Capabilities &#8211; User Role Editor, Access Permissions, Admin Menus",
-    "requires_plugins": [],
-    "requires": "5.5",
-    "active_installs": 100000,
-    "downloads": 2984651
   },
   {
     "slug": "auto-terms-of-service-and-privacy-policy",
@@ -2608,14 +2494,6 @@
     "downloads": 2630001
   },
   {
-    "slug": "tidio-live-chat",
-    "name": "Tidio – Live Chat &amp; AI Chatbots",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 100000,
-    "downloads": 2563916
-  },
-  {
     "slug": "cache-enabler",
     "name": "Cache Enabler",
     "requires_plugins": [],
@@ -2656,14 +2534,6 @@
     "downloads": 2419639
   },
   {
-    "slug": "wp-all-export",
-    "name": "Export any WordPress data to XML/CSV",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 2371665
-  },
-  {
     "slug": "presto-player",
     "name": "The Ultimate Video Player For WordPress &#8211; by Presto Player",
     "requires_plugins": [],
@@ -2694,14 +2564,6 @@
     "requires": "5.4",
     "active_installs": 100000,
     "downloads": 2262729
-  },
-  {
-    "slug": "add-search-to-menu",
-    "name": "Ivory Search &#8211; WordPress Search Plugin",
-    "requires_plugins": [],
-    "requires": "3.9",
-    "active_installs": 100000,
-    "downloads": 2259473
   },
   {
     "slug": "q2w3-fixed-widget",
@@ -2800,14 +2662,6 @@
     "downloads": 1795889
   },
   {
-    "slug": "page-scroll-to-id",
-    "name": "Page scroll to id",
-    "requires_plugins": [],
-    "requires": "3.3",
-    "active_installs": 100000,
-    "downloads": 1755853
-  },
-  {
     "slug": "facebook-messenger-customer-chat",
     "name": "Facebook Chat Plugin &#8211; Live Chat Plugin for WordPress",
     "requires_plugins": [],
@@ -2840,36 +2694,12 @@
     "downloads": 1693719
   },
   {
-    "slug": "sticky-menu-or-anything-on-scroll",
-    "name": "Sticky Menu &amp; Sticky Header",
-    "requires_plugins": [],
-    "requires": "3.6",
-    "active_installs": 100000,
-    "downloads": 1596710
-  },
-  {
     "slug": "shortcoder",
     "name": "Shortcoder — Create Shortcodes for Anything",
     "requires_plugins": [],
     "requires": "4.9.0",
     "active_installs": 100000,
     "downloads": 1591656
-  },
-  {
-    "slug": "migrate-guru",
-    "name": "WordPress Migrate &amp; Clone Free : Migrate Guru",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 100000,
-    "downloads": 1573818
-  },
-  {
-    "slug": "wp-sweep",
-    "name": "WP-Sweep",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 100000,
-    "downloads": 1572557
   },
   {
     "slug": "robin-image-optimizer",
@@ -2886,14 +2716,6 @@
     "requires": "6.1",
     "active_installs": 100000,
     "downloads": 1527759
-  },
-  {
-    "slug": "wp-force-ssl",
-    "name": "WP Force SSL &amp; HTTPS SSL Redirect",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 100000,
-    "downloads": 1517441
   },
   {
     "slug": "wp-downgrade",
@@ -2984,22 +2806,6 @@
     "downloads": 1256754
   },
   {
-    "slug": "head-footer-code",
-    "name": "Head &amp; Footer Code",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 100000,
-    "downloads": 1235884
-  },
-  {
-    "slug": "xserver-typesquare-webfonts",
-    "name": "TypeSquare Webfonts for エックスサーバー",
-    "requires_plugins": [],
-    "requires": "5.2",
-    "active_installs": 100000,
-    "downloads": 1211555
-  },
-  {
     "slug": "wp-whatsapp",
     "name": "WP Chat App",
     "requires_plugins": [],
@@ -3022,14 +2828,6 @@
     "requires": "5.4",
     "active_installs": 100000,
     "downloads": 1192270
-  },
-  {
-    "slug": "public-post-preview",
-    "name": "Public Post Preview",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 100000,
-    "downloads": 1140894
   },
   {
     "slug": "heartbeat-control",
@@ -3096,14 +2894,6 @@
     "downloads": 1074585
   },
   {
-    "slug": "insert-php-code-snippet",
-    "name": "Insert PHP Code Snippet",
-    "requires_plugins": [],
-    "requires": "2.8",
-    "active_installs": 100000,
-    "downloads": 1054609
-  },
-  {
     "slug": "disable-admin-notices",
     "name": "Disable Admin Notices individually",
     "requires_plugins": [],
@@ -3168,14 +2958,6 @@
     "downloads": 868521
   },
   {
-    "slug": "seo-simple-pack",
-    "name": "SEO SIMPLE PACK",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 100000,
-    "downloads": 829835
-  },
-  {
     "slug": "full-site-editing",
     "name": "WordPress.com Editing Toolkit",
     "requires_plugins": [],
@@ -3216,14 +2998,6 @@
     "downloads": 715367
   },
   {
-    "slug": "wp-parsidate",
-    "name": "Parsi Date",
-    "requires_plugins": [],
-    "requires": "5.3",
-    "active_installs": 100000,
-    "downloads": 711766
-  },
-  {
     "slug": "popups-for-divi",
     "name": "Popups for Divi",
     "requires_plugins": [],
@@ -3246,22 +3020,6 @@
     "requires": "4.0",
     "active_installs": 100000,
     "downloads": 523624
-  },
-  {
-    "slug": "local-google-fonts",
-    "name": "Local Google Fonts",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 100000,
-    "downloads": 514279
-  },
-  {
-    "slug": "microsoft-clarity",
-    "name": "Microsoft Clarity",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 100000,
-    "downloads": 486071
   },
   {
     "slug": "make-column-clickable-elementor",
@@ -3352,6 +3110,14 @@
     "downloads": 0
   },
   {
+    "slug": "page-scroll-to-id",
+    "name": "Page scroll to id",
+    "requires_plugins": [],
+    "requires": "3.3",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "colibri-page-builder",
     "name": "Colibri Page Builder",
     "requires_plugins": [],
@@ -3371,13 +3137,23 @@
     "slug": "flexible-shipping",
     "name": "Table Rate Shipping Method for WooCommerce by Flexible Shipping",
     "requires_plugins": [],
-    "requires": "5.8",
+    "requires": "6.4",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "cf7-conditional-fields",
+    "name": "Conditional Fields for Contact Form 7",
+    "requires_plugins": [
+      "contact-form-7"
+    ],
+    "requires": "5.0",
     "active_installs": 100000,
     "downloads": 0
   },
   {
     "slug": "templates-patterns-collection",
-    "name": "Cloud Templates &amp; Patterns collection",
+    "name": "Starter Sites &amp; Templates by Neve",
     "requires_plugins": [],
     "requires": "5.5",
     "active_installs": 100000,
@@ -3408,6 +3184,14 @@
     "downloads": 0
   },
   {
+    "slug": "wp-parsidate",
+    "name": "Parsi Date",
+    "requires_plugins": [],
+    "requires": "5.2",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "admin-site-enhancements",
     "name": "Admin and Site Enhancements (ASE)",
     "requires_plugins": [],
@@ -3416,10 +3200,26 @@
     "downloads": 0
   },
   {
+    "slug": "add-search-to-menu",
+    "name": "Ivory Search &#8211; WordPress Search Plugin",
+    "requires_plugins": [],
+    "requires": "3.9",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "tenweb-speed-optimizer",
     "name": "10Web Booster &#8211; Website speed optimization, Cache &amp; Page Speed optimizer",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "head-footer-code",
+    "name": "Head &amp; Footer Code",
+    "requires_plugins": [],
+    "requires": "4.9",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3448,6 +3248,14 @@
     "downloads": 0
   },
   {
+    "slug": "relevanssi",
+    "name": "Relevanssi &#8211; A Better Search",
+    "requires_plugins": [],
+    "requires": "4.9",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "advanced-database-cleaner",
     "name": "Advanced Database Cleaner",
     "requires_plugins": [],
@@ -3460,6 +3268,14 @@
     "name": "404 to 301 &#8211; Redirect, Log and Notify 404 Errors",
     "requires_plugins": [],
     "requires": "3.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-all-import",
+    "name": "Import any XML or CSV File to WordPress",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3480,10 +3296,18 @@
     "downloads": 0
   },
   {
+    "slug": "seo-simple-pack",
+    "name": "SEO SIMPLE PACK",
+    "requires_plugins": [],
+    "requires": "4.9",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "everest-forms",
     "name": "Everest Forms – Build Contact Forms, Surveys, Polls, Quizzes, Newsletter &amp; Application Forms, and Many More with Ease!",
     "requires_plugins": [],
-    "requires": "5.2",
+    "requires": "5.5",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3492,6 +3316,14 @@
     "name": "Jetpack Protect",
     "requires_plugins": [],
     "requires": "6.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "local-google-fonts",
+    "name": "Local Google Fonts",
+    "requires_plugins": [],
+    "requires": "4.6",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3507,7 +3339,7 @@
     "slug": "stackable-ultimate-gutenberg-blocks",
     "name": "Stackable &#8211; Page Builder Gutenberg Blocks",
     "requires_plugins": [],
-    "requires": "6.3",
+    "requires": "6.4",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3523,7 +3355,7 @@
     "slug": "give",
     "name": "GiveWP &#8211; Donation Plugin and Fundraising Platform",
     "requires_plugins": [],
-    "requires": "6.4",
+    "requires": "6.5",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3560,6 +3392,16 @@
     "downloads": 0
   },
   {
+    "slug": "yith-woocommerce-quick-view",
+    "name": "YITH WooCommerce Quick View",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "6.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "omnisend",
     "name": "Newsletters, Email Marketing, SMS and Popups by Omnisend",
     "requires_plugins": [],
@@ -3580,6 +3422,14 @@
     "name": "FileOrganizer &#8211; Manage WordPress and Website Files",
     "requires_plugins": [],
     "requires": "5.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-all-export",
+    "name": "Export any WordPress data to XML/CSV",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3618,10 +3468,26 @@
     "downloads": 0
   },
   {
+    "slug": "insert-php-code-snippet",
+    "name": "Insert PHP Code Snippet",
+    "requires_plugins": [],
+    "requires": "2.8",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "duplicate-wp-page-post",
     "name": "Duplicate Page and Post",
     "requires_plugins": [],
     "requires": "3.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-asset-clean-up",
+    "name": "Asset CleanUp: Page Speed Booster",
+    "requires_plugins": [],
+    "requires": "4.5",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3650,6 +3516,14 @@
     "downloads": 0
   },
   {
+    "slug": "migrate-guru",
+    "name": "WordPress Migrate &amp; Clone Free : Migrate Guru",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "block-bad-queries",
     "name": "BBQ Firewall – Fast &amp; Powerful Firewall Security",
     "requires_plugins": [],
@@ -3662,6 +3536,22 @@
     "name": "Advanced Access Manager &#8211; Restricted Content, Users &amp; Roles, Enhanced Security and More",
     "requires_plugins": [],
     "requires": "5.2.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "public-post-preview",
+    "name": "Public Post Preview",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "capability-manager-enhanced",
+    "name": "PublishPress Capabilities &#8211; User Role Editor, Access Permissions, Admin Menus",
+    "requires_plugins": [],
+    "requires": "5.5",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3756,12 +3646,36 @@
     "downloads": 0
   },
   {
+    "slug": "image-widget",
+    "name": "Image Widget",
+    "requires_plugins": [],
+    "requires": "3.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "iubenda-cookie-law-solution",
+    "name": "iubenda | All-in-one Compliance for GDPR / CCPA Cookie Consent + more",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "contact-form-7-dynamic-text-extension",
     "name": "Contact Form 7 &#8211; Dynamic Text Extension",
     "requires_plugins": [
       "contact-form-7"
     ],
     "requires": "5.5",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "schema-and-structured-data-for-wp",
+    "name": "Schema &amp; Structured Data for WP &amp; AMP",
+    "requires_plugins": [],
+    "requires": "4.5",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3806,10 +3720,42 @@
     "downloads": 0
   },
   {
+    "slug": "wp-sweep",
+    "name": "WP-Sweep",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-force-ssl",
+    "name": "WP Force SSL &amp; HTTPS SSL Redirect",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "tidio-live-chat",
+    "name": "Tidio – Live Chat &amp; AI Chatbots",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "bdthemes-element-pack-lite",
-    "name": "Element Pack Elementor Addons (Header Footer, Template Library, Dynamic Grid &amp; Carousel, Remote Arrows)",
+    "name": "Element Pack Elementor Addons (Header Footer, Template Library, Dynamic Grid, Carousel and Remote Arrows)",
     "requires_plugins": [],
     "requires": "5.0.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "wordpress-popup",
+    "name": "Hustle &#8211; Email Marketing, Lead Generation, Optins, Popups",
+    "requires_plugins": [],
+    "requires": "6.4",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3823,7 +3769,7 @@
   },
   {
     "slug": "embedpress",
-    "name": "EmbedPress – Embed PDF, 3D Flipbook, Social Feeds, Google Docs, Vimeo, Wistia, YouTube Videos, Audios, Google Maps in Gutenberg Block &amp; Elementor",
+    "name": "EmbedPress – Embed PDF, PDF 3D FlipBook, Instagram Social Feeds, Google Docs, Vimeo, Wistia, YouTube Videos, Maps &amp; Upload PDF Documents",
     "requires_plugins": [],
     "requires": "4.6",
     "active_installs": 100000,
@@ -3866,6 +3812,14 @@
     "name": "Disable and Remove Google Fonts | GDPR &amp; DSGVO friendly",
     "requires_plugins": [],
     "requires": "4.8",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "microsoft-clarity",
+    "name": "Microsoft Clarity",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3920,6 +3874,14 @@
     "downloads": 0
   },
   {
+    "slug": "sticky-menu-or-anything-on-scroll",
+    "name": "Sticky Menu &amp; Sticky Header",
+    "requires_plugins": [],
+    "requires": "3.6",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "gosmtp",
     "name": "GoSMTP &#8211; SMTP for WordPress",
     "requires_plugins": [],
@@ -3928,10 +3890,42 @@
     "downloads": 0
   },
   {
+    "slug": "advanced-ads",
+    "name": "Advanced Ads – Ad Manager &amp; AdSense",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "ninjafirewall",
     "name": "NinjaFirewall (WP Edition) &#8211; Advanced Security Plugin and Firewall",
     "requires_plugins": [],
     "requires": "4.9",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "xserver-typesquare-webfonts",
+    "name": "TypeSquare Webfonts for エックスサーバー",
+    "requires_plugins": [],
+    "requires": "5.2",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "woocommerce-multilingual",
+    "name": "WooCommerce Multilingual &amp; Multicurrency with WPML",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
+    "slug": "disable-xml-rpc-api",
+    "name": "Disable XML-RPC-API",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 100000,
     "downloads": 0
   },
@@ -3978,20 +3972,20 @@
     "downloads": 0
   },
   {
+    "slug": "content-views-query-and-display-post-page",
+    "name": "Content Views &#8211; Post Grid &amp; Filter, Recent Posts, Category Posts &#8230; (Shortcode, Blocks, and Elementor Widgets)",
+    "requires_plugins": [],
+    "requires": "3.3",
+    "active_installs": 100000,
+    "downloads": 0
+  },
+  {
     "slug": "depicter",
     "name": "Slider &amp; Popup Builder by Depicter &#8211; Add Image Slider, Carousel Slider, Exit Intent Popup, Popup Modal, Coupon Popup, Post Slider Carousel",
     "requires_plugins": [],
     "requires": "5.3",
     "active_installs": 100000,
     "downloads": 0
-  },
-  {
-    "slug": "woo-product-feed-pro",
-    "name": "Product Feed PRO for WooCommerce by AdTribes – WooCommerce Product Feeds",
-    "requires_plugins": [],
-    "requires": "5.4",
-    "active_installs": 90000,
-    "downloads": 10000351
   },
   {
     "slug": "wp-retina-2x",
@@ -4008,14 +4002,6 @@
     "requires": "5.5",
     "active_installs": 90000,
     "downloads": 5291678
-  },
-  {
-    "slug": "learnpress",
-    "name": "LearnPress &#8211; WordPress LMS Plugin",
-    "requires_plugins": [],
-    "requires": "6.0",
-    "active_installs": 90000,
-    "downloads": 4543817
   },
   {
     "slug": "insta-gallery",
@@ -4058,36 +4044,12 @@
     "downloads": 2552655
   },
   {
-    "slug": "tutor",
-    "name": "Tutor LMS &#8211; eLearning and online course solution",
-    "requires_plugins": [],
-    "requires": "5.3",
-    "active_installs": 90000,
-    "downloads": 2275255
-  },
-  {
-    "slug": "mailgun",
-    "name": "Mailgun for WordPress",
-    "requires_plugins": [],
-    "requires": "4.4",
-    "active_installs": 90000,
-    "downloads": 2062923
-  },
-  {
     "slug": "mobile-menu",
     "name": "WP Mobile Menu &#8211; The Mobile-Friendly Responsive Menu",
     "requires_plugins": [],
     "requires": "4.4",
     "active_installs": 90000,
     "downloads": 1978417
-  },
-  {
-    "slug": "kk-star-ratings",
-    "name": "kk Star Ratings &#8211; Rate Post &amp; Collect User Feedbacks",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 90000,
-    "downloads": 1920988
   },
   {
     "slug": "permalink-manager",
@@ -4162,28 +4124,12 @@
     "downloads": 1154929
   },
   {
-    "slug": "regenerate-thumbnails-advanced",
-    "name": "reGenerate Thumbnails Advanced",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 90000,
-    "downloads": 1153710
-  },
-  {
     "slug": "mainwp-child-reports",
     "name": "MainWP Child Reports",
     "requires_plugins": [],
     "requires": "6.0",
     "active_installs": 90000,
     "downloads": 1143877
-  },
-  {
-    "slug": "temporary-login-without-password",
-    "name": "Temporary Login Without Password",
-    "requires_plugins": [],
-    "requires": "3.0.1",
-    "active_installs": 90000,
-    "downloads": 1123631
   },
   {
     "slug": "better-font-awesome",
@@ -4218,44 +4164,12 @@
     "downloads": 824330
   },
   {
-    "slug": "change-wp-admin-login",
-    "name": "All In One Login — WordPress Login Security Plugin to Protect and Customize WP Admin",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 90000,
-    "downloads": 754432
-  },
-  {
-    "slug": "disable-comments-rb",
-    "name": "Disable Comments",
-    "requires_plugins": [],
-    "requires": "3.1",
-    "active_installs": 90000,
-    "downloads": 694577
-  },
-  {
     "slug": "disable-json-api",
     "name": "Disable REST API",
     "requires_plugins": [],
     "requires": "4.9",
     "active_installs": 90000,
     "downloads": 673830
-  },
-  {
-    "slug": "resize-image-after-upload",
-    "name": "Resize Image After Upload",
-    "requires_plugins": [],
-    "requires": "3.5",
-    "active_installs": 90000,
-    "downloads": 613999
-  },
-  {
-    "slug": "disable-xml-rpc-api",
-    "name": "Disable XML-RPC-API",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 90000,
-    "downloads": 579492
   },
   {
     "slug": "one-user-avatar",
@@ -4314,6 +4228,14 @@
     "downloads": 0
   },
   {
+    "slug": "tutor",
+    "name": "Tutor LMS &#8211; eLearning and online course solution",
+    "requires_plugins": [],
+    "requires": "5.3",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
     "slug": "jupiterx-core",
     "name": "Jupiter X Core",
     "requires_plugins": [],
@@ -4326,6 +4248,14 @@
     "name": "Real-Time Find and Replace",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "woo-product-feed-pro",
+    "name": "Product Feed PRO for WooCommerce by AdTribes – WooCommerce Product Feeds",
+    "requires_plugins": [],
+    "requires": "5.4",
     "active_installs": 90000,
     "downloads": 0
   },
@@ -4354,6 +4284,14 @@
     "downloads": 0
   },
   {
+    "slug": "mailgun",
+    "name": "Mailgun for WordPress",
+    "requires_plugins": [],
+    "requires": "4.4",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
     "slug": "anywhere-elementor",
     "name": "AnyWhere Elementor",
     "requires_plugins": [],
@@ -4372,10 +4310,52 @@
     "downloads": 0
   },
   {
+    "slug": "temporary-login-without-password",
+    "name": "Temporary Login Without Password",
+    "requires_plugins": [],
+    "requires": "3.0.1",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "resize-image-after-upload",
+    "name": "Resize Image After Upload",
+    "requires_plugins": [],
+    "requires": "3.5",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "kliken-marketing-for-google",
+    "name": "AI Powered Marketing",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "5.8",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
     "slug": "ocean-social-sharing",
     "name": "Ocean Social Sharing",
     "requires_plugins": [],
     "requires": "5.6",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "disable-comments-rb",
+    "name": "Disable Comments",
+    "requires_plugins": [],
+    "requires": "3.1",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "learnpress",
+    "name": "LearnPress &#8211; WordPress LMS Plugin",
+    "requires_plugins": [],
+    "requires": "6.0",
     "active_installs": 90000,
     "downloads": 0
   },
@@ -4420,6 +4400,14 @@
     "downloads": 0
   },
   {
+    "slug": "kk-star-ratings",
+    "name": "kk Star Ratings &#8211; Rate Post &amp; Collect User Feedbacks",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
     "slug": "advanced-import",
     "name": "Advanced Import : One Click Import for WordPress or Theme Demo Data",
     "requires_plugins": [],
@@ -4432,6 +4420,14 @@
     "name": "Real Media Library: Media Library Folder &amp; File Manager",
     "requires_plugins": [],
     "requires": "5.9",
+    "active_installs": 90000,
+    "downloads": 0
+  },
+  {
+    "slug": "side-cart-woocommerce",
+    "name": "Side Cart Woocommerce | Woocommerce Cart",
+    "requires_plugins": [],
+    "requires": "3.0.1",
     "active_installs": 90000,
     "downloads": 0
   },
@@ -4458,14 +4454,6 @@
     "requires": "2.8",
     "active_installs": 80000,
     "downloads": 3871518
-  },
-  {
-    "slug": "wp-dbmanager",
-    "name": "WP-DBManager",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 80000,
-    "downloads": 2983593
   },
   {
     "slug": "master-slider",
@@ -4534,14 +4522,6 @@
     "downloads": 1061165
   },
   {
-    "slug": "side-cart-woocommerce",
-    "name": "Side Cart Woocommerce | Woocommerce Cart",
-    "requires_plugins": [],
-    "requires": "3.0.1",
-    "active_installs": 80000,
-    "downloads": 927775
-  },
-  {
     "slug": "advanced-cf7-db",
     "name": "Advanced Contact form 7 DB",
     "requires_plugins": [],
@@ -4572,14 +4552,6 @@
     "requires": "4.8",
     "active_installs": 80000,
     "downloads": 875671
-  },
-  {
-    "slug": "two-factor",
-    "name": "Two-Factor",
-    "requires_plugins": [],
-    "requires": "4.3",
-    "active_installs": 80000,
-    "downloads": 870763
   },
   {
     "slug": "automatic-translator-addon-for-loco-translate",
@@ -4638,10 +4610,10 @@
     "downloads": 0
   },
   {
-    "slug": "wpdatatables",
-    "name": "wpDataTables &#8211; WordPress Data Table, Dynamic Tables &amp; Table Charts Plugin",
+    "slug": "instagram-widget-by-wpzoom",
+    "name": "WPZOOM Social Feed Widget &amp; Block",
     "requires_plugins": [],
-    "requires": "4.0",
+    "requires": "6.0",
     "active_installs": 80000,
     "downloads": 0
   },
@@ -4655,9 +4627,17 @@
   },
   {
     "slug": "email-subscribers",
-    "name": "Email Subscribers by Icegram Express &#8211; Email Marketing, Newsletters, Automation for WordPress &amp; WooCommerce",
+    "name": "Email Subscribers by Icegram Express – Affordable, Powerful Email Marketing for WordPress &amp; WooCommerce",
     "requires_plugins": [],
     "requires": "3.9",
+    "active_installs": 80000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-dbmanager",
+    "name": "WP-DBManager",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 80000,
     "downloads": 0
   },
@@ -4682,6 +4662,30 @@
     "name": "Folders &#8211; Unlimited Folders to Organize Media Library Folder, Pages, Posts, File Manager",
     "requires_plugins": [],
     "requires": "3.0.0",
+    "active_installs": 80000,
+    "downloads": 0
+  },
+  {
+    "slug": "regenerate-thumbnails-advanced",
+    "name": "reGenerate Thumbnails Advanced",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 80000,
+    "downloads": 0
+  },
+  {
+    "slug": "scheduled-post-trigger",
+    "name": "Scheduled Post Trigger",
+    "requires_plugins": [],
+    "requires": "4.2",
+    "active_installs": 80000,
+    "downloads": 0
+  },
+  {
+    "slug": "two-factor",
+    "name": "Two-Factor",
+    "requires_plugins": [],
+    "requires": "6.3",
     "active_installs": 80000,
     "downloads": 0
   },
@@ -4768,6 +4772,14 @@
     "downloads": 0
   },
   {
+    "slug": "change-wp-admin-login",
+    "name": "All In One Login — WordPress Login Security Plugin to Protect and Customize WP Admin",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 80000,
+    "downloads": 0
+  },
+  {
     "slug": "contact-form-7-image-captcha",
     "name": "Contact Form 7 Image CAPTCHA, WPForms Image CAPTCHA, Contact Form 7 Spam Image CAPTCHA, WPForms Spam Image CAPTCHA, GDPR",
     "requires_plugins": [],
@@ -4800,16 +4812,6 @@
     "downloads": 14491031
   },
   {
-    "slug": "advanced-woo-search",
-    "name": "Advanced Woo Search",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "4.0",
-    "active_installs": 70000,
-    "downloads": 3913536
-  },
-  {
     "slug": "wp-clone-by-wp-academy",
     "name": "Clone",
     "requires_plugins": [],
@@ -4826,36 +4828,12 @@
     "downloads": 2634876
   },
   {
-    "slug": "sydney-toolbox",
-    "name": "Sydney Toolbox",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 70000,
-    "downloads": 2311497
-  },
-  {
     "slug": "contextual-related-posts",
     "name": "Contextual Related Posts",
     "requires_plugins": [],
     "requires": "6.3",
     "active_installs": 70000,
     "downloads": 2222744
-  },
-  {
-    "slug": "clearfy",
-    "name": "Clearfy Cache – WordPress optimization plugin, Minify HTML, CSS &amp; JS, Defer",
-    "requires_plugins": [],
-    "requires": "5.2",
-    "active_installs": 70000,
-    "downloads": 2117891
-  },
-  {
-    "slug": "media-library-assistant",
-    "name": "Media Library Assistant",
-    "requires_plugins": [],
-    "requires": "4.1",
-    "active_installs": 70000,
-    "downloads": 2053550
   },
   {
     "slug": "wonderm00ns-simple-facebook-open-graph-tags",
@@ -4866,28 +4844,12 @@
     "downloads": 2041412
   },
   {
-    "slug": "instagram-widget-by-wpzoom",
-    "name": "WPZOOM Social Feed Widget &amp; Block",
-    "requires_plugins": [],
-    "requires": "6.0",
-    "active_installs": 70000,
-    "downloads": 1956018
-  },
-  {
     "slug": "boldgrid-backup",
     "name": "Total Upkeep – WordPress Backup Plugin plus Restore &amp; Migrate by BoldGrid",
     "requires_plugins": [],
     "requires": "5.0",
     "active_installs": 70000,
     "downloads": 1800975
-  },
-  {
-    "slug": "interactive-3d-flipbook-powered-physics-engine",
-    "name": "3D FlipBook – PDF Embedder, PDF Flipbook Viewer, Flipbook Image Gallery",
-    "requires_plugins": [],
-    "requires": "4.3",
-    "active_installs": 70000,
-    "downloads": 1793489
   },
   {
     "slug": "visual-portfolio",
@@ -4920,14 +4882,6 @@
     "requires": "3.0.1",
     "active_installs": 70000,
     "downloads": 1492187
-  },
-  {
-    "slug": "simple-author-box",
-    "name": "Simple Author Box",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 70000,
-    "downloads": 1353609
   },
   {
     "slug": "woo-smart-quick-view",
@@ -5046,28 +5000,12 @@
     "downloads": 452454
   },
   {
-    "slug": "page-or-post-clone",
-    "name": "Page and Post Clone",
-    "requires_plugins": [],
-    "requires": "4.5",
-    "active_installs": 70000,
-    "downloads": 452001
-  },
-  {
     "slug": "dynamicconditions",
     "name": "Dynamic Conditions",
     "requires_plugins": [],
     "requires": "5.0",
     "active_installs": 70000,
     "downloads": 424996
-  },
-  {
-    "slug": "scheduled-post-trigger",
-    "name": "Scheduled Post Trigger",
-    "requires_plugins": [],
-    "requires": "4.2",
-    "active_installs": 70000,
-    "downloads": 325968
   },
   {
     "slug": "reviews-feed",
@@ -5078,10 +5016,42 @@
     "downloads": 298137
   },
   {
+    "slug": "media-library-assistant",
+    "name": "Media Library Assistant",
+    "requires_plugins": [],
+    "requires": "4.1",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "wpdatatables",
+    "name": "wpDataTables &#8211; WordPress Data Table, Dynamic Tables &amp; Table Charts Plugin",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "page-or-post-clone",
+    "name": "Page and Post Clone",
+    "requires_plugins": [],
+    "requires": "4.5",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
     "slug": "live-sales-notifications-for-woocommerce",
     "name": "Live sales notification for WooCommerce, Fake sales notification for WooCommerce, Recent sales popup for WooCommerce",
     "requires_plugins": [],
     "requires": "3.0.1",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "sydney-toolbox",
+    "name": "Sydney Toolbox",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 70000,
     "downloads": 0
   },
@@ -5112,6 +5082,14 @@
     "downloads": 0
   },
   {
+    "slug": "simple-author-box",
+    "name": "Simple Author Box",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
     "slug": "customer-reviews-woocommerce",
     "name": "Customer Reviews for WooCommerce",
     "requires_plugins": [],
@@ -5128,10 +5106,26 @@
     "downloads": 0
   },
   {
+    "slug": "surecart",
+    "name": "SureCart &#8211; Ecommerce Made Easy For Selling Physical Products, Digital Downloads, Subscriptions, Donations, &amp; Payments",
+    "requires_plugins": [],
+    "requires": "6.6",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
     "slug": "wp-hide-security-enhancer",
     "name": "WP Hide &amp; Security Enhancer",
     "requires_plugins": [],
     "requires": "4.0",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "suretriggers",
+    "name": "SureTriggers: All-in-One WordPress Automation",
+    "requires_plugins": [],
+    "requires": "5.4",
     "active_installs": 70000,
     "downloads": 0
   },
@@ -5160,10 +5154,26 @@
     "downloads": 0
   },
   {
+    "slug": "clearfy",
+    "name": "Clearfy Cache – WordPress optimization plugin, Minify HTML, CSS &amp; JS, Defer",
+    "requires_plugins": [],
+    "requires": "5.2",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
     "slug": "ameliabooking",
     "name": "Booking for Appointments and Events Calendar &#8211; Amelia",
     "requires_plugins": [],
     "requires": "4.5",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "interactive-3d-flipbook-powered-physics-engine",
+    "name": "3D FlipBook – PDF Embedder, PDF Flipbook Viewer, Flipbook Image Gallery",
+    "requires_plugins": [],
+    "requires": "4.3",
     "active_installs": 70000,
     "downloads": 0
   },
@@ -5212,6 +5222,16 @@
     "name": "LoftLoader",
     "requires_plugins": [],
     "requires": "5.0",
+    "active_installs": 70000,
+    "downloads": 0
+  },
+  {
+    "slug": "advanced-woo-search",
+    "name": "Advanced Woo Search",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "4.0",
     "active_installs": 70000,
     "downloads": 0
   },
@@ -5288,14 +5308,6 @@
     "downloads": 2729134
   },
   {
-    "slug": "perfect-woocommerce-brands",
-    "name": "Perfect Brands for WooCommerce",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 60000,
-    "downloads": 2002731
-  },
-  {
     "slug": "advanced-iframe",
     "name": "Advanced iFrame",
     "requires_plugins": [],
@@ -5310,24 +5322,6 @@
     "requires": "6.4",
     "active_installs": 60000,
     "downloads": 1915607
-  },
-  {
-    "slug": "weight-based-shipping-for-woocommerce",
-    "name": "WooCommerce Weight Based Shipping",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 60000,
-    "downloads": 1889396
-  },
-  {
-    "slug": "woo-advanced-shipment-tracking",
-    "name": "Advanced Shipment Tracking for WooCommerce",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "5.3",
-    "active_installs": 60000,
-    "downloads": 1821407
   },
   {
     "slug": "order-import-export-for-woocommerce",
@@ -5354,32 +5348,6 @@
     "downloads": 1510417
   },
   {
-    "slug": "woocommerce-ajax-filters",
-    "name": "Advanced AJAX Product Filters",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "5.0",
-    "active_installs": 60000,
-    "downloads": 1459232
-  },
-  {
-    "slug": "getwid",
-    "name": "Getwid &#8211; Gutenberg Blocks",
-    "requires_plugins": [],
-    "requires": "5.8",
-    "active_installs": 60000,
-    "downloads": 1272250
-  },
-  {
-    "slug": "wp-store-locator",
-    "name": "WP Store Locator",
-    "requires_plugins": [],
-    "requires": "3.7",
-    "active_installs": 60000,
-    "downloads": 1267246
-  },
-  {
     "slug": "variation-swatches-for-woocommerce",
     "name": "Variation Swatches for WooCommerce",
     "requires_plugins": [],
@@ -5404,28 +5372,12 @@
     "downloads": 1187476
   },
   {
-    "slug": "search-exclude",
-    "name": "Search Exclude",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 60000,
-    "downloads": 1030857
-  },
-  {
     "slug": "exclusive-addons-for-elementor",
     "name": "Exclusive Addons for Elementor",
     "requires_plugins": [],
     "requires": "4.6",
     "active_installs": 60000,
     "downloads": 1027939
-  },
-  {
-    "slug": "quick-featured-images",
-    "name": "Quick Featured Images",
-    "requires_plugins": [],
-    "requires": "3.8",
-    "active_installs": 60000,
-    "downloads": 1017133
   },
   {
     "slug": "wordfence-login-security",
@@ -5588,10 +5540,28 @@
     "downloads": 153043
   },
   {
+    "slug": "woocommerce-ajax-filters",
+    "name": "Advanced AJAX Product Filters",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "5.0",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
     "slug": "weglot",
     "name": "Translate WordPress and go Multilingual &#8211; Weglot",
     "requires_plugins": [],
     "requires": "4.5",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-store-locator",
+    "name": "WP Store Locator",
+    "requires_plugins": [],
+    "requires": "3.7",
     "active_installs": 60000,
     "downloads": 0
   },
@@ -5616,6 +5586,14 @@
     "name": "Internal Link Juicer: SEO Auto Linker for WordPress",
     "requires_plugins": [],
     "requires": "5.9.0",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
+    "slug": "getwid",
+    "name": "Getwid &#8211; Gutenberg Blocks",
+    "requires_plugins": [],
+    "requires": "5.8",
     "active_installs": 60000,
     "downloads": 0
   },
@@ -5668,10 +5646,42 @@
     "downloads": 0
   },
   {
+    "slug": "perfect-woocommerce-brands",
+    "name": "Perfect Brands for WooCommerce",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
     "slug": "imagemagick-engine",
     "name": "ImageMagick Engine",
     "requires_plugins": [],
     "requires": "3.0",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
+    "slug": "weight-based-shipping-for-woocommerce",
+    "name": "WooCommerce Weight Based Shipping",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
+    "slug": "zarinpal-woocommerce-payment-gateway",
+    "name": "Zarinpal Gateway",
+    "requires_plugins": [],
+    "requires": "5.8",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
+    "slug": "easy-accordion-free",
+    "name": "Easy Accordion – Responsive Accordion FAQ Builder and Product FAQ",
+    "requires_plugins": [],
+    "requires": "4.7",
     "active_installs": 60000,
     "downloads": 0
   },
@@ -5702,6 +5712,14 @@
     "downloads": 0
   },
   {
+    "slug": "search-exclude",
+    "name": "Search Exclude",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
     "slug": "woocommerce-currency-switcher",
     "name": "FOX &#8211; Currency Switcher Professional for WooCommerce",
     "requires_plugins": [],
@@ -5718,10 +5736,20 @@
     "downloads": 0
   },
   {
+    "slug": "woo-advanced-shipment-tracking",
+    "name": "Advanced Shipment Tracking for WooCommerce",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "5.3",
+    "active_installs": 60000,
+    "downloads": 0
+  },
+  {
     "slug": "user-registration",
     "name": "User Registration &amp; Membership – Custom Registration Form, Login Form, and User Profile",
     "requires_plugins": [],
-    "requires": "5.2",
+    "requires": "5.5",
     "active_installs": 60000,
     "downloads": 0
   },
@@ -5784,14 +5812,6 @@
     "downloads": 0
   },
   {
-    "slug": "wp-simple-firewall",
-    "name": "Shield Security &#8211; Smart Bot Blocking &amp; Intrusion Prevention Security",
-    "requires_plugins": [],
-    "requires": "5.7",
-    "active_installs": 50000,
-    "downloads": 12011596
-  },
-  {
     "slug": "social-networks-auto-poster-facebook-twitter-g",
     "name": "NextScripts: Social Networks Auto-Poster",
     "requires_plugins": [],
@@ -5808,16 +5828,6 @@
     "downloads": 3848570
   },
   {
-    "slug": "woocommerce-jetpack",
-    "name": "Booster for WooCommerce",
-    "requires_plugins": [
-      "woocommerce"
-    ],
-    "requires": "5.8",
-    "active_installs": 50000,
-    "downloads": 3737036
-  },
-  {
     "slug": "pirate-forms",
     "name": "Contact Form &amp; SMTP Plugin for WordPress by PirateForms",
     "requires_plugins": [],
@@ -5832,14 +5842,6 @@
     "requires": "5.6",
     "active_installs": 50000,
     "downloads": 3333895
-  },
-  {
-    "slug": "simple-membership",
-    "name": "Simple Membership",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 50000,
-    "downloads": 2687191
   },
   {
     "slug": "instagram-slider-widget",
@@ -5970,28 +5972,12 @@
     "downloads": 1083888
   },
   {
-    "slug": "wp-maintenance",
-    "name": "WP Maintenance",
-    "requires_plugins": [],
-    "requires": "3.0",
-    "active_installs": 50000,
-    "downloads": 1022968
-  },
-  {
     "slug": "shariff",
     "name": "Shariff Wrapper",
     "requires_plugins": [],
     "requires": "4.9",
     "active_installs": 50000,
     "downloads": 1005419
-  },
-  {
-    "slug": "styles-and-layouts-for-gravity-forms",
-    "name": "Gravity Booster &#8211; Styles &amp; Layouts for Gravity Forms &#8211; Best Gravity Forms Styler, Designer",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 50000,
-    "downloads": 1002552
   },
   {
     "slug": "wpfront-notification-bar",
@@ -6024,14 +6010,6 @@
     "requires": "4.7",
     "active_installs": 50000,
     "downloads": 865745
-  },
-  {
-    "slug": "real-time-auto-find-and-replace",
-    "name": "Better Find and Replace",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 50000,
-    "downloads": 765582
   },
   {
     "slug": "astra-bulk-edit",
@@ -6096,14 +6074,6 @@
     "requires": "5.0",
     "active_installs": 50000,
     "downloads": 595277
-  },
-  {
-    "slug": "suretriggers",
-    "name": "SureTriggers: All-in-One WordPress Automation",
-    "requires_plugins": [],
-    "requires": "5.4",
-    "active_installs": 50000,
-    "downloads": 595146
   },
   {
     "slug": "jwt-authentication-for-wp-rest-api",
@@ -6186,14 +6156,6 @@
     "downloads": 437793
   },
   {
-    "slug": "zarinpal-woocommerce-payment-gateway",
-    "name": "Zarinpal Gateway",
-    "requires_plugins": [],
-    "requires": "4.5",
-    "active_installs": 50000,
-    "downloads": 422190
-  },
-  {
     "slug": "elegro-payment",
     "name": "elegro Crypto Payment",
     "requires_plugins": [],
@@ -6216,14 +6178,6 @@
     "requires": "3.0.1",
     "active_installs": 50000,
     "downloads": 409571
-  },
-  {
-    "slug": "advanced-popups",
-    "name": "Advanced Popups",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 50000,
-    "downloads": 394475
   },
   {
     "slug": "adapta-rgpd",
@@ -6330,8 +6284,24 @@
     "downloads": 0
   },
   {
+    "slug": "when-last-login",
+    "name": "When Last Login",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
     "slug": "responsive-accordion-and-collapse",
     "name": "Accordion FAQ &#8211; Compatible With All Page Builder (Elementor, Gutenberg)",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
+    "slug": "fluent-crm",
+    "name": "FluentCRM &#8211; Email Newsletter, Automation, Email Marketing, Email Campaigns, Optins, Leads, and CRM Solution",
     "requires_plugins": [],
     "requires": "5.0",
     "active_installs": 50000,
@@ -6386,18 +6356,18 @@
     "downloads": 0
   },
   {
-    "slug": "easy-login-woocommerce",
-    "name": "Login/Signup Popup ( Inline Form + Woocommerce )",
-    "requires_plugins": [],
-    "requires": "3.0.1",
-    "active_installs": 50000,
-    "downloads": 0
-  },
-  {
     "slug": "clever-fox",
     "name": "Clever Fox",
     "requires_plugins": [],
     "requires": "6.0",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
+    "slug": "quick-featured-images",
+    "name": "Quick Featured Images",
+    "requires_plugins": [],
+    "requires": "3.8",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6418,6 +6388,14 @@
     "downloads": 0
   },
   {
+    "slug": "wp-maintenance",
+    "name": "WP Maintenance",
+    "requires_plugins": [],
+    "requires": "3.0",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
     "slug": "easy-digital-downloads",
     "name": "Easy Digital Downloads – eCommerce Payments and Subscriptions made easy",
     "requires_plugins": [],
@@ -6430,6 +6408,14 @@
     "name": "WP Accessibility",
     "requires_plugins": [],
     "requires": "4.9",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
+    "slug": "advanced-popups",
+    "name": "Advanced Popups",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6455,7 +6441,7 @@
     "requires_plugins": [
       "woocommerce"
     ],
-    "requires": "6.4",
+    "requires": "6.5",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6486,10 +6472,12 @@
     "downloads": 0
   },
   {
-    "slug": "easy-accordion-free",
-    "name": "Easy Accordion – Responsive Accordion FAQ Builder and Product FAQ",
-    "requires_plugins": [],
-    "requires": "4.7",
+    "slug": "woocommerce-jetpack",
+    "name": "Booster for WooCommerce",
+    "requires_plugins": [
+      "woocommerce"
+    ],
+    "requires": "5.8",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6528,18 +6516,18 @@
     "downloads": 0
   },
   {
-    "slug": "convertkit",
-    "name": "Kit (formerly ConvertKit) &#8211; Email Newsletter, Email Marketing, Subscribers and Landing Pages",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 50000,
-    "downloads": 0
-  },
-  {
     "slug": "koko-analytics",
     "name": "Koko Analytics",
     "requires_plugins": [],
     "requires": "6.0",
+    "active_installs": 50000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-simple-firewall",
+    "name": "Shield Security &#8211; Smart Bot Blocking &amp; Intrusion Prevention Security",
+    "requires_plugins": [],
+    "requires": "5.7",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6560,10 +6548,10 @@
     "downloads": 0
   },
   {
-    "slug": "ajax-load-more",
-    "name": "WordPress Infinite Scroll &#8211; Ajax Load More",
+    "slug": "real-time-auto-find-and-replace",
+    "name": "Better Find and Replace",
     "requires_plugins": [],
-    "requires": "5.0",
+    "requires": "4.0",
     "active_installs": 50000,
     "downloads": 0
   },
@@ -6648,28 +6636,12 @@
     "downloads": 3083864
   },
   {
-    "slug": "nimble-builder",
-    "name": "Nimble Page Builder",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 40000,
-    "downloads": 2859136
-  },
-  {
     "slug": "google-maps-widget",
     "name": "Maps Widget for Google Maps",
     "requires_plugins": [],
     "requires": "4.0",
     "active_installs": 40000,
     "downloads": 2422357
-  },
-  {
-    "slug": "ditty-news-ticker",
-    "name": "Ditty – Responsive News Tickers, Sliders, and Lists",
-    "requires_plugins": [],
-    "requires": "6.2",
-    "active_installs": 40000,
-    "downloads": 2406454
   },
   {
     "slug": "soliloquy-lite",
@@ -6762,14 +6734,6 @@
     "downloads": 1234361
   },
   {
-    "slug": "popup-anything-on-click",
-    "name": "Popup Anything &#8211; Popup for opt-ins and Lead Generation Conversions",
-    "requires_plugins": [],
-    "requires": "5.2",
-    "active_installs": 40000,
-    "downloads": 1099195
-  },
-  {
     "slug": "exclude-pages",
     "name": "Exclude Pages",
     "requires_plugins": [],
@@ -6794,14 +6758,6 @@
     "downloads": 1001773
   },
   {
-    "slug": "beautiful-and-responsive-cookie-consent",
-    "name": "Beautiful Cookie Consent Banner",
-    "requires_plugins": [],
-    "requires": "4.0",
-    "active_installs": 40000,
-    "downloads": 980081
-  },
-  {
     "slug": "carousel-slider",
     "name": "Carousel Slider",
     "requires_plugins": [],
@@ -6820,14 +6776,6 @@
     "downloads": 972955
   },
   {
-    "slug": "testimonial-free",
-    "name": "Real Testimonials – Testimonial Slider, Carousel, Grid | Collect Customer Reviews and Video Testimonial with Testimonial Form | Social Proof Reviews and Review Slider",
-    "requires_plugins": [],
-    "requires": "4.7",
-    "active_installs": 40000,
-    "downloads": 957387
-  },
-  {
     "slug": "wp-phpmyadmin-extension",
     "name": "WP phpMyAdmin",
     "requires_plugins": [],
@@ -6844,22 +6792,6 @@
     "downloads": 868722
   },
   {
-    "slug": "blossomthemes-toolkit",
-    "name": "BlossomThemes Toolkit",
-    "requires_plugins": [],
-    "requires": "4.4.0",
-    "active_installs": 40000,
-    "downloads": 859774
-  },
-  {
-    "slug": "surecart",
-    "name": "SureCart &#8211; Ecommerce Made Easy For Selling Physical Products, Digital Downloads, Subscriptions, Donations, &amp; Payments",
-    "requires_plugins": [],
-    "requires": "6.2",
-    "active_installs": 40000,
-    "downloads": 856366
-  },
-  {
     "slug": "site-offline",
     "name": "Site Offline Or Coming Soon Or Maintenance Mode",
     "requires_plugins": [],
@@ -6874,14 +6806,6 @@
     "requires": "5.0",
     "active_installs": 40000,
     "downloads": 841115
-  },
-  {
-    "slug": "fluent-crm",
-    "name": "FluentCRM &#8211; Email Newsletter, Automation, Email Marketing, Email Campaigns, Optins, Leads, and CRM Solution",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 40000,
-    "downloads": 827785
   },
   {
     "slug": "shopengine",
@@ -6964,14 +6888,6 @@
     "downloads": 755434
   },
   {
-    "slug": "wp-import-export-lite",
-    "name": "WP Import Export Lite",
-    "requires_plugins": [],
-    "requires": "4.4",
-    "active_installs": 40000,
-    "downloads": 714717
-  },
-  {
     "slug": "acf-to-rest-api",
     "name": "ACF to REST API",
     "requires_plugins": [],
@@ -6994,14 +6910,6 @@
     "requires": "5.4",
     "active_installs": 40000,
     "downloads": 675931
-  },
-  {
-    "slug": "secupress",
-    "name": "SecuPress Free — WordPress Security",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 40000,
-    "downloads": 665223
   },
   {
     "slug": "optimus",
@@ -7076,14 +6984,6 @@
     "downloads": 522832
   },
   {
-    "slug": "wt-woocommerce-sequential-order-numbers",
-    "name": "Sequential Order Number for WooCommerce",
-    "requires_plugins": [],
-    "requires": "3.0.1",
-    "active_installs": 40000,
-    "downloads": 484196
-  },
-  {
     "slug": "snazzy-maps",
     "name": "Snazzy Maps",
     "requires_plugins": [],
@@ -7140,14 +7040,6 @@
     "downloads": 397211
   },
   {
-    "slug": "themesflat-addons-for-elementor",
-    "name": "Themesflat Addons For Elementor",
-    "requires_plugins": [],
-    "requires": "4.9",
-    "active_installs": 40000,
-    "downloads": 385508
-  },
-  {
     "slug": "rss-for-yandex-turbo",
     "name": "RSS for Yandex Turbo",
     "requires_plugins": [],
@@ -7162,14 +7054,6 @@
     "requires": "5.2",
     "active_installs": 40000,
     "downloads": 363075
-  },
-  {
-    "slug": "wp-admin-ui-customize",
-    "name": "WP Admin UI Customize",
-    "requires_plugins": [],
-    "requires": "4.2",
-    "active_installs": 40000,
-    "downloads": 356532
   },
   {
     "slug": "addons-for-divi",
@@ -7252,14 +7136,6 @@
     "downloads": 188377
   },
   {
-    "slug": "when-last-login",
-    "name": "When Last Login",
-    "requires_plugins": [],
-    "requires": "5.0",
-    "active_installs": 40000,
-    "downloads": 138468
-  },
-  {
     "slug": "selfhost-google-fonts",
     "name": "Self-Hosted Google Fonts",
     "requires_plugins": [],
@@ -7272,6 +7148,14 @@
     "name": "WP Call Button &#8211; Easy Click to Call Button for WordPress",
     "requires_plugins": [],
     "requires": "4.9",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "mihdan-index-now",
+    "name": "CrawlWP SEO &#8211; Instant Search Engine Indexing &amp; SEO Performance Monitor",
+    "requires_plugins": [],
+    "requires": "5.9",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7300,6 +7184,22 @@
     "downloads": 0
   },
   {
+    "slug": "yoast-seo-settings-xml-csv-import",
+    "name": "Import Settings into WordPress SEO by Yoast",
+    "requires_plugins": [],
+    "requires": "4.1.0",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "secupress",
+    "name": "SecuPress Free — WordPress Security",
+    "requires_plugins": [],
+    "requires": "4.9",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "visibility-logic-elementor",
     "name": "Visibility Logic for Elementor",
     "requires_plugins": [],
@@ -7316,6 +7216,14 @@
     "downloads": 0
   },
   {
+    "slug": "easy-login-woocommerce",
+    "name": "Login/Signup Popup ( Inline Form + Woocommerce )",
+    "requires_plugins": [],
+    "requires": "3.0.1",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "advanced-product-fields-for-woocommerce",
     "name": "Advanced Product Fields (Product Addons) for WooCommerce",
     "requires_plugins": [],
@@ -7328,6 +7236,14 @@
     "name": "Solid Central – Site Management, Backups, Security, and Reporting",
     "requires_plugins": [],
     "requires": "6.4",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "simple-membership",
+    "name": "Simple Membership",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7356,6 +7272,14 @@
     "downloads": 0
   },
   {
+    "slug": "testimonial-free",
+    "name": "Real Testimonials – Testimonial Slider, Carousel, Grid | Collect Customer Reviews and Video Testimonial with Testimonial Form | Social Proof Reviews and Review Slider",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "persian-woocommerce-sms",
     "name": "افزونه پیامک ووکامرس Persian WooCommerce SMS",
     "requires_plugins": [],
@@ -7380,10 +7304,34 @@
     "downloads": 0
   },
   {
+    "slug": "country-phone-field-contact-form-7",
+    "name": "Country &amp; Phone Field Contact Form 7",
+    "requires_plugins": [],
+    "requires": "6.0",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "klaviyo",
     "name": "Klaviyo",
     "requires_plugins": [],
     "requires": "4.4",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "blossomthemes-toolkit",
+    "name": "BlossomThemes Toolkit",
+    "requires_plugins": [],
+    "requires": "4.4.0",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "slim-seo",
+    "name": "Slim SEO &#8211; Fast &amp; Automated WordPress SEO Plugin",
+    "requires_plugins": [],
+    "requires": "5.9",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7420,6 +7368,14 @@
     "downloads": 0
   },
   {
+    "slug": "themesflat-addons-for-elementor",
+    "name": "Themesflat Addons For Elementor",
+    "requires_plugins": [],
+    "requires": "4.9",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "varnish-http-purge",
     "name": "Proxy Cache Purge",
     "requires_plugins": [],
@@ -7432,6 +7388,14 @@
     "name": "OneClick Chat to Order",
     "requires_plugins": [],
     "requires": "5.3",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "styles-and-layouts-for-gravity-forms",
+    "name": "Gravity Booster &#8211; Styles &amp; Layouts for Gravity Forms &#8211; Best Gravity Forms Styler, Designer",
+    "requires_plugins": [],
+    "requires": "4.0",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7454,6 +7418,14 @@
   {
     "slug": "pc-robotstxt",
     "name": "Virtual Robots.txt",
+    "requires_plugins": [],
+    "requires": "5.0",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "convertkit",
+    "name": "Kit (formerly ConvertKit) &#8211; Email Newsletter, Email Marketing, Subscribers and Landing Pages",
     "requires_plugins": [],
     "requires": "5.0",
     "active_installs": 40000,
@@ -7492,6 +7464,14 @@
     "downloads": 0
   },
   {
+    "slug": "wt-woocommerce-sequential-order-numbers",
+    "name": "Sequential Order Number for WooCommerce",
+    "requires_plugins": [],
+    "requires": "3.0.1",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "wp-database-backup",
     "name": "WP Database Backup &#8211; Unlimited Database &amp; Files Backup by Backup for WP",
     "requires_plugins": [],
@@ -7503,7 +7483,7 @@
     "slug": "greenshift-animation-and-page-builder-blocks",
     "name": "Greenshift &#8211; animation and page builder blocks",
     "requires_plugins": [],
-    "requires": "6.3",
+    "requires": "6.6",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7512,6 +7492,30 @@
     "name": "Simply Static &#8211; The WordPress Static Site Generator",
     "requires_plugins": [],
     "requires": "6.3",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "beautiful-and-responsive-cookie-consent",
+    "name": "Beautiful Cookie Consent Banner",
+    "requires_plugins": [],
+    "requires": "4.0",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "wp-import-export-lite",
+    "name": "WP Import Export Lite",
+    "requires_plugins": [],
+    "requires": "4.4",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "ajax-load-more",
+    "name": "WordPress Infinite Scroll &#8211; Ajax Load More",
+    "requires_plugins": [],
+    "requires": "5.0",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7596,6 +7600,14 @@
     "downloads": 0
   },
   {
+    "slug": "nimble-builder",
+    "name": "Nimble Page Builder",
+    "requires_plugins": [],
+    "requires": "4.7",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
     "slug": "woocommerce-delivery-notes",
     "name": "Print Invoice &amp; Delivery Notes for WooCommerce",
     "requires_plugins": [
@@ -7623,9 +7635,25 @@
   },
   {
     "slug": "superb-blocks",
-    "name": "Superb Addons &#8211; Blocks, Patterns and Elementor Sections &amp; Elements",
+    "name": "Superb Addons: WordPress Blocks, Patterns &amp; Theme Designer",
     "requires_plugins": [],
     "requires": "3.0.1",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "popup-anything-on-click",
+    "name": "Popup Anything &#8211; Popup for opt-ins and Lead Generation Conversions",
+    "requires_plugins": [],
+    "requires": "5.2",
+    "active_installs": 40000,
+    "downloads": 0
+  },
+  {
+    "slug": "ditty-news-ticker",
+    "name": "Ditty – Responsive News Tickers, Sliders, and Lists",
+    "requires_plugins": [],
+    "requires": "6.2",
     "active_installs": 40000,
     "downloads": 0
   },
@@ -7710,28 +7738,12 @@
     "downloads": 2138740
   },
   {
-    "slug": "google-sitemap-plugin",
-    "name": "Sitemap by BestWebSoft &#8211; WordPress XML Site Map Page Generator Plugin",
-    "requires_plugins": [],
-    "requires": "5.6",
-    "active_installs": 30000,
-    "downloads": 2074290
-  },
-  {
     "slug": "wp-analytify",
     "name": "Analytify &#8211; Google Analytics Dashboard For WordPress (GA4 analytics made easy)",
     "requires_plugins": [],
     "requires": "3.6",
     "active_installs": 30000,
     "downloads": 2057932
-  },
-  {
-    "slug": "ultimate-faqs",
-    "name": "Ultimate FAQ Accordion Plugin",
-    "requires_plugins": [],
-    "requires": "6.0",
-    "active_installs": 30000,
-    "downloads": 1950027
   },
   {
     "slug": "seo-image",
@@ -7766,22 +7778,6 @@
     "downloads": 1627864
   },
   {
-    "slug": "wp-console",
-    "name": "WP Console &#8211; WordPress PHP Console powered by PsySH",
-    "requires_plugins": [],
-    "requires": "5.3.12",
-    "active_installs": 30000,
-    "downloads": 1608958
-  },
-  {
-    "slug": "advanced-gutenberg",
-    "name": "Gutenberg Blocks &#8211; PublishPress Blocks Gutenberg Editor Plugin",
-    "requires_plugins": [],
-    "requires": "5.5",
-    "active_installs": 30000,
-    "downloads": 1537163
-  },
-  {
     "slug": "zero-bs-crm",
     "name": "Jetpack CRM &#8211; Clients, Leads, Invoices, Billing, Email Marketing, &amp; Automation",
     "requires_plugins": [],
@@ -7804,14 +7800,6 @@
     "requires": false,
     "active_installs": 30000,
     "downloads": 1283347
-  },
-  {
-    "slug": "gwolle-gb",
-    "name": "Gwolle Guestbook",
-    "requires_plugins": [],
-    "requires": "4.1",
-    "active_installs": 30000,
-    "downloads": 1282986
   },
   {
     "slug": "rss-importer",
@@ -7904,16 +7892,6 @@
     "downloads": 1131590
   },
   {
-    "slug": "master-addons",
-    "name": "Master Addons &#8211; Free Widgets, Hover Effects, Toggle, Conditions, Animations for Elementor",
-    "requires_plugins": [
-      "elementor"
-    ],
-    "requires": "4.0",
-    "active_installs": 30000,
-    "downloads": 1129999
-  },
-  {
     "slug": "spicebox",
     "name": "Spice Box",
     "requires_plugins": [],
@@ -7954,14 +7932,6 @@
     "downloads": 969687
   },
   {
-    "slug": "wp-graphql",
-    "name": "WPGraphQL",
-    "requires_plugins": [],
-    "requires": "5.9",
-    "active_installs": 30000,
-    "downloads": 946585
-  },
-  {
     "slug": "paypal-donations",
     "name": "Donations via PayPal",
     "requires_plugins": [],
@@ -7994,14 +7964,6 @@
     "downloads": 875274
   },
   {
-    "slug": "portfolio-filter-gallery",
-    "name": "Portfolio Gallery &#8211; Image Gallery Plugin",
-    "requires_plugins": [],
-    "requires": "3.2",
-    "active_installs": 30000,
-    "downloads": 865103
-  },
-  {
     "slug": "woo-variation-gallery",
     "name": "Additional Variation Images Gallery for WooCommerce",
     "requires_plugins": [
@@ -8018,14 +7980,6 @@
     "requires": "3.5",
     "active_installs": 30000,
     "downloads": 841181
-  },
-  {
-    "slug": "rara-one-click-demo-import",
-    "name": "Rara One Click Demo Import",
-    "requires_plugins": [],
-    "requires": "6.0",
-    "active_installs": 30000,
-    "downloads": 822293
   },
   {
     "slug": "woocommerce-customizer",
@@ -8060,14 +8014,6 @@
     "downloads": 774607
   },
   {
-    "slug": "mp-timetable",
-    "name": "Timetable and Event Schedule by MotoPress",
-    "requires_plugins": [],
-    "requires": "4.6",
-    "active_installs": 30000,
-    "downloads": 771730
-  },
-  {
     "slug": "hide-admin-bar",
     "name": "Hide Admin Bar",
     "requires_plugins": [],
@@ -8082,5 +8028,61 @@
     "requires": "3.5",
     "active_installs": 30000,
     "downloads": 751522
+  },
+  {
+    "slug": "uncanny-learndash-toolkit",
+    "name": "Uncanny Toolkit for LearnDash",
+    "requires_plugins": [],
+    "requires": "5.4",
+    "active_installs": 30000,
+    "downloads": 746240
+  },
+  {
+    "slug": "asesor-cookies-para-la-ley-en-espana",
+    "name": "Asesor de Cookies RGPD para normativa europea",
+    "requires_plugins": [],
+    "requires": "3.5",
+    "active_installs": 30000,
+    "downloads": 707160
+  },
+  {
+    "slug": "catch-ids",
+    "name": "Catch IDs",
+    "requires_plugins": [],
+    "requires": "5.9",
+    "active_installs": 30000,
+    "downloads": 701510
+  },
+  {
+    "slug": "ocean-custom-sidebar",
+    "name": "Ocean Custom Sidebar",
+    "requires_plugins": [],
+    "requires": "5.6",
+    "active_installs": 30000,
+    "downloads": 695625
+  },
+  {
+    "slug": "advanced-backgrounds",
+    "name": "Advanced WordPress Backgrounds",
+    "requires_plugins": [],
+    "requires": "6.2",
+    "active_installs": 30000,
+    "downloads": 677273
+  },
+  {
+    "slug": "team-members",
+    "name": "Team Members",
+    "requires_plugins": [],
+    "requires": "3.6",
+    "active_installs": 30000,
+    "downloads": 675316
+  },
+  {
+    "slug": "blackhole-bad-bots",
+    "name": "Blackhole for Bad Bots",
+    "requires_plugins": [],
+    "requires": "4.6",
+    "active_installs": 30000,
+    "downloads": 673936
   }
 ]
