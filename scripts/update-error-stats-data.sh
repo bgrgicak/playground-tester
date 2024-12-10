@@ -114,26 +114,26 @@ function generate_comparison_stats() {
 
 function update_comparison_stats() {
     echo "Updating comparison stats..."
-    local initial_stats=$(mktemp)
-    generate_comparison_stats playwright-report/playwright-results-full-run.json > "$initial_stats"
-    local new_stats=$(mktemp)
-    generate_comparison_stats playwright-report/playwright-results-timeout-errors.json > "$new_stats"
-    jq -s '
-        .[0] as $initial |
-        .[1] as $new |
-        $initial |
-        map(
-            . as $item |
-            $new |
-            map(select(.slug == $item.slug)) |
-            if length > 0 then
-                $item + {result_2024: .[0].result_2024}
-            else
-                $item
-            end
-        )
-    ' "$initial_stats" "$new_stats" \
-        > data/stats/playground-2023-2024-error-comparison.json
+    # local initial_stats=$(mktemp)
+    # generate_comparison_stats playwright-report/playwright-results-full-run.json > "$initial_stats"
+    # local new_stats=$(mktemp)
+    # generate_comparison_stats playwright-report/playwright-results-timeout-errors.json > "$new_stats"
+    # jq -s '
+    #     .[0] as $initial |
+    #     .[1] as $new |
+    #     $initial |
+    #     map(
+    #         . as $item |
+    #         $new |
+    #         map(select(.slug == $item.slug)) |
+    #         if length > 0 then
+    #             $item + {result_2024: .[0].result_2024}
+    #         else
+    #             $item
+    #         end
+    #     )
+    # ' "$initial_stats" "$new_stats" \
+    generate_comparison_stats playwright-report/playwright-results.json > data/stats/playground-2023-2024-error-comparison.json
 }
 
 update_comparison_stats

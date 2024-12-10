@@ -4,7 +4,7 @@ import fs from "fs";
 const playgroundUrls = [
   {
     name: "Playground from December 2023",
-    url: "http://127.0.0.1:5400/website-server/",
+    url: "http://localhost:5400/website-server/",
     oldUI: true,
     wpVersion: 6.4,
   },
