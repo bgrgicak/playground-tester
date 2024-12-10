@@ -90,8 +90,9 @@ function generate_test_comparison_report() {
     local report_without_wp_version_errors=$(mktemp)
     get_report_without_wp_version_errors > "$report_without_wp_version_errors"
 
-    echo "# Test Comparison Report" > "$report_file"
-    echo "This report compares the test results for Playground from December 2023 and December 2024." >> "$report_file"
+    echo "# Playground MySQL and PHP compatibility improvements between 2023 and 2024" > "$report_file"
+    echo "This report compares Playground from December 2023 and December 2024 by analyzing how many of the top 1000 plugins from WordPress.org can be activated in Playground." >> "$report_file"
+    echo "To determine if a plugin is compatible, we use End to End tests where we activate the plugin together it's dependencies and check if it was successfully activated in Playground." >> "$report_file"
 
     # Calculate error rates using the filtered data
     local total_2023=$(jq length "$report_without_wp_version_errors")
