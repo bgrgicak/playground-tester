@@ -2,3 +2,6 @@ node_modules
 temp
 .DS_Store
 .nvm/
+/test-results/
+/blob-report/
+/playwright/.cache/
