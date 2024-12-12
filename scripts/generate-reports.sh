@@ -11,7 +11,7 @@
 #   ./scripts/generate-reports.sh
 
 source "./scripts/pre-script-run.sh"
-source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/lib/logs/analyze-json-logs.sh
 source ./scripts/save-data.sh
 
 if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then

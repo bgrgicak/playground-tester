@@ -13,8 +13,8 @@
 #   --wordpress <path> Path to the WordPress installation used for testing.
 
 source "./scripts/pre-script-run.sh"
-source "./scripts/lib/log-parser/analyze-json-logs.sh"
-source "./scripts/lib/log-parser/parse-raw-logs.sh"
+source "./scripts/lib/logs/analyze-json-logs.sh"
+source "./scripts/lib/logs/parse-raw-logs.sh"
 
 test_type=""
 item_path=""

@@ -15,7 +15,7 @@
 # Usage: ./scripts/update-error-stats.sh
 
 source ./scripts/pre-script-run.sh
-source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/lib/logs/analyze-json-logs.sh
 
 playground_stats_dir="$PLAYGROUND_TESTER_DATA_PATH/stats"
 playground_stats_file="$playground_stats_dir/error-stats.json"

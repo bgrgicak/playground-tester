@@ -1,8 +1,8 @@
 #!/bin/bash
 
 source "$(dirname "$0")/common-test-functions.sh"
-source "./scripts/lib/log-parser/parse-raw-logs.sh"
-source "./scripts/lib/log-parser/analyze-json-logs.sh"
+source "./scripts/lib/logs/parse-raw-logs.sh"
+source "./scripts/lib/logs/analyze-json-logs.sh"
 
 empty_log_file_test() {
     local temp_file=$(mktemp)
