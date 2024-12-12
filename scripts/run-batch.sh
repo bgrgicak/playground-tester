@@ -55,6 +55,11 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
+if [ -z "$item_type" ]; then
+  echo "Error: --plugins or --themes option is required" >&2
+  exit 1
+fi
+
 download_latest_wordpress() {
   if [ -d "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
     rm -rf "$PLAYGROUND_TESTER_WORDPRESS_PATH"
@@ -117,8 +122,8 @@ run_top_n_items() {
 }
 
 run_plugin_previews() {
-  echo "Testing WordPress.org previews..."
-  run_batches "$(list_log_paths_for_slugs plugins "$(list_plugins_with_previews)")"
+  echo "Testing WordPress.org $item_type previews..."
+  run_batches "$(list_log_paths_for_slugs $item_type "$(list_plugins_with_previews)")"
 }
 
 run_batch() {
