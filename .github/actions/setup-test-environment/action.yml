@@ -11,6 +11,7 @@ runs:
       uses: actions/checkout@v4
       with:
         submodules: recursive
+        ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Configure Git
       shell: bash
@@ -21,7 +22,7 @@ runs:
     - name: Git Submodule Update
       shell: bash
       run: |
-        git pull --recurse-submodules
+        git pull --recurse-submodules origin ${{ github.event.pull_request.head.ref }}
         git submodule update --remote --recursive
 
     - name: Set Node version
