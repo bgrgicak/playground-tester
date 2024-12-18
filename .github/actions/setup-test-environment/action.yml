@@ -12,6 +12,7 @@ runs:
       with:
         submodules: recursive
         ref: ${{ github.event.pull_request.head.ref }}
+        token: ${{ secrets.BOTBERO_TOKEN }}
 
     - name: Configure Git
       shell: bash
