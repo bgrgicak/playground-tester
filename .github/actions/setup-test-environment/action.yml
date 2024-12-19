@@ -1,6 +1,9 @@
 name: Setup Node Environment
 description: Sets up Node.js environment using .nvmrc
 
+permissions:
+  contents: write
+
 runs:
   using: "composite"
   steps:
@@ -8,12 +11,24 @@ runs:
       uses: actions/checkout@v4
       with:
         submodules: recursive
+        ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Configure Git
       shell: bash
       run: |
         git config --global user.name "botbero"
         git config --global user.email "botbero@users.noreply.github.com"
+        if [ ! -z "${{ env.token }}" ]; then
+          git config --global url."https://${{ env.token }}@github.com/".insteadOf "https://github.com/"
+        else
+          echo "Warning: token is not set. Skipping remote URL update."
+        fi
+
+    - name: Git Submodule Update
+      shell: bash
+      run: |
+        git pull --recurse-submodules origin ${{ github.event.pull_request.head.ref }}
+        git submodule update --remote --recursive
 
     - name: Set Node version
       shell: bash
