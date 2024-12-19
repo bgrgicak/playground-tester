@@ -26,10 +26,6 @@ jobs:
 
       - name: Run tests
         run: |
-          # Configure git to use the token for authentication
-          git config --global user.email "botbero@users.noreply.github.com"
-          git config --global user.name "botbero"
-          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf ssh://git@github
-          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf https://github
-          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf git@github
           ./scripts/unit-tests/test.sh
+        env:
+          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
