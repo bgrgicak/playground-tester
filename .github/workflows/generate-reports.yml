@@ -20,8 +20,8 @@ jobs:
           token: ${{ secrets.BOTBERO_TOKEN }}
 
       - uses: ./.github/actions/setup-test-environment/
-
-      - name: Run generate-reports.sh
         env:
           GITHUB_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
+
+      - name: Run generate-reports.sh
         run: ./scripts/generate-reports.sh

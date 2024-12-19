@@ -24,6 +24,8 @@ jobs:
           token: ${{ secrets.BOTBERO_TOKEN }}
 
       - uses: ./.github/actions/setup-test-environment/
+        env:
+          token: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run plugin batch
         run: ./scripts/run-batch.sh --batch-size ${{ inputs.batch_size }} --plugins
