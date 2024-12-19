@@ -18,10 +18,10 @@ runs:
       run: |
         git config --global user.name "botbero"
         git config --global user.email "botbero@users.noreply.github.com"
-        if [ ! -z "${{ github.token }}" ]; then
-          git config --global url."https://${{ github.token }}@github.com/".insteadOf "https://github.com/"
+        if [ ! -z "${{ env.token }}" ]; then
+          git config --global url."https://${{ env.token }}@github.com/".insteadOf "https://github.com/"
         else
-          echo "Warning: github.token is not set. Skipping remote URL update."
+          echo "Warning: token is not set. Skipping remote URL update."
         fi
 
     - name: Git Submodule Update
