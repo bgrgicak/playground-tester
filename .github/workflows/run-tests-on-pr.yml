@@ -19,6 +19,9 @@ jobs:
           submodules: recursive
           ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.BOTBERO_TOKEN }}
+          repository: bgrgicak/Playground-compatibility-reports
+          path: data
+
 
       - uses: ./.github/actions/setup-test-environment/
         env:
@@ -27,8 +30,9 @@ jobs:
       - name: Run tests
         run: |
           # Configure git to use the token for authentication
-          GITHUB_TOKEN=${{ secrets.BOTBERO_TOKEN }}
           git config --global user.email "botbero@users.noreply.github.com"
           git config --global user.name "botbero"
-          git config --global url."https://${{ secrets.BOTBERO_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf ssh://git@github
+          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf https://github
+          git config --global --add url."https://${{ secrets.BOTBERO_TOKEN }}:x-oauth-basic@github".insteadOf git@github
           ./scripts/unit-tests/test.sh
