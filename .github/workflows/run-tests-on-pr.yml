@@ -25,4 +25,6 @@ jobs:
           token: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run tests
-        run: ./scripts/unit-tests/test.sh
+        run: |
+          git config --global url."https://${{ secrets.BOTBERO_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          ./scripts/unit-tests/test.sh
