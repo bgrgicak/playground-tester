@@ -1,9 +1,6 @@
 name: Setup Node Environment
 description: Sets up Node.js environment using .nvmrc
 
-permissions:
-  contents: write
-
 runs:
   using: "composite"
   steps:
