@@ -27,6 +27,8 @@ runs:
         cd data/
         if [ ! -z "${{ github.token }}" ]; then
           git remote set-url origin https://${{ github.token }}@github.com/bgrgicak/Playground-compatibility-reports.git
+        else
+          echo "Warning: github.token is not set. Skipping remote URL update."
         fi
 
     - name: Set Node version
