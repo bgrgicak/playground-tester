@@ -4,7 +4,10 @@ on:
   schedule:
     # Run every 20 minutes with a 10 minute delay
     # to ensure it runs after plugin runs
-    - cron: '10,30,50 * * * *'
+    - cron: '10 * * * *'
+    - cron: '30 * * * *'
+    - cron: '50 * * * *'
+
   workflow_dispatch:
     inputs:
       batch_size:
