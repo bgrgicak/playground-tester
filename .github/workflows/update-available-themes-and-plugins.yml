@@ -24,3 +24,12 @@ jobs:
 
       - name: Run update-available-themes-and-plugins.sh
         run: ./scripts/update-available-themes-and-plugins.sh
+
+      - name: Save data
+        run: |
+          source ./scripts/save-data.sh
+          save_data \
+            --add logs/ \
+            --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" \
+            --push
+

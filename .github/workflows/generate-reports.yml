@@ -26,3 +26,11 @@ jobs:
 
       - name: Run generate-reports.sh
         run: ./scripts/generate-reports.sh
+
+      - name: Save data
+        run: |
+          source ./scripts/save-data.sh
+          save_data \
+            --add reports/ \
+            --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" \
+            --push

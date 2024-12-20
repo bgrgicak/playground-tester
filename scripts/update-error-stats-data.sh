@@ -16,6 +16,7 @@
 
 source ./scripts/pre-script-run.sh
 source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/save-data.sh
 
 playground_stats_dir="$PLAYGROUND_TESTER_DATA_PATH/stats"
 playground_stats_file="$playground_stats_dir/error-stats.json"

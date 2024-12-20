@@ -24,3 +24,11 @@ jobs:
 
       - name: Run update-error-stats-data.sh
         run: ./scripts/update-error-stats-data.sh
+
+      - name: Save data
+        run: |
+          source ./scripts/save-data.sh
+          save_data \
+            --add logs/ \
+            --message "Updated error stats on $(date +"%Y-%m-%d")" \
+            --push

@@ -72,13 +72,7 @@ function generate_playground_error_reports() {
     generate_error_reports "PLAYGROUND"
 }
 
-
-function push_reports() {
-    save_data --add reports/ --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" --push
-}
-
 update_stats
 generate_sql_error_reports
 generate_php_error_reports
 generate_playground_error_reports
-push_reports
