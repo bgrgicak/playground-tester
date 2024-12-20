@@ -60,7 +60,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    local folders=$(find "data/$item_type" -name "error.json" -exec get_file_mtime {} + | \
+    local folders=$(get_log_files "$item_type" -name "error.json" -exec get_file_mtime {} + | \
           sort -n | \
           head -n "$batch_size" | \
           awk '{print $NF}' | \
