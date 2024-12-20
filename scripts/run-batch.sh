@@ -49,22 +49,18 @@ download_latest_wordpress() {
   ./scripts/build-wordpress.sh --output "$PLAYGROUND_TESTER_TEMP_PATH"
 }
 
-# MacOS and Linux have different ways to get the file modification time.
-# This function is used to get the file modification time on both systems.
-get_file_mtime() {
-    stat -f '%m %N' "$1" 2>/dev/null || stat -c '%Y %n' "$1"
-}
-
 run_batch() {
     echo "Running batch of ${batch_size} items..."
 
+    # TODO FIX LS in Linux
+
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    local folders=$(get_log_files "$item_type" -name "error.json" -exec get_file_mtime {} + | \
-          sort -n | \
-          head -n "$batch_size" | \
-          awk '{print $NF}' | \
-          sed 's/\/error.json//')
+    local folders=$(get_log_files "$item_type" \
+        -exec ls -ltr {} + |           # Sort numerically by time modified
+        head -n "$batch_size" |      # Take only the number we need
+        awk '{print $NF}' |          # Get the path (last field)
+        sed 's/\/error.json//')      # Remove error.json from path
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
