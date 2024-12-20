@@ -19,7 +19,7 @@ if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then
 fi
 
 function update_stats() {
-    local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/playground_stats.md"
+    local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/playground-stats.md"
 
     # Create the full markdown file
     echo "# Playground Error Report" > "$report_file"
