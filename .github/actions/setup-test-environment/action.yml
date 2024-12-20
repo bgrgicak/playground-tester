@@ -10,7 +10,7 @@ runs:
         git config --global user.name "${{ env.GH_USER }}"
         git config --global user.email "${{ env.GH_USER }}@users.noreply.github.com"
         cd data/
-          git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
+        git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
         cd ..
       env:
         GH_USER: ${{ env.GH_USER }}
