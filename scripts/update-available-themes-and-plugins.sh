@@ -70,7 +70,7 @@ remove_items_not_in_wp_public_data() {
     for letter_dir in "$PLAYGROUND_TESTER_DATA_PATH/logs/${item_type}"/*/ ; do
         for item_dir in "${letter_dir}"*/ ; do
             item=$(basename "${item_dir}")
-            if [ ! -f "wp-public-data/${item_type}/${item}.json" ]; then
+            if [ ! -f "$PLAYGROUND_TESTER_PATH/wp-public-data/${item_type}/${item}.json" ]; then
                 echo "Removing ${item} from ${item_type}..."
                 rm -rf "$PLAYGROUND_TESTER_DATA_PATH/logs/${item_type}/${item:0:1}/${item}"
             fi
@@ -78,7 +78,7 @@ remove_items_not_in_wp_public_data() {
     done
 }
 
-update_wp_public_data
+# update_wp_public_data
 update_list_of_items_to_test "wp-public-data/plugins" "plugins"
 update_list_of_items_to_test "wp-public-data/themes" "themes"
 remove_items_not_in_wp_public_data "plugins"
