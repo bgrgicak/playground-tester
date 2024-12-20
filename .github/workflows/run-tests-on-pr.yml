@@ -21,9 +21,6 @@ jobs:
           token: ${{ secrets.BOTBERO_TOKEN }}
 
       - uses: ./.github/actions/setup-test-environment/
-        env:
-          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
-          GH_USER: botbero
 
       - name: Test git push
         run: |
