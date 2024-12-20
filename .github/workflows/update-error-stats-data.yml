@@ -7,8 +7,10 @@ on:
     - cron: '15 * * * *'
   workflow_dispatch:
 
-jobs:
+permissions:
+  contents: write
 
+jobs:
   run-scripts:
     runs-on: ubuntu-latest
     steps:
