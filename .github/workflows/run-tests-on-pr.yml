@@ -18,7 +18,7 @@ jobs:
         with:
           submodules: recursive
           ref: ${{ github.event.pull_request.head.ref }}
-          token: ${{ env.GH_TOKEN }}
+          token: ${{ secrets.BOTBERO_TOKEN }}
 
       - uses: ./.github/actions/setup-test-environment/
         env:
