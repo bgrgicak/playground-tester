@@ -34,5 +34,5 @@ jobs:
           source ./scripts/save-data.sh
           save_data \
             --add reports/ \
-            --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" \
+            --message "Report generated on $(date +"%Y-%m-%d %H:%M:%S")" \
             --push

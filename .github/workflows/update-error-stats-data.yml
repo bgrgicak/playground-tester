@@ -31,6 +31,6 @@ jobs:
         run: |
           source ./scripts/save-data.sh
           save_data \
-            --add logs/ \
+            --add stats/ \
             --message "Updated error stats on $(date +"%Y-%m-%d")" \
             --push
