@@ -21,7 +21,8 @@ jobs:
 
       - uses: ./.github/actions/setup-test-environment/
         env:
-          GITHUB_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
+          GH_USER: ${{ secrets.BOTBERO_USER }}
+          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run generate-reports.sh
         run: ./scripts/generate-reports.sh
