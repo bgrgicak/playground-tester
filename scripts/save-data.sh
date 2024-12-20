@@ -37,6 +37,10 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
+  git fetch origin HEAD:refs/heads/main
+  git checkout HEAD:refs/heads/main
+  git pull origin HEAD:refs/heads/main
+
   if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add $dry_run
     git commit --allow-empty -m "$message" --quiet $dry_run

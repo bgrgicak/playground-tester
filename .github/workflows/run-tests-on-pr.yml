@@ -27,18 +27,10 @@ jobs:
 
       - name: Test git push
         run: |
-          cd data
-          git fetch origin main
-          git checkout main
-          git pull origin main
+          source ./scripts/save-data.sh
           echo "update" >> README.md
-          git add README.md
-          git commit -m "update readme"
-          git push origin main
-        env:
-          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
-          GH_USER: ${{ secrets.BOTBERO_USER }}
-
+          save_data --add README.md --message "update readme"
+          save_data --push
 
 
       # - uses: ./.github/actions/setup-test-environment/
