@@ -28,6 +28,3 @@ jobs:
       - name: Run tests
         run: |
           ./scripts/unit-tests/test.sh
-        env:
-          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
-          GH_USER: botbero
