@@ -13,13 +13,8 @@ runs:
     - name: Configure Git
       shell: bash
       run: |
-        git config --global user.name "botbero"
-        git config --global user.email "botbero@users.noreply.github.com"
-        if [ ! -z "${{ env.token }}" ]; then
-          git config --global url."https://${{ env.token }}@github.com/".insteadOf "https://github.com/"
-        else
-          echo "Warning: token is not set. Skipping remote URL update."
-        fi
+        git config --global user.name "${{ env.GH_USER }}"
+        git config --global user.email "${{ env.GH_USER }}@users.noreply.github.com"
 
     - name: Git Submodule Update
       shell: bash
