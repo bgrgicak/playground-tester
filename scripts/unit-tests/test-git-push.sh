@@ -3,12 +3,18 @@
 # Navigate to the data submodule
 cd data || exit 1
 
+REPO_URL="https://github.com/bgrgicak/Playground-compatibility-reports.git"
+if [ -n "$GH_TOKEN" ]; then
+    echo "Using GH_TOKEN to authenticate."
+    REPO_URL="https://${GH_TOKEN}@github.com/bgrgicak/Playground-compatibility-reports.git"
+fi
+
 # Test git push with --dry-run (with any pending changes)
-push_output=$(git push --dry-run origin main 2>&1)
+push_output=$(git push --dry-run $REPO_URL main 2>&1)
 push_status=$?
 
 # Test git push with --dry-run (should show up-to-date)
-no_change_output=$(git push --dry-run origin main 2>&1)
+no_change_output=$(git push --dry-run $REPO_URL main 2>&1)
 no_change_status=$?
 
 # Assert results
