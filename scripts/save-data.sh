@@ -13,11 +13,15 @@ save_data() {
   local add=""
   local message=""
   local push=false
+  local dry_run=""
+  local remote="origin"
+  local branch="main"
   while [[ "$#" -gt 0 ]]; do
     case $1 in
       --add) add="$2"; shift 2;;
       --message) message="$2"; shift 2;;
       --push) push=true; shift 1;;
+      --dry-run) dry_run="--dry-run"; shift 1;;
       *) echo "Invalid option: $1" >&2; exit 1;;
     esac
   done
@@ -35,13 +39,17 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
+  git fetch "$remote" "$branch"
+  git checkout "$branch"
+  git pull "$remote" "$branch"
+
   if [ -n "$message" ] && [ -n "$add" ]; then
-    git add -A $add
-    git commit --allow-empty -m "$message" --quiet
+    git add -A $add $dry_run
+    git commit --allow-empty -m "$message" --quiet $dry_run
   fi
 
   if $push; then
-    git push --recurse-submodules=on-demand --quiet
+    git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run
   fi
 
   cd ..

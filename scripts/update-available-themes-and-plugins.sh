@@ -84,4 +84,3 @@ update_list_of_items_to_test "wp-public-data/themes" "themes"
 remove_items_not_in_wp_public_data "plugins"
 remove_items_not_in_wp_public_data "themes"
 
-save_data --add logs/. --message "Updated the list of plugins and themes on $(date +"%Y-%m-%d")" --push

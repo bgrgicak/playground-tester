@@ -5,8 +5,10 @@ on:
     # - cron: '0 * * * *'  # Run every hour at minute 0
   workflow_dispatch:
 
-jobs:
+permissions:
+  contents: write
 
+jobs:
   run-scripts:
     runs-on: ubuntu-latest
     steps:
@@ -14,6 +16,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.BOTBERO_TOKEN }}
+
+      - uses: ./.github/actions/setup-test-environment/
+        env:
+          GH_USER: ${{ secrets.BOTBERO_USER }}
+          GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run generate-reports.sh
         run: ./scripts/generate-reports.sh
+
+      - name: Save data
+        run: |
+          source ./scripts/save-data.sh
+          save_data \
+            --add reports/ \
+            --message "Last updated at $(date +"%Y-%m-%d %H:%M:%S")" \
+            --push
