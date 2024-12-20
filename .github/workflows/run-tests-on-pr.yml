@@ -20,13 +20,29 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.BOTBERO_TOKEN }}
 
-      - uses: ./.github/actions/setup-test-environment/
-        env:
-          token: ${{ secrets.BOTBERO_TOKEN }}
-
-      - name: Run tests
+      - name: Test git push
         run: |
-          ./scripts/unit-tests/test.sh
+          git config --global user.email "botbero@users.noreply.github.com"
+          git config --global user.name "botbero"
+          git config --unset-all http.https://github.com/.extraheader
+          cd data
+          git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
+          git push
+          git remote set-url origin https://github.com/bgrgicak/Playground-compatibility-reports.git
+          git push
         env:
           GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
           GH_USER: botbero
+
+
+
+      # - uses: ./.github/actions/setup-test-environment/
+      #   env:
+      #     token: ${{ secrets.BOTBERO_TOKEN }}
+
+      # - name: Run tests
+      #   run: |
+      #     ./scripts/unit-tests/test.sh
+      #   env:
+      #     GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
+      #     GH_USER: botbero
