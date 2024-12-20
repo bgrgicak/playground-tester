@@ -4,13 +4,6 @@ description: Sets up Node.js environment using .nvmrc
 runs:
   using: "composite"
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
-        ref: ${{ github.event.pull_request.head.ref }}
-        token: ${{ env.GH_TOKEN }}
-
     - name: Configure Git
       shell: bash
       run: |

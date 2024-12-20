@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ env.GH_TOKEN }}
+
       - uses: ./.github/actions/setup-test-environment/
         env:
           GH_USER: ${{ secrets.BOTBERO_USER }}
