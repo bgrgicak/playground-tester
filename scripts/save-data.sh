@@ -29,13 +29,6 @@ save_data() {
     exit 0
   fi
 
-  # Use the GH_TOKEN environment variable to authenticate if it's available
-  if [ -n "$GH_TOKEN" ]; then
-    git config --global url."https://${GH_TOKEN}ff:x-oauth-basic@github".insteadOf ssh://git@github
-    git config --global url."https://${GH_TOKEN}ff:x-oauth-basic@github".insteadOf https://github
-    git config --global url."https://${GH_TOKEN}ff:x-oauth-basic@github".insteadOf git@github
-  fi
-
   # If path starts with PLAYGROUND_TESTER_DATA_PATH remove it to ensure the
   # path is relative to the data submodule
   if [[ "$add" == "$PLAYGROUND_TESTER_DATA_PATH"* ]]; then

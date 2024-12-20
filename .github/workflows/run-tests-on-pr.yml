@@ -34,7 +34,6 @@ jobs:
           echo "update" >> README.md
           git add README.md
           git commit -m "update readme"
-          git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
           git push origin main
         env:
           GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
