@@ -9,7 +9,7 @@ runs:
       with:
         submodules: recursive
         ref: ${{ github.event.pull_request.head.ref }}
-        token: ${{ secrets.BOTBERO_TOKEN }}
+        token: ${{ env.GH_TOKEN }}
 
     - name: Configure Git
       shell: bash
@@ -17,7 +17,7 @@ runs:
         git config --global user.name "${{ env.GH_USER }}"
         git config --global user.email "${{ env.GH_USER }}@users.noreply.github.com"
       env:
-        GH_USER: botbero
+        GH_USER: ${{ env.GH_USER }}
 
     - name: Git Submodule Update
       shell: bash
