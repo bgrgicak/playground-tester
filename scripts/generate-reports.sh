@@ -26,13 +26,13 @@ function update_stats() {
     echo "This report shows the number of errors for each of the top WordPress.org plugins and themes in the last 90 days." >> "$report_file"
     echo "" >> "$report_file"
     echo "## Stats" >> "$report_file"
-    echo "| Date | Plugins Tested | Themes Tested | Plugins with Errors | Themes with Errors |" >> "$report_file"
-    echo "|------|----------------|---------------|-------------------|-------------------|" >> "$report_file"
+    echo "| Date | Error rate (%) | Plugins Tested | Themes Tested | Plugins with Errors | Themes with Errors |" >> "$report_file"
+    echo "|------|----------------|----------------|---------------|---------------------|--------------------|" >> "$report_file"
 
     # Read from error-stats.json and sort by date in reverse order
     # Only show the last 90 days of stats
     jq -r 'to_entries | sort_by(.key) | reverse | .[0:90] | .[] |
-    "| \(.key) | \(.value.plugins_tested) | \(.value.themes_tested) | \(.value.plugins_with_errors) | \(.value.themes_with_errors) |"' \
+    "| \(.key) | \((.value.plugins_with_errors + .value.themes_with_errors) / (.value.plugins_tested + .value.themes_tested) * 100)% | \(.value.plugins_tested) | \(.value.themes_tested) | \(.value.plugins_with_errors) | \(.value.themes_with_errors) |"' \
     "$PLAYGROUND_TESTER_DATA_PATH/stats/error-stats.json" >> "$report_file"
 }
 
