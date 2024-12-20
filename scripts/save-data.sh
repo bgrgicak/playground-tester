@@ -14,6 +14,8 @@ save_data() {
   local message=""
   local push=false
   local dry_run=""
+  local remote="origin"
+  local branch="main"
   while [[ "$#" -gt 0 ]]; do
     case $1 in
       --add) add="$2"; shift 2;;
@@ -37,9 +39,9 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
-  git fetch origin HEAD:refs/heads/main
-  git checkout HEAD:refs/heads/main
-  git pull origin HEAD:refs/heads/main
+  git fetch "$remote" "$branch"
+  git checkout "$branch"
+  git pull "$remote" "$branch"
 
   if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add $dry_run
@@ -47,8 +49,7 @@ save_data() {
   fi
 
   if $push; then
-    # Always push to the 'main' branch
-    git push origin HEAD:refs/heads/main --recurse-submodules=on-demand --quiet $dry_run
+    git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run
   fi
 
   cd ..
