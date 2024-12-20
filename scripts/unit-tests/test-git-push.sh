@@ -8,6 +8,7 @@ REPO_URL="origin"
 if [ -n "$GH_TOKEN" ] && [ -n "$GH_USER" ]; then
     echo "Logging in with GH_TOKEN"
     echo "$GH_TOKEN" | gh auth login --with-token
+    gh auth switch --user "$GH_USER"
 fi
 
 # Test git push with --dry-run (with any pending changes)
