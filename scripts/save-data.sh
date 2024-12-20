@@ -39,9 +39,9 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
-  git fetch "$remote" "$branch"
-  git checkout "$branch"
-  git pull "$remote" "$branch"
+  git fetch "$remote" "$branch" > /dev/null 2>&1
+  git checkout "$branch" > /dev/null 2>&1
+  git pull "$remote" "$branch" > /dev/null 2>&1
 
   if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add $dry_run
