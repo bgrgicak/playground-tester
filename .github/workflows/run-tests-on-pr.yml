@@ -26,6 +26,9 @@ jobs:
           git config --global user.name "botbero"
           git config --unset-all http.https://github.com/.extraheader
           cd data
+          echo "update" >> README.md
+          git add README.md
+          git commit -m "update readme"
           git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
           git push origin HEAD:refs/heads/main
         env:
