@@ -1,9 +1,10 @@
 name: Test themes
 
 on:
-  # schedule:
-    # Run every 10 minutes with a 2 minute delay compared to plugin runs
-    # - cron: '2,12,22,32,42,52 * * * *'
+  schedule:
+    # Run every 10 minutes, 6 minutes
+    # to ensure it runs after plugin runs
+    - cron: '6,16,26,36,46,56 * * * *'
   workflow_dispatch:
     inputs:
       batch_size:

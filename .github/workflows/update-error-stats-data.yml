@@ -1,8 +1,10 @@
 name: Update error stats data
 
 on:
-  # schedule:
-    # - cron: '0 * * * *'  # Run every hour at minute 0
+  schedule:
+    # Run every hour at minute 15
+    # to ensure it runs before generate-reports
+    - cron: '15 * * * *'
   workflow_dispatch:
 
 jobs:
