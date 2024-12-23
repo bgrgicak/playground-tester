@@ -64,8 +64,8 @@ sort_logs_by_last_commit_date() {
             }
             /^[A-Z]\t/ {
                 file=$2;
-                # Match pattern: logs/item_type/*/*/error.json
-                if (file ~ "^logs\\/" type "\\/[^\\/]+\\/[^\\/]+\\/error\\.json$") {
+                # Match pattern: logs/item_type/*/*/last-updated.txt
+                if (file ~ "^logs\\/" type "\\/[^\\/]+\\/[^\\/]+\\/last-updated\\.txt$") {
                     if (!(file in dates)) {
                         dates[file] = commit_date;
                     }
@@ -74,13 +74,13 @@ sort_logs_by_last_commit_date() {
         END {
             for (file in dates) {
                 clean_file = file;
-                gsub(/\/error\.json$/, "", clean_file);
+                gsub(/\/last-updated\.txt$/, "", clean_file);
                 print dates[file] "\t" data_path "/" clean_file;
             }
         }' |
         sort -k1,2 |
-        awk '{print $4}'
-    )
+        awk '{print $4}')
+
     head -n "$batch_size" <<< "$log_output"
     cd ..
 }

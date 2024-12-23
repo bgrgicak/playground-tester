@@ -53,16 +53,15 @@ run_batch() {
     echo "Running batch of ${batch_size} items..."
 
     # Find the oldest items to test first.
-    # We use the age of the error.json file to determine the age.
     local folders=$(sort_logs_by_last_commit_date "$item_type" "$batch_size")
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
-    # We will only update the error.json file to the current time to indicate that the item is being processed
-    # without making any changes to the contents of the file and losing data.
+    # We will only update the last-updated.txt file to the current time to indicate that the item is being processed
+    # without making any changes to the contents of log files and losing data.
 
     for folder in $folders; do
-        touch "$folder/error.json"
+        date +%s > "$folder/last-updated.txt"
         local folder_name=$(basename "$folder")
         save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
     done
