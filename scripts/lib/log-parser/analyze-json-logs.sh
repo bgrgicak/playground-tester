@@ -57,7 +57,7 @@ sort_logs_by_last_commit_date() {
     cd data || exit 1
 
     git log --name-status --format="format:%ai" |
-        awk -v type="$item_type" '
+        awk -v type="$item_type" -v data_path="$PLAYGROUND_TESTER_DATA_PATH" '
             /^[0-9]/ {
                 commit_date=$0;
                 next
@@ -75,7 +75,7 @@ sort_logs_by_last_commit_date() {
             for (file in dates) {
                 clean_file = file;
                 gsub(/\/error\.json$/, "", clean_file);
-                print dates[file] "\tdata/" clean_file;
+                print dates[file] "\t" data_path "/" clean_file;
             }
         }' |
         sort -k1,2 |
