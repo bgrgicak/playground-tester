@@ -39,9 +39,22 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
-  git fetch "$remote" "$branch" > /dev/null 2>&1
-  git checkout "$branch" > /dev/null 2>&1
-  git pull "$remote" "$branch" > /dev/null 2>&1
+  # Fetch and merge remote changes
+  if ! git fetch "$remote" "$branch" > /dev/null 2>&1; then
+    echo "Failed to fetch from remote"
+    exit 1
+  fi
+
+  if ! git checkout "$branch" > /dev/null 2>&1; then
+    echo "Failed to checkout branch $branch"
+    exit 1
+  fi
+
+  # Try to merge remote changes, automatically accepting remote version for conflicts
+  if ! git merge -X theirs "$remote/$branch" > /dev/null 2>&1; then
+    echo "Failed to merge with remote."
+    exit 1
+  fi
 
   if [ -n "$message" ] && [ -n "$add" ]; then
     git add -A $add $dry_run
