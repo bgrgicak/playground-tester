@@ -70,7 +70,7 @@ run_batch() {
         local folder_name=$(basename "$folder")
         save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
     done
-    save_data --push
+    save_data --push || exit 1
 
     for folder in $folders; do
         ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH"
@@ -84,7 +84,7 @@ run_batch() {
         fi
         save_data --add "$folder" --message "$message"
     done
-    save_data --push
+    save_data --push || exit 1
 }
 
 download_latest_wordpress
