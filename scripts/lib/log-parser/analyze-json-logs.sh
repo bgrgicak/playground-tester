@@ -56,7 +56,7 @@ sort_logs_by_last_commit_date() {
     # CD to data directory to use the submodule
     cd data || exit 1
 
-    git log --name-status --format="format:%ai" |
+    local log_output=$(git log --name-status --format="format:%ai" |
         awk -v type="$item_type" -v data_path="$PLAYGROUND_TESTER_DATA_PATH" '
             /^[0-9]/ {
                 commit_date=$0;
@@ -79,7 +79,8 @@ sort_logs_by_last_commit_date() {
             }
         }' |
         sort -k1,2 |
-        head -n "$batch_size" |
         awk '{print $4}'
+    )
+    head -n "$batch_size" <<< "$log_output"
     cd ..
 }
