@@ -54,9 +54,9 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    local all_folders=$(get_log_files "$item_type" -exec ls -ltr {} +)
-    local folders=$(echo "$all_folders" \
-      | head -n "$batch_size" \
+    local all_folders=$(mktemp)
+    get_log_files "$item_type" -exec ls -ltr {} + > "$all_folders"
+    local folders=$(head -n "$batch_size" "$all_folders" \
       | awk '{print $NF}' \
       | sed 's/\/error.json//')
 
