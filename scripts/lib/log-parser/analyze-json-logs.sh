@@ -15,7 +15,7 @@ get_log_files() {
     local item_type="$1"
     # Remove first parameter from $@ so we can pass all additional parameters to find
     shift
-    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -name "error.json" -mindepth 3 -maxdepth 3 -type f "$@"
+    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -mindepth 3 -maxdepth 3 -type f -name "error.json" "$@"
 }
 
 # Get log files with errors
