@@ -44,3 +44,42 @@ get_errors_by_level() {
 get_number_of_errors_by_level() {
     echo "$(get_errors_by_level "$1" "$2" | jq 'length')"
 }
+
+# Sort logs by last commit date
+#
+# Usage:
+#   sort_logs_by_last_commit_date <item-type>
+sort_logs_by_last_commit_date() {
+    local item_type="$1"
+    local batch_size="$2"
+
+    # CD to data directory to use the submodule
+    cd data || exit 1
+
+    git log --name-status --format="format:%ai" |
+        awk -v type="$item_type" '
+            /^[0-9]/ {
+                commit_date=$0;
+                next
+            }
+            /^[A-Z]\t/ {
+                file=$2;
+                # Match pattern: logs/item_type/*/*/error.json
+                if (file ~ "^logs\\/" type "\\/[^\\/]+\\/[^\\/]+\\/error\\.json$") {
+                    if (!(file in dates)) {
+                        dates[file] = commit_date;
+                    }
+                }
+            }
+        END {
+            for (file in dates) {
+                clean_file = file;
+                gsub(/\/error\.json$/, "", clean_file);
+                print dates[file] "\t" clean_file;
+            }
+        }' |
+        sort -k1,2 |
+        head -n "$batch_size" |
+        awk '{print $4}'
+    cd ..
+}

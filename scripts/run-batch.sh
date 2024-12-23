@@ -54,11 +54,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     # We use the age of the error.json file to determine the age.
-    local all_folders=$(mktemp)
-    get_log_files "$item_type" -exec ls -ltr {} + > "$all_folders"
-    local folders=$(head -n "$batch_size" "$all_folders" \
-      | awk '{print $NF}' \
-      | sed 's/\/error.json//')
+    local folders=$(sort_logs_by_last_commit_date "$item_type" "$batch_size")
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
