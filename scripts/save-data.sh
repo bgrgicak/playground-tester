@@ -51,8 +51,10 @@ save_data() {
   fi
 
   # Try to merge remote changes, automatically accepting remote version for conflicts
-  if ! git merge -X theirs "$remote/$branch" > /dev/null 2>&1; then
-    echo "Failed to merge with remote."
+  merge_output=$(git merge -X theirs "$remote/$branch" 2>&1)
+  if [ $? -ne 0 ]; then
+    echo "Failed to merge with remote:"
+    echo "$merge_output"
     exit 1
   fi
 
