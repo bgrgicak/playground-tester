@@ -75,7 +75,7 @@ sort_logs_by_last_commit_date() {
             for (file in dates) {
                 clean_file = file;
                 gsub(/\/error\.json$/, "", clean_file);
-                print dates[file] "\t" clean_file;
+                print dates[file] "\tdata/" clean_file;
             }
         }' |
         sort -k1,2 |
