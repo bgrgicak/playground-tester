@@ -57,12 +57,14 @@ run_batch() {
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
-    # We will only update the last-updated.txt file to the current time to indicate that the item is being processed
-    # without making any changes to the contents of log files and losing data.
-
+    # We will only replace the TIMESTAMP-last-tested.txt file to indicate that the item is being processed.
     for folder in $folders; do
-        date +%s > "$folder/last-updated.txt"
-        local folder_name=$(basename "$folder")
+        local timestamp_file=$(find "$folder" -name "*-last-tested.txt")
+        if [ -f "$timestamp_file" ]; then
+            rm "$timestamp_file"
+        fi
+        echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
+
         save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
     done
     save_data --push || exit 1
