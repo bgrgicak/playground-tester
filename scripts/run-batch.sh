@@ -53,7 +53,7 @@ run_batch() {
     echo "Running batch of ${batch_size} items..."
 
     # Find the oldest items to test first.
-    local folders=$(sort_logs_by_last_commit_date "$item_type" "$batch_size")
+    local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size")
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #

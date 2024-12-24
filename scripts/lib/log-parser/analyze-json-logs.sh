@@ -10,12 +10,20 @@ source "./scripts/pre-script-run.sh"
 #
 # Usage:
 #   get_log_files <item-type>
-#   get_log_files <item-type> -name "error.json"
+#   get_log_files <item-type> "error.json"
 get_log_files() {
     local item_type="$1"
+    local log_file_name="$2"
     # Remove first parameter from $@ so we can pass all additional parameters to find
     shift
-    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -mindepth 3 -maxdepth 3 -type f -name "error.json" "$@"
+    # If no log file name is provided, default to error.json
+    if [ -z "$log_file_name" ]; then
+        log_file_name="error.json"
+    else
+        # Remove second parameter if provided so we can pass all additional parameters to find
+        shift
+    fi
+    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -mindepth 3 -maxdepth 3 -type f -name "$log_file_name" "$@"
 }
 
 # Get log files with errors
@@ -45,42 +53,21 @@ get_number_of_errors_by_level() {
     echo "$(get_errors_by_level "$1" "$2" | jq 'length')"
 }
 
-# Sort logs by last commit date
+# Get the first n logs to test.
+# We first need to test logs that have not been
+# tested for the longest time.
+# The last tested time is stored in TIMESTAMP-last-tested.txt
+# file located in log directories of each item.
 #
 # Usage:
-#   sort_logs_by_last_commit_date <item-type>
-sort_logs_by_last_commit_date() {
+#   get_first_n_logs_to_test <item-type> <batch-size>
+get_first_n_logs_to_test() {
     local item_type="$1"
     local batch_size="$2"
 
-    # CD to data directory to use the submodule
-    cd data || exit 1
-
-    local log_output=$(git log --name-status --format="format:%ai" |
-        awk -v type="$item_type" -v data_path="$PLAYGROUND_TESTER_DATA_PATH" '
-            /^[0-9]/ {
-                commit_date=$0;
-                next
-            }
-            /^[A-Z]\t/ {
-                file=$2;
-                # Match pattern: logs/item_type/*/*/last-updated.txt
-                if (file ~ "^logs\\/" type "\\/[^\\/]+\\/[^\\/]+\\/last-updated\\.txt$") {
-                    if (!(file in dates)) {
-                        dates[file] = commit_date;
-                    }
-                }
-            }
-        END {
-            for (file in dates) {
-                clean_file = file;
-                gsub(/\/last-updated\.txt$/, "", clean_file);
-                print dates[file] "\t" data_path "/" clean_file;
-            }
-        }' |
-        sort -k1,2 |
-        awk '{print $4}')
-
-    head -n "$batch_size" <<< "$log_output"
-    cd ..
+    get_log_files "$item_type" "*last-tested.txt" |
+        awk -F'/' '{print $NF " " substr($0, 1, length($0)-length($NF)-1)}' |
+        sort |
+        cut -d' ' -f2- |
+        head -n "$batch_size"
 }
