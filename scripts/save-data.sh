@@ -50,8 +50,8 @@ save_data() {
     exit 1
   fi
 
-  # Try to merge remote changes, automatically accepting remote version for conflicts
-  merge_output=$(git merge -X theirs "$remote/$branch" 2>&1)
+  # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
+  merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
   if [ $? -ne 0 ]; then
     echo "Failed to merge with remote:"
     echo "$merge_output"
