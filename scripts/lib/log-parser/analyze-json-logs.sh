@@ -13,17 +13,9 @@ source "./scripts/pre-script-run.sh"
 #   get_log_files <item-type> "error.json"
 get_log_files() {
     local item_type="$1"
-    local log_file_name="$2"
     # Remove first parameter from $@ so we can pass all additional parameters to find
     shift
-    # If no log file name is provided, default to error.json
-    if [ -z "$log_file_name" ]; then
-        log_file_name="error.json"
-    else
-        # Remove second parameter if provided so we can pass all additional parameters to find
-        shift
-    fi
-    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -mindepth 3 -maxdepth 3 -type f -name "$log_file_name" "$@"
+    find "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/" -mindepth 3 -maxdepth 3 -type f "$@"
 }
 
 # Get log files with errors
@@ -32,7 +24,7 @@ get_log_files() {
 get_log_files_with_errors() {
     local item_type="$1"
     shift
-    get_log_files "$item_type" -size +3c "$@"
+    get_log_files "$item_type" -name "error.json" -size +3c "$@"
 }
 
 # Get all errors of a given level from the JSON log file
@@ -65,7 +57,7 @@ get_first_n_logs_to_test() {
     local item_type="$1"
     local batch_size="$2"
 
-    get_log_files "$item_type" "*last-tested.txt" |
+    get_log_files "$item_type" -name"*last-tested.txt" |
         awk -F'/' '{print $NF " " substr($0, 1, length($0)-length($NF)-1)}' |
         sort |
         cut -d' ' -f2- |

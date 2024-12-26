@@ -36,8 +36,8 @@ add_error_stat_files_if_missing() {
 update_error_stats() {
     echo "Updating error rate stats..."
 
-    local plugins_tested=$(get_log_files plugins | wc -l)
-    local themes_tested=$(get_log_files themes | wc -l)
+    local plugins_tested=$(get_log_files plugins -name "error.json" | wc -l)
+    local themes_tested=$(get_log_files themes -name "error.json" | wc -l)
 
     # Files without errors contain only [] and a newline.
     # We can check if the file has more than 3 characters to check if it has errors.
