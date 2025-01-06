@@ -57,9 +57,11 @@ get_first_n_logs_to_test() {
     local item_type="$1"
     local batch_size="$2"
 
-    get_log_files "$item_type" -name "*last-tested.txt" |
+    local all_log_files=$(get_log_files "$item_type" -name "*last-tested.txt"|
         awk -F'/' '{print $NF " " substr($0, 1, length($0)-length($NF)-1)}' |
         sort |
-        cut -d' ' -f2- |
+        cut -d' ' -f2-)
+    echo "$all_log_files" |
         head -n "$batch_size"
 }
+
