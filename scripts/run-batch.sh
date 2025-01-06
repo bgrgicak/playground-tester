@@ -59,10 +59,10 @@ run_batch() {
     #
     # We will only replace the TIMESTAMP-last-tested.txt file to indicate that the item is being processed.
     for folder in $folders; do
-        local timestamp_file=$(find "$folder" -name "*-last-tested.txt")
-        if [ -f "$timestamp_file" ]; then
+        local timestamp_files=$(find "$folder" -name "*-last-tested.txt")
+        for timestamp_file in $timestamp_files; do
             rm "$timestamp_file"
-        fi
+        done
         echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
 
         save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
