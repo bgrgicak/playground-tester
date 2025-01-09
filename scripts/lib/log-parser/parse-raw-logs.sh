@@ -32,6 +32,12 @@ prepare_log_file() {
     cat $temp_file
 }
 
+get_log_file_path() {
+    local item_type="$1"
+    local item_name="$2"
+    echo "/logs/$item_type/$item_name/error.json"
+}
+
 parse_raw_logs() {
     local test_name=""
     local item_type=""
@@ -85,7 +91,8 @@ parse_raw_logs() {
 
     echo "[" > "$temp_file"
     local first_entry=true
-    jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type "$item_type" --arg item_name "$item_name" '
+    local log_file_path=$(get_log_file_path "$item_type" "$item_name")
+    jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type "$item_type" --arg item_name "$item_name" --arg log_file_path "$log_file_path" '
     {
         "filename": $input,
         "plugin": ($input | split("/")[-1]),
@@ -129,7 +136,7 @@ parse_raw_logs() {
                         "test": $test_name,
                         ($item_type): $item_name,
                         "details": $line,
-                        "log": $input
+                        "log": $log_file_path
                     }]
                 elif ($line | test("^file:///.*\\.js:[0-9]+")) then
                     . + [{

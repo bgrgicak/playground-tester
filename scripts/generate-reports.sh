@@ -12,6 +12,7 @@
 
 source "./scripts/pre-script-run.sh"
 source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/lib/log-parser/parse-raw-logs.sh
 source ./scripts/save-data.sh
 
 if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then
@@ -52,8 +53,9 @@ function generate_error_reports() {
             if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
                 continue
             fi
-            jq -r --arg type "$type" \
-                '.[] | select(.type == $type) | select(.level == "FATAL") | "| \(.message) | \(.test) | [View logs](../\(.log)) |"' \
+            local log_file_path=$(get_log_file_path "$item_type" "$item_name")
+            jq -r --arg type "$type" --arg log_file_path "$log_file_path" \
+                '.[] | select(.type == $type) | select(.level == "FATAL") | "| \(.message) | \(.test) | [View logs](\($log_file_path)) |"' \
                 "$file" | \
                 sort -u >> "$report_file"
         done
