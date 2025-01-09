@@ -35,7 +35,8 @@ prepare_log_file() {
 get_log_file_path() {
     local item_type="$1"
     local item_name="$2"
-    echo "/logs/$item_type/$item_name/error.json"
+    local first_item_name_letter=$(echo "$item_name" | cut -c 1)
+    echo "/logs/$item_type/$first_item_name_letter/$item_name/error.json"
 }
 
 parse_raw_logs() {
