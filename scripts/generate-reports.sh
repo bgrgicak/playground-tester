@@ -12,6 +12,7 @@
 
 source "./scripts/pre-script-run.sh"
 source ./scripts/lib/log-parser/analyze-json-logs.sh
+source ./scripts/lib/log-parser/parse-raw-logs.sh
 source ./scripts/save-data.sh
 
 if [ ! -d "$PLAYGROUND_TESTER_DATA_PATH/reports" ]; then
@@ -43,8 +44,8 @@ function generate_error_reports() {
 
     echo "# ${type} Errors Report" > "$report_file"
     echo "## Stats" >> "$report_file"
-    echo "| Message | Test | Logs |" >> "$report_file"
-    echo "|---------|------|------|" >> "$report_file"
+    echo "| Message | Test | Item | Logs |" >> "$report_file"
+    echo "|---------|------|------|------|" >> "$report_file"
 
     # for themes and plugins
     for item_type in "plugins" "themes"; do
@@ -52,8 +53,10 @@ function generate_error_reports() {
             if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
                 continue
             fi
-            jq -r --arg type "$type" \
-                '.[] | select(.type == $type) | select(.level == "FATAL") | "| \(.message) | \(.test) | [View logs](../\(.log)) |"' \
+            local item_name=$(basename "$(dirname "$file")")
+            local log_file_path=$(get_log_file_path "$item_type" "$item_name")
+            jq -r --arg type "$type" --arg log_file_path "$log_file_path" --arg item_name "$item_name" \
+                '.[] | select(.type == $type) | select(.level == "FATAL") | "| \(.message) | \(.test) | \($item_name) | [View logs](\($log_file_path)) |"' \
                 "$file" | \
                 sort -u >> "$report_file"
         done
