@@ -91,8 +91,14 @@ parse_raw_logs() {
 
     echo "[" > "$temp_file"
     local first_entry=true
+    local item_type_singular=$(echo "$item_type")
+    if [ "$item_type" = "plugins" ]; then
+        item_type_singular="plugin"
+    elif [ "$item_type" = "themes" ]; then
+        item_type_singular="theme"
+    fi
     local log_file_path=$(get_log_file_path "$item_type" "$item_name")
-    jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type "$item_type" --arg item_name "$item_name" --arg log_file_path "$log_file_path" '
+    jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type_singular "$item_type_singular" --arg item_name "$item_name" --arg log_file_path "$log_file_path" '
     {
         "filename": $input,
         "plugin": ($input | split("/")[-1]),
@@ -134,7 +140,7 @@ parse_raw_logs() {
                             end
                         ),
                         "test": $test_name,
-                        ($item_type): $item_name,
+                        ($item_type_singular): $item_name,
                         "details": $line,
                         "log": $log_file_path
                     }]
@@ -144,7 +150,7 @@ parse_raw_logs() {
                         "level": "FATAL",
                         "type": "PLAYGROUND",
                         "test": $test_name,
-                        ($item_type): $item_name,
+                        ($item_type_singular): $item_name,
                         "details": $line,
                         "log": $input
                     }]
