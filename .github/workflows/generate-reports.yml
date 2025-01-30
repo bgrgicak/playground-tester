@@ -2,9 +2,9 @@ name: Generate reports
 
 on:
   schedule:
-    # Run every hour at minute 30 to ensure
+    # Run every 2 hours at minute 30 to ensure
     # it runs after update-error-stats-data
-    - cron: '30 * * * *'
+    - cron: '30 */2 * * *'
   workflow_dispatch:
 
 permissions:

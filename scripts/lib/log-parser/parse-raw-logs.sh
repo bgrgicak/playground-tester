@@ -32,11 +32,36 @@ prepare_log_file() {
     cat $temp_file
 }
 
-get_log_file_path() {
+get_item_path() {
+    local item_type="$1"
+    local item_name="$2"
+    local first_item_name_letter=$(echo "$item_name" | cut -c 1)
+    echo "$PLAYGROUND_TESTER_DATA_PATH/logs/$item_type/$first_item_name_letter/$item_name"
+}
+
+get_log_file_git_path() {
     local item_type="$1"
     local item_name="$2"
     local first_item_name_letter=$(echo "$item_name" | cut -c 1)
     echo "/logs/$item_type/$first_item_name_letter/$item_name/error.json"
+}
+
+get_failed_tests_for_item() {
+    local item_path="$1"
+    find "$item_path" -mindepth 2 -maxdepth 2 -type f -name "error.json" -size +3c | while read -r file; do
+        basename "$(dirname "$file")"
+    done
+}
+
+has_item_a_failed_test() {
+    local item_path="$1"
+    local test_name="$2"
+    local failed_tests=$(get_failed_tests_for_item "$item_path")
+    if [ $(grep -c "$test_name" <<< "$failed_tests") -gt 0 ]; then
+        return 0
+    else
+        return 1
+    fi
 }
 
 parse_raw_logs() {
@@ -98,7 +123,7 @@ parse_raw_logs() {
     elif [ "$item_type" = "themes" ]; then
         item_type_singular="theme"
     fi
-    local log_file_path=$(get_log_file_path "$item_type" "$item_name")
+    local log_file_path=$(get_log_file_git_path "$item_type" "$item_name")
     jq -Rs --arg input "$parsed_input_file" --arg test_name "$test_name" --arg item_type_singular "$item_type_singular" --arg item_name "$item_name" --arg log_file_path "$log_file_path" '
     {
         "filename": $input,

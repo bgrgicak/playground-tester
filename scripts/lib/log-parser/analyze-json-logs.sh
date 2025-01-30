@@ -19,6 +19,9 @@ get_log_files() {
 }
 
 # Get log files with errors
+# Pass additional parameters to filter the files
+# All find parameters are supported
+#
 # Usage:
 #   get_log_files_with_errors <item-type>
 get_log_files_with_errors() {
