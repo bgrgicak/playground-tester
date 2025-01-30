@@ -33,7 +33,7 @@ function update_stats() {
     # Read from error-stats.json and sort by date in reverse order
     # Only show the last 90 days of stats
     jq -r 'to_entries | sort_by(.key) | reverse | .[0:90] | .[] |
-    "| \(.key) | \(((.value.plugins_with_errors + .value.themes_with_errors) / (.value.plugins_tested + .value.themes_tested) * 1000 | floor * 0.001))% | \(.value.plugins_tested) | \(.value.themes_tested) | \(.value.plugins_with_errors) | \(.value.themes_with_errors) |"' \
+    "| \(.key) | \(((.value.plugins_with_errors + .value.themes_with_errors) / (.value.plugins_tested + .value.themes_tested) * 1000 | floor ))% | \(.value.plugins_tested) | \(.value.themes_tested) | \(.value.plugins_with_errors) | \(.value.themes_with_errors) |"' \
     "$PLAYGROUND_TESTER_DATA_PATH/stats/error-stats.json" >> "$report_file"
 }
 
