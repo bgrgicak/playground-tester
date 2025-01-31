@@ -23,11 +23,17 @@ get_log_files() {
 # All find parameters are supported
 #
 # Usage:
-#   get_log_files_with_errors <item-type>
+#   get_log_files_with_errors <item-type> <limit>
 get_log_files_with_errors() {
     local item_type="$1"
-    shift
-    get_log_files "$item_type" -name "error.json" -size +3c "$@"
+    local limit="$2"
+    if [ -z "$limit" ]; then
+        shift
+        get_log_files "$item_type" -name "error.json" -size +3c "$@"
+    else
+        shift 2
+        get_log_files "$item_type" -name "error.json" -size +3c "$@" | head -n "$limit"
+    fi
 }
 
 # Get all errors of a given level from the JSON log file

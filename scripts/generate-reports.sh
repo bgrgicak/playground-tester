@@ -37,8 +37,9 @@ function update_stats() {
     "$PLAYGROUND_TESTER_DATA_PATH/stats/error-stats.json" >> "$report_file"
 }
 
-function generate_error_reports() {
+function generate_error_report() {
     local type=$1
+    local log_files_with_errors=$2
     local name=$(echo "$type" | tr '[:upper:]' '[:lower:]')
     local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/${name}-errors.md"
 
@@ -47,59 +48,55 @@ function generate_error_reports() {
     echo "| Message | Test | Item | Logs |" >> "$report_file"
     echo "|---------|------|------|------|" >> "$report_file"
 
-    # for themes and plugins
-    for item_type in "plugins" "themes"; do
-        get_log_files_with_errors "$item_type" | while read -r file; do
-            if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
-                continue
-            fi
+    while read -r file; do
+        if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
+            continue
+        fi
             local item_name=$(basename "$(dirname "$file")")
+            local item_type=$(basename "$(dirname "$(dirname "$(dirname "$file")")")")
             local log_file_path=$(get_log_file_git_path "$item_type" "$item_name")
             jq -r --arg type "$type" --arg log_file_path "$log_file_path" --arg item_name "$item_name" \
                 '.[] | select(.type == $type) | select(.level == "FATAL") | "| \(.message) | \(.test) | \($item_name) | [View logs](\($log_file_path)) |"' \
-                "$file" | \
-                sort -u >> "$report_file"
-        done
-    done
+            "$file" | \
+            sort -u >> "$report_file"
+    done < "$log_files_with_errors"
 }
 
-function generate_sql_error_reports() {
-    generate_error_reports "SQL"
-}
-
-function generate_php_error_reports() {
-    generate_error_reports "PHP"
-}
-
-function generate_playground_error_reports() {
-    generate_error_reports "PLAYGROUND"
-}
-
-function get_ast_errors() {
+function generate_ast_errors_report() {
+    local log_files_with_errors=$1
     local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/ast-errors.md"
 
     echo "# AST Errors Report" > "$report_file"
     echo "## Stats" >> "$report_file"
-    echo "| Item | Logs |" >> "$report_file"
-    echo "|------|------|" >> "$report_file"
-    for item_type in "plugins" "themes"; do
-        get_log_files_with_errors "$item_type" | while read -r file; do
-            if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
-                continue
-            fi
-            local item_name=$(basename "$(dirname "$file")")
-            local item_path=$(get_item_path "$item_type" "$item_name")
-            local failed_tests=$(get_failed_tests_for_item "$item_path")
-            local log_file_path=$(get_log_file_git_path "$item_type" "$item_name")
-            if has_item_a_failed_test "$item_path" "ast-sqlite-boot" && ! has_item_a_failed_test "$item_path" "asyncify-boot"; then
-                echo "| $item_name | [View logs]($log_file_path) |" >> "$report_file"
-            fi
-        done
-    done
+    echo "| Item | Message | Logs |" >> "$report_file"
+    echo "|------|---------|------|" >> "$report_file"
+    while read -r file; do
+        if [ -z "$(cat "$file")" ] || [ "$(jq length "$file")" -eq 0 ]; then
+            continue
+        fi
+        local item_name=$(basename "$(dirname "$file")")
+        local item_type=$(basename "$(dirname "$(dirname "$(dirname "$file")")")")
+        local item_path=$(get_item_path "$item_type" "$item_name")
+        local failed_tests=$(get_failed_tests_for_item "$item_path")
+        local log_file_path=$(get_log_file_git_path "$item_type" "$item_name")
+        if has_item_a_failed_test "$item_path" "ast-sqlite-boot" && ! has_item_a_failed_test "$item_path" "asyncify-boot"; then
+            local message=$(jq -r '.message' "$file")
+            echo "| $item_name | $message | [View logs]($log_file_path) |" >> "$report_file"
+        fi
+    done < "$log_files_with_errors"
+}
+
+generate_error_reports() {
+    local log_files_with_errors=$(mktemp)
+    get_log_files_with_errors "plugins" >> "$log_files_with_errors"
+    get_log_files_with_errors "themes" >> "$log_files_with_errors"
+
+    generate_error_report "SQL" $log_files_with_errors
+    generate_error_report "PHP" $log_files_with_errors
+    generate_error_report "PLAYGROUND" $log_files_with_errors
+    generate_ast_errors_report "$log_files_with_errors"
 }
 
 update_stats
-generate_sql_error_reports
-generate_php_error_reports
-generate_playground_error_reports
-get_ast_errors
+generate_error_reports
+
