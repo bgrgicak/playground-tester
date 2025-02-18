@@ -2,11 +2,9 @@ name: Test plugins
 
 on:
   schedule:
-    # Run every 20 minutes, 5 minutes
-    # to ensure it runs before theme runs
+    # Run every 30 minutes
     - cron: '5 * * * *'
-    - cron: '25 * * * *'
-    - cron: '45 * * * *'
+    - cron: '35 * * * *'
 
   workflow_dispatch:
     inputs:
