@@ -29,40 +29,31 @@ fi
 new_steps_file=$(mktemp)
 cat > "$new_steps_file" << 'EOL'
 [
-  {
-    "step": "mkdir",
-    "path": "wordpress/wp-content/mu-plugins"
-  },
-  {
-    "step": "writeFile",
-    "path": "wordpress/wp-content/mu-plugins/addFilter-0.php",
-    "data": "<?php function sqlite_plugin_adminbar_item( $admin_bar ) {\nglobal $wpdb;\n$suffix = defined( 'WP_SQLITE_AST_DRIVER' ) && WP_SQLITE_AST_DRIVER ? ' (AST)' : '';\n$title  = '<span style=\"color:%2346B450;\">' . __( 'Database: SQLite', 'sqlite-database-integration' ) . $suffix . '</span>';\n$args = array(\n'id'     => 'sqlite-db-integration',\n'parent' => 'top-secondary',\n'title'  => $title,\n'href'   => esc_url( admin_url( 'options-general.php?page=sqlite-integration' ) ),\n'meta'   => false,\n);\n$admin_bar->add_node( $args );\n}\nadd_action( 'admin_bar_menu', 'sqlite_plugin_adminbar_item', 999 );"
-  },
-  {
-    "step": "defineWpConfigConsts",
-    "consts": {
-      "WP_SQLITE_AST_DRIVER": true
-    }
-  },
-  {
-    "step": "installPlugin",
-    "pluginData": {
-      "resource": "url",
-      "url": "https://github-proxy.com/proxy/?repo=Automattic/sqlite-database-integration&branch=ast-sqlite-driver-beta"
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "WP_SQLITE_AST_DRIVER": true
+      }
     },
-    "options": {
-      "activate": false
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://github-proxy.com/proxy/?repo=Automattic/sqlite-database-integration&branch=develop"
+      },
+      "options": {
+        "activate": false
+      }
+    },
+    {
+      "step": "rmdir",
+      "path": "/internal/shared/sqlite-database-integration"
+    },
+    {
+      "step": "mv",
+      "fromPath": "/wordpress/wp-content/plugins/sqlite-database-integration-develop",
+      "toPath": "/internal/shared/sqlite-database-integration"
     }
-  },
-  {
-    "step": "rmdir",
-    "path": "/internal/shared/sqlite-database-integration"
-  },
-  {
-    "step": "mv",
-    "fromPath": "/wordpress/wp-content/plugins/sqlite-database-integration-ast-sqlite-driver-beta",
-    "toPath": "/internal/shared/sqlite-database-integration"
-  }
 ]
 EOL
 

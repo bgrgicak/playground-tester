@@ -80,8 +80,10 @@ function generate_ast_errors_report() {
         local failed_tests=$(get_failed_tests_for_item "$item_path")
         local log_file_path=$(get_log_file_git_path "$item_type" "$item_name")
         if has_item_a_failed_test "$item_path" "ast-sqlite-boot" && ! has_item_a_failed_test "$item_path" "asyncify-boot"; then
-            local message=$(jq -r '.message' "$file")
-            echo "| $item_name | $message | [View logs]($log_file_path) |" >> "$report_file"
+            # Filter for ast-sqlite-boot tests and messages not starting with file:///
+            jq -r '.[] | select(.test == "ast-sqlite-boot" and (.message | startswith("file:///") | not)) | .message' "$item_path/ast-sqlite-boot/error.json" | while read -r message; do
+                echo "| $item_name | $message | [View logs]($log_file_path) |" >> "$report_file"
+            done
         fi
     done < "$log_files_with_errors"
 }
