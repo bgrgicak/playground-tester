@@ -19,7 +19,7 @@ run_test "Test a successful plugin run"\
 ✓ 0gravatar passed jspi-boot"
 
 run_test "Test a failed plugin run"\
-    "./scripts/run-tests.sh --plugin $PLAYGROUND_TESTER_DATA_PATH/logs/plugins/g/google-maps-effortless --wordpress ./temp/wordpress" \
+    "./scripts/run-tests.sh --plugin $PLAYGROUND_TESTER_DATA_PATH/logs/plugins/g/gl-import-external-images --wordpress ./temp/wordpress" \
     "✗ gl-import-external-images failed ast-sqlite-boot
 ✗ gl-import-external-images failed asyncify-boot
 ✗ gl-import-external-images failed jspi-boot"
