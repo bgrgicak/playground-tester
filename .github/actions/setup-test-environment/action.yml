@@ -18,9 +18,7 @@ runs:
 
     - name: Git Submodule Update
       shell: bash
-      run: |
-        git pull --recurse-submodules origin ${{ github.event.pull_request.head.ref }}
-        git submodule update --remote --recursive
+      run: git submodule update --remote --recursive --depth 1
 
     - name: Set Node version
       shell: bash
