@@ -35,6 +35,6 @@ jobs:
         run: |
           BATCH_SIZE=${{ inputs.batch_size }}
           if [ -z "$BATCH_SIZE" ]; then
-            BATCH_SIZE=50
+            BATCH_SIZE=150
           fi
           ./scripts/run-batch.sh --batch-size $BATCH_SIZE --plugins
