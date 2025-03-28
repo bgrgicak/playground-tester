@@ -54,16 +54,6 @@ save_data() {
   fi
   echo "[DEBUG]: Done git checkout"
 
-  # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
-  echo "[DEBUG]: Starting git merge --allow-unrelated-histories -X theirs $remote/$branch"
-  merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
-  if [ $? -ne 0 ]; then
-    echo "Failed to merge with remote:"
-    echo "$merge_output"
-    exit 1
-  fi
-  echo "[DEBUG]: Done git merge"
-
   if [ -n "$message" ] && [ -n "$add" ]; then
     echo "[DEBUG]: Starting git add -A $add $dry_run"
     git add -A $add $dry_run
@@ -75,6 +65,16 @@ save_data() {
   fi
 
   if $push; then
+    # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
+    echo "[DEBUG]: Starting git merge --allow-unrelated-histories -X theirs $remote/$branch"
+    merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
+    if [ $? -ne 0 ]; then
+      echo "Failed to merge with remote:"
+      echo "$merge_output"
+      exit 1
+    fi
+    echo "[DEBUG]: Done git merge"
+
     echo "[DEBUG]: Starting git push $remote $branch --recurse-submodules=on-demand --quiet $dry_run"
     git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run
     echo "[DEBUG]: Done git push"
