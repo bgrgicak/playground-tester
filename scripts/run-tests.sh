@@ -73,12 +73,10 @@ for test in scripts/lib/playground-tests/*.sh; do
     fi
     echo "" > "$log_file"
 
-    # Each test gets its own copy of WordPress.
-    # This ensures each test starts with a clean WordPress installation.
-    temp_folder=$(mktemp -d)
-    cp -r "$wordpress_path" "$temp_folder/wordpress"
+    # Ensure each test starts with a clean WordPress installation.
+    git -C "$wordpress_path" reset --hard > /dev/null 2>&1
 
-    result=$(./$test --blueprint $blueprint_path --wordpress $temp_folder/wordpress)
+    result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path")
 
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed

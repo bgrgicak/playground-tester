@@ -37,7 +37,7 @@ To see the exact errors generated Playground tests, check out [SQL Errors Report
 
 1. Clone the repository:
    ```
-   git clone --recurse-submodules https://github.com/bgrgicak/playground-tester.git
+   git clone --recurse-submodules --shallow-submodules https://github.com/bgrgicak/playground-tester.git
    ```
 2. Install dependencies:
    ```
