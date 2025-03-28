@@ -58,7 +58,7 @@ save_data() {
     echo "[DEBUG]: Done git add"
 
     echo "[DEBUG]: Starting git commit --allow-empty -m "$message" --quiet $dry_run"
-    git commit --allow-empty -m "$message" --quiet $dry_run
+    git commit --allow-empty --no-status --untracked-files=no -m "$message" --quiet $dry_run
     echo "[DEBUG]: Done git commit"
   fi
 
