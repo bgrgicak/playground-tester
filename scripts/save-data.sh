@@ -39,7 +39,6 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
-  echo "[DEBUG]: Starting git checkout $branch"
   # Checkout $branch.
   # Only run the checkout if we're not already on the target branch,
   # as checkout may take a few seconds in a repository of this size.
@@ -50,40 +49,28 @@ save_data() {
       exit 1
     fi
   fi
-  echo "[DEBUG]: Done git checkout"
 
   if [ -n "$message" ] && [ -n "$add" ]; then
-    echo "[DEBUG]: Starting git add -A $add $dry_run"
     git add -A $add $dry_run
-    echo "[DEBUG]: Done git add"
-
-    echo "[DEBUG]: Starting git commit --allow-empty -m "$message" --quiet $dry_run"
     git commit --allow-empty --no-status --untracked-files=no -m "$message" --quiet $dry_run
-    echo "[DEBUG]: Done git commit"
   fi
 
   if $push; then
     # Fetch remote changes
-    echo "[DEBUG]: Starting git fetch $remote $branch"
     if ! git fetch "$remote" "$branch" > /dev/null 2>&1; then
       echo "Failed to fetch from remote"
       exit 1
     fi
-    echo "[DEBUG]: Done git fetch"
 
     # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
-    echo "[DEBUG]: Starting git merge --allow-unrelated-histories -X theirs $remote/$branch"
     merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
     if [ $? -ne 0 ]; then
       echo "Failed to merge with remote:"
       echo "$merge_output"
       exit 1
     fi
-    echo "[DEBUG]: Done git merge"
 
-    echo "[DEBUG]: Starting git push $remote $branch --recurse-submodules=on-demand --quiet $dry_run"
     git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run
-    echo "[DEBUG]: Done git push"
   fi
 
   cd ..
