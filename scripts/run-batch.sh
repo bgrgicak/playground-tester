@@ -66,11 +66,11 @@ run_batch() {
             rm "$timestamp_file"
         done
         echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
-
-        echo "[DEBUG]: Starting save_data: ... is being tested"
-        save_data --add "$folder" --message "⏳ $(basename "$folder") is being tested"
-        echo "[DEBUG]: Done save_data"
     done
+    echo "[DEBUG]: Starting save_data: a batch is being tested"
+    save_data --add "$folder" --message "⏳ a batch is being tested"
+    echo "[DEBUG]: Done save_data"
+
     echo "[DEBUG]: Starting save_data --push"
     save_data --push || exit 1
     echo "[DEBUG]: Done save_data"
