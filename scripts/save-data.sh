@@ -40,9 +40,15 @@ save_data() {
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
   echo "[DEBUG]: Starting git checkout $branch"
-  if ! git checkout "$branch" > /dev/null 2>&1; then
-    echo "Failed to checkout branch $branch"
-    exit 1
+  # Checkout $branch.
+  # Only run the checkout if we're not already on the target branch,
+  # as checkout may take a few seconds in a repository of this size.
+  current_branch=$(git branch --show-current)
+  if [ "$current_branch" != "$branch" ]; then
+    if ! git checkout "$branch" > /dev/null 2>&1; then
+      echo "Failed to checkout branch $branch"
+      exit 1
+    fi
   fi
   echo "[DEBUG]: Done git checkout"
 
