@@ -39,14 +39,6 @@ save_data() {
 
   cd data || { echo "Submodule directory 'data' not found."; exit 1; }
 
-  # Fetch and merge remote changes
-  echo "[DEBUG]: Starting git fetch $remote $branch"
-  if ! git fetch "$remote" "$branch" > /dev/null 2>&1; then
-    echo "Failed to fetch from remote"
-    exit 1
-  fi
-  echo "[DEBUG]: Done git fetch"
-
   echo "[DEBUG]: Starting git checkout $branch"
   if ! git checkout "$branch" > /dev/null 2>&1; then
     echo "Failed to checkout branch $branch"
@@ -65,6 +57,14 @@ save_data() {
   fi
 
   if $push; then
+    # Fetch remote changes
+    echo "[DEBUG]: Starting git fetch $remote $branch"
+    if ! git fetch "$remote" "$branch" > /dev/null 2>&1; then
+      echo "Failed to fetch from remote"
+      exit 1
+    fi
+    echo "[DEBUG]: Done git fetch"
+
     # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
     echo "[DEBUG]: Starting git merge --allow-unrelated-histories -X theirs $remote/$branch"
     merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
