@@ -64,9 +64,7 @@ run_batch() {
     echo "Running batch of ${batch_size} items..."
 
     # Find the oldest items to test first.
-    echo "[DEBUG]: Starting get_first_n_logs_to_test"
     local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" --prefix-chars "$prefix_chars")
-    echo "[DEBUG]: Done get_first_n_logs_to_test"
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
@@ -78,18 +76,11 @@ run_batch() {
         done
         echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
     done
-    echo "[DEBUG]: Starting save_data: a batch is being tested"
     save_data --add "*" --message "⏳ a $item_type batch is being tested"
-    echo "[DEBUG]: Done save_data"
-
-    echo "[DEBUG]: Starting save_data --push"
     save_data --push || exit 1
-    echo "[DEBUG]: Done save_data"
 
     for folder in $folders; do
-        echo "[DEBUG]: Starting run-tests.sh $test_type $folder"
         ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH"
-        echo "[DEBUG]: Done run-tests.sh"
         local failed_tests=$?
         local folder_name=$(basename "$folder")
         local message=""
@@ -98,16 +89,10 @@ run_batch() {
         else
           message="✅ $folder_name has no errors"
         fi
-        echo "[DEBUG]: Starting save_data --add $folder $message"
         save_data --add "$folder" --message "$message"
-        echo "[DEBUG]: Done save_data"
     done
-    echo "[DEBUG]: Starting save_data --push"
     save_data --push || exit 1
-    echo "[DEBUG]: Done save_data"
 }
 
-echo "[DEBUG]: Starting download_latest_wordpress"
 download_latest_wordpress
-echo "[DEBUG]: Starting run_batch"
 run_batch
