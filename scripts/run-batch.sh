@@ -35,12 +35,23 @@ while [[ "$#" -gt 0 ]]; do
       item_type="themes"
       shift 1
       ;;
+    --prefix-chars)
+      prefix_chars="$2"
+      if ! [[ "$prefix_chars" =~ ^[_a-z0-9]+$ ]] ; then
+        echo "Error: --prefix-chars must consist of lowercase alphanumeric characters" >&2
+        exit 1
+      fi
+      shift 2
+      ;;
     *)
       echo "Invalid option: $1" >&2
       exit 1
       ;;
   esac
 done
+
+# Set full range if not specified
+prefix_chars="${prefix_chars:-*}"
 
 download_latest_wordpress() {
   if [ -d "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
@@ -53,7 +64,7 @@ run_batch() {
     echo "Running batch of ${batch_size} items..."
 
     # Find the oldest items to test first.
-    local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size")
+    local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" --prefix-chars "$prefix_chars")
 
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
