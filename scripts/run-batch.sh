@@ -35,18 +35,10 @@ while [[ "$#" -gt 0 ]]; do
       item_type="themes"
       shift 1
       ;;
-    --from-letter)
-      from_letter="$2"
-      if ! [[ "$from_letter" =~ ^[a-z0-9]$ ]] ; then
-        echo "Error: --from-letter argument must be a single lowercase alphanumeric character" >&2
-        exit 1
-      fi
-      shift 2
-      ;;
-    --to-letter)
-      to_letter="$2"
-      if ! [[ "$to_letter" =~ ^[a-z0-9]$ ]] ; then
-        echo "Error: --to-letter argument must be a single lowercase alphanumeric character" >&2
+    --prefix-chars)
+      prefix_chars="$2"
+      if ! [[ "$prefix_chars" =~ ^[_a-z0-9]+$ ]] ; then
+        echo "Error: --prefix-chars must consist of lowercase alphanumeric characters" >&2
         exit 1
       fi
       shift 2
@@ -58,9 +50,8 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
-# Set default range if not specified
-from_letter="${from_letter:-0}"
-to_letter="${to_letter:-z}"
+# Set full range if not specified
+prefix_chars="${prefix_chars:-*}"
 
 download_latest_wordpress() {
   if [ -d "$PLAYGROUND_TESTER_WORDPRESS_PATH" ]; then
@@ -74,7 +65,7 @@ run_batch() {
 
     # Find the oldest items to test first.
     echo "[DEBUG]: Starting get_first_n_logs_to_test"
-    local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" "$from_letter" "$to_letter")
+    local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" --prefix-chars "$prefix_chars")
     echo "[DEBUG]: Done get_first_n_logs_to_test"
 
     # Update all items in the current batch to prevent them from being picked up by another runner.

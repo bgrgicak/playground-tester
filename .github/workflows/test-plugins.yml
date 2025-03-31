@@ -22,9 +22,9 @@ jobs:
       fail-fast: false
       matrix:
         range:
-          - { from: "0", to: "b" }
-          - { from: "c", to: "n" }
-          - { from: "o", to: "z" }
+          - "_0123456789ab"
+          - "cdefghijklmn"
+          - "opqrstuvwxyz"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,4 +44,4 @@ jobs:
           if [ -z "$BATCH_SIZE" ]; then
             BATCH_SIZE=150
           fi
-          ./scripts/run-batch.sh --batch-size $BATCH_SIZE --plugins --from-letter ${{ matrix.range.from }} --to-letter ${{ matrix.range.to }}
+          ./scripts/run-batch.sh --batch-size $BATCH_SIZE --plugins --prefix-chars ${{ matrix.range }}
