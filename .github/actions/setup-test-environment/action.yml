@@ -16,9 +16,9 @@ runs:
         GH_USER: ${{ env.GH_USER }}
         GH_TOKEN: ${{ env.GH_TOKEN }}
 
-    - name: Git Submodule Update
+    - name: Checkout data submodule
       shell: bash
-      run: git submodule update --remote --recursive --depth 1
+      run: git submodule update --init --remote --recursive --depth 1 data
 
     - name: Set Node version
       shell: bash
