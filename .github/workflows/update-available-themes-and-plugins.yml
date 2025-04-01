@@ -13,6 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          submodules: recursive
           ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.BOTBERO_TOKEN }}
 
@@ -20,10 +21,6 @@ jobs:
         env:
           GH_USER: ${{ secrets.BOTBERO_USER }}
           GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
-
-      - name: Checkout wp-public-data submodule
-        shell: bash
-        run: git submodule update --init --remote --recursive --depth 1 wp-public-data
 
       - name: Run update-available-themes-and-plugins.sh
         run: ./scripts/update-available-themes-and-plugins.sh
