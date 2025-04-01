@@ -66,7 +66,6 @@ run_batch() {
     # Find the oldest items to test first.
     local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" --prefix-chars "$prefix_chars")
 
-    echo "  [DEBUG] Touch timestamps"
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
     # We will only replace the TIMESTAMP-last-tested.txt file to indicate that the item is being processed.
@@ -77,13 +76,10 @@ run_batch() {
         done
         echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
     done
-    echo "  [DEBUG] Git add"
     save_data --add "*" --message "⏳ a $item_type batch is being tested"
-    echo "  [DEBUG] Git push"
     save_data --push || exit 1
 
     for folder in $folders; do
-        echo "  [DEBUG] Run tests"
         ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH"
         local failed_tests=$?
         local folder_name=$(basename "$folder")
@@ -93,10 +89,8 @@ run_batch() {
         else
           message="✅ $folder_name has no errors"
         fi
-        echo "  [DEBUG] Git add"
         save_data --add "$folder" --message "$message"
     done
-    echo "  [DEBUG] Git push"
     save_data --push || exit 1
 }
 
