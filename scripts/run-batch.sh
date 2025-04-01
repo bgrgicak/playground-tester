@@ -75,15 +75,6 @@ run_batch() {
     done
     git -C "$PLAYGROUND_TESTER_DATA_PATH" sparse-checkout set "${paths[@]}"
 
-    # Sparse-checkout wp-public-data to only the selected files (requires --no-cone).
-    # This will speed up commits when running the tests.
-    git -C "./wp-public-data" sparse-checkout init --no-cone
-    local paths=()
-    for folder in $folders; do
-      paths+=("/${item_type}/$(basename $folder).json")
-    done
-    git -C "./wp-public-data" sparse-checkout set "${paths[@]}"
-
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
     # We will only replace the TIMESTAMP-last-tested.txt file to indicate that the item is being processed.
