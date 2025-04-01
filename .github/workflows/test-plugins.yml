@@ -22,9 +22,15 @@ jobs:
       fail-fast: false
       matrix:
         range:
-          - "_0123456789ab"
-          - "cdefghijklmn"
-          - "opqrstuvwxyz"
+          - "_0123456789ab" # ~12.6k plugins
+          - "cd"            # ~11.8k plugins
+          - "efgh"          # ~14.2k plugins
+          - "ijklm"         # ~13.6k plugins
+          - "nopqr"         # ~11.0k plugins
+          - "rs"            # ~14.7k plugins
+          - "tuvxyz"        # ~9.4k plugins
+          - "w"             # ~14.7k plugins
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
