@@ -66,16 +66,6 @@ run_batch() {
     # Find the oldest items to test first.
     local folders=$(get_first_n_logs_to_test "$item_type" "$batch_size" --prefix-chars "$prefix_chars")
 
-    echo "  [DEBUG] Sparse-checkout"
-    # Sparse-checkout data to only the selected folders.
-    # This will speed up commits when running the tests.
-    git -C "$PLAYGROUND_TESTER_DATA_PATH" sparse-checkout init --cone
-    local paths=()
-    for folder in $folders; do
-      paths+=("${folder#$PLAYGROUND_TESTER_DATA_PATH/}")
-    done
-    git -C "$PLAYGROUND_TESTER_DATA_PATH" sparse-checkout set "${paths[@]}"
-
     echo "  [DEBUG] Touch timestamps"
     # Update all items in the current batch to prevent them from being picked up by another runner.
     #
