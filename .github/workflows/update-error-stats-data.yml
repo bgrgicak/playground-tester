@@ -17,7 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           ref: ${{ github.event.pull_request.head.ref }}
           token: ${{ secrets.BOTBERO_TOKEN }}
 

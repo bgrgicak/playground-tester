@@ -9,16 +9,14 @@ runs:
       run: |
         git config --global user.name "${{ env.GH_USER }}"
         git config --global user.email "${{ env.GH_USER }}@users.noreply.github.com"
-        cd data/
-        git remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
-        cd ..
+        git -C data remote set-url origin https://${{ env.GH_USER }}:${{ env.GH_TOKEN }}@github.com/bgrgicak/Playground-compatibility-reports.git
       env:
         GH_USER: ${{ env.GH_USER }}
         GH_TOKEN: ${{ env.GH_TOKEN }}
 
-    - name: Git Submodule Update
+    - name: Checkout data submodule
       shell: bash
-      run: git submodule update --remote --recursive --depth 1
+      run: git submodule update --init --remote --recursive --depth 1 data
 
     - name: Set Node version
       shell: bash
