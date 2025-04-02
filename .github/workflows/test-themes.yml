@@ -18,6 +18,12 @@ permissions:
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        range:
+          - "_0123456789abcdefghijk" # ~6.6k themes
+          - "lmnopqrstuvwxyz"        # ~6.7k themes
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,6 +41,6 @@ jobs:
         run: |
           BATCH_SIZE=${{ inputs.batch_size }}
           if [ -z "$BATCH_SIZE" ]; then
-            BATCH_SIZE=100
+            BATCH_SIZE=70
           fi
-          ./scripts/run-batch.sh --batch-size $BATCH_SIZE --themes
+          ./scripts/run-batch.sh --batch-size $BATCH_SIZE --themes --prefix-chars ${{ matrix.range }}
