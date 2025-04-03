@@ -11,27 +11,18 @@ set -e
 
 source "./scripts/pre-script-run.sh"
 
-NVM_DIR="$PLAYGROUND_TESTER_PATH/.nvm"
-
-if [ -d "$NVM_DIR" ]; then
-    source "$NVM_DIR/nvm.sh"
-fi
-
-# Install nvm if not installed
-if [ ! -d "$NVM_DIR" ]; then
-    mkdir -p "$NVM_DIR"
-fi
-if [ ! -f "$NVM_DIR/nvm.sh" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-    source "$NVM_DIR/nvm.sh"
-fi
-
+# Source NVM
+echo "Setting up NVM"
+. $HOME/.nvm/nvm.sh > /dev/null 2>&1
 
 # Install Node
+echo "Installing Node"
 nvm install $(cat .nvmrc)
 
 # Install dependencies
-npm install
+echo "Installing dependencies"
+npm ci
 
 # Build WordPress
+echo "Building WordPress"
 ./scripts/build-wordpress.sh --output ./temp

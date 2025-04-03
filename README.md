@@ -31,7 +31,7 @@ To see the exact errors generated Playground tests, check out [SQL Errors Report
 - [`git`](https://git-scm.com/) version control system
 - [`jq`](https://stedolan.github.io/jq/): command-line JSON processor
 - [`node`](https://nodejs.org/en): JavaScript runtime
-- [`nvm`](https://github.com/nvm-sh/nvm): Node Version Manager (it's shipped with the project in the `.nvm` folder)
+- [`nvm`](https://github.com/nvm-sh/nvm): Node Version Manager
 
 ## Installation
 

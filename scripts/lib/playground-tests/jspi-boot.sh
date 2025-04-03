@@ -28,6 +28,7 @@ if [ -z "$blueprint_path" ]; then
 fi
 
 # Use Node 23 which supports JSPI
+. $HOME/.nvm/nvm.sh > /dev/null 2>&1
 nvm install 23 >/dev/null 2>&1
 
 wordpress_args=""
