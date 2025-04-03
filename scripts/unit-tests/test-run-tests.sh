@@ -8,7 +8,7 @@ source "./scripts/pre-script-run.sh"
 source "$PLAYGROUND_TESTER_PATH/scripts/unit-tests/common-test-functions.sh"
 
 run_test "Test a successful theme run"\
-    "./scripts/run-tests.sh --theme $PLAYGROUND_TESTER_DATA_PATH/logs/themes/g/100-bytes --wordpress ./temp/wordpress" \
+    "./scripts/run-tests.sh --theme $PLAYGROUND_TESTER_DATA_PATH/logs/themes/1/100-bytes --wordpress ./temp/wordpress" \
     "✓ 100-bytes passed ast-sqlite-boot
 ✓ 100-bytes passed asyncify-boot
 ✓ 100-bytes passed jspi-boot"
