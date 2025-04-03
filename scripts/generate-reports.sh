@@ -9,6 +9,7 @@
 #
 # Usage:
 #   ./scripts/generate-reports.sh
+set -e
 
 source "./scripts/pre-script-run.sh"
 source ./scripts/lib/log-parser/analyze-json-logs.sh

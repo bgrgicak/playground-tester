@@ -1,6 +1,7 @@
 #! /bin/bash
 #
 # Helper functions to analyze JSON logs and output a summary of the results.
+set -e
 
 source "./scripts/pre-script-run.sh"
 

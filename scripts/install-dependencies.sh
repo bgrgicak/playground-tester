@@ -7,6 +7,7 @@
 #
 # Usage:
 #   ./scripts/install-dependencies.sh
+set -e
 
 source "./scripts/pre-script-run.sh"
 

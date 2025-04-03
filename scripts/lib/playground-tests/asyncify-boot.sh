@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 
 source "./scripts/pre-script-run.sh"
 

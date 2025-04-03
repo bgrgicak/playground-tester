@@ -11,6 +11,7 @@
 # Options:
 #   --plugin|--theme <path> Path to the item we want to test.
 #   --wordpress <path> Path to the WordPress installation used for testing.
+set -e
 
 source "./scripts/pre-script-run.sh"
 source "./scripts/lib/log-parser/analyze-json-logs.sh"

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 ## TODO: Replace real plugin and theme with test ones
 

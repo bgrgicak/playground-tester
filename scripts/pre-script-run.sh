@@ -10,6 +10,7 @@
 # PLAYGROUND_TESTER_DISABLE_GIT - Set to true to disable git commits. (false by default)
 #
 # The script also sources the NVM configuration and adds support for the --help flag.
+set -e
 
 if [ -z "$PLAYGROUND_TESTER_PATH" ]; then
     PLAYGROUND_TESTER_PATH=$(pwd)

@@ -7,6 +7,7 @@
 #   ./scripts/build-wordpress.sh --output <path>
 #
 # --output <path> Path to the folder where the WordPress snapshot will be saved.
+set -e
 
 source "./scripts/pre-script-run.sh"
 
