@@ -20,9 +20,9 @@ for test_file in "$SCRIPT_DIR"/test-*.sh; do
 
     # Execute the test file
     if bash "$test_file"; then
-        ((PASSED_TESTS++))
+        PASSED_TESTS=$((PASSED_TESTS+1))
     else
-        ((FAILED_TESTS++))
+        FAILED_TESTS=$((FAILED_TESTS+1))
     fi
 
     echo

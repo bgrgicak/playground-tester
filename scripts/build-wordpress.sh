@@ -31,7 +31,8 @@ node "$PLAYGROUND_CLI_PATH" build-snapshot \
     --quiet \
     --wp="https://wordpress.org/latest.zip" \
     --outfile="$zip_path" > /dev/null
-unzip -qq "$zip_path" -d "$wordpress_path" > /dev/null 2>&1
+unzip -qq "$zip_path" -d "$wordpress_path" > /dev/null 2>&1 \
+    || true # Ignore "warning: stripped absolute path spec from" exiting with 1.
 rm "$zip_path"
 
 # Initialize the WordPress snapshot as a git repository,
