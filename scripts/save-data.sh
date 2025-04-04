@@ -71,7 +71,12 @@ save_data() {
       exit 1
     fi
 
-    git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run
+    push_output=$(git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run 2>&1)
+    if [ $? -ne 0 ]; then
+      echo "Failed to push to remote:"
+      echo "$push_output"
+      exit 1
+    fi
   fi
 
   cd ..
