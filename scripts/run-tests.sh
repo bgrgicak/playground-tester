@@ -77,7 +77,7 @@ for test in scripts/lib/playground-tests/*.sh; do
     # Ensure each test starts with a clean WordPress installation.
     cd "$wordpress_path"
     git reset --hard > /dev/null 2>&1
-    cd -
+    cd - > /dev/null
 
     result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
 

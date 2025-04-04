@@ -41,4 +41,4 @@ cd "$wordpress_path/wordpress"
 git init > /dev/null 2>&1
 git add . > /dev/null 2>&1
 git commit -m "WordPress snapshot" > /dev/null 2>&1
-cd -
+cd - > /dev/null
