@@ -6,6 +6,7 @@
 #
 # --batch-size <batch-size> Number of items to test. (10 by default)
 # --plugins|--themes Type of items to test.
+set -e
 
 source "./scripts/pre-script-run.sh"
 source ./scripts/save-data.sh

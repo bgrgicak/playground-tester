@@ -10,6 +10,7 @@
 # --item-name <item-name> Name of the item that was tested.
 # --input <input> Path to the raw logs file.
 # --output <output> Path to the output JSON file.
+set -e
 
 source "./scripts/pre-script-run.sh"
 

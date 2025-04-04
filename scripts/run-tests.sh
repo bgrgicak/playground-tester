@@ -11,6 +11,7 @@
 # Options:
 #   --plugin|--theme <path> Path to the item we want to test.
 #   --wordpress <path> Path to the WordPress installation used for testing.
+set -e
 
 source "./scripts/pre-script-run.sh"
 source "./scripts/lib/log-parser/analyze-json-logs.sh"
@@ -76,7 +77,7 @@ for test in scripts/lib/playground-tests/*.sh; do
     # Ensure each test starts with a clean WordPress installation.
     git -C "$wordpress_path" reset --hard > /dev/null 2>&1
 
-    result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path")
+    result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
 
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed

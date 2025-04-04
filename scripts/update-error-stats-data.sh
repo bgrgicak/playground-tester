@@ -13,6 +13,7 @@
 # If the script is run multiple times in a day, it will update the existing entry for the current date.
 #
 # Usage: ./scripts/update-error-stats.sh
+set -e
 
 source ./scripts/pre-script-run.sh
 source ./scripts/lib/log-parser/analyze-json-logs.sh

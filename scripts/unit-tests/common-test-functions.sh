@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Normalize the output of a test to remove color codes,
 # carriage returns, and trailing whitespace.

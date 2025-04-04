@@ -8,6 +8,7 @@
 #   --add <path>       Path to the source files/directories to commit. Required for committing.
 #   --message <message> Commit message. Required for committing.
 #   --push             Push changes to git. Optional.
+set -e
 
 save_data() {
   local add=""

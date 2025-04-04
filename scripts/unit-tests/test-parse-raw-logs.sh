@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 source "$(dirname "$0")/common-test-functions.sh"
 source "./scripts/lib/log-parser/parse-raw-logs.sh"

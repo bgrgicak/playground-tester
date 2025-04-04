@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 
 source "./scripts/pre-script-run.sh"
 
@@ -65,6 +66,7 @@ jq -s '.[0] as $new | .[1] | .steps = ($new + .steps)' "$new_steps_file" "$bluep
 jq '.preferredVersions.php = (if .preferredVersions.php == "7.2" or .preferredVersions.php == "7.3" then "7.4" else .preferredVersions.php end)' "$asl_blueprint_path" > "${asl_blueprint_path}.tmp" && mv "${asl_blueprint_path}.tmp" "$asl_blueprint_path"
 
 # Use Node if it's not already installed
+. $HOME/.nvm/nvm.sh > /dev/null 2>&1
 nvm install $(cat .nvmrc) >/dev/null 2>&1
 
 wordpress_args=""

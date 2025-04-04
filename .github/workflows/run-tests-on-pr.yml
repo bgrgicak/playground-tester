@@ -26,5 +26,6 @@ jobs:
           GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run tests
+        shell: bash
         run: |
           ./scripts/unit-tests/test.sh

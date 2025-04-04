@@ -8,6 +8,7 @@
 # It will also create a initial error.json log file for new items.
 #
 # If a item is removed from wp-public-data, it will be removed from the logs.
+set -e
 
 source ./scripts/pre-script-run.sh
 source ./scripts/save-data.sh

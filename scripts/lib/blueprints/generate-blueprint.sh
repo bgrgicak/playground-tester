@@ -8,6 +8,7 @@
 #
 # --item-path <path> Path to the item.
 # --plugin|--theme Type of the item. Either "plugin" or "theme".
+set -e
 
 source "./scripts/pre-script-run.sh"
 
