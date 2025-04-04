@@ -57,17 +57,11 @@ save_data() {
   fi
 
   if $push; then
-    # Fetch remote changes
-    if ! git fetch "$remote" "$branch" > /dev/null 2>&1; then
-      echo "Failed to fetch from remote"
-      exit 1
-    fi
-
-    # Try to merge remote changes, allow unrelated histories and automatically accept remote version for conflicts
-    merge_output=$(git merge --allow-unrelated-histories -X theirs "$remote/$branch" 2>&1)
+    # Pull remote changes, allow unrelated histories and automatically accept remote version for conflicts
+    pull_output=$(git pull --allow-unrelated-histories -X theirs "$remote" "$branch" 2>&1)
     if [ $? -ne 0 ]; then
-      echo "Failed to merge with remote:"
-      echo "$merge_output"
+      echo "Failed to pull from remote:"
+      echo "$pull_output"
       exit 1
     fi
 
