@@ -38,8 +38,8 @@ rm "$zip_path"
 
 # Initialize the WordPress snapshot as a git repository,
 # so we can reset any file changes before every test.
-cd "$wordpress_path"
+cd "$wordpress_path/wordpress"
 git init > /dev/null 2>&1
 git add . > /dev/null 2>&1
 git commit -m "WordPress snapshot" > /dev/null 2>&1
-cd ..
+cd -
