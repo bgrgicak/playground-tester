@@ -58,7 +58,7 @@ save_data() {
 
   if $push; then
     # Try pull & push multiple times to avoid rejected push errors.
-    local max_attempts=5
+    local max_attempts=10
     local attempt=1
     while [ $attempt -le $max_attempts ]; do
       # Pull remote changes, allow unrelated histories and automatically accept remote version for conflicts
