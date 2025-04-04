@@ -58,7 +58,7 @@ save_data() {
 
   if $push; then
     # Pull remote changes, allow unrelated histories and automatically accept remote version for conflicts
-    pull_output=$(git pull --allow-unrelated-histories -X theirs "$remote" "$branch" 2>&1)
+    pull_output=$(git pull --rebase --allow-unrelated-histories -X theirs "$remote" "$branch" 2>&1)
     if [ $? -ne 0 ]; then
       echo "Failed to pull from remote:"
       echo "$pull_output"
