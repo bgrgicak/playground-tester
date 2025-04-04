@@ -77,7 +77,7 @@ run_batch() {
         done
         echo "Last tested on $(date +%Y-%m-%d\ %H:%M:%S)" > "$folder/$(date +%Y%m%d-%H%M%S)-last-tested.txt"
     done
-    save_data --add "*" --message "⏳ a $item_type batch is being tested"
+    save_data --add . --message "⏳ a $item_type batch is being tested"
     save_data --push || exit 1
 
     for folder in $folders; do
