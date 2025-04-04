@@ -40,4 +40,4 @@ rm "$zip_path"
 # so we can reset any file changes before every test.
 git init "$wordpress_path" > /dev/null 2>&1
 git -C "$wordpress_path" add . > /dev/null 2>&1
-git -C "$wordpress_path" commit -m "WordPress snapshot" > /dev/null 2>&1
+git -C "$wordpress_path" commit -m "WordPress snapshot"
