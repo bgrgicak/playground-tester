@@ -81,8 +81,8 @@ run_batch() {
     save_data --push || exit 1
 
     for folder in $folders; do
-        ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH" || code=$?
-        local failed_tests=${code:-0}
+        local failed_tests=0
+        ./scripts/run-tests.sh --$test_type $folder --wordpress "$PLAYGROUND_TESTER_WORDPRESS_PATH" || failed_tests=$?
         local folder_name=$(basename "$folder")
         local message=""
         if [ $failed_tests -gt 0 ]; then
