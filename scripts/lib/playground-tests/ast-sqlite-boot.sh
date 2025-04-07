@@ -74,5 +74,5 @@ if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"
 fi
 
-node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$asl_blueprint_path" $wordpress_args 2>&1
+node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$asl_blueprint_path" --port ${PLAYGROUND_PORT:-9400} $wordpress_args 2>&1
 

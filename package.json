@@ -1,4 +1,9 @@
 {
+  "type": "module",
+  "scripts": {
+    "test:plugins": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/run-plugin-tests.ts",
+    "download:plugins": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/download-plugins.ts"
+  },
   "dependencies": {
     "@wp-playground/cli": "^1.0.28"
   }

@@ -29,6 +29,7 @@ mkdir -p "$wordpress_path"
 rm -rf "$wordpress_path/wordpress" "$zip_path"
 node "$PLAYGROUND_CLI_PATH" build-snapshot \
     --quiet \
+    --port=${PLAYGROUND_PORT:-9400} \
     --wp="https://wordpress.org/latest.zip" \
     --outfile="$zip_path" > /dev/null
 unzip -qq "$zip_path" -d "$wordpress_path" > /dev/null 2>&1 \
