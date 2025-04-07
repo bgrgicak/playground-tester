@@ -10,6 +10,8 @@
 #   --push             Push changes to git. Optional.
 set -e
 
+source "./scripts/pre-script-run.sh"
+
 save_data() {
   local add=""
   local message=""
