@@ -27,10 +27,6 @@ if [ -z "$blueprint_path" ]; then
     exit 1
 fi
 
-# Use Node if it's not already installed
-. $HOME/.nvm/nvm.sh > /dev/null 2>&1
-nvm install $(cat .nvmrc) >/dev/null 2>&1
-
 wordpress_args=""
 if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"

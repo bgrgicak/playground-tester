@@ -65,14 +65,9 @@ jq -s '.[0] as $new | .[1] | .steps = ($new + .steps)' "$new_steps_file" "$bluep
 # The new SQLite driver doesn't support PHP 7.2 or 7.3, so we need to update the PHP version to 7.4
 jq '.preferredVersions.php = (if .preferredVersions.php == "7.2" or .preferredVersions.php == "7.3" then "7.4" else .preferredVersions.php end)' "$asl_blueprint_path" > "${asl_blueprint_path}.tmp" && mv "${asl_blueprint_path}.tmp" "$asl_blueprint_path"
 
-# Use Node if it's not already installed
-. $HOME/.nvm/nvm.sh > /dev/null 2>&1
-nvm install $(cat .nvmrc) >/dev/null 2>&1
-
 wordpress_args=""
 if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"
 fi
 
 node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$asl_blueprint_path" --port ${PLAYGROUND_PORT:-9400} $wordpress_args 2>&1
-
