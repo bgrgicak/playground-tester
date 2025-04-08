@@ -38,6 +38,7 @@ jobs:
           GH_TOKEN: ${{ secrets.BOTBERO_TOKEN }}
 
       - name: Run theme batch
+        shell: bash
         run: |
           BATCH_SIZE=${{ inputs.batch_size }}
           if [ -z "$BATCH_SIZE" ]; then
