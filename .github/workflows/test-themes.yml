@@ -43,4 +43,4 @@ jobs:
           if [ -z "$BATCH_SIZE" ]; then
             BATCH_SIZE=70
           fi
-          ./scripts/run-batch.sh --batch-size $BATCH_SIZE --themes --prefix-chars ${{ matrix.range }}
+          npm run test:batch -- --themes --limit $BATCH_SIZE --prefix-chars ${{ matrix.range }}
