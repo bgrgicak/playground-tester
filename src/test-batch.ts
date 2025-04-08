@@ -52,6 +52,7 @@ const findResult = await exec(
     `. ./scripts/lib/log-parser/analyze-json-logs.sh && get_first_n_logs_to_test "${type}" "${limit}" --prefix-chars "${prefixChars}"`,
     {
         cwd: rootDir,
+        shell: 'bash',
         maxBuffer: 100 * 1024 * 1024,
     }
 );
