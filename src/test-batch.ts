@@ -49,7 +49,7 @@ const prefixChars = argv['prefix-chars'];
 
 // Get plugins/themes to test.
 const findResult = await exec(
-    `source ./scripts/lib/log-parser/analyze-json-logs.sh && get_first_n_logs_to_test "${type}" "${limit}" --prefix-chars "${prefixChars}"`,
+    `. ./scripts/lib/log-parser/analyze-json-logs.sh && get_first_n_logs_to_test "${type}" "${limit}" --prefix-chars "${prefixChars}"`,
     {
         cwd: rootDir,
         maxBuffer: 100 * 1024 * 1024,
@@ -64,7 +64,7 @@ for (const path of paths) {
     await exec(`echo "Last tested on \$(date +%Y-%m-%d\\ %H:%M:%S)" > "${path}/$(date +%Y%m%d-%H%M%S)-last-tested.txt"`);
 }
 await exec(
-    `source ./scripts/save-data.sh && save_data --add . --message "tested a batch of ${limit} ${type}" --push`,
+    `. ./scripts/save-data.sh && save_data --add . --message "tested a batch of ${limit} ${type}" --push`,
     { cwd: rootDir }
 );
 
@@ -119,6 +119,6 @@ await Promise.all(pool.filter((slot) => slot !== undefined));
 
 // Save data.
 await exec(
-    `source ./scripts/save-data.sh && save_data --add . --message "tested a batch of ${limit} ${type}" --push`,
+    `. ./scripts/save-data.sh && save_data --add . --message "tested a batch of ${limit} ${type}" --push`,
     { cwd: rootDir }
 );
