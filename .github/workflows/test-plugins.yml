@@ -49,6 +49,6 @@ jobs:
         run: |
           BATCH_SIZE=${{ inputs.batch_size }}
           if [ -z "$BATCH_SIZE" ]; then
-            BATCH_SIZE=100
+            BATCH_SIZE=200
           fi
           npm run test:batch -- --plugins --limit $BATCH_SIZE --prefix-chars ${{ matrix.range }}
