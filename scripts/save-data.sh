@@ -9,6 +9,7 @@
 #   --message <message> Commit message. Required for committing.
 #   --push             Push changes to git. Optional.
 set -e
+set -x
 
 source "./scripts/pre-script-run.sh"
 
