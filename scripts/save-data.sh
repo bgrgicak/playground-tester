@@ -9,7 +9,6 @@
 #   --message <message> Commit message. Required for committing.
 #   --push             Push changes to git. Optional.
 set -e
-set -x
 
 source "./scripts/pre-script-run.sh"
 
@@ -65,16 +64,12 @@ save_data() {
     local attempt=1
     while [ $attempt -le $max_attempts ]; do
       # Pull remote changes, allow unrelated histories and automatically accept remote version for conflicts
-      pull_output=$(git pull --rebase --allow-unrelated-histories -X theirs "$remote" "$branch" 2>&1)
-      if [ $? -ne 0 ]; then
-        echo "Failed to pull from remote:"
-        echo "$pull_output"
-        exit 1
-      fi
+      git pull --rebase --allow-unrelated-histories -X theirs "$remote" "$branch" 2>&1
 
       # Push changes to remote
-      push_output=$(git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run 2>&1)
-      if [ $? -eq 0 ]; then
+      local code=0
+      push_output=$(git push "$remote" "$branch" --recurse-submodules=on-demand --quiet $dry_run 2>&1) || code=$?
+      if [ $code -eq 0 ]; then
         break
       fi
 
