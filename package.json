@@ -1,5 +1,18 @@
 {
+  "type": "module",
+  "engines": {
+    "node": "23.11.0"
+  },
+  "scripts": {
+    "test:batch": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/test-batch.ts",
+    "download:plugins": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/download-plugins.ts"
+  },
   "dependencies": {
-    "@wp-playground/cli": "^1.0.28"
+    "@types/yargs": "^17.0.33",
+    "@wp-playground/cli": "^1.0.28",
+    "yargs": "^17.7.2"
+  },
+  "volta": {
+    "node": "23.11.0"
   }
 }

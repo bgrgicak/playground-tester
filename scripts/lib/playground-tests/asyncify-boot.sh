@@ -27,13 +27,9 @@ if [ -z "$blueprint_path" ]; then
     exit 1
 fi
 
-# Use Node if it's not already installed
-. $HOME/.nvm/nvm.sh > /dev/null 2>&1
-nvm install $(cat .nvmrc) >/dev/null 2>&1
-
 wordpress_args=""
 if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"
 fi
 
-node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_path" $wordpress_args 2>&1
+node node_modules/@wp-playground/cli/cli.js run-blueprint --quiet --debug --blueprint="$blueprint_path" --port ${PLAYGROUND_PORT:-9400} $wordpress_args 2>&1
