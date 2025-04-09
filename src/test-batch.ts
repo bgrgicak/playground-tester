@@ -116,7 +116,7 @@ for (const path of paths) {
 }
 
 // Wait for all workers to finish.
-await Promise.all(pool.filter((slot) => slot !== undefined));
+await Promise.all(pool);
 
 // Save data.
 await exec(
