@@ -65,7 +65,7 @@ for (const path of paths) {
     await exec(`echo "Last tested on \$(date +%Y-%m-%d\\ %H:%M:%S)" > "${path}/$(date +%Y%m%d-%H%M%S)-last-tested.txt"`);
 }
 await exec(
-    `. ./scripts/save-data.sh && save_data --add . --message "testing a batch of ${limit} ${type}" --push`,
+    `. ./scripts/save-data.sh && save_data --add . --message "⏳ testing a batch of ${limit} ${type}" --push`,
     { cwd: rootDir, shell: 'bash' }
 );
 
@@ -120,6 +120,6 @@ await Promise.all(pool);
 
 // Save data.
 await exec(
-    `. ./scripts/save-data.sh && save_data --add . --message "tested a batch of ${limit} ${type}" --push`,
+    `. ./scripts/save-data.sh && save_data --add . --message "✅ tested a batch of ${limit} ${type}" --push`,
     { cwd: rootDir, shell: 'bash' }
 );
