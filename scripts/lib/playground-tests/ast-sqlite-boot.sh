@@ -33,7 +33,8 @@ cat > "$new_steps_file" << 'EOL'
     {
       "step": "defineWpConfigConsts",
       "consts": {
-        "WP_SQLITE_AST_DRIVER": true
+        "WP_SQLITE_AST_DRIVER": true,
+        "FQDB": "/wordpress/wp-content/database/.ht.ast.sqlite"
       }
     },
     {

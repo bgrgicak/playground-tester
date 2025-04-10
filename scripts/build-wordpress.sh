@@ -36,6 +36,10 @@ unzip -qq "$zip_path" -d "$wordpress_path" > /dev/null 2>&1 \
     || true # Ignore "warning: stripped absolute path spec from" exiting with 1.
 rm "$zip_path"
 
+# Copy prepared SQLite database file for AST tests.
+# This is needed, so that we can use a database where information schema is populated.
+cp "$(dirname "$0")/../.ht.ast.sqlite" "$wordpress_path/wordpress/wp-content/database/.ht.ast.sqlite"
+
 # Initialize the WordPress snapshot as a git repository,
 # so we can reset any file changes before every test.
 cd "$wordpress_path/wordpress"
