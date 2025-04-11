@@ -63,9 +63,6 @@ EOL
 asl_blueprint_path=$(mktemp).json
 jq -s '.[0] as $new | .[1] | .steps = ($new + .steps)' "$new_steps_file" "$blueprint_path" > "$asl_blueprint_path"
 
-# The new SQLite driver doesn't support PHP 7.2 or 7.3, so we need to update the PHP version to 7.4
-jq '.preferredVersions.php = (if .preferredVersions.php == "7.2" or .preferredVersions.php == "7.3" then "7.4" else .preferredVersions.php end)' "$asl_blueprint_path" > "${asl_blueprint_path}.tmp" && mv "${asl_blueprint_path}.tmp" "$asl_blueprint_path"
-
 wordpress_args=""
 if [ -n "$wordpress_path" ]; then
   wordpress_args=" --skipWordPressSetup --mountBeforeInstall $wordpress_path:/wordpress"
