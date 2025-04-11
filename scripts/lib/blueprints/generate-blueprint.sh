@@ -132,4 +132,17 @@ elif [ "$item_type" = "themes" ]; then
     jq -s '.[0] * .[1]' <(echo "$blueprint") <(echo "$theme_steps") > "$blueprint_path"
 fi
 
+# Disable WP auto-updates and WP cron.
+jq --arg blueprint "$(cat "$blueprint_path")" '
+    . = ($blueprint | fromjson) |
+    .steps = ([{
+        "step": "defineWpConfigConsts",
+        "consts": {
+            "WP_AUTO_UPDATE_CORE": false,
+            "DISABLE_WP_CRON": true
+        }
+    }] + .steps)
+' <<< '{}' > "$blueprint_path"
+
+
 echo "$blueprint_path"
