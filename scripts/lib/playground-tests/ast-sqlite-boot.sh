@@ -60,7 +60,7 @@ cat > "$new_steps_file" << 'EOL'
 EOL
 
 
-asl_blueprint_path=$(mktemp)
+asl_blueprint_path=$(mktemp).json
 jq -s '.[0] as $new | .[1] | .steps = ($new + .steps)' "$new_steps_file" "$blueprint_path" > "$asl_blueprint_path"
 
 # The new SQLite driver doesn't support PHP 7.2 or 7.3, so we need to update the PHP version to 7.4
