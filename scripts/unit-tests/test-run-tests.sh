@@ -20,7 +20,7 @@ run_test "Test a successful plugin run"\
 ✓ 0gravatar passed jspi-boot"
 
 run_test "Test a failed plugin run"\
-    "./scripts/run-tests.sh --plugin $PLAYGROUND_TESTER_DATA_PATH/logs/plugins/g/gl-import-external-images --wordpress ./temp/wordpress" \
-    "✗ gl-import-external-images failed ast-sqlite-boot
-✗ gl-import-external-images failed asyncify-boot
-✗ gl-import-external-images failed jspi-boot"
+    "./scripts/run-tests.sh --plugin $PLAYGROUND_TESTER_DATA_PATH/logs/plugins/1/1qlick --wordpress ./temp/wordpress" \
+    "✗ 1qlick failed ast-sqlite-boot
+✗ 1qlick failed asyncify-boot
+✗ 1qlick failed jspi-boot"
