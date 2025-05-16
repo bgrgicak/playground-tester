@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Table Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Tailwind gray-100 */
+        }
+        /* Loader styles */
+        .loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            position: fixed; /* Changed to fixed for better visibility during load */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center loader */
+            z-index: 100; /* Ensure loader is on top */
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .table-container {
+            max-height: 70vh; /* Adjusted height for search bar */
+            overflow: auto;
+            width: 100%;
+        }
+
+        th, td {
+            min-width: 150px; /* Ensure columns have a minimum width */
+            padding: 0.75rem; /* Tailwind p-3 equivalent */
+            border-bottom-width: 1px; /* From divide-y */
+        }
+        th {
+            position: sticky; /* Make header sticky */
+            top: 0;
+            background-color: #f9fafb; /* Tailwind gray-50 */
+            z-index: 10; /* Keep header above table content during scroll */
+            text-align: left; /* Default alignment */
+        }
+        td {
+             white-space: nowrap; /* Keep cell content on one line */
+             overflow: hidden; /* Hide overflow */
+             text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+             max-width: 400px; /* Prevent extremely wide cells, adjust as needed */
+        }
+        /* Allow td content to be seen on hover if truncated */
+        td:hover {
+            white-space: normal;
+            overflow: visible;
+            max-width: none;
+        }
+
+        #searchInput {
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db; /* Tailwind gray-300 */
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            width: 100%;
+            max-width: 500px; /* Limit search bar width */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Tailwind shadow-sm */
+        }
+        #uniqueErrorCount {
+            font-size: 0.9em; /* Slightly smaller than title */
+            color: #6b7280; /* Tailwind gray-500 */
+            font-weight: 500; /* Medium weight */
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center p-4 pt-8">
+
+    <div id="loader" class="loader"></div>
+
+    <div id="errorMessage" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative mb-4 w-full max-w-4xl text-center" role="alert">
+        <strong class="font-bold">Error!</strong>
+        <span class="block sm:inline" id="errorText"></span>
+    </div>
+
+    <div class="w-full max-w-7xl bg-white shadow-xl rounded-lg p-6 hidden flex flex-col" id="contentContainer">
+        <h1 class="text-3xl font-bold mb-4 text-center text-gray-700">
+            PHP Error Report Table <span id="uniqueErrorCount"></span>
+        </h1>
+
+        <div class="mb-6 flex justify-center">
+            <input type="text" id="searchInput" placeholder="Search by Item or Message..." class="focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+
+        <div id="tableContainer" class="table-container rounded-lg border border-gray-200">
+            </div>
+        <p id="rowCount" class="text-sm text-gray-600 mt-4 text-center"></p>
+    </div>
+
+    <script>
+        // URL of the Markdown file
+        const markdownFileUrl = 'https://raw.githubusercontent.com/bgrgicak/Playground-compatibility-reports/refs/heads/main/reports/php-errors.md';
+
+        // DOM elements
+        const loader = document.getElementById('loader');
+        const tableContainer = document.getElementById('tableContainer');
+        const contentContainer = document.getElementById('contentContainer');
+        const errorMessageDiv = document.getElementById('errorMessage');
+        const errorTextSpan = document.getElementById('errorText');
+        const searchInput = document.getElementById('searchInput');
+        const rowCountDisplay = document.getElementById('rowCount');
+        const uniqueErrorCountSpan = document.getElementById('uniqueErrorCount');
+
+
+        /**
+         * Fetches and processes the Markdown file.
+         */
+        async function fetchAndProcessMarkdown() {
+            showLoader(true);
+            showError(false);
+            contentContainer.classList.add('hidden');
+            uniqueErrorCountSpan.textContent = ""; // Clear previous count
+
+            try {
+                const response = await fetch(markdownFileUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}. URL: ${markdownFileUrl}`);
+                }
+                const markdownText = await response.text();
+                // console.log("Fetched Markdown (first 500 chars):", markdownText.substring(0, 500)); // For debugging
+
+                const parsedResult = parseMarkdownTable(markdownText);
+
+                if (parsedResult && parsedResult.html && parsedResult.uniqueCount > 0) {
+                    tableContainer.innerHTML = parsedResult.html;
+                    uniqueErrorCountSpan.textContent = `(${parsedResult.uniqueCount} unique)`;
+                    contentContainer.classList.remove('hidden');
+                    searchInput.addEventListener('keyup', filterTable);
+                    updateRowCount();
+                } else {
+                    showError(true, 'No table found, required columns (Item, Message) are missing, or no unique errors to display. Check console for details.');
+                }
+
+            } catch (error) {
+                console.error('Error fetching or parsing Markdown:', error);
+                showError(true, `Failed to load or parse the Markdown file. ${error.message}`);
+            } finally {
+                showLoader(false);
+            }
+        }
+
+        /**
+         * Parses Markdown text to find the first table, de-duplicates by "Message",
+         * and converts it to HTML with only "Item" and "Message" columns.
+         * @param {string} markdown - The Markdown content.
+         * @returns {{html: string, uniqueCount: number}|null} Object with HTML string and count, or null.
+         */
+        function parseMarkdownTable(markdown) {
+            const lines = markdown.split('\n');
+            // console.log("Markdown lines (first 10 for debug):", lines.slice(0, 10)); // For debugging
+
+            let tableStarted = false;
+            let headerProcessed = false;
+            let originalHeaderCells = [];
+            let itemIndex = -1;
+            let messageIndex = -1;
+            const newTableRows = [];
+            const seenMessages = new Set(); // To track unique messages
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                const trimmedLine = line.trim();
+
+                if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
+                    const cells = trimmedLine.slice(1, -1).split('|').map(cell => cell.trim());
+
+                    if (!tableStarted) {
+                        // console.log("Potential header line:", trimmedLine); // For debugging
+                        const nextLineIndex = i + 1;
+                        if (nextLineIndex < lines.length) {
+                            const nextLine = lines[nextLineIndex].trim();
+                            // console.log("Next line (for separator check):", nextLine); // For debugging
+                            if (nextLine.startsWith('|') && nextLine.includes('-') && nextLine.endsWith('|')) {
+                                const separatorCells = nextLine.slice(1, -1).split('|').map(sc => sc.trim());
+                                if (separatorCells.length === cells.length && separatorCells.every(sc => sc.match(/^:?-+:?$/))) {
+                                    // console.log("Table started. Header identified:", cells); // For debugging
+                                    tableStarted = true;
+                                    originalHeaderCells = cells;
+
+                                    itemIndex = originalHeaderCells.findIndex(h => h.toLowerCase() === 'item');
+                                    messageIndex = originalHeaderCells.findIndex(h => h.toLowerCase() === 'message');
+                                    // console.log(`Indices found - Item: ${itemIndex}, Message: ${messageIndex}`); // For debugging
+
+                                    if (itemIndex === -1 || messageIndex === -1) {
+                                        console.error("Required columns 'Item' or 'Message' not found in header:", originalHeaderCells);
+                                        return null;
+                                    }
+
+                                    i++;
+                                    headerProcessed = true;
+                                    // console.log("Header processed, separator line skipped."); // For debugging
+                                } else {
+                                     // console.log("Separator line invalid or mismatch."); // For debugging
+                                }
+                            } else {
+                                // console.log("Next line is not a valid separator."); // For debugging
+                            }
+                        }
+                    } else if (tableStarted && headerProcessed) { // This is a data row
+                         if (cells.length === originalHeaderCells.length) { // Check if cell count matches header
+                            const itemContent = cells[itemIndex];
+                            const messageContent = cells[messageIndex];
+
+                            // Deduplication based on messageContent
+                            if (!seenMessages.has(messageContent)) {
+                                seenMessages.add(messageContent);
+                                newTableRows.push([itemContent, messageContent]);
+                            } else {
+                                // console.log("Duplicate message skipped:", messageContent); // For debugging
+                            }
+                        } else {
+                            // MODIFIED BEHAVIOR: Log warning and skip row instead of breaking
+                            console.warn(`Data row cell count mismatch. Expected: ${originalHeaderCells.length}, Got: ${cells.length}. Skipping line: "${trimmedLine}"`);
+                            // No break here, loop continues to the next line
+                        }
+                    }
+                } else { // Line does not start and end with '|'
+                    if (tableStarted && headerProcessed) { // If table processing was underway, assume end of table
+                        // console.log("Non-table line encountered, assuming end of table:", trimmedLine); // For debugging
+                        break;
+                    }
+                    if (tableStarted && !headerProcessed) { // False start for table (e.g. header found but no valid separator)
+                        // console.log("False start for table, resetting."); // For debugging
+                        tableStarted = false;
+                        originalHeaderCells = [];
+                        itemIndex = -1;
+                        messageIndex = -1;
+                    }
+                }
+            }
+
+            if (itemIndex === -1 || messageIndex === -1 || newTableRows.length === 0) {
+                 console.log("Final check: No valid table data. Item Index:", itemIndex, "Message Index:", messageIndex, "Unique Rows:", newTableRows.length);
+                return null;
+            }
+
+            // console.log(`Successfully parsed ${newTableRows.length} unique rows for the table.`); // For debugging
+
+            let html = '<table class="min-w-full divide-y divide-gray-200">';
+            html += '<thead class="bg-gray-50">';
+            html += '<tr>';
+            html += `<th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Item</th>`;
+            html += `<th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>`;
+            html += '</tr>';
+            html += '</thead>';
+
+            html += '<tbody class="bg-white divide-y divide-gray-200">';
+            newTableRows.forEach(row => {
+                const itemCell = row[0];
+                const messageCell = row[1];
+                html += '<tr>';
+                html += `<td class="px-4 py-3 text-sm text-gray-700" title="${escapeHtml(itemCell)}">${parseAndLinkCell(itemCell)}</td>`;
+                html += `<td class="px-4 py-3 text-sm text-gray-700" title="${escapeHtml(messageCell)}">${parseAndLinkCell(messageCell)}</td>`;
+                html += '</tr>';
+            });
+            html += '</tbody>';
+            html += '</table>';
+
+            return { html: html, uniqueCount: newTableRows.length };
+        }
+
+        function parseAndLinkCell(cellContent) {
+            const escapedContent = escapeHtml(cellContent);
+            const linkMatch = cellContent.match(/\[([^\]]+)\]\(([^)]+)\)/);
+            if (linkMatch && linkMatch[1] !== undefined && linkMatch[2] !== undefined) {
+                const linkText = escapeHtml(linkMatch[1]);
+                const linkUrl = escapeHtml(linkMatch[2]);
+                if (linkUrl.startsWith('http://') || linkUrl.startsWith('https://') || linkUrl.startsWith('/')) {
+                   return `<a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">${linkText}</a>`;
+                }
+            }
+            return escapedContent;
+        }
+
+        function escapeHtml(unsafe) {
+            if (unsafe === null || typeof unsafe === 'undefined') return '';
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function filterTable() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const table = tableContainer.querySelector('table');
+            if (!table) return;
+            const tbody = table.getElementsByTagName('tbody')[0];
+            if (!tbody) return;
+            const rows = tbody.getElementsByTagName('tr');
+            let visibleRows = 0;
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const itemCell = row.cells[0];
+                const messageCell = row.cells[1];
+                let match = false;
+
+                if (itemCell && messageCell) {
+                    const itemText = (itemCell.textContent || itemCell.innerText || "").toLowerCase();
+                    const messageText = (messageCell.textContent || messageCell.innerText || "").toLowerCase();
+                    if (itemText.includes(searchTerm) || messageText.includes(searchTerm)) {
+                        match = true;
+                    }
+                }
+                row.style.display = match ? '' : 'none';
+                if (match) {
+                    visibleRows++;
+                }
+            }
+            updateRowCount(visibleRows, rows.length);
+        }
+
+        function updateRowCount(visible, total) {
+            const table = tableContainer.querySelector('table');
+            if (!table || !table.tBodies[0]) {
+                 rowCountDisplay.textContent = "";
+                 return;
+            }
+            const tbody = table.tBodies[0];
+            const totalRows = total !== undefined ? total : tbody.rows.length;
+            const visibleRowsCount = visible !== undefined ? visible : totalRows;
+
+            if (searchInput.value) {
+                rowCountDisplay.textContent = `Showing ${visibleRowsCount} of ${totalRows} unique errors.`;
+            } else {
+                rowCountDisplay.textContent = `Total ${totalRows} unique errors.`;
+            }
+        }
+
+        function showLoader(show) {
+            loader.style.display = show ? 'block' : 'none';
+        }
+
+        function showError(show, message = '') {
+            if (show) {
+                errorTextSpan.textContent = message;
+                errorMessageDiv.classList.remove('hidden');
+            } else {
+                errorMessageDiv.classList.add('hidden');
+                errorTextSpan.textContent = '';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchAndProcessMarkdown);
+    </script>
+
+</body>
+</html>
