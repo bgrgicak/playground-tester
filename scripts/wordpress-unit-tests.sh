@@ -6,8 +6,10 @@
 
 cd wordpress-develop
 
+PHPUNIT_JSON_FILE=../data/stats/wp-core-phpunit-test-results.json
+
 # Initialize empty JSON array
-echo '[]' > ../test-results.json
+echo '[]' > $PHPUNIT_JSON_FILE
 
 # TODO test all files in tests/phpunit/tests/**/*.php
 for file in tests/phpunit/tests/*.php; do
@@ -29,13 +31,13 @@ for file in tests/phpunit/tests/*.php; do
         # Add failed test result with PHP output using jq
         jq --arg test "$file" --arg error "$output" --arg php_output "$php_output" --argjson php_exit_code "$php_exit_code" \
            '. += [{"test": $test, "success": false, "error": $error, "php_output": $php_output, "php_exit_code": $php_exit_code}]' \
-           ../test-results.json > ../test-results.tmp
-        mv ../test-results.tmp ../test-results.json
+           $PHPUNIT_JSON_FILE > $PHPUNIT_JSON_FILE.tmp
+        mv $PHPUNIT_JSON_FILE.tmp $PHPUNIT_JSON_FILE
     else
         echo -e "\033[0;32mTest passed: $file\033[0m" >&2
         # Add successful test result using jq
-        jq --arg test "$file" '. += [{"test": $test, "success": true, "error": ""}]' ../test-results.json > ../test-results.tmp
-        mv ../test-results.tmp ../test-results.json
+        jq --arg test "$file" '. += [{"test": $test, "success": true, "error": ""}]' $PHPUNIT_JSON_FILE > $PHPUNIT_JSON_FILE.tmp
+        mv $PHPUNIT_JSON_FILE.tmp $PHPUNIT_JSON_FILE
     fi
 done
 
