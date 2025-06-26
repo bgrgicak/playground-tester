@@ -17,3 +17,16 @@ npm ci
 # Build WordPress
 echo "Building WordPress"
 ./scripts/build-wordpress.sh --output ./temp
+
+# Install WordPress develop dependencies
+echo "Installing WordPress develop dependencies"
+cd ./wordpress-develop
+composer install
+npm install
+
+cp wp-tests-config-sample.php wp-tests-config.php
+
+# TODO configure MySQL
+# TODO move unit test setup to a separate file
+
+cd ..
