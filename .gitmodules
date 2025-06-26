@@ -4,3 +4,6 @@
 [submodule "data"]
 	path = data
 	url = https://github.com/bgrgicak/Playground-compatibility-reports.git
+[submodule "wordpress-develop"]
+	path = wordpress-develop
+	url = https://github.com/WordPress/wordpress-develop.git
