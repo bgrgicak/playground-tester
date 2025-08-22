@@ -5,10 +5,10 @@
 
 This project tests if plugins and themes from WordPress.org are compatible with WordPress Playground.
 
-If you are a plugin or theme developer you can find logs for your project in the `data/logs/(plugin|theme)/[first-letter]/[slug]` folder.
+If you are a plugin or theme developer you can find logs for your project in the [Playground Compatibility Reports repository](https://github.com/bgrgicak/Playground-compatibility-reports/) in the `logs/(plugin|theme)/[first-letter]/[slug]` directory.
 
-You can find how the error rate is changing over time in the [Playground Error Report](data/reports/playground_stats.md).
-To see the exact errors generated Playground tests, check out [SQL Errors Report](data/reports/sql-errors.md) and [PHP Errors Report](data/reports/php-errors.md).
+You can find how the error rate is changing over time in the [Playground Error Report](https://github.com/bgrgicak/Playground-compatibility-reports/blob/main/reports/playground-stats.md).
+To see the exact errors generated Playground tests, check out [SQL Errors Report](https://github.com/bgrgicak/Playground-compatibility-reports/blob/main/reports/sql-errors.md) and [PHP Errors Report](https://github.com/bgrgicak/Playground-compatibility-reports/blob/main/reports/php-errors.md).
 
 ## Overview
 
