@@ -4,13 +4,18 @@
     "node": "23.11.0"
   },
   "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:batch": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/test-batch.ts",
     "download:plugins": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/download-plugins.ts"
   },
   "dependencies": {
     "@types/yargs": "^17.0.33",
-    "@wp-playground/cli": "^1.1.0",
+    "@wp-playground/cli": "^3.0.15",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
   },
   "volta": {
     "node": "23.11.0"
