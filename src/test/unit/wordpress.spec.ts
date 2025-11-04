@@ -1,27 +1,49 @@
 import { describe, it, expect, afterAll, beforeAll } from 'vitest';
 import { runCLI } from '@wp-playground/cli';
 import type { RunCLIServer } from '@wp-playground/cli';
-import { login, type Blueprint } from '@wp-playground/blueprints';
+import { type Blueprint } from '@wp-playground/blueprints';
 import type { PHPRequest, PHPResponse } from '@php-wasm/universal';
 import { phpVar } from '@php-wasm/util';
 import { errorLogPath as vfsErrorLogPath } from '@php-wasm/logger';
 import path from 'path';
-import fs from 'fs';
+import { writeFileSync } from 'fs';
+
+interface Env {
+    ITEM_TYPE?: string;
+    ITEM_SLUG?: string;
+    LOG_FILE?: string;
+    PLAYGROUND_PORT?: string;
+}
+
+const env = process.env as Env;
+
+// write env vars to a temp file
+writeFileSync(path.resolve(process.cwd(), 'temp', 'env.json'), JSON.stringify(env, null, 2));
+
+// write process.env to a temp file
+writeFileSync(path.resolve(process.cwd(), 'temp', 'process.env.json'), JSON.stringify(process.env, null, 2));
 
 interface TestArgs {
     plugin?: string;
     theme?: string;
+    hostErrorLogPath: string;
+    playgroundPort?: number;
 }
 
 const args: TestArgs = {
-    plugin: process.env.WP_TEST_PLUGIN,
-    theme: process.env.WP_TEST_THEME,
+    hostErrorLogPath: path.resolve(process.cwd(), 'temp', 'error.log'),
 };
-
-const phpArgs: TestArgs = {
-    plugin: phpVar(args.plugin),
-    theme: phpVar(args.theme),
-};
+if (env.ITEM_TYPE === 'theme') {
+    args.theme = env.ITEM_SLUG;
+} else if (env.ITEM_TYPE === 'plugin') {
+    args.plugin = env.ITEM_SLUG;
+}
+if (env.LOG_FILE) {
+    args.hostErrorLogPath = env.LOG_FILE;
+}
+if (env.PLAYGROUND_PORT) {
+    args.playgroundPort = parseInt(env.PLAYGROUND_PORT);
+}
 
 function getBlueprint(args: TestArgs) : Blueprint {
     const blueprint: Blueprint = {
@@ -34,7 +56,16 @@ function getBlueprint(args: TestArgs) : Blueprint {
         ],
     };
     if (args.plugin) {
-        blueprint.plugins = [args.plugin];
+        blueprint.steps.push({
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "wordpress.org/plugins",
+                "slug": args.plugin,
+            },
+            "options": {
+                "activate": true
+            }
+        });
     }
     if (args.theme) {
         blueprint.steps.push({
@@ -72,19 +103,22 @@ describe('Unit tests', () => {
     let bootError: Error | undefined;
     beforeAll(async () => {
         try {
-            const hostErrorLogPath = path.resolve(process.cwd(), 'error.log');
-            fs.writeFileSync(hostErrorLogPath, '');
+            const blueprint = getBlueprint(args);
+            console.log(JSON.stringify(blueprint, null, 2));
+            // write blueprint to a temp file
+            writeFileSync(path.resolve(process.cwd(), 'temp', 'blueprint.json'), JSON.stringify(blueprint, null, 2));
             cli = await runCLI({
                 command: 'server',
-                blueprint: getBlueprint(args),
+                blueprint,
                 quiet: true,
                 mount: [
                     {
-                        hostPath: hostErrorLogPath,
+                        hostPath: args.hostErrorLogPath,
                         vfsPath: vfsErrorLogPath,
                     }
                 ],
                 internalCookieStore: true,
+                port: args.playgroundPort,
             });
             server = cli.server;
             playground = cli.playground;
@@ -94,15 +128,22 @@ describe('Unit tests', () => {
             bootError = error as Error;
         }
     });
-    afterAll(async () => {
+    afterAll(async ({ suite }) => {
         if (server) {
             await server.close();
+        }
+        if (bootError && suite) {
+            suite.meta['error'] = {
+                message: bootError?.message,
+                stack: bootError?.stack,
+                cause: bootError?.cause,
+            };
         }
     });
 
     describe('boot', () => {
-        it('should boot without errors', () => {
-            expect(bootError?.message).toBeUndefined();
+        it('should boot without errors', ({ task }) => {
+            expect(bootError).toBeUndefined();
         });
     });
 
