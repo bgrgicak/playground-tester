@@ -128,21 +128,21 @@ describe('Unit tests', () => {
             bootError = error as Error;
         }
     });
-    afterAll(async ({ suite }) => {
+    afterAll(async () => {
         if (server) {
             await server.close();
-        }
-        if (bootError && suite) {
-            suite.meta['error'] = {
-                message: bootError?.message,
-                stack: bootError?.stack,
-                cause: bootError?.cause,
-            };
         }
     });
 
     describe('boot', () => {
         it('should boot without errors', ({ task }) => {
+            if (bootError) {
+                task.meta['error'] = {
+                    message: bootError?.message,
+                    stack: bootError?.stack,
+                    cause: bootError?.cause,
+                };
+            }
             expect(bootError).toBeUndefined();
         });
     });
