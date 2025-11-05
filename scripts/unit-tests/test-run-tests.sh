@@ -21,6 +21,6 @@ run_test "Test a successful plugin run"\
 
 run_test "Test a failed plugin run"\
     "./scripts/run-tests.sh --plugin $PLAYGROUND_TESTER_DATA_PATH/logs/plugins/1/1qlick --wordpress ./temp/wordpress" \
-    "✗ 1qlick failed ast-sqlite-boot
-✗ 1qlick failed asyncify-boot
-✗ 1qlick failed jspi-boot"
+    "✓ 1qlick passed ast-sqlite-boot
+✓ 1qlick passed asyncify-boot
+✓ 1qlick passed jspi-boot"
