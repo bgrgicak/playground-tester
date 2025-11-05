@@ -103,13 +103,9 @@ describe('Unit tests', () => {
     let bootError: Error | undefined;
     beforeAll(async () => {
         try {
-            const blueprint = getBlueprint(args);
-            console.log(JSON.stringify(blueprint, null, 2));
-            // write blueprint to a temp file
-            writeFileSync(path.resolve(process.cwd(), 'temp', 'blueprint.json'), JSON.stringify(blueprint, null, 2));
             cli = await runCLI({
                 command: 'server',
-                blueprint,
+                blueprint: getBlueprint(args),
                 quiet: true,
                 mount: [
                     {
