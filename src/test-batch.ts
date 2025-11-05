@@ -4,10 +4,11 @@
  * Runs all plugin/theme tests using the Playground Tester with up to
  * MAX_CONCURRENCY workers executing tests concurrently.
  *
- * For each item, tests are run in both WASM modes sequentially:
+ * For each item, tests are run in both WASM modes in parallel:
  * 1. Asyncify mode (default Node.js)
  * 2. JSPI mode (with --experimental-wasm-jspi flag)
  *
+ * Each mode gets its own port allocation to avoid conflicts.
  * Results from both modes are aggregated into a single error.json per item.
  */
 import { exec as execCallback, spawn } from 'child_process';
@@ -119,6 +120,7 @@ const argv = yargs(process.argv.slice(2))
 // Configuration.
 const rootDir = join(import.meta.dirname, '..');
 const MAX_CONCURRENCY = 8;
+const BASE_PORT = 9400; // Base port for Playground servers
 const type = argv.plugins ? 'plugins' : 'themes';
 const limit = argv['item-path'] ? 1 : argv.limit;
 const prefixChars = argv['prefix-chars'];
@@ -188,25 +190,26 @@ for (const path of paths) {
                 }
             }
 
-            // Run Asyncify tests
-            const asyncifyResult = await runTestsForMode(
-                path,
-                slug,
-                itemType,
-                'asyncify',
-                workerId,
-                type
-            );
-
-            // Run JSPI tests
-            const jspiResult = await runTestsForMode(
-                path,
-                slug,
-                itemType,
-                'jspi',
-                workerId,
-                type
-            );
+            // Run both modes in parallel with separate port allocations
+            // Asyncify uses workerId, JSPI uses workerId + MAX_CONCURRENCY
+            const [asyncifyResult, jspiResult] = await Promise.all([
+                runTestsForMode(
+                    path,
+                    slug,
+                    itemType,
+                    'asyncify',
+                    workerId, // Port: BASE_PORT + workerId
+                    type
+                ),
+                runTestsForMode(
+                    path,
+                    slug,
+                    itemType,
+                    'jspi',
+                    workerId + MAX_CONCURRENCY, // Port: BASE_PORT + workerId + MAX_CONCURRENCY
+                    type
+                )
+            ]);
 
             // Aggregate results from both modes
             const itemErrorJsonPath = join(path, 'error.json');

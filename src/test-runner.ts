@@ -126,6 +126,10 @@ if (!existsSync(testDirectory)) {
 writeFileSync(errorLogPath, '');
 
 // Configure environment for vitest
+// Port allocation: BASE_PORT (9400) + workerId
+// When running modes in parallel:
+//   - Asyncify uses workerIds 1 to MAX_CONCURRENCY
+//   - JSPI uses workerIds (MAX_CONCURRENCY + 1) to (MAX_CONCURRENCY * 2)
 const env: Record<string, string> = {
     ITEM_SLUG: slug,
     ITEM_TYPE: itemType,
