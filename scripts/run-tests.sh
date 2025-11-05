@@ -64,9 +64,12 @@ if [ $? -gt 0 ]; then
     exit 1
 fi
 
-for test in scripts/lib/playground-tests/*.sh; do
-    item_name=$(basename $item_path)
-    test_name=$(basename $test .sh)
+# Iterate over tests in a deterministic, sorted order to ensure stable output
+# Sorting guarantees the same order across CI runners and prevents test failures
+mapfile -t tests < <(printf '%s\n' scripts/lib/playground-tests/*.sh | LC_ALL=C sort)
+for test in "${tests[@]}"; do
+    item_name=$(basename "$item_path")
+    test_name=$(basename "$test" .sh)
     log_folder="$item_path/$test_name"
     log_file="$log_folder/error.log"
     if [ ! -d "$log_folder" ]; then
@@ -79,7 +82,7 @@ for test in scripts/lib/playground-tests/*.sh; do
     git reset --hard > /dev/null 2>&1
     cd - > /dev/null
 
-    result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
+    result=$(./"$test" --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
 
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
@@ -88,7 +91,7 @@ for test in scripts/lib/playground-tests/*.sh; do
         echo "[]" > "$log_folder/error.json"
     else
         echo "$result" > "$log_file"
-        parse_raw_logs --test-name $test_name --"$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
+        parse_raw_logs --test-name "$test_name" --"$test_type" --item-name "$item_name" --input "$log_file" --output "$log_folder/error.json"
 
     fi
 
