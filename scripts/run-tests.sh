@@ -57,16 +57,18 @@ if [ ! -d "$wordpress_path" ]; then
 fi
 
 # Build base blueprint used for all tests
-blueprint_path=$(./scripts/lib/blueprints/generate-blueprint.sh --item-path $item_path --"$test_type")
+blueprint_path=$(./scripts/lib/blueprints/generate-blueprint.sh --item-path "$item_path" --"$test_type")
 if [ $? -gt 0 ]; then
     echo "Failed to generate blueprint with exit code $?"
     echo "Error: $blueprint_path"
     exit 1
 fi
 
-for test in scripts/lib/playground-tests/*.sh; do
-    item_name=$(basename $item_path)
-    test_name=$(basename $test .sh)
+# Iterate over tests in deterministic, sorted order
+mapfile -t test_files < <(LC_ALL=C sort < <(printf '%s\n' scripts/lib/playground-tests/*.sh))
+for test in "${test_files[@]}"; do
+    item_name=$(basename "$item_path")
+    test_name=$(basename "$test" .sh)
     log_folder="$item_path/$test_name"
     log_file="$log_folder/error.log"
     if [ ! -d "$log_folder" ]; then
@@ -79,7 +81,7 @@ for test in scripts/lib/playground-tests/*.sh; do
     git reset --hard > /dev/null 2>&1
     cd - > /dev/null
 
-    result=$(./$test --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
+    result=$("./$test" --blueprint "$blueprint_path" --wordpress "$wordpress_path" || true)
 
     # if result is empty, add empty log file
     # We use empty log file to indicate that the test passed
@@ -88,12 +90,12 @@ for test in scripts/lib/playground-tests/*.sh; do
         echo "[]" > "$log_folder/error.json"
     else
         echo "$result" > "$log_file"
-        parse_raw_logs --test-name $test_name --"$test_type" --item-name "$item_name" --input $log_file --output "$log_folder/error.json"
+        parse_raw_logs --test-name "$test_name" --"$test_type" --item-name "$item_name" --input "$log_file" --output "$log_folder/error.json"
 
     fi
 
     fatal_errors=$(get_number_of_errors_by_level "FATAL" "$log_folder/error.json")
-    if [ $fatal_errors -gt 0 ]; then
+    if [ "$fatal_errors" -gt 0 ]; then
         echo -e "\033[31m✗\033[0m $item_name failed $test_name"
     else
         echo -e "\033[32m✓\033[0m $item_name passed $test_name"
@@ -103,6 +105,6 @@ for test in scripts/lib/playground-tests/*.sh; do
 done
 
 # get all error.json files and merge them into a single file
-jq -s 'flatten' $item_path/**/error.json > $item_path/error.json
+jq -s 'flatten' "$item_path"/**/error.json > "$item_path/error.json"
 
 exit $(get_number_of_errors_by_level "FATAL" "$item_path/error.json")
