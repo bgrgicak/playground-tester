@@ -40,16 +40,42 @@ pluginsToTest.forEach((plugin) => {
       ).toBeLessThanOrEqual(playgroundWpVersion);
 
       const url = "/wp-admin/plugins.php";
+      const blueprint = {
+        landingPage: url,
+        login: true,
+        preferredVersions: {
+          php: "8.3",
+          wp: playgroundWpVersion.toString(),
+        },
+        steps: [] as any[],
+      };
+
       const slug = plugin.slug;
-      const plugins: string[] = [];
       if (plugin.requires_plugins) {
-        plugins.push(...plugin.requires_plugins);
+        for (const requiredPlugin of plugin.requires_plugins) {
+          blueprint.steps.push({
+            step: "installPlugin",
+            pluginData: {
+              resource: "wordpress.org/plugins",
+              slug: requiredPlugin,
+            },
+            options: {
+              activate: true,
+            },
+          });
+        }
       }
-      plugins.push(slug);
-      const pluginArgs = plugins.map((plugin) => `plugin=${plugin}`).join("&");
-      await website.goto(
-        `${playgroundUrl.url}?url=${url}&wp=${playgroundWpVersion}&${pluginArgs}`
-      );
+      blueprint.steps.push({
+        step: "installPlugin",
+        pluginData: {
+          resource: "wordpress.org/plugins",
+          slug: slug,
+        },
+        options: {
+          activate: true,
+        },
+      });
+      await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
       expect(website.page.locator("h1", { hasText: "Report error" }), {
