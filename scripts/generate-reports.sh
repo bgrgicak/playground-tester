@@ -80,8 +80,8 @@ function push_reports() {
 }
 
 function get_report_without_wp_version_errors() {
-    jq '[.[] | select(.result_2023 | startswith("Error: Min WP version") | not) | select(.result_2024 | startswith("Error: Min WP version") | not)]' \
-        data/stats/playground-2023-2024-error-comparison.json
+    jq '[.[] | select(.result_2024 | startswith("Error: Min WP version") | not) | select(.result_2025 | startswith("Error: Min WP version") | not)]' \
+        playground-2024-2025-error-comparison.json
 }
 
 function generate_test_comparison_report() {
@@ -90,30 +90,30 @@ function generate_test_comparison_report() {
     local report_without_wp_version_errors=$(mktemp)
     get_report_without_wp_version_errors > "$report_without_wp_version_errors"
 
-    echo "# Playground MySQL and PHP compatibility improvements between 2023 and 2024" > "$report_file"
-    echo "This report compares Playground from December 2023 and December 2024 by analyzing how many of the top 1000 plugins from WordPress.org can be activated in Playground." >> "$report_file"
+    echo "# Playground MySQL and PHP compatibility improvements between 2024 and 2025" > "$report_file"
+    echo "This report compares Playground from December 2024 and December 2025 by analyzing how many of the top 1000 plugins from WordPress.org can be activated in Playground." >> "$report_file"
     echo "To determine if a plugin is compatible, we use End to End tests where we activate the plugin together it's dependencies and check if it was successfully activated in Playground." >> "$report_file"
 
     # Calculate error rates using the filtered data
-    local total_2023=$(jq length "$report_without_wp_version_errors")
-    local errors_2023=$(jq '[.[] | select(.result_2023 != "ok")] | length' "$report_without_wp_version_errors")
     local total_2024=$(jq length "$report_without_wp_version_errors")
     local errors_2024=$(jq '[.[] | select(.result_2024 != "ok")] | length' "$report_without_wp_version_errors")
+    local total_2025=$(jq length "$report_without_wp_version_errors")
+    local errors_2025=$(jq '[.[] | select(.result_2025 != "ok")] | length' "$report_without_wp_version_errors")
 
-    local error_rate_2023=$(echo "scale=2; ($errors_2023 / $total_2023) * 100" | bc)
     local error_rate_2024=$(echo "scale=2; ($errors_2024 / $total_2024) * 100" | bc)
-    local improvement=$(echo "scale=2; (($error_rate_2023 - $error_rate_2024) / $error_rate_2023) * 100" | bc)
+    local error_rate_2025=$(echo "scale=2; ($errors_2025 / $total_2025) * 100" | bc)
+    local improvement=$(echo "scale=2; (($error_rate_2024 - $error_rate_2025) / $error_rate_2024) * 100" | bc)
 
     echo "## Stats" >> "$report_file"
     echo "| Year | Error Rate |" >> "$report_file"
     echo "|------|------------|" >> "$report_file"
-    echo "| 2023 | ${error_rate_2023}% |" >> "$report_file"
     echo "| 2024 | ${error_rate_2024}% |" >> "$report_file"
+    echo "| 2025 | ${error_rate_2025}% |" >> "$report_file"
     echo "| Improvement | ${improvement}% |" >> "$report_file"
 
     echo "## Report" >> "$report_file"
     echo "" >> "$report_file"
-    echo "| Test Item | 2023 Result | 2024 Result |" >> "$report_file"
+    echo "| Test Item | 2024 Result | 2025 Result |" >> "$report_file"
     echo "|-----------|-------------|-------------|" >> "$report_file"
 
     jq -r '
@@ -121,11 +121,11 @@ function generate_test_comparison_report() {
     map(select(.slug != null)) |  # Ensure slug is present
     map({
         title: .slug,
-        result_2023: (.result_2023 | if . == "ok" then "✅" else "❌" end),
-        result_2024: (.result_2024 | if . == "ok" then "✅" else "❌" end)
+        result_2024: (.result_2024 | if . == "ok" then "✅" else "❌" end),
+        result_2025: (.result_2025 | if . == "ok" then "✅" else "❌" end)
     }) |
     .[] |
-    "| \(.title) | \(.result_2023) | \(.result_2024) |"
+    "| \(.title) | \(.result_2024) | \(.result_2025) |"
     ' "$report_without_wp_version_errors" >> "$report_file"
 
     # Optionally, remove the temporary file after use
@@ -142,11 +142,11 @@ function generate_temporary_error_report() {
     map(select(.slug != null)) |  # Ensure slug is present
     map({
         slug: .slug,
-        result_2023: .result_2023,
-        result_2024: .result_2024
+        result_2024: .result_2024,
+        result_2025: .result_2025
     }) |
     .[] |
-    select(.result_2024 == "Test timeout of 300000ms exceeded.") |
+    select(.result_2025 == "Test timeout of 300000ms exceeded.") |
     .slug
     ' "$report_without_wp_version_errors" > "$report_file"
 }

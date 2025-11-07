@@ -3,16 +3,16 @@ import fs from "fs";
 
 const playgroundUrls = [
   {
-    name: "Playground from December 2023",
-    url: "http://localhost:5400/website-server/",
-    oldUI: true,
-    wpVersion: 6.4,
-  },
-  {
-    name: "Playground from December 2024",
-    url: "http://127.0.0.1:5401/website-server/",
+    name: "Playground from November 6th 2024",
+    url: "http://127.0.0.1:5932/",
     oldUI: false,
     wpVersion: 6.6,
+  },
+  {
+    name: "Playground from November 6th 2025",
+    url: "http://127.0.0.1:5400/",
+    oldUI: false,
+    wpVersion: 6.8,
   },
 ];
 

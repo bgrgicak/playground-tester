@@ -80,10 +80,10 @@ function generate_comparison_stats() {
             .[] |
             {
                 title: .title,
-                year: (.title | startswith("Playground from December 2023") | if . then "2023" else "2024" end),
+                year: (.title | startswith("Playground from November 6th 2024") | if . then "2024" else "2025" end),
                 slug: (.title |
-                    sub("Playground from December 2023 - "; "") |
-                    sub("Playground from December 2024 - "; "") |
+                    sub("Playground from November 6th 2024 - "; "") |
+                    sub("Playground from November 6th 2025 - "; "") |
                     sub(" should load"; "")
                 ),
                 ok: .ok,
@@ -106,8 +106,8 @@ function generate_comparison_stats() {
         map({
             title: .value[0].title,
             slug: .value[0].slug,
-            result_2023: (.value | map(select(.year == "2023"))[0] | if .ok then "ok" else .error end),
-            result_2024: (.value | map(select(.year == "2024"))[0] | if .ok then "ok" else .error end)
+            result_2024: (.value | map(select(.year == "2024"))[0] | if .ok then "ok" else .error end),
+            result_2025: (.value | map(select(.year == "2025"))[0] | if .ok then "ok" else .error end)
         })
         ' "$1"
 }
@@ -133,7 +133,7 @@ function update_comparison_stats() {
     #         end
     #     )
     # ' "$initial_stats" "$new_stats" \
-    generate_comparison_stats playwright-report/playwright-results.json > data/stats/playground-2023-2024-error-comparison.json
+    generate_comparison_stats playwright-report/playwright-results.json > playground-2024-2025-error-comparison.json
 }
 
 update_comparison_stats
