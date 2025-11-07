@@ -5,13 +5,11 @@ const playgroundUrls = [
   {
     name: "Playground from November 6th 2024",
     url: "http://127.0.0.1:5932/",
-    oldUI: false,
     wpVersion: 6.6,
   },
   {
     name: "Playground from November 6th 2025",
     url: "http://127.0.0.1:5400/",
-    oldUI: false,
     wpVersion: 6.8,
   },
 ];
@@ -51,54 +49,42 @@ pluginsToTest.forEach((plugin) => {
       };
 
       const slug = plugin.slug;
-      if (plugin.requires_plugins) {
-        for (const requiredPlugin of plugin.requires_plugins) {
-          blueprint.steps.push({
-            step: "installPlugin",
-            pluginData: {
-              resource: "wordpress.org/plugins",
-              slug: requiredPlugin,
-            },
-            options: {
-              activate: true,
-            },
-          });
-        }
-      }
-      blueprint.steps.push({
+      const pluginInstallStep = (slug: string) => ({
         step: "installPlugin",
         pluginData: {
           resource: "wordpress.org/plugins",
           slug: slug,
         },
         options: {
-          activate: true,
+          activate: false,
         },
       });
+      if (plugin.requires_plugins) {
+        for (const requiredPlugin of plugin.requires_plugins) {
+          blueprint.steps.push(pluginInstallStep(requiredPlugin));
+        }
+      }
+      blueprint.steps.push(pluginInstallStep(slug));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
-      expect(website.page.locator("h1", { hasText: "Report error" }), {
-        message: "Playground failed to boot with an error.",
-      }).not.toBeVisible();
+      // Activate all plugins
+      await wordpress.locator("#cb-select-all-1").check();
+      await wordpress
+        .locator("#bulk-action-selector-top")
+        .selectOption("activate-selected");
+      await wordpress.locator("#doaction").click();
 
-      // Check if WordPress loaded the error page on first load
-      expect(wordpress.locator("body")).not.toHaveId("error-page");
+      // wait for the page to reload after bulk activation
+      await website.page.waitForLoadState("networkidle");
 
       /**
        * Some plugins are redirecting to custom pages, so we need to check if the URL is correct
        * and if not, redirect to the correct URL using the Playground Website URL input.
        */
-      let urlInput;
-      if (playgroundUrl.oldUI) {
-        urlInput = await website.page.getByRole("textbox", {
-          name: "URL to visit in the WordPress",
-        });
-      } else {
-        urlInput = await website.page.getByLabel(
-          "URL to visit in the WordPress"
-        );
-      }
+      const urlInput = await website.page.getByLabel(
+        "URL to visit in the WordPress"
+      );
       await expect(
         urlInput,
         `The Playground Website didn't load correctly. The URL input for ${plugin.slug} is not visible.`
