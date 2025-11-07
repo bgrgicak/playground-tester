@@ -105,6 +105,8 @@ pluginsToTest.forEach((plugin) => {
         }
 
         if (attempts < maxAttempts) {
+          // Add a small delay to avoid overwhelming the server
+          await website.page.waitForTimeout(1000);
           await urlInput.fill(url);
           await urlInput.press("Enter");
           await website.waitForNestedIframes(website.page);
