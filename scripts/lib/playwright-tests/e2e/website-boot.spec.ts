@@ -76,11 +76,14 @@ pluginsToTest.forEach((plugin) => {
       await wordpress.locator("#doaction").click();
 
       // wait for the page to reload after bulk activation
-      await website.page.waitForLoadState("networkidle");
+      await website.waitForNestedIframes(website.page);
 
       /**
-       * Some plugins are redirecting to custom pages, so we need to check if the URL is correct
-       * and if not, redirect to the correct URL using the Playground Website URL input.
+       * Some plugins redirect to custom pages after activation.
+       * Keep reloading until we see the h1 title "Plugins" (up to 10 attempts).
+       *
+       * We do this because await website.waitForNestedIframes sometimes doesn't
+       * wait for the full page load after activation.
        */
       const urlInput = await website.page.getByLabel(
         "URL to visit in the WordPress"
@@ -89,12 +92,34 @@ pluginsToTest.forEach((plugin) => {
         urlInput,
         `The Playground Website didn't load correctly. The URL input for ${plugin.slug} is not visible.`
       ).toBeVisible();
-      if ((await urlInput.inputValue()) !== url) {
-        await urlInput.fill(url);
-        await urlInput.press("Enter");
-        await website.waitForNestedIframes(website.page);
+
+      let attempts = 0;
+      const maxAttempts = 10;
+      while (attempts < maxAttempts) {
+        attempts++;
+        const h1 = wordpress.locator("h1").first();
+        const h1Text = await h1.textContent();
+
+        if (h1Text === "Plugins") {
+          break;
+        }
+
+        if (attempts < maxAttempts) {
+          await urlInput.fill(url);
+          await urlInput.press("Enter");
+          await website.waitForNestedIframes(website.page);
+        }
       }
 
+      const h1 = wordpress.locator("h1").first();
+      await expect(
+        h1,
+        `Failed to load plugins page for ${plugin.slug} after ${maxAttempts} attempts`
+      ).toHaveText("Plugins");
+
+      /**
+       * Check that the plugin is activated by looking for the Deactivate button
+       */
       const deactivateButtonByLabel = await wordpress.getByLabel(
         `Deactivate ${plugin.name}`
       );
