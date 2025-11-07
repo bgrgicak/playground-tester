@@ -86,7 +86,7 @@ function get_report_without_wp_version_errors() {
 
 function generate_test_comparison_report() {
     local item_type=$1
-    local report_file="$PLAYGROUND_TESTER_DATA_PATH/reports/test-comparison.md"
+    local report_file="test-comparison.md"
     local report_without_wp_version_errors=$(mktemp)
     get_report_without_wp_version_errors > "$report_without_wp_version_errors"
 
