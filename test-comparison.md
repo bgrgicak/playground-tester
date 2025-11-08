@@ -4,9 +4,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 ## Stats
 | Year | Error Rate |
 |------|------------|
-| 2024 | 13.00% |
-| 2025 | 5.00% |
-| Improvement | 61.00% |
+| 2024 | 11.00% |
+| 2025 | 8.00% |
+| Improvement | 27.00% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -46,19 +46,19 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | advanced-database-cleaner | ✅ | ✅ |
 | advanced-excerpt | ✅ | ✅ |
 | advanced-google-recaptcha | ✅ | ✅ |
-| advanced-iframe | ✅ | ✅ |
+| advanced-iframe | ✅ | ❌ |
 | advanced-import | ✅ | ✅ |
 | advanced-nocaptcha-recaptcha | ✅ | ✅ |
 | advanced-popups | ✅ | ✅ |
 | advanced-product-fields-for-woocommerce | ✅ | ✅ |
 | advanced-responsive-video-embedder | ✅ | ✅ |
-| advanced-woo-search | ❌ | ✅ |
+| advanced-woo-search | ❌ | ❌ |
 | advanced-wp-reset | ✅ | ✅ |
 | ag-custom-admin | ✅ | ✅ |
 | age-gate | ✅ | ✅ |
 | ai-engine | ✅ | ✅ |
 | ajax-load-more | ✅ | ✅ |
-| ajax-search-for-woocommerce | ❌ | ✅ |
+| ajax-search-for-woocommerce | ❌ | ❌ |
 | ajax-search-lite | ✅ | ✅ |
 | ajax-thumbnail-rebuild | ✅ | ✅ |
 | akismet | ✅ | ✅ |
@@ -82,7 +82,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | asesor-cookies-para-la-ley-en-espana | ✅ | ✅ |
 | astra-bulk-edit | ✅ | ✅ |
 | astra-import-export | ✅ | ✅ |
-| astra-sites | ✅ | ❌ |
+| astra-sites | ✅ | ✅ |
 | astra-widgets | ✅ | ✅ |
 | async-javascript | ✅ | ✅ |
 | athemes-starter-sites | ✅ | ✅ |
@@ -99,7 +99,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | backup-backup | ✅ | ✅ |
 | backuply | ❌ | ✅ |
 | backupwordpress | ✅ | ✅ |
-| backwpup | ✅ | ❌ |
+| backwpup | ✅ | ✅ |
 | bbpress | ✅ | ✅ |
 | bdthemes-element-pack-lite | ✅ | ✅ |
 | bdthemes-prime-slider-lite | ✅ | ✅ |
@@ -108,14 +108,14 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | better-font-awesome | ✅ | ✅ |
 | better-search-replace | ✅ | ✅ |
 | better-wp-security | ✅ | ✅ |
-| bing-webmaster-tools | ✅ | ✅ |
+| bing-webmaster-tools | ❌ | ❌ |
 | bj-lazy-load | ✅ | ✅ |
 | black-studio-tinymce-widget | ✅ | ✅ |
 | blackhole-bad-bots | ✅ | ✅ |
-| block-bad-queries | ✅ | ❌ |
+| block-bad-queries | ✅ | ✅ |
 | block-options | ✅ | ✅ |
 | blocks-animation | ✅ | ✅ |
-| blocksy-companion | ✅ | ✅ |
+| blocksy-companion | ❌ | ✅ |
 | blog2social | ✅ | ✅ |
 | blogger-importer | ✅ | ✅ |
 | blogvault-real-time-backup | ✅ | ✅ |
@@ -139,7 +139,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | button-contact-vr | ✅ | ✅ |
 | buttonizer-multifunctional-button | ✅ | ✅ |
 | cache-enabler | ✅ | ✅ |
-| calculated-fields-form | ❌ | ✅ |
+| calculated-fields-form | ✅ | ✅ |
 | call-now-button | ✅ | ✅ |
 | capability-manager-enhanced | ✅ | ✅ |
 | carousel-slider | ✅ | ✅ |
@@ -147,7 +147,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | catch-ids | ✅ | ✅ |
 | categories-images | ✅ | ✅ |
 | category-posts | ✅ | ✅ |
-| cf7-conditional-fields | ❌ | ✅ |
+| cf7-conditional-fields | ❌ | ❌ |
 | cf7-google-sheets-connector | ❌ | ❌ |
 | change-admin-email-setting-without-outbound-email | ✅ | ✅ |
 | change-wp-admin-login | ✅ | ✅ |
@@ -158,7 +158,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | classic-editor | ✅ | ✅ |
 | classic-widgets | ✅ | ✅ |
 | clean-image-filenames | ✅ | ✅ |
-| cleantalk-spam-protect | ✅ | ✅ |
+| cleantalk-spam-protect | ✅ | ❌ |
 | clear-cache-for-widgets | ✅ | ✅ |
 | clearfy | ✅ | ✅ |
 | clever-fox | ✅ | ✅ |
@@ -176,7 +176,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | colorlib-login-customizer | ✅ | ✅ |
 | column-shortcodes | ✅ | ✅ |
 | coming-soon | ✅ | ✅ |
-| companion-auto-update | ❌ | ❌ |
+| companion-auto-update | ✅ | ✅ |
 | complianz-gdpr | ✅ | ✅ |
 | complianz-terms-conditions | ✅ | ✅ |
 | conditional-menus | ✅ | ✅ |
@@ -184,8 +184,8 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | constant-contact-forms | ✅ | ✅ |
 | contact-form-7 | ❌ | ✅ |
 | contact-form-7-add-confirm | ❌ | ❌ |
-| contact-form-7-dynamic-text-extension | ❌ | ✅ |
-| contact-form-7-honeypot | ❌ | ✅ |
+| contact-form-7-dynamic-text-extension | ❌ | ❌ |
+| contact-form-7-honeypot | ❌ | ❌ |
 | contact-form-7-image-captcha | ✅ | ✅ |
 | contact-form-7-multi-step-module | ❌ | ❌ |
 | contact-form-7-simple-recaptcha | ✅ | ✅ |
@@ -200,7 +200,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | cookie-law-info | ✅ | ✅ |
 | cookie-notice | ❌ | ❌ |
 | cookiebot | ✅ | ✅ |
-| copy-delete-posts | ✅ | ✅ |
+| copy-delete-posts | ❌ | ❌ |
 | cornerstone | ✅ | ✅ |
 | country-phone-field-contact-form-7 | ✅ | ✅ |
 | creame-whatsapp-me | ✅ | ✅ |
@@ -247,9 +247,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | display-posts-shortcode | ✅ | ✅ |
 | disqus-comment-system | ✅ | ✅ |
 | ditty-news-ticker | ✅ | ✅ |
-| dokan-lite | ❌ | ✅ |
+| dokan-lite | ❌ | ❌ |
 | dominant-color-images | ✅ | ✅ |
-| download-manager | ❌ | ✅ |
+| download-manager | ✅ | ✅ |
 | download-monitor | ✅ | ✅ |
 | download-plugins-dashboard | ✅ | ✅ |
 | drag-and-drop-multiple-file-upload-contact-form-7 | ✅ | ✅ |
@@ -261,7 +261,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | duracelltomi-google-tag-manager | ✅ | ✅ |
 | dynamic-visibility-for-elementor | ❌ | ❌ |
 | dynamicconditions | ✅ | ✅ |
-| easy-accordion-free | ❌ | ✅ |
+| easy-accordion-free | ✅ | ✅ |
 | easy-digital-downloads | ✅ | ✅ |
 | easy-facebook-likebox | ✅ | ✅ |
 | easy-fancybox | ✅ | ✅ |
@@ -277,7 +277,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | ele-custom-skin | ✅ | ✅ |
 | elegro-payment | ✅ | ✅ |
 | elementor | ✅ | ✅ |
-| elementor-beta | ✅ | ✅ |
+| elementor-beta | ❌ | ❌ |
 | elementskit-lite | ✅ | ✅ |
 | email-address-encoder | ✅ | ✅ |
 | email-encoder-bundle | ✅ | ✅ |
@@ -295,7 +295,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | essential-addons-for-elementor-lite | ✅ | ✅ |
 | essential-blocks | ✅ | ✅ |
 | essential-content-types | ✅ | ✅ |
-| event-tickets | ✅ | ❌ |
+| event-tickets | ✅ | ✅ |
 | events-manager | ✅ | ✅ |
 | everest-forms | ❌ | ❌ |
 | ewww-image-optimizer | ✅ | ✅ |
@@ -306,7 +306,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | export-media-with-selected-content | ✅ | ✅ |
 | extendify | ✅ | ✅ |
 | facebook-conversion-pixel | ✅ | ✅ |
-| facebook-for-woocommerce | ❌ | ✅ |
+| facebook-for-woocommerce | ❌ | ❌ |
 | facebook-messenger-customer-chat | ✅ | ✅ |
 | facebook-pagelike-widget | ✅ | ✅ |
 | famethemes-demo-importer | ✅ | ✅ |
@@ -316,7 +316,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | favicon-by-realfavicongenerator | ✅ | ✅ |
 | featured-image-from-url | ✅ | ✅ |
 | feeds-for-youtube | ✅ | ✅ |
-| feedzy-rss-feeds | ✅ | ✅ |
+| feedzy-rss-feeds | ✅ | ❌ |
 | file-manager-advanced | ✅ | ✅ |
 | filebird | ✅ | ✅ |
 | fileorganizer | ✅ | ✅ |
@@ -352,7 +352,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | google-calendar-events | ✅ | ✅ |
 | google-captcha | ✅ | ✅ |
 | google-language-translator | ✅ | ✅ |
-| google-listings-and-ads | ❌ | ✅ |
+| google-listings-and-ads | ❌ | ❌ |
 | google-maps-easy | ✅ | ✅ |
 | google-maps-widget | ✅ | ✅ |
 | google-site-kit | ✅ | ✅ |
@@ -366,15 +366,15 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | gtranslate | ✅ | ✅ |
 | gutenberg | ❌ | ✅ |
 | gutentor | ✅ | ✅ |
-| h5p | ❌ | ✅ |
-| happy-elementor-addons | ✅ | ✅ |
+| h5p | ✅ | ✅ |
+| happy-elementor-addons | ❌ | ❌ |
 | hcaptcha-for-forms-and-more | ✅ | ✅ |
 | head-footer-code | ✅ | ✅ |
 | header-and-footer-scripts | ✅ | ✅ |
 | header-footer | ✅ | ✅ |
 | header-footer-code-manager | ✅ | ✅ |
 | header-footer-elementor | ✅ | ✅ |
-| headers-security-advanced-hsts-wp | ❌ | ❌ |
+| headers-security-advanced-hsts-wp | ✅ | ✅ |
 | health-check | ✅ | ✅ |
 | heartbeat-control | ✅ | ✅ |
 | hello-dolly | ✅ | ✅ |
@@ -388,7 +388,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | hotjar | ✅ | ✅ |
 | ht-mega-for-elementor | ✅ | ✅ |
 | html-editor-syntax-highlighter | ✅ | ✅ |
-| http-headers | ❌ | ❌ |
+| http-headers | ✅ | ✅ |
 | https-redirection | ✅ | ✅ |
 | hummingbird-performance | ✅ | ✅ |
 | if-menu | ✅ | ✅ |
@@ -402,13 +402,13 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | import-users-from-csv-with-meta | ✅ | ✅ |
 | imsanity | ✅ | ✅ |
 | independent-analytics | ✅ | ✅ |
-| indexnow | ✅ | ✅ |
+| indexnow | ❌ | ❌ |
 | insert-headers-and-footers | ✅ | ✅ |
 | insert-pages | ✅ | ✅ |
 | insert-php | ✅ | ✅ |
 | insert-php-code-snippet | ✅ | ✅ |
 | insta-gallery | ✅ | ✅ |
-| instagram-feed | ❌ | ❌ |
+| instagram-feed | ❌ | ✅ |
 | instagram-slider-widget | ✅ | ✅ |
 | instagram-widget-by-wpzoom | ✅ | ✅ |
 | instant-images | ✅ | ✅ |
@@ -420,7 +420,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | ithemes-sync | ✅ | ✅ |
 | iubenda-cookie-law-solution | ✅ | ✅ |
 | iwp-client | ✅ | ✅ |
-| jeg-elementor-kit | ✅ | ✅ |
+| jeg-elementor-kit | ❌ | ❌ |
 | jetformbuilder | ✅ | ✅ |
 | jetpack | ❌ | ✅ |
 | jetpack-boost | ❌ | ✅ |
@@ -433,15 +433,15 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | kadence-woocommerce-email-designer | ✅ | ✅ |
 | kirki | ✅ | ✅ |
 | kk-star-ratings | ✅ | ✅ |
-| klarna-payments-for-woocommerce | ❌ | ✅ |
+| klarna-payments-for-woocommerce | ❌ | ❌ |
 | klaviyo | ✅ | ✅ |
-| kliken-marketing-for-google | ❌ | ✅ |
+| kliken-marketing-for-google | ❌ | ❌ |
 | koko-analytics | ✅ | ✅ |
-| kubio | ❌ | ✅ |
+| kubio | ✅ | ✅ |
 | layout-grid | ✅ | ✅ |
 | leadin | ✅ | ✅ |
 | learnpress | ✅ | ✅ |
-| learnpress-course-review | ✅ | ✅ |
+| learnpress-course-review | ❌ | ❌ |
 | lightweight-social-icons | ✅ | ✅ |
 | limit-login-attempts | ✅ | ✅ |
 | limit-login-attempts-reloaded | ✅ | ✅ |
@@ -458,7 +458,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | loginizer | ✅ | ✅ |
 | loginpress | ✅ | ✅ |
 | mailchimp | ✅ | ✅ |
-| mailchimp-for-woocommerce | ❌ | ✅ |
+| mailchimp-for-woocommerce | ❌ | ❌ |
 | mailchimp-for-wp | ✅ | ✅ |
 | mailgun | ✅ | ✅ |
 | mailin | ✅ | ✅ |
@@ -503,7 +503,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | nav-menu-roles | ✅ | ✅ |
 | navz-photo-gallery | ✅ | ✅ |
 | newsletter | ✅ | ✅ |
-| nextend-facebook-connect | ✅ | ❌ |
+| nextend-facebook-connect | ✅ | ✅ |
 | nextgen-gallery | ✅ | ✅ |
 | nginx-helper | ✅ | ✅ |
 | nimble-builder | ✅ | ✅ |
@@ -529,7 +529,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | open-external-links-in-a-new-window | ✅ | ✅ |
 | optimole-wp | ✅ | ✅ |
 | optimus | ✅ | ✅ |
-| optinmonster | ❌ | ✅ |
+| optinmonster | ✅ | ✅ |
 | option-tree | ✅ | ✅ |
 | order-import-export-for-woocommerce | ✅ | ✅ |
 | otter-blocks | ✅ | ✅ |
@@ -555,7 +555,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | photo-gallery | ❌ | ❌ |
 | php-code-widget | ✅ | ✅ |
 | php-compatibility-checker | ✅ | ✅ |
-| pinterest-for-woocommerce | ❌ | ✅ |
+| pinterest-for-woocommerce | ❌ | ❌ |
 | piotnet-addons-for-elementor | ✅ | ✅ |
 | pirate-forms | ✅ | ✅ |
 | pixelyoursite | ✅ | ✅ |
@@ -570,7 +570,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | portfolio-post-type | ✅ | ✅ |
 | post-and-page-builder | ✅ | ✅ |
 | post-duplicator | ✅ | ✅ |
-| post-grid | ❌ | ✅ |
+| post-grid | ✅ | ✅ |
 | post-smtp | ✅ | ✅ |
 | post-type-switcher | ✅ | ✅ |
 | post-types-order | ✅ | ✅ |
@@ -579,16 +579,16 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | powerpack-lite-for-elementor | ✅ | ✅ |
 | premium-addons-for-elementor | ✅ | ✅ |
 | presto-player | ✅ | ✅ |
-| pretty-link | ❌ | ✅ |
-| print-invoices-packing-slip-labels-for-woocommerce | ❌ | ✅ |
+| pretty-link | ✅ | ✅ |
+| print-invoices-packing-slip-labels-for-woocommerce | ❌ | ❌ |
 | printfriendly | ✅ | ✅ |
 | printful-shipping-for-woocommerce | ✅ | ✅ |
 | product-import-export-for-woo | ✅ | ✅ |
-| profile-builder | ❌ | ✅ |
+| profile-builder | ✅ | ✅ |
 | protect-uploads | ✅ | ✅ |
 | public-post-preview | ✅ | ✅ |
 | pubsubhubbub | ✅ | ✅ |
-| pymntpl-paypal-woocommerce | ❌ | ✅ |
+| pymntpl-paypal-woocommerce | ❌ | ❌ |
 | q2w3-fixed-widget | ✅ | ✅ |
 | qi-addons-for-elementor | ❌ | ❌ |
 | qi-blocks | ✅ | ✅ |
@@ -604,10 +604,10 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | real-time-find-and-replace | ✅ | ✅ |
 | really-simple-captcha | ✅ | ✅ |
 | really-simple-csv-importer | ✅ | ✅ |
-| really-simple-ssl | ❌ | ✅ |
+| really-simple-ssl | ✅ | ✅ |
 | recent-posts-widget-extended | ✅ | ✅ |
 | recent-posts-widget-with-thumbnails | ✅ | ✅ |
-| redirect-redirection | ✅ | ❌ |
+| redirect-redirection | ✅ | ✅ |
 | redirection | ✅ | ✅ |
 | redis-cache | ✅ | ✅ |
 | redux-framework | ✅ | ✅ |
@@ -702,7 +702,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | so-widgets-bundle | ✅ | ✅ |
 | social-icons-widget-by-wpzoom | ✅ | ✅ |
 | social-media-widget | ✅ | ✅ |
-| social-networks-auto-poster-facebook-twitter-g | ❌ | ✅ |
+| social-networks-auto-poster-facebook-twitter-g | ✅ | ❌ |
 | social-pug | ✅ | ✅ |
 | soliloquy-lite | ✅ | ✅ |
 | speedycache | ✅ | ✅ |
@@ -715,7 +715,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | statify | ✅ | ✅ |
 | sticky-header-effects-for-elementor | ✅ | ✅ |
 | sticky-menu-or-anything-on-scroll | ✅ | ✅ |
-| stop-spammer-registrations-plugin | ❌ | ❌ |
+| stop-spammer-registrations-plugin | ✅ | ✅ |
 | stop-user-enumeration | ✅ | ✅ |
 | stops-core-theme-and-plugin-updates | ✅ | ✅ |
 | stream | ✅ | ✅ |
@@ -742,20 +742,20 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | templates-patterns-collection | ✅ | ✅ |
 | temporary-login-without-password | ✅ | ✅ |
 | tenweb-speed-optimizer | ✅ | ✅ |
-| testimonial-free | ❌ | ✅ |
+| testimonial-free | ✅ | ✅ |
 | the-events-calendar | ✅ | ✅ |
 | the-plus-addons-for-elementor-page-builder | ✅ | ✅ |
 | the-post-grid | ✅ | ✅ |
 | theme-check | ✅ | ✅ |
 | theme-editor | ✅ | ✅ |
 | theme-my-login | ✅ | ✅ |
-| themegrill-demo-importer | ❌ | ✅ |
+| themegrill-demo-importer | ✅ | ✅ |
 | themeisle-companion | ✅ | ✅ |
 | themesflat-addons-for-elementor | ✅ | ✅ |
 | themify-portfolio-post | ✅ | ✅ |
-| thirstyaffiliates | ❌ | ✅ |
-| ti-woocommerce-wishlist | ❌ | ✅ |
-| tidio-live-chat | ❌ | ✅ |
+| thirstyaffiliates | ✅ | ✅ |
+| ti-woocommerce-wishlist | ❌ | ❌ |
+| tidio-live-chat | ✅ | ✅ |
 | tiktok-for-business | ✅ | ✅ |
 | timber-library | ✅ | ✅ |
 | timeline-widget-addon-for-elementor | ❌ | ❌ |
@@ -763,9 +763,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | tinymce-advanced | ✅ | ✅ |
 | title-remover | ✅ | ✅ |
 | to-top | ✅ | ✅ |
-| tracking-code-manager | ❌ | ❌ |
-| translatepress-multilingual | ❌ | ✅ |
-| tutor | ❌ | ✅ |
+| tracking-code-manager | ✅ | ✅ |
+| translatepress-multilingual | ✅ | ✅ |
+| tutor | ✅ | ✅ |
 | tuxedo-big-file-uploads | ✅ | ✅ |
 | two-factor | ❌ | ✅ |
 | uk-cookie-consent | ✅ | ✅ |
@@ -775,7 +775,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | ultimate-category-excluder | ✅ | ✅ |
 | ultimate-dashboard | ✅ | ✅ |
 | ultimate-member | ✅ | ✅ |
-| ultimate-post | ❌ | ✅ |
+| ultimate-post | ✅ | ✅ |
 | ultimate-responsive-image-slider | ✅ | ✅ |
 | ultimate-social-media-icons | ❌ | ✅ |
 | uncanny-automator | ✅ | ✅ |
@@ -799,7 +799,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | varnish-http-purge | ✅ | ✅ |
 | virtue-toolkit | ✅ | ✅ |
 | visibility-logic-elementor | ✅ | ✅ |
-| visitors-traffic-real-time-statistics | ❌ | ✅ |
+| visitors-traffic-real-time-statistics | ✅ | ✅ |
 | visual-footer-credit-remover | ✅ | ✅ |
 | visual-form-builder | ✅ | ✅ |
 | visual-portfolio | ✅ | ✅ |
@@ -812,8 +812,8 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wc-smart-cod | ✅ | ✅ |
 | wcboost-variation-swatches | ✅ | ✅ |
 | web-stories | ✅ | ✅ |
-| webappick-product-feed-for-woocommerce | ❌ | ✅ |
-| webp-converter-for-media | ❌ | ❌ |
+| webappick-product-feed-for-woocommerce | ❌ | ❌ |
+| webp-converter-for-media | ✅ | ✅ |
 | webp-express | ✅ | ✅ |
 | webp-uploads | ✅ | ✅ |
 | weglot | ✅ | ✅ |
@@ -828,47 +828,47 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | widget-logic | ✅ | ✅ |
 | widget-options | ✅ | ✅ |
 | wonderm00ns-simple-facebook-open-graph-tags | ✅ | ✅ |
-| woo-advanced-shipment-tracking | ❌ | ✅ |
+| woo-advanced-shipment-tracking | ❌ | ❌ |
 | woo-cart-abandonment-recovery | ❌ | ❌ |
 | woo-checkout-field-editor-pro | ✅ | ✅ |
 | woo-discount-rules | ❌ | ❌ |
 | woo-order-export-lite | ✅ | ✅ |
 | woo-permalink-manager | ✅ | ✅ |
 | woo-product-feed-pro | ✅ | ✅ |
-| woo-product-filter | ❌ | ✅ |
+| woo-product-filter | ❌ | ❌ |
 | woo-razorpay | ✅ | ✅ |
-| woo-smart-compare | ❌ | ✅ |
-| woo-smart-quick-view | ❌ | ✅ |
-| woo-smart-wishlist | ❌ | ✅ |
-| woo-stripe-payment | ❌ | ✅ |
-| woo-variation-gallery | ❌ | ✅ |
-| woo-variation-swatches | ❌ | ✅ |
+| woo-smart-compare | ❌ | ❌ |
+| woo-smart-quick-view | ❌ | ❌ |
+| woo-smart-wishlist | ❌ | ❌ |
+| woo-stripe-payment | ❌ | ❌ |
+| woo-variation-gallery | ❌ | ❌ |
+| woo-variation-swatches | ❌ | ❌ |
 | woocommerce | ❌ | ✅ |
 | woocommerce-advanced-free-shipping | ✅ | ✅ |
-| woocommerce-ajax-filters | ❌ | ✅ |
+| woocommerce-ajax-filters | ❌ | ❌ |
 | woocommerce-checkout-manager | ✅ | ✅ |
 | woocommerce-conversion-tracking | ❌ | ❌ |
 | woocommerce-correios | ✅ | ✅ |
 | woocommerce-currency-switcher | ✅ | ✅ |
 | woocommerce-customizer | ✅ | ✅ |
-| woocommerce-delivery-notes | ❌ | ✅ |
+| woocommerce-delivery-notes | ❌ | ❌ |
 | woocommerce-direct-checkout | ✅ | ✅ |
 | woocommerce-extra-checkout-fields-for-brazil | ✅ | ✅ |
-| woocommerce-gateway-stripe | ❌ | ✅ |
+| woocommerce-gateway-stripe | ❌ | ❌ |
 | woocommerce-germanized | ✅ | ✅ |
 | woocommerce-google-adwords-conversion-tracking-tag | ✅ | ✅ |
-| woocommerce-google-analytics-integration | ❌ | ✅ |
-| woocommerce-jetpack | ❌ | ✅ |
+| woocommerce-google-analytics-integration | ❌ | ❌ |
+| woocommerce-jetpack | ❌ | ❌ |
 | woocommerce-legacy-rest-api | ✅ | ✅ |
 | woocommerce-mercadopago | ❌ | ❌ |
 | woocommerce-multilingual | ✅ | ✅ |
-| woocommerce-payments | ❌ | ✅ |
-| woocommerce-paypal-payments | ❌ | ✅ |
-| woocommerce-pdf-invoices-packing-slips | ❌ | ✅ |
+| woocommerce-payments | ❌ | ❌ |
+| woocommerce-paypal-payments | ❌ | ❌ |
+| woocommerce-pdf-invoices-packing-slips | ❌ | ❌ |
 | woocommerce-products-filter | ❌ | ❌ |
-| woocommerce-services | ❌ | ✅ |
-| woocommerce-shipstation-integration | ❌ | ✅ |
-| woocommerce-square | ❌ | ✅ |
+| woocommerce-services | ❌ | ❌ |
+| woocommerce-shipstation-integration | ❌ | ❌ |
+| woocommerce-square | ❌ | ❌ |
 | woocustomizer | ✅ | ✅ |
 | woolentor-addons | ❌ | ❌ |
 | woosidebars | ✅ | ✅ |
@@ -890,7 +890,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wp-asset-clean-up | ✅ | ✅ |
 | wp-bulk-delete | ✅ | ✅ |
 | wp-call-button | ✅ | ✅ |
-| wp-carousel-free | ❌ | ✅ |
+| wp-carousel-free | ✅ | ✅ |
 | wp-clone-by-wp-academy | ✅ | ✅ |
 | wp-cloudflare-page-cache | ✅ | ✅ |
 | wp-consent-api | ✅ | ✅ |
@@ -912,9 +912,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wp-force-login | ✅ | ✅ |
 | wp-force-ssl | ❌ | ❌ |
 | wp-google-map-plugin | ✅ | ✅ |
-| wp-google-maps | ❌ | ✅ |
+| wp-google-maps | ✅ | ✅ |
 | wp-headers-and-footers | ✅ | ✅ |
-| wp-hide-security-enhancer | ❌ | ❌ |
+| wp-hide-security-enhancer | ❌ | ✅ |
 | wp-htaccess-editor | ✅ | ✅ |
 | wp-import-export-lite | ✅ | ✅ |
 | wp-job-manager | ✅ | ✅ |
@@ -948,7 +948,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wp-reset | ✅ | ✅ |
 | wp-responsive-menu | ✅ | ✅ |
 | wp-retina-2x | ✅ | ✅ |
-| wp-reviews-plugin-for-google | ✅ | ❌ |
+| wp-reviews-plugin-for-google | ✅ | ✅ |
 | wp-revisions-control | ✅ | ✅ |
 | wp-rollback | ✅ | ✅ |
 | wp-rss-aggregator | ✅ | ✅ |
@@ -968,7 +968,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wp-super-cache | ✅ | ✅ |
 | wp-sweep | ✅ | ✅ |
 | wp-table-builder | ✅ | ✅ |
-| wp-ulike | ❌ | ✅ |
+| wp-ulike | ✅ | ✅ |
 | wp-user-avatar | ✅ | ✅ |
 | wp-video-lightbox | ✅ | ✅ |
 | wp-whatsapp | ✅ | ✅ |
@@ -986,7 +986,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wpide | ✅ | ✅ |
 | wps-hide-login | ✅ | ✅ |
 | wps-limit-login | ✅ | ✅ |
-| wptouch | ❌ | ❌ |
+| wptouch | ✅ | ✅ |
 | wpvivid-backuprestore | ✅ | ✅ |
 | wt-woocommerce-sequential-order-numbers | ✅ | ✅ |
 | xml-sitemap-feed | ✅ | ✅ |
@@ -999,7 +999,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | yith-woocommerce-ajax-search | ❌ | ❌ |
 | yith-woocommerce-catalog-mode | ❌ | ❌ |
 | yith-woocommerce-compare | ❌ | ❌ |
-| yith-woocommerce-quick-view | ❌ | ✅ |
+| yith-woocommerce-quick-view | ❌ | ❌ |
 | yith-woocommerce-wishlist | ❌ | ❌ |
 | yith-woocommerce-zoom-magnifier | ❌ | ❌ |
 | yoast-seo-settings-xml-csv-import | ✅ | ✅ |
