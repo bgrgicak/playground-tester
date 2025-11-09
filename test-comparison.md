@@ -4,9 +4,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 ## Stats
 | Year | Error Rate |
 |------|------------|
-| 2024 | 11.00% |
+| 2024 | 10.00% |
 | 2025 | 8.00% |
-| Improvement | 27.00% |
+| Improvement | 20.00% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -115,7 +115,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | block-bad-queries | ✅ | ✅ |
 | block-options | ✅ | ✅ |
 | blocks-animation | ✅ | ✅ |
-| blocksy-companion | ❌ | ✅ |
+| blocksy-companion | ✅ | ✅ |
 | blog2social | ✅ | ✅ |
 | blogger-importer | ✅ | ✅ |
 | blogvault-real-time-backup | ✅ | ✅ |
@@ -471,7 +471,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | manage-notification-emails | ✅ | ✅ |
 | mappress-google-maps-for-wordpress | ✅ | ✅ |
 | master-slider | ✅ | ✅ |
-| matomo | ❌ | ❌ |
+| matomo | ✅ | ✅ |
 | maxbuttons | ✅ | ✅ |
 | media-cleaner | ✅ | ✅ |
 | media-file-renamer | ✅ | ✅ |
