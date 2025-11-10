@@ -60,6 +60,60 @@ pluginsToTest.forEach((plugin) => {
       website,
       wordpress,
     }) => {
+      /**
+       * Activates plugins and ensures we're back on the plugins page.
+       * Some plugins redirect to custom pages after activation.
+       */
+      const activatePluginsAndReturnToPluginsPage = async (
+        pluginSlugs: string[]
+      ) => {
+        const url = "/wp-admin/plugins.php";
+
+        for (const pluginSlug of pluginSlugs) {
+          // Activate the plugin
+          const activateLink = wordpress.locator(`#activate-${pluginSlug}`);
+          await activateLink.click();
+
+          // Wait for the page to reload after activation
+          await website.waitForNestedIframes(website.page);
+        }
+
+        // Keep reloading until we see the h1 title "Plugins" (up to 10 attempts)
+        const urlInput = website.page.getByLabel(
+          "URL to visit in the WordPress"
+        );
+        await expect(
+          urlInput,
+          `The Playground Website didn't load correctly. The URL input is not visible.`
+        ).toBeVisible();
+
+        let attempts = 0;
+        const maxAttempts = 10;
+        while (attempts < maxAttempts) {
+          attempts++;
+          const h1 = wordpress.locator("h1").first();
+          const h1Text = await h1.textContent();
+
+          if (h1Text === "Plugins") {
+            break;
+          }
+
+          if (attempts < maxAttempts) {
+            // Add a small delay to avoid overwhelming the server
+            await website.page.waitForTimeout(1000);
+            await urlInput.fill(url);
+            await urlInput.press("Enter");
+            await website.waitForNestedIframes(website.page);
+          }
+        }
+
+        const h1 = wordpress.locator("h1").first();
+        await expect(
+          h1,
+          `Failed to load plugins page after ${maxAttempts} attempts`
+        ).toHaveText("Plugins");
+      };
+
       const playgroundWpVersion = playgroundUrl.wpVersion;
       const minWpVersion = plugin.requires
         ? parseFloat(plugin.requires)
@@ -97,76 +151,26 @@ pluginsToTest.forEach((plugin) => {
         }
       }
       blueprint.steps.push(pluginInstallStep(slug));
+      console.log(JSON.stringify(blueprint));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
-      // Activate all plugins
-      await wordpress.locator("#cb-select-all-1").check();
-      await wordpress
-        .locator("#bulk-action-selector-top")
-        .selectOption("activate-selected");
-      await wordpress.locator("#doaction").click();
-
-      // wait for the page to reload after bulk activation
-      await website.waitForNestedIframes(website.page);
-
-      /**
-       * Some plugins redirect to custom pages after activation.
-       * Keep reloading until we see the h1 title "Plugins" (up to 10 attempts).
-       *
-       * We do this because await website.waitForNestedIframes sometimes doesn't
-       * wait for the full page load after activation.
-       */
-      const urlInput = await website.page.getByLabel(
-        "URL to visit in the WordPress"
-      );
-      await expect(
-        urlInput,
-        `The Playground Website didn't load correctly. The URL input for ${plugin.slug} is not visible.`
-      ).toBeVisible();
-
-      let attempts = 0;
-      const maxAttempts = 10;
-      while (attempts < maxAttempts) {
-        attempts++;
-        const h1 = wordpress.locator("h1").first();
-        const h1Text = await h1.textContent();
-
-        if (h1Text === "Plugins") {
-          break;
-        }
-
-        if (attempts < maxAttempts) {
-          // Add a small delay to avoid overwhelming the server
-          await website.page.waitForTimeout(1000);
-          await urlInput.fill(url);
-          await urlInput.press("Enter");
-          await website.waitForNestedIframes(website.page);
-        }
+      // First activate dependencies if they exist
+      if (plugin.requires_plugins && plugin.requires_plugins.length > 0) {
+        await activatePluginsAndReturnToPluginsPage(plugin.requires_plugins);
       }
 
-      const h1 = wordpress.locator("h1").first();
-      await expect(
-        h1,
-        `Failed to load plugins page for ${plugin.slug} after ${maxAttempts} attempts`
-      ).toHaveText("Plugins");
+      // Now activate the main plugin
+      await activatePluginsAndReturnToPluginsPage([slug]);
 
       /**
        * Check that the plugin is activated by looking for the Deactivate button
        */
-      const deactivateButtonByLabel = await wordpress.getByLabel(
-        `Deactivate ${plugin.name}`
-      );
       const deactivateButtonById = await wordpress.locator(
         `#deactivate-${slug}`
       );
-      const deactivateButtonByHrefStart = await wordpress.locator(
-        `a[href^="plugins.php?action=deactivate&plugin=${slug}"]`
-      );
       await expect(
-        deactivateButtonByHrefStart
-          .or(deactivateButtonById)
-          .or(deactivateButtonByLabel),
+        deactivateButtonById,
         `The plugin ${plugin.name} isn't activated.`
       ).toHaveText("Deactivate");
     });
