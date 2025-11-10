@@ -51,6 +51,11 @@ function guessDependencies(slug: string): string[] {
     dependencies.push("elementor");
   }
 
+  // If yith install woocommerce
+  if (slug.startsWith("yith")) {
+    dependencies.push("woocommerce");
+  }
+
   return dependencies;
 }
 
@@ -161,7 +166,6 @@ pluginsToTest.forEach((plugin) => {
         }
       }
       blueprint.steps.push(pluginInstallStep(slug));
-      console.log(JSON.stringify(blueprint));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
