@@ -22,6 +22,38 @@ const pluginsToTest = JSON.parse(
   )
 );
 
+// Guess plugin dependencies based on slug patterns
+function guessDependencies(slug: string): string[] {
+  const dependencies: string[] = [];
+
+  // Pattern: contains "contact-form-7" but is not exactly "contact-form-7"
+  if (slug.includes("contact-form-7") && slug !== "contact-form-7") {
+    dependencies.push("contact-form-7");
+  }
+
+  // Pattern: contains "woo-" but is not exactly "woocommerce"
+  if (slug.includes("woo-") && slug !== "woocommerce") {
+    dependencies.push("woocommerce");
+  }
+
+  // If dynamic-visibility-for-elementor install elementor
+  if (slug === "dynamic-visibility-for-elementor") {
+    dependencies.push("elementor");
+  }
+
+  return dependencies;
+}
+
+// Apply dependency guessing to plugins with empty requires_plugins
+pluginsToTest.forEach((plugin: any) => {
+  if (!plugin.requires_plugins || plugin.requires_plugins.length === 0) {
+    const guessedDeps = guessDependencies(plugin.slug);
+    if (guessedDeps.length > 0) {
+      plugin.requires_plugins = guessedDeps;
+    }
+  }
+});
+
 pluginsToTest.forEach((plugin) => {
   playgroundUrls.forEach((playgroundUrl) => {
     test(`${playgroundUrl.name} - ${plugin.slug} should load`, async ({
