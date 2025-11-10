@@ -408,7 +408,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | insert-php | ✅ | ✅ |
 | insert-php-code-snippet | ✅ | ✅ |
 | insta-gallery | ✅ | ✅ |
-| instagram-feed | ❌ | ✅ |
+| instagram-feed | ✅ | ✅ |
 | instagram-slider-widget | ✅ | ✅ |
 | instagram-widget-by-wpzoom | ✅ | ✅ |
 | instant-images | ✅ | ✅ |
@@ -471,7 +471,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | manage-notification-emails | ✅ | ✅ |
 | mappress-google-maps-for-wordpress | ✅ | ✅ |
 | master-slider | ✅ | ✅ |
-| matomo | ✅ | ✅ |
+| matomo | ❌ | ❌ |
 | maxbuttons | ✅ | ✅ |
 | media-cleaner | ✅ | ✅ |
 | media-file-renamer | ✅ | ✅ |
@@ -702,7 +702,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | so-widgets-bundle | ✅ | ✅ |
 | social-icons-widget-by-wpzoom | ✅ | ✅ |
 | social-media-widget | ✅ | ✅ |
-| social-networks-auto-poster-facebook-twitter-g | ✅ | ❌ |
+| social-networks-auto-poster-facebook-twitter-g | ✅ | ✅ |
 | social-pug | ✅ | ✅ |
 | soliloquy-lite | ✅ | ✅ |
 | speedycache | ✅ | ✅ |
