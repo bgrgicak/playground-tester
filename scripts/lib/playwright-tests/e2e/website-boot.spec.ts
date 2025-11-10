@@ -41,6 +41,16 @@ function guessDependencies(slug: string): string[] {
     dependencies.push("elementor");
   }
 
+  // If oneclick-whatsapp-order install woocommerce
+  if (slug === "oneclick-whatsapp-order") {
+    dependencies.push("woocommerce");
+  }
+
+  // if name contains elementor add elementor as dependency
+  if (slug.includes("elementor") && slug !== "elementor") {
+    dependencies.push("elementor");
+  }
+
   return dependencies;
 }
 
@@ -166,16 +176,13 @@ pluginsToTest.forEach((plugin) => {
       /**
        * Check that the plugin is activated by looking for the Deactivate button
        */
-      const pluginRow = wordpress.locator(
-        `tr.active[data-slug="${slug}"]`
-      );
-      const deactivateButton = pluginRow.locator(
-        'a:has-text("Deactivate")'
+      const deactivateButtonById = await wordpress.locator(
+        `#deactivate-${slug}`
       );
       await expect(
-        deactivateButton,
+        deactivateButtonById,
         `The plugin ${plugin.name} isn't activated.`
-      ).toBeVisible({ timeout: 60000 });
+      ).toHaveText("Deactivate");
     });
   });
 });
