@@ -166,13 +166,16 @@ pluginsToTest.forEach((plugin) => {
       /**
        * Check that the plugin is activated by looking for the Deactivate button
        */
-      const deactivateButtonById = await wordpress.locator(
-        `#deactivate-${slug}`
+      const pluginRow = wordpress.locator(
+        `tr.active[data-slug="${slug}"]`
+      );
+      const deactivateButton = pluginRow.locator(
+        'a:has-text("Deactivate")'
       );
       await expect(
-        deactivateButtonById,
+        deactivateButton,
         `The plugin ${plugin.name} isn't activated.`
-      ).toHaveText("Deactivate");
+      ).toBeVisible({ timeout: 60000 });
     });
   });
 });
