@@ -52,6 +52,11 @@ function guessDependencies(slug: string): string[] {
     dependencies.push("contact-form-7");
   }
 
+  // if cf7-conditional-fields add contact-form-7 as dependency
+  if (slug === "cf7-conditional-fields") {
+    dependencies.push("contact-form-7");
+  }
+
   // Pattern: contains "woo-" but is not exactly "woocommerce"
   if (slug.includes("woo-") && slug !== "woocommerce") {
     dependencies.push("woocommerce");
@@ -255,10 +260,12 @@ pluginsToTest.forEach((plugin) => {
       let deactivateButtonFound = false;
 
       while (checkCount < maxChecks && !deactivateButtonFound) {
-        // Match either slug/ (folder plugin) or slug.php (single-file plugin)
-        // Using %2F for URL-encoded forward slash
+        // Match either:
+        // - slug/ (folder plugin, URL-encoded as %2F)
+        // - slug.php (single-file plugin)
+        // - #deactivate-slug (WordPress standard ID)
         const deactivateButton = wordpress.locator(
-          `a[href*="plugin=${slug}%2F"], a[href*="plugin=${slug}.php"]`
+          `a[href*="plugin=${slug}%2F"], a[href*="plugin=${slug}.php"], #deactivate-${slug}`
         );
         if (await deactivateButton.count()) {
           deactivateButtonFound = true;
