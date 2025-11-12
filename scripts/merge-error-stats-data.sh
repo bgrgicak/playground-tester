@@ -52,8 +52,8 @@ function generate_comparison_stats() {
         map({
             title: .value[0].title,
             slug: .value[0].slug,
-            result_2024: (.value | map(select(.year == "2024"))[0] | if .ok then "ok" else .error end),
-            result_2025: (.value | map(select(.year == "2025"))[0] | if .ok then "ok" else .error end)
+            result_2024: (.value | map(select(.year == "2024"))[0] | if . then (if .ok then "ok" else .error end) else null end),
+            result_2025: (.value | map(select(.year == "2025"))[0] | if . then (if .ok then "ok" else .error end) else null end)
         })
         ' "$1"
 }
