@@ -215,7 +215,7 @@ pluginsToTest.forEach((plugin) => {
       }
       blueprint.steps.push(pluginInstallStep(slug));
 
-      console.log(JSON.stringify(blueprint));
+      // console.log(JSON.stringify(blueprint));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
