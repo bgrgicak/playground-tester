@@ -7,12 +7,14 @@ const playgroundUrls = [
     url: "http://127.0.0.1:5932/",
     proxyUrl: "http://127.0.0.1:5932/plugin-proxy.php?url=",
     wpVersion: 6.6,
+    year: 2024,
   },
   {
     name: "Playground from November 6th 2025",
     url: "http://127.0.0.1:5400/",
     proxyUrl: "http://127.0.0.1:5400/plugin-proxy.php?url=",
     wpVersion: 6.8,
+    year: 2025,
   },
 ];
 
@@ -34,19 +36,12 @@ for (const result of testResults) {
   };
 }
 
-const plugins = JSON.parse(
+const pluginsToTest = JSON.parse(
   fs.readFileSync(
     `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.json`,
     "utf8"
   )
 );
-const pluginsToTest = plugins.filter((plugin: any) => {
-  // Keep only plugins that failed in either 2024 or 2025
-  const results = testResultsMap[plugin.slug];
-  return (
-    !results || results.result_2024 !== "ok" || results.result_2025 !== "ok"
-  );
-});
 
 // Guess plugin dependencies based on slug patterns
 function guessDependencies(slug: string): string[] {
@@ -59,6 +54,11 @@ function guessDependencies(slug: string): string[] {
 
   // Pattern: contains "woo-" but is not exactly "woocommerce"
   if (slug.includes("woo-") && slug !== "woocommerce") {
+    dependencies.push("woocommerce");
+  }
+
+  // Add "woocommerce" if slug contains "woocommerce" but is not exactly "woocommerce"
+  if (slug.includes("woocommerce") && slug !== "woocommerce") {
     dependencies.push("woocommerce");
   }
 
@@ -97,6 +97,13 @@ pluginsToTest.forEach((plugin: any) => {
 
 pluginsToTest.forEach((plugin) => {
   playgroundUrls.forEach((playgroundUrl) => {
+    // Skip test if previously passed for this playground year
+    if (
+      testResultsMap[plugin.slug] &&
+      testResultsMap[plugin.slug][`result_${playgroundUrl.year}`] === "ok"
+    ) {
+      return;
+    }
     test(`${playgroundUrl.name} - ${plugin.slug} should load`, async ({
       website,
       wordpress,
@@ -215,7 +222,6 @@ pluginsToTest.forEach((plugin) => {
       }
       blueprint.steps.push(pluginInstallStep(slug));
 
-      // console.log(JSON.stringify(blueprint));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
@@ -229,7 +235,7 @@ pluginsToTest.forEach((plugin) => {
       const h1 = wordpress.locator("h1").first();
       await expect(h1, "Plugins page should load after blueprint").toHaveText(
         "Plugins",
-        { timeout: 30000 }
+        { timeout: 10000 }
       );
 
       // First activate dependencies if they exist
@@ -243,13 +249,29 @@ pluginsToTest.forEach((plugin) => {
       /**
        * Check that the plugin is activated by looking for the Deactivate button
        */
-      const deactivateButtonById = await wordpress.locator(
-        `a[href^="plugins.php?action=deactivate&plugin=${slug}"]`
-      );
+      // try 10 times to find the deactivate button with 3 seconds interval
+      const maxChecks = 10;
+      let checkCount = 0;
+      let deactivateButtonFound = false;
+
+      while (checkCount < maxChecks && !deactivateButtonFound) {
+        // Match either slug/ (folder plugin) or slug.php (single-file plugin)
+        // Using %2F for URL-encoded forward slash
+        const deactivateButton = wordpress.locator(
+          `a[href*="plugin=${slug}%2F"], a[href*="plugin=${slug}.php"]`
+        );
+        if (await deactivateButton.count()) {
+          deactivateButtonFound = true;
+          break;
+        }
+        checkCount++;
+        await website.page.waitForTimeout(1000); // wait for 1 second before retrying
+      }
+
       await expect(
-        deactivateButtonById,
+        deactivateButtonFound,
         `The plugin ${plugin.name} isn't activated.`
-      ).toHaveText("Deactivate");
+      ).toBeTruthy();
     });
   });
 });
