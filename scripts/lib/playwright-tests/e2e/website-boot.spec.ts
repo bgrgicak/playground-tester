@@ -5,22 +5,48 @@ const playgroundUrls = [
   {
     name: "Playground from November 6th 2024",
     url: "http://127.0.0.1:5932/",
+    proxyUrl: "http://127.0.0.1:5932/plugin-proxy.php?url=",
     wpVersion: 6.6,
   },
   {
     name: "Playground from November 6th 2025",
     url: "http://127.0.0.1:5400/",
+    proxyUrl: "http://127.0.0.1:5400/plugin-proxy.php?url=",
     wpVersion: 6.8,
   },
 ];
 
 const currentDir = process.cwd();
-const pluginsToTest = JSON.parse(
+
+// playground-2024-2025-error-comparison.json
+const testResults = JSON.parse(
+  fs.readFileSync(
+    `${currentDir}/playground-2024-2025-error-comparison.json`,
+    "utf8"
+  )
+);
+const testResultsMap: {
+  [slug: string]: { result_2024: string; result_2025: string };
+} = {};
+for (const result of testResults) {
+  testResultsMap[result.slug] = {
+    ...result,
+  };
+}
+
+const plugins = JSON.parse(
   fs.readFileSync(
     `${currentDir}/scripts/lib/playwright-tests/plugins-to-test.json`,
     "utf8"
   )
 );
+const pluginsToTest = plugins.filter((plugin: any) => {
+  // Keep only plugins that failed in either 2024 or 2025
+  const results = testResultsMap[plugin.slug];
+  return (
+    !results || results.result_2024 !== "ok" || results.result_2025 !== "ok"
+  );
+});
 
 // Guess plugin dependencies based on slug patterns
 function guessDependencies(slug: string): string[] {
@@ -85,12 +111,35 @@ pluginsToTest.forEach((plugin) => {
         const url = "/wp-admin/plugins.php";
 
         for (const pluginSlug of pluginSlugs) {
-          // Activate the plugin
-          const activateLink = wordpress.locator(`#activate-${pluginSlug}`);
-          await activateLink.click();
-
           // Wait for the page to reload after activation
           await website.waitForNestedIframes(website.page);
+
+          // Retry activation because the page might not be ready
+          let activationSuccess = false;
+          const maxAttempts = 10;
+          let attempts = 0;
+
+          while (attempts < maxAttempts && !activationSuccess) {
+            attempts++;
+            try {
+              const activateLink = wordpress.locator(
+                `a[href^="plugins.php?action=activate&plugin=${pluginSlug}"]`
+              );
+              await activateLink.click({ timeout: 5000 }); // 5-second timeout per attempt
+              activationSuccess = true;
+            } catch (error) {
+              if (attempts < maxAttempts) {
+                await website.page.waitForTimeout(1000);
+                await website.waitForNestedIframes(website.page);
+              }
+            }
+          }
+
+          if (!activationSuccess) {
+            throw new Error(
+              `Failed to activate ${pluginSlug} after ${maxAttempts} attempts`
+            );
+          }
         }
 
         // Keep reloading until we see the h1 title "Plugins" (up to 10 attempts)
@@ -129,14 +178,13 @@ pluginsToTest.forEach((plugin) => {
         ).toHaveText("Plugins");
       };
 
-      const playgroundWpVersion = playgroundUrl.wpVersion;
+      let playgroundWpVersion: string | number = playgroundUrl.wpVersion;
       const minWpVersion = plugin.requires
         ? parseFloat(plugin.requires)
         : playgroundWpVersion;
-      expect(
-        minWpVersion,
-        `Min WP version for ${plugin.slug} is ${minWpVersion}`
-      ).toBeLessThanOrEqual(playgroundWpVersion);
+      if (minWpVersion > playgroundWpVersion) {
+        playgroundWpVersion = `${playgroundUrl.proxyUrl}https://wordpress.org/wordpress-${minWpVersion}.zip`;
+      }
 
       const url = "/wp-admin/plugins.php";
       const blueprint = {
@@ -166,8 +214,23 @@ pluginsToTest.forEach((plugin) => {
         }
       }
       blueprint.steps.push(pluginInstallStep(slug));
+
+      console.log(JSON.stringify(blueprint));
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
+
+      // Explicitly navigate to plugins page to ensure it's fully loaded with installed plugins
+      const urlInput = website.page.getByLabel("URL to visit in the WordPress");
+      await urlInput.fill(url);
+      await urlInput.press("Enter");
+      await website.waitForNestedIframes();
+
+      // Wait for plugins page to load
+      const h1 = wordpress.locator("h1").first();
+      await expect(h1, "Plugins page should load after blueprint").toHaveText(
+        "Plugins",
+        { timeout: 30000 }
+      );
 
       // First activate dependencies if they exist
       if (plugin.requires_plugins && plugin.requires_plugins.length > 0) {
@@ -181,7 +244,7 @@ pluginsToTest.forEach((plugin) => {
        * Check that the plugin is activated by looking for the Deactivate button
        */
       const deactivateButtonById = await wordpress.locator(
-        `#deactivate-${slug}`
+        `a[href^="plugins.php?action=deactivate&plugin=${slug}"]`
       );
       await expect(
         deactivateButtonById,
