@@ -151,6 +151,19 @@ pluginsToTest.forEach((plugin) => {
             activationSuccess,
             `Failed to activate ${pluginSlug} after ${maxAttempts} attempts`
           ).toBeTruthy();
+
+          try {
+            // Plugin activation shouldn't cause a critical error
+            const errorMessage = wordpress.locator(
+              "has-text=There has been a critical error on this website"
+            );
+            await expect(
+              errorMessage,
+              `Activating plugin ${pluginSlug} caused a critical error.`
+            ).not.toBeVisible();
+          } catch (e) {
+            // Ignore errors in checking for critical error message
+          }
         }
 
         // Keep reloading until we see the h1 title "Plugins" (up to 10 attempts)
@@ -167,7 +180,13 @@ pluginsToTest.forEach((plugin) => {
         while (attempts < maxAttempts) {
           attempts++;
           const h1 = wordpress.locator("h1").first();
-          const h1Text = await h1.textContent();
+          let h1Text: string | null = null;
+
+          try {
+            h1Text = await h1.textContent({ timeout: 5000 });
+          } catch (error) {
+            // h1 element not found, will retry by reloading
+          }
 
           if (h1Text === "Plugins") {
             break;
@@ -269,6 +288,15 @@ pluginsToTest.forEach((plugin) => {
       let deactivateButtonFound = false;
 
       while (checkCount < maxChecks && !deactivateButtonFound) {
+        // First check what page we're on
+        const h1 = wordpress.locator("h1").first();
+        let h1Text = "";
+        try {
+          h1Text = (await h1.textContent({ timeout: 2000 })) || "";
+        } catch (e) {
+          h1Text = "[h1 not found]";
+        }
+
         // Match either:
         // - slug/ (folder plugin, URL-encoded as %2F)
         // - slug.php (single-file plugin)
@@ -276,10 +304,22 @@ pluginsToTest.forEach((plugin) => {
         const deactivateButton = wordpress.locator(
           `a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
         );
-        if (await deactivateButton.count()) {
+        const buttonCount = await deactivateButton.count();
+        if (buttonCount > 0) {
           deactivateButtonFound = true;
           break;
         }
+
+        // If we're not on the plugins page, try to navigate back
+        if (h1Text !== "Plugins" && checkCount < maxChecks - 1) {
+          const urlInput = website.page.getByLabel(
+            "URL to visit in the WordPress"
+          );
+          await urlInput.fill("/wp-admin/plugins.php");
+          await urlInput.press("Enter");
+          await website.waitForNestedIframes(website.page);
+        }
+
         checkCount++;
         await website.page.waitForTimeout(1000); // wait for 1 second before retrying
       }

@@ -2798,8 +2798,8 @@
   {
     "title": "Playground from November 6th 2024 - matomo should load",
     "slug": "matomo",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() "
+    "result_2024": "Error: expect.not.toBeVisible: Unknown engine \"has-text\" while parsing selector has-text=There has been a critical error on this website Call log:   - expect.not.toBeVisible with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('has-text=There has been a critical error on this website') ",
+    "result_2025": "Error: expect.not.toBeVisible: Unknown engine \"has-text\" while parsing selector has-text=There has been a critical error on this website Call log:   - expect.not.toBeVisible with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('has-text=There has been a critical error on this website') "
   },
   {
     "title": "Playground from November 6th 2024 - maxbuttons should load",
