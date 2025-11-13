@@ -254,7 +254,7 @@
   {
     "title": "Playground from November 6th 2024 - advanced-woo-search should load",
     "slug": "advanced-woo-search",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -290,7 +290,7 @@
   {
     "title": "Playground from November 6th 2024 - ajax-search-for-woocommerce should load",
     "slug": "ajax-search-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -860,13 +860,13 @@
   {
     "title": "Playground from November 6th 2024 - cf7-conditional-fields should load",
     "slug": "cf7-conditional-fields",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - cf7-google-sheets-connector should load",
     "slug": "cf7-google-sheets-connector",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -1082,19 +1082,19 @@
   {
     "title": "Playground from November 6th 2024 - contact-form-7-add-confirm should load",
     "slug": "contact-form-7-add-confirm",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "Error: Failed to activate contact-form-7 after 10 attempts"
+    "result_2024": "ok",
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - contact-form-7-dynamic-text-extension should load",
     "slug": "contact-form-7-dynamic-text-extension",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - contact-form-7-honeypot should load",
     "slug": "contact-form-7-honeypot",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -1106,13 +1106,13 @@
   {
     "title": "Playground from November 6th 2024 - contact-form-7-mailchimp-extension should load",
     "slug": "contact-form-7-mailchimp-extension",
-    "result_2024": "Error: Failed to activate contact-form-7-mailchimp-extension after 10 attempts",
-    "result_2025": "Error: Failed to activate contact-form-7 after 10 attempts"
+    "result_2024": "ok",
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - contact-form-7-multi-step-module should load",
     "slug": "contact-form-7-multi-step-module",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -1484,7 +1484,7 @@
   {
     "title": "Playground from November 6th 2024 - dokan-lite should load",
     "slug": "dokan-lite",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -1850,7 +1850,7 @@
   {
     "title": "Playground from November 6th 2024 - facebook-for-woocommerce should load",
     "slug": "facebook-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -2150,7 +2150,7 @@
   {
     "title": "Playground from November 6th 2024 - google-listings-and-ads should load",
     "slug": "google-listings-and-ads",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -2696,13 +2696,13 @@
   {
     "title": "Playground from November 6th 2024 - kliken-ads-pixel-for-meta should load",
     "slug": "kliken-ads-pixel-for-meta",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - kliken-marketing-for-google should load",
     "slug": "kliken-marketing-for-google",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -2864,7 +2864,7 @@
   {
     "title": "Playground from November 6th 2024 - mailchimp-for-woocommerce should load",
     "slug": "mailchimp-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible ",
     "result_2025": "ok"
   },
   {
@@ -3098,7 +3098,7 @@
   {
     "title": "Playground from November 6th 2024 - mollie-payments-for-woocommerce should load",
     "slug": "mollie-payments-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -3278,7 +3278,7 @@
   {
     "title": "Playground from November 6th 2024 - oneclick-whatsapp-order should load",
     "slug": "oneclick-whatsapp-order",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -3482,7 +3482,7 @@
   {
     "title": "Playground from November 6th 2024 - pinterest-for-woocommerce should load",
     "slug": "pinterest-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -3638,7 +3638,7 @@
   {
     "title": "Playground from November 6th 2024 - print-invoices-packing-slip-labels-for-woocommerce should load",
     "slug": "print-invoices-packing-slip-labels-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -3692,7 +3692,7 @@
   {
     "title": "Playground from November 6th 2024 - pymntpl-paypal-woocommerce should load",
     "slug": "pymntpl-paypal-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -4748,7 +4748,7 @@
   {
     "title": "Playground from November 6th 2024 - ti-woocommerce-wishlist should load",
     "slug": "ti-woocommerce-wishlist",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5114,7 +5114,7 @@
   {
     "title": "Playground from November 6th 2024 - webappick-product-feed-for-woocommerce should load",
     "slug": "webappick-product-feed-for-woocommerce",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5210,19 +5210,19 @@
   {
     "title": "Playground from November 6th 2024 - woo-advanced-shipment-tracking should load",
     "slug": "woo-advanced-shipment-tracking",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woo-bulk-editor should load",
     "slug": "woo-bulk-editor",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woo-cart-abandonment-recovery should load",
     "slug": "woo-cart-abandonment-recovery",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5234,7 +5234,7 @@
   {
     "title": "Playground from November 6th 2024 - woo-discount-rules should load",
     "slug": "woo-discount-rules",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5252,7 +5252,7 @@
   {
     "title": "Playground from November 6th 2024 - woo-preview-emails should load",
     "slug": "woo-preview-emails",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5264,7 +5264,7 @@
   {
     "title": "Playground from November 6th 2024 - woo-product-filter should load",
     "slug": "woo-product-filter",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5276,25 +5276,25 @@
   {
     "title": "Playground from November 6th 2024 - woo-smart-compare should load",
     "slug": "woo-smart-compare",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woo-smart-quick-view should load",
     "slug": "woo-smart-quick-view",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woo-smart-wishlist should load",
     "slug": "woo-smart-wishlist",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woo-stripe-payment should load",
     "slug": "woo-stripe-payment",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5306,7 +5306,7 @@
   {
     "title": "Playground from November 6th 2024 - woo-variation-swatches should load",
     "slug": "woo-variation-swatches",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5324,7 +5324,7 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-ajax-filters should load",
     "slug": "woocommerce-ajax-filters",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5378,7 +5378,7 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-gateway-stripe should load",
     "slug": "woocommerce-gateway-stripe",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5402,7 +5402,7 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-jetpack should load",
     "slug": "woocommerce-jetpack",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5420,7 +5420,7 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-mercadopago should load",
     "slug": "woocommerce-mercadopago",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
     "result_2025": "ok"
   },
   {
@@ -5432,25 +5432,25 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-payments should load",
     "slug": "woocommerce-payments",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-paypal-payments should load",
     "slug": "woocommerce-paypal-payments",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-pdf-invoices-packing-slips should load",
     "slug": "woocommerce-pdf-invoices-packing-slips",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-products-filter should load",
     "slug": "woocommerce-products-filter",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5486,7 +5486,7 @@
   {
     "title": "Playground from November 6th 2024 - woolentor-addons should load",
     "slug": "woolentor-addons",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -5534,7 +5534,7 @@
   {
     "title": "Playground from November 6th 2024 - worker should load",
     "slug": "worker",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible ",
     "result_2025": "ok"
   },
   {
@@ -6158,7 +6158,7 @@
   {
     "title": "Playground from November 6th 2024 - wpcf7-redirect should load",
     "slug": "wpcf7-redirect",
-    "result_2024": "Error: Failed to activate contact-form-7 after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -6278,37 +6278,37 @@
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-ajax-navigation should load",
     "slug": "yith-woocommerce-ajax-navigation",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-ajax-search should load",
     "slug": "yith-woocommerce-ajax-search",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-catalog-mode should load",
     "slug": "yith-woocommerce-catalog-mode",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-compare should load",
     "slug": "yith-woocommerce-compare",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-quick-view should load",
     "slug": "yith-woocommerce-quick-view",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - yith-woocommerce-wishlist should load",
     "slug": "yith-woocommerce-wishlist",
-    "result_2024": "Error: Failed to activate woocommerce after 10 attempts",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
