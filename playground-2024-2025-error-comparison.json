@@ -168,12 +168,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - advanced-backgrounds should load",
-    "slug": "advanced-backgrounds",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - advanced-cf7-db should load",
     "slug": "advanced-cf7-db",
     "result_2024": "ok",
@@ -246,12 +240,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - advanced-responsive-video-embedder should load",
-    "slug": "advanced-responsive-video-embedder",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - advanced-woo-search should load",
     "slug": "advanced-woo-search",
     "result_2024": "ok",
@@ -260,12 +248,6 @@
   {
     "title": "Playground from November 6th 2024 - advanced-wp-reset should load",
     "slug": "advanced-wp-reset",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - ag-custom-admin should load",
-    "slug": "ag-custom-admin",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -390,12 +372,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - antivirus should load",
-    "slug": "antivirus",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - anywhere-elementor should load",
     "slug": "anywhere-elementor",
     "result_2024": "ok",
@@ -422,12 +398,6 @@
   {
     "title": "Playground from November 6th 2024 - aryo-activity-log should load",
     "slug": "aryo-activity-log",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - asesor-cookies-para-la-ley-en-espana should load",
-    "slug": "asesor-cookies-para-la-ley-en-espana",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -696,12 +666,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - bnfw should load",
-    "slug": "bnfw",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - bold-page-builder should load",
     "slug": "bold-page-builder",
     "result_2024": "ok",
@@ -774,12 +738,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - bulletproof-security should load",
-    "slug": "bulletproof-security",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - burst-statistics should load",
     "slug": "burst-statistics",
     "result_2024": "ok",
@@ -836,12 +794,6 @@
   {
     "title": "Playground from November 6th 2024 - cartflows should load",
     "slug": "cartflows",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - catch-ids should load",
-    "slug": "catch-ids",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -990,12 +942,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - co-authors-plus should load",
-    "slug": "co-authors-plus",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - coblocks should load",
     "slug": "coblocks",
     "result_2024": "ok",
@@ -1068,12 +1014,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - constant-contact-forms should load",
-    "slug": "constant-contact-forms",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - contact-form-7 should load",
     "slug": "contact-form-7",
     "result_2024": "ok",
@@ -1140,12 +1080,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - content-aware-sidebars should load",
-    "slug": "content-aware-sidebars",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - content-control should load",
     "slug": "content-control",
     "result_2024": "ok",
@@ -1197,7 +1131,7 @@
     "title": "Playground from November 6th 2024 - copy-delete-posts should load",
     "slug": "copy-delete-posts",
     "result_2024": "Error: Failed to load plugins page after 10 attempts  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() Expected string: \"Plugins\" Received string: \"Please wait, copying in progress...\" Call log:   - Failed to load plugins page after 10 attempts with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first()     33 × locator resolved to <h1>Please wait, copying in progress...</h1>        - unexpected value \"Please wait, copying in progress...\" ",
-    "result_2025": "Error: Failed to load plugins page after 10 attempts  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() Expected string: \"Plugins\" Received string: \"Please wait, copying in progress...\" Call log:   - Failed to load plugins page after 10 attempts with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first()     33 × locator resolved to <h1>Please wait, copying in progress...</h1>        - unexpected value \"Please wait, copying in progress...\" "
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - cornerstone should load",
@@ -1326,12 +1260,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - cyr-and-lat should load",
-    "slug": "cyr-and-lat",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - cyr2lat should load",
     "slug": "cyr2lat",
     "result_2024": "ok",
@@ -1346,12 +1274,6 @@
   {
     "title": "Playground from November 6th 2024 - cyrlitera should load",
     "slug": "cyrlitera",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - debug-bar should load",
-    "slug": "debug-bar",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -1476,12 +1398,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - ditty-news-ticker should load",
-    "slug": "ditty-news-ticker",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - dokan-lite should load",
     "slug": "dokan-lite",
     "result_2024": "ok",
@@ -1508,12 +1424,6 @@
   {
     "title": "Playground from November 6th 2024 - download-plugin should load",
     "slug": "download-plugin",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - download-plugins-dashboard should load",
-    "slug": "download-plugins-dashboard",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -1608,12 +1518,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - easy-social-icons should load",
-    "slug": "easy-social-icons",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - easy-svg should load",
     "slug": "easy-svg",
     "result_2024": "ok",
@@ -1628,12 +1532,6 @@
   {
     "title": "Playground from November 6th 2024 - easy-theme-and-plugin-upgrades should load",
     "slug": "easy-theme-and-plugin-upgrades",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - easy-video-player should load",
-    "slug": "easy-video-player",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -2052,12 +1950,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - gallery-custom-links should load",
-    "slug": "gallery-custom-links",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - gdpr-cookie-compliance should load",
     "slug": "gdpr-cookie-compliance",
     "result_2024": "ok",
@@ -2154,18 +2046,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - google-maps-easy should load",
-    "slug": "google-maps-easy",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - google-maps-widget should load",
-    "slug": "google-maps-widget",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - google-pagespeed-insights should load",
     "slug": "google-pagespeed-insights",
     "result_2024": "ok",
@@ -2202,12 +2082,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - gravity-forms-pdf-extended should load",
-    "slug": "gravity-forms-pdf-extended",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - gravity-forms-zero-spam should load",
     "slug": "gravity-forms-zero-spam",
     "result_2024": "ok",
@@ -2234,12 +2108,6 @@
   {
     "title": "Playground from November 6th 2024 - gutenkit-blocks-addon should load",
     "slug": "gutenkit-blocks-addon",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - gutentor should load",
-    "slug": "gutentor",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -2318,12 +2186,6 @@
   {
     "title": "Playground from November 6th 2024 - hello-plus should load",
     "slug": "hello-plus",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - hide-admin-bar should load",
-    "slug": "hide-admin-bar",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -2520,12 +2382,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - instagram-slider-widget should load",
-    "slug": "instagram-slider-widget",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - instagram-widget-by-wpzoom should load",
     "slug": "instagram-widget-by-wpzoom",
     "result_2024": "ok",
@@ -2682,12 +2538,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - klarna-payments-for-woocommerce should load",
-    "slug": "klarna-payments-for-woocommerce",
-    "result_2024": "Error: The plugin Klarna Payments for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=klarna-payments-for-woocommerce\"]').or(locator('#deactivate-klarna-payments-for-woocommerce')).or(getByLabel('Deactivate Klarna Payments for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Klarna Payments for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=klarna-payments-for-woocommerce\"]').or(locator('#deactivate-klarna-payments-for-woocommerce')).or(getByLabel('Deactivate Klarna Payments for WooCommerce')) ",
-    "result_2025": "Error: The plugin Klarna Payments for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=klarna-payments-for-woocommerce\"]').or(locator('#deactivate-klarna-payments-for-woocommerce')).or(getByLabel('Deactivate Klarna Payments for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Klarna Payments for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=klarna-payments-for-woocommerce\"]').or(locator('#deactivate-klarna-payments-for-woocommerce')).or(getByLabel('Deactivate Klarna Payments for WooCommerce')) "
-  },
-  {
     "title": "Playground from November 6th 2024 - klaviyo should load",
     "slug": "klaviyo",
     "result_2024": "ok",
@@ -2746,12 +2596,6 @@
     "slug": "learnpress",
     "result_2024": "ok",
     "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - learnpress-course-review should load",
-    "slug": "learnpress-course-review",
-    "result_2024": "Error: The plugin LearnPress &#8211; Course Review isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=learnpress-course-review\"]').or(locator('#deactivate-learnpress-course-review')).or(getByLabel('Deactivate LearnPress &#8211; Course Review')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin LearnPress &#8211; Course Review isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=learnpress-course-review\"]').or(locator('#deactivate-learnpress-course-review')).or(getByLabel('Deactivate LearnPress &#8211; Course Review')) ",
-    "result_2025": "Error: The plugin LearnPress &#8211; Course Review isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=learnpress-course-review\"]').or(locator('#deactivate-learnpress-course-review')).or(getByLabel('Deactivate LearnPress &#8211; Course Review')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin LearnPress &#8211; Course Review isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=learnpress-course-review\"]').or(locator('#deactivate-learnpress-course-review')).or(getByLabel('Deactivate LearnPress &#8211; Course Review')) "
   },
   {
     "title": "Playground from November 6th 2024 - lightweight-social-icons should load",
@@ -3204,12 +3048,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - ocean-custom-sidebar should load",
-    "slug": "ocean-custom-sidebar",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - ocean-extra should load",
     "slug": "ocean-extra",
     "result_2024": "ok",
@@ -3294,12 +3132,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - open-external-links-in-a-new-window should load",
-    "slug": "open-external-links-in-a-new-window",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - optimization-detective should load",
     "slug": "optimization-detective",
     "result_2024": "ok",
@@ -3308,12 +3140,6 @@
   {
     "title": "Playground from November 6th 2024 - optimole-wp should load",
     "slug": "optimole-wp",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - optimus should load",
-    "slug": "optimus",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -3386,12 +3212,6 @@
   {
     "title": "Playground from November 6th 2024 - password-protected should load",
     "slug": "password-protected",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - paypal-donations should load",
-    "slug": "paypal-donations",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -3572,12 +3392,6 @@
   {
     "title": "Playground from November 6th 2024 - post-expirator should load",
     "slug": "post-expirator",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - post-grid should load",
-    "slug": "post-grid",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -3836,12 +3650,6 @@
   {
     "title": "Playground from November 6th 2024 - regenerate-thumbnails-advanced should load",
     "slug": "regenerate-thumbnails-advanced",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - related-posts-thumbnails should load",
-    "slug": "related-posts-thumbnails",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -4260,12 +4068,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - simple-social-buttons should load",
-    "slug": "simple-social-buttons",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - simple-social-icons should load",
     "slug": "simple-social-icons",
     "result_2024": "ok",
@@ -4286,12 +4088,6 @@
   {
     "title": "Playground from November 6th 2024 - simply-schedule-appointments should load",
     "slug": "simply-schedule-appointments",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - simply-static should load",
-    "slug": "simply-static",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -4434,12 +4230,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - spicebox should load",
-    "slug": "spicebox",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - spiderblocker should load",
     "slug": "spiderblocker",
     "result_2024": "ok",
@@ -4466,12 +4256,6 @@
   {
     "title": "Playground from November 6th 2024 - stackable-ultimate-gutenberg-blocks should load",
     "slug": "stackable-ultimate-gutenberg-blocks",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - starbox should load",
-    "slug": "starbox",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -4520,12 +4304,6 @@
   {
     "title": "Playground from November 6th 2024 - string-locator should load",
     "slug": "string-locator",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - stripe-payments should load",
-    "slug": "stripe-payments",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -4638,12 +4416,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - team-members should load",
-    "slug": "team-members",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - template-kit-import should load",
     "slug": "template-kit-import",
     "result_2024": "ok",
@@ -4734,18 +4506,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - themify-portfolio-post should load",
-    "slug": "themify-portfolio-post",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - thirstyaffiliates should load",
-    "slug": "thirstyaffiliates",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - ti-woocommerce-wishlist should load",
     "slug": "ti-woocommerce-wishlist",
     "result_2024": "ok",
@@ -4760,12 +4520,6 @@
   {
     "title": "Playground from November 6th 2024 - tiktok-for-business should load",
     "slug": "tiktok-for-business",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - timber-library should load",
-    "slug": "timber-library",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -4896,12 +4650,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - ultimate-responsive-image-slider should load",
-    "slug": "ultimate-responsive-image-slider",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - ultimate-social-media-icons should load",
     "slug": "ultimate-social-media-icons",
     "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
@@ -4910,12 +4658,6 @@
   {
     "title": "Playground from November 6th 2024 - uncanny-automator should load",
     "slug": "uncanny-automator",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - uncanny-learndash-toolkit should load",
-    "slug": "uncanny-learndash-toolkit",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -5090,12 +4832,6 @@
   {
     "title": "Playground from November 6th 2024 - wc-custom-thank-you should load",
     "slug": "wc-custom-thank-you",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wc-smart-cod should load",
-    "slug": "wc-smart-cod",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -5298,12 +5034,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - woo-variation-gallery should load",
-    "slug": "woo-variation-gallery",
-    "result_2024": "Error: The plugin Additional Variation Images Gallery for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woo-variation-gallery\"]').or(locator('#deactivate-woo-variation-gallery')).or(getByLabel('Deactivate Additional Variation Images Gallery for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Additional Variation Images Gallery for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woo-variation-gallery\"]').or(locator('#deactivate-woo-variation-gallery')).or(getByLabel('Deactivate Additional Variation Images Gallery for WooCommerce')) ",
-    "result_2025": "Error: The plugin Additional Variation Images Gallery for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woo-variation-gallery\"]').or(locator('#deactivate-woo-variation-gallery')).or(getByLabel('Deactivate Additional Variation Images Gallery for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Additional Variation Images Gallery for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woo-variation-gallery\"]').or(locator('#deactivate-woo-variation-gallery')).or(getByLabel('Deactivate Additional Variation Images Gallery for WooCommerce')) "
-  },
-  {
     "title": "Playground from November 6th 2024 - woo-variation-swatches should load",
     "slug": "woo-variation-swatches",
     "result_2024": "ok",
@@ -5334,12 +5064,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - woocommerce-conversion-tracking should load",
-    "slug": "woocommerce-conversion-tracking",
-    "result_2024": "Error: The plugin WooCommerce Conversion Tracking isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-conversion-tracking\"]').or(locator('#deactivate-woocommerce-conversion-tracking')).or(getByLabel('Deactivate WooCommerce Conversion Tracking')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WooCommerce Conversion Tracking isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-conversion-tracking\"]').or(locator('#deactivate-woocommerce-conversion-tracking')).or(getByLabel('Deactivate WooCommerce Conversion Tracking')) ",
-    "result_2025": "Error: The plugin WooCommerce Conversion Tracking isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-conversion-tracking\"]').or(locator('#deactivate-woocommerce-conversion-tracking')).or(getByLabel('Deactivate WooCommerce Conversion Tracking')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WooCommerce Conversion Tracking isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-conversion-tracking\"]').or(locator('#deactivate-woocommerce-conversion-tracking')).or(getByLabel('Deactivate WooCommerce Conversion Tracking')) "
-  },
-  {
     "title": "Playground from November 6th 2024 - woocommerce-correios should load",
     "slug": "woocommerce-correios",
     "result_2024": "ok",
@@ -5350,18 +5074,6 @@
     "slug": "woocommerce-currency-switcher",
     "result_2024": "ok",
     "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - woocommerce-customizer should load",
-    "slug": "woocommerce-customizer",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - woocommerce-delivery-notes should load",
-    "slug": "woocommerce-delivery-notes",
-    "result_2024": "Error: The plugin Print Invoice &amp; Delivery Notes for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-delivery-notes\"]').or(locator('#deactivate-woocommerce-delivery-notes')).or(getByLabel('Deactivate Print Invoice &amp; Delivery Notes for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Print Invoice &amp; Delivery Notes for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-delivery-notes\"]').or(locator('#deactivate-woocommerce-delivery-notes')).or(getByLabel('Deactivate Print Invoice &amp; Delivery Notes for WooCommerce')) ",
-    "result_2025": "Error: The plugin Print Invoice &amp; Delivery Notes for WooCommerce isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-delivery-notes\"]').or(locator('#deactivate-woocommerce-delivery-notes')).or(getByLabel('Deactivate Print Invoice &amp; Delivery Notes for WooCommerce')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin Print Invoice &amp; Delivery Notes for WooCommerce isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-delivery-notes\"]').or(locator('#deactivate-woocommerce-delivery-notes')).or(getByLabel('Deactivate Print Invoice &amp; Delivery Notes for WooCommerce')) "
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-direct-checkout should load",
@@ -5466,20 +5178,8 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - woocommerce-shipstation-integration should load",
-    "slug": "woocommerce-shipstation-integration",
-    "result_2024": "Error: The plugin WooCommerce ShipStation Integration isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-shipstation-integration\"]').or(locator('#deactivate-woocommerce-shipstation-integration')).or(getByLabel('Deactivate WooCommerce ShipStation Integration')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WooCommerce ShipStation Integration isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-shipstation-integration\"]').or(locator('#deactivate-woocommerce-shipstation-integration')).or(getByLabel('Deactivate WooCommerce ShipStation Integration')) ",
-    "result_2025": "Error: The plugin WooCommerce ShipStation Integration isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-shipstation-integration\"]').or(locator('#deactivate-woocommerce-shipstation-integration')).or(getByLabel('Deactivate WooCommerce ShipStation Integration')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WooCommerce ShipStation Integration isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=woocommerce-shipstation-integration\"]').or(locator('#deactivate-woocommerce-shipstation-integration')).or(getByLabel('Deactivate WooCommerce ShipStation Integration')) "
-  },
-  {
     "title": "Playground from November 6th 2024 - woocommerce-square should load",
     "slug": "woocommerce-square",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - woocustomizer should load",
-    "slug": "woocustomizer",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -5580,12 +5280,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - wp-analytify should load",
-    "slug": "wp-analytify",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - wp-asset-clean-up should load",
     "slug": "wp-asset-clean-up",
     "result_2024": "ok",
@@ -5640,18 +5334,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - wp-customer-reviews should load",
-    "slug": "wp-customer-reviews",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wp-database-backup should load",
-    "slug": "wp-database-backup",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - wp-db-backup should load",
     "slug": "wp-db-backup",
     "result_2024": "ok",
@@ -5680,12 +5362,6 @@
     "slug": "wp-edit",
     "result_2024": "ok",
     "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wp-editor should load",
-    "slug": "wp-editor",
-    "result_2024": "Error: The plugin WP Editor isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=wp-editor\"]').or(locator('#deactivate-wp-editor')).or(getByLabel('Deactivate WP Editor')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WP Editor isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=wp-editor\"]').or(locator('#deactivate-wp-editor')).or(getByLabel('Deactivate WP Editor')) ",
-    "result_2025": "Error: The plugin WP Editor isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=wp-editor\"]').or(locator('#deactivate-wp-editor')).or(getByLabel('Deactivate WP Editor')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin WP Editor isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=wp-editor\"]').or(locator('#deactivate-wp-editor')).or(getByLabel('Deactivate WP Editor')) "
   },
   {
     "title": "Playground from November 6th 2024 - wp-external-links should load",
@@ -5802,20 +5478,8 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - wp-last-modified-info should load",
-    "slug": "wp-last-modified-info",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - wp-letsencrypt-ssl should load",
     "slug": "wp-letsencrypt-ssl",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wp-lightbox-2 should load",
-    "slug": "wp-lightbox-2",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -5900,12 +5564,6 @@
   {
     "title": "Playground from November 6th 2024 - wp-pagenavi should load",
     "slug": "wp-pagenavi",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wp-paginate should load",
-    "slug": "wp-paginate",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -6012,12 +5670,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - wp-seo-structured-data-schema should load",
-    "slug": "wp-seo-structured-data-schema",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
     "title": "Playground from November 6th 2024 - wp-seopress should load",
     "slug": "wp-seopress",
     "result_2024": "ok",
@@ -6116,12 +5768,6 @@
   {
     "title": "Playground from November 6th 2024 - wp-user-avatar should load",
     "slug": "wp-user-avatar",
-    "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - wp-video-lightbox should load",
-    "slug": "wp-video-lightbox",
     "result_2024": "ok",
     "result_2025": "ok"
   },
@@ -6312,12 +5958,6 @@
     "result_2025": "ok"
   },
   {
-    "title": "Playground from November 6th 2024 - yith-woocommerce-zoom-magnifier should load",
-    "slug": "yith-woocommerce-zoom-magnifier",
-    "result_2024": "Error: The plugin YITH WooCommerce Product Gallery &amp; Image Zoom isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=yith-woocommerce-zoom-magnifier\"]').or(locator('#deactivate-yith-woocommerce-zoom-magnifier')).or(getByLabel('Deactivate YITH WooCommerce Product Gallery &amp; Image Zoom')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin YITH WooCommerce Product Gallery &amp; Image Zoom isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=yith-woocommerce-zoom-magnifier\"]').or(locator('#deactivate-yith-woocommerce-zoom-magnifier')).or(getByLabel('Deactivate YITH WooCommerce Product Gallery &amp; Image Zoom')) ",
-    "result_2025": "Error: The plugin YITH WooCommerce Product Gallery &amp; Image Zoom isn't activated.  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=yith-woocommerce-zoom-magnifier\"]').or(locator('#deactivate-yith-woocommerce-zoom-magnifier')).or(getByLabel('Deactivate YITH WooCommerce Product Gallery &amp; Image Zoom')) Expected string: \"Deactivate\" Received: <element(s) not found> Call log:   - The plugin YITH WooCommerce Product Gallery &amp; Image Zoom isn't activated. with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('a[href^=\"plugins.php?action=deactivate&plugin=yith-woocommerce-zoom-magnifier\"]').or(locator('#deactivate-yith-woocommerce-zoom-magnifier')).or(getByLabel('Deactivate YITH WooCommerce Product Gallery &amp; Image Zoom')) "
-  },
-  {
     "title": "Playground from November 6th 2024 - yoast-seo-settings-xml-csv-import should load",
     "slug": "yoast-seo-settings-xml-csv-import",
     "result_2024": "ok",
@@ -6345,12 +5985,6 @@
     "title": "Playground from November 6th 2024 - zarinpal-woocommerce-payment-gateway should load",
     "slug": "zarinpal-woocommerce-payment-gateway",
     "result_2024": "ok",
-    "result_2025": "ok"
-  },
-  {
-    "title": "Playground from November 6th 2024 - zero-bs-crm should load",
-    "slug": "zero-bs-crm",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
     "result_2025": "ok"
   },
   {
