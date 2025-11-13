@@ -135,7 +135,7 @@ pluginsToTest.forEach((plugin) => {
             attempts++;
             try {
               const activateLink = wordpress.locator(
-                `a[href^="plugins.php?action=activate&plugin=${pluginSlug}"]`
+                `a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
               );
               await activateLink.click({ timeout: 5000 }); // 5-second timeout per attempt
               activationSuccess = true;
@@ -147,11 +147,10 @@ pluginsToTest.forEach((plugin) => {
             }
           }
 
-          if (!activationSuccess) {
-            throw new Error(
-              `Failed to activate ${pluginSlug} after ${maxAttempts} attempts`
-            );
-          }
+          await expect(
+            activationSuccess,
+            `Failed to activate ${pluginSlug} after ${maxAttempts} attempts`
+          ).toBeTruthy();
         }
 
         // Keep reloading until we see the h1 title "Plugins" (up to 10 attempts)
@@ -190,11 +189,26 @@ pluginsToTest.forEach((plugin) => {
         ).toHaveText("Plugins");
       };
 
-      let playgroundWpVersion: string | number = playgroundUrl.wpVersion;
-      const minWpVersion = plugin.requires
+      // Find the minimum WordPress version required by plugin and its dependencies
+      let minWpVersion = plugin.requires
         ? parseFloat(plugin.requires)
-        : playgroundWpVersion;
-      if (minWpVersion > playgroundWpVersion) {
+        : playgroundUrl.wpVersion;
+
+      // Check dependencies' WordPress requirements
+      if (plugin.requires_plugins && plugin.requires_plugins.length > 0) {
+        for (const depSlug of plugin.requires_plugins) {
+          const depPlugin = pluginsToTest.find((p: any) => p.slug === depSlug);
+          if (depPlugin && depPlugin.requires) {
+            const depMinVersion = parseFloat(depPlugin.requires);
+            if (depMinVersion > minWpVersion) {
+              minWpVersion = depMinVersion;
+            }
+          }
+        }
+      }
+
+      let playgroundWpVersion: string | number = playgroundUrl.wpVersion;
+      if (minWpVersion > playgroundUrl.wpVersion) {
         playgroundWpVersion = `${playgroundUrl.proxyUrl}https://wordpress.org/wordpress-${minWpVersion}.zip`;
       }
 
@@ -227,6 +241,7 @@ pluginsToTest.forEach((plugin) => {
       }
       blueprint.steps.push(pluginInstallStep(slug));
 
+      console.log(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
 
@@ -265,7 +280,7 @@ pluginsToTest.forEach((plugin) => {
         // - slug.php (single-file plugin)
         // - #deactivate-slug (WordPress standard ID)
         const deactivateButton = wordpress.locator(
-          `a[href*="plugin=${slug}%2F"], a[href*="plugin=${slug}.php"], #deactivate-${slug}`
+          `a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
         );
         if (await deactivateButton.count()) {
           deactivateButtonFound = true;
