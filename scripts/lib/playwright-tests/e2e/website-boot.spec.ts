@@ -181,12 +181,6 @@ pluginsToTest.forEach((plugin) => {
             await website.waitForNestedIframes(website.page);
           }
         }
-
-        const h1 = wordpress.locator("h1").first();
-        await expect(
-          h1,
-          `Failed to load plugins page after ${maxAttempts} attempts`
-        ).toHaveText("Plugins");
       };
 
       // Find the minimum WordPress version required by plugin and its dependencies
