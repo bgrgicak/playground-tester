@@ -100,16 +100,19 @@ function generate_test_comparison_report() {
     local total_2025=$(jq length "$report_without_wp_version_errors")
     local errors_2025=$(jq '[.[] | select(.result_2025 != "ok")] | length' "$report_without_wp_version_errors")
 
-    local error_rate_2024=$(echo "scale=2; ($errors_2024 / $total_2024) * 100" | bc)
-    local error_rate_2025=$(echo "scale=2; ($errors_2025 / $total_2025) * 100" | bc)
-    local improvement=$(echo "scale=2; (($error_rate_2024 - $error_rate_2025) / $error_rate_2024) * 100" | bc)
+    local success_2024=$((total_2024 - errors_2024))
+    local success_2025=$((total_2025 - errors_2025))
+
+    local error_rate_2024=$(printf "%.2f" $(echo "scale=4; ($errors_2024 / $total_2024) * 100" | bc))
+    local error_rate_2025=$(printf "%.2f" $(echo "scale=4; ($errors_2025 / $total_2025) * 100" | bc))
+    local improvement=$(printf "%.2f" $(echo "scale=4; (($error_rate_2024 - $error_rate_2025) / $error_rate_2024) * 100" | bc))
 
     echo "## Stats" >> "$report_file"
-    echo "| Year | Error Rate |" >> "$report_file"
-    echo "|------|------------|" >> "$report_file"
-    echo "| 2024 | ${error_rate_2024}% |" >> "$report_file"
-    echo "| 2025 | ${error_rate_2025}% |" >> "$report_file"
-    echo "| Improvement | ${improvement}% |" >> "$report_file"
+    echo "| Year | Tested | Success | Failed | Error Rate |" >> "$report_file"
+    echo "|------|--------|---------|--------|------------|" >> "$report_file"
+    echo "| 2024 | ${total_2024} | ${success_2024} | ${errors_2024} | ${error_rate_2024}% |" >> "$report_file"
+    echo "| 2025 | ${total_2025} | ${success_2025} | ${errors_2025} | ${error_rate_2025}% |" >> "$report_file"
+    echo "| Improvement | - | - | - | ${improvement}% |" >> "$report_file"
 
     echo "## Report" >> "$report_file"
     echo "" >> "$report_file"
