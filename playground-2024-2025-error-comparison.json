@@ -302,7 +302,7 @@
   {
     "title": "Playground from November 6th 2024 - all-in-one-event-calendar should load",
     "slug": "all-in-one-event-calendar",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin Timely All-in-One Events Calendar isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -344,13 +344,13 @@
   {
     "title": "Playground from November 6th 2024 - ameliabooking should load",
     "slug": "ameliabooking",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Booking for Appointments and Events Calendar &#8211; Amelia isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - amp should load",
     "slug": "amp",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin AMP isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -476,8 +476,8 @@
   {
     "title": "Playground from November 6th 2024 - automatic-translator-addon-for-loco-translate should load",
     "slug": "automatic-translator-addon-for-loco-translate",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin LocoAI &#8211; Auto Translate For Loco Translate isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin LocoAI &#8211; Auto Translate For Loco Translate isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - autoptimize should load",
@@ -506,7 +506,7 @@
   {
     "title": "Playground from November 6th 2024 - backup should load",
     "slug": "backup",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin JetBackup &#8211; Backup, Restore &amp; Migrate isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -518,7 +518,7 @@
   {
     "title": "Playground from November 6th 2024 - backuply should load",
     "slug": "backuply",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Backuply &#8211; Backup, Restore, Migrate and Clone isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -590,7 +590,7 @@
   {
     "title": "Playground from November 6th 2024 - bing-webmaster-tools should load",
     "slug": "bing-webmaster-tools",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Bing URL Submissions Plugin isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -710,8 +710,8 @@
   {
     "title": "Playground from November 6th 2024 - brizy should load",
     "slug": "brizy",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() "
+    "result_2024": "Error: The plugin Brizy &#8211; Page Builder isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Brizy &#8211; Page Builder isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - broken-link-checker should load",
@@ -722,7 +722,7 @@
   {
     "title": "Playground from November 6th 2024 - broken-link-checker-seo should load",
     "slug": "broken-link-checker-seo",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Broken Link Checker by AIOSEO – Easily Fix/Monitor Internal and External links isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -1130,7 +1130,7 @@
   {
     "title": "Playground from November 6th 2024 - copy-delete-posts should load",
     "slug": "copy-delete-posts",
-    "result_2024": "Error: Failed to load plugins page after 10 attempts  Timed out 30000ms waiting for expect(locator).toHaveText(expected)  Locator: locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() Expected string: \"Plugins\" Received string: \"Please wait, copying in progress...\" Call log:   - Failed to load plugins page after 10 attempts with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first()     33 × locator resolved to <h1>Please wait, copying in progress...</h1>        - unexpected value \"Please wait, copying in progress...\" ",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {
@@ -1815,7 +1815,7 @@
     "title": "Playground from November 6th 2024 - feedzy-rss-feeds should load",
     "slug": "feedzy-rss-feeds",
     "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2025": "Error: The plugin RSS Aggregator by Feedzy – Feed to Post, Autoblogging, News &amp; YouTube Video Feeds Aggregator isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - file-manager-advanced should load",
@@ -1898,7 +1898,7 @@
   {
     "title": "Playground from November 6th 2024 - font-awesome should load",
     "slug": "font-awesome",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin Font Awesome isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -1923,7 +1923,7 @@
     "title": "Playground from November 6th 2024 - form-maker should load",
     "slug": "form-maker",
     "result_2024": "Error: The plugin Form Maker by 10Web &#8211; Mobile-Friendly Drag &amp; Drop Contact Form Builder isn't activated.  expect(received).toBeTruthy()  Received: false",
-    "result_2025": "ok"
+    "result_2025": "Error: The plugin Form Maker by 10Web &#8211; Mobile-Friendly Drag &amp; Drop Contact Form Builder isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - formidable should load",
@@ -1982,7 +1982,7 @@
   {
     "title": "Playground from November 6th 2024 - getgenie should load",
     "slug": "getgenie",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin GetGenie – AI Content Writer with Keyword Research &amp; SEO Tracking Tools isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -1994,7 +1994,7 @@
   {
     "title": "Playground from November 6th 2024 - give should load",
     "slug": "give",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin GiveWP &#8211; Donation Plugin and Fundraising Platform isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -2180,14 +2180,14 @@
   {
     "title": "Playground from November 6th 2024 - hello-dolly should load",
     "slug": "hello-dolly",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: Failed to activate hello-dolly after 10 attempts  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: Failed to activate hello-dolly after 10 attempts  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - hello-plus should load",
     "slug": "hello-plus",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin Hello Plus isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Hello Plus isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - hide-my-wp should load",
@@ -2342,7 +2342,7 @@
   {
     "title": "Playground from November 6th 2024 - indexnow should load",
     "slug": "indexnow",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin IndexNow Plugin isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -2570,7 +2570,7 @@
   {
     "title": "Playground from November 6th 2024 - latepoint should load",
     "slug": "latepoint",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin LatePoint &#8211; Calendar Booking Plugin for Appointments and Events isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -2708,7 +2708,7 @@
   {
     "title": "Playground from November 6th 2024 - mailchimp-for-woocommerce should load",
     "slug": "mailchimp-for-woocommerce",
-    "result_2024": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible ",
+    "result_2024": "Error: The plugin Mailchimp for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -2798,8 +2798,8 @@
   {
     "title": "Playground from November 6th 2024 - matomo should load",
     "slug": "matomo",
-    "result_2024": "Error: expect.not.toBeVisible: Unknown engine \"has-text\" while parsing selector has-text=There has been a critical error on this website Call log:   - expect.not.toBeVisible with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('has-text=There has been a critical error on this website') ",
-    "result_2025": "Error: expect.not.toBeVisible: Unknown engine \"has-text\" while parsing selector has-text=There has been a critical error on this website Call log:   - expect.not.toBeVisible with timeout 30000ms   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('has-text=There has been a critical error on this website') "
+    "result_2024": "ok",
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - maxbuttons should load",
@@ -3026,7 +3026,7 @@
   {
     "title": "Playground from November 6th 2024 - ninjafirewall should load",
     "slug": "ninjafirewall",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin NinjaFirewall (WP Edition) &#8211; Advanced Security Plugin and Firewall isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -3260,7 +3260,7 @@
   {
     "title": "Playground from November 6th 2024 - persian-woocommerce should load",
     "slug": "persian-woocommerce",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin ووکامرس فارسی isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -3285,7 +3285,7 @@
     "title": "Playground from November 6th 2024 - photo-gallery should load",
     "slug": "photo-gallery",
     "result_2024": "Error: The plugin Photo Gallery by 10Web &#8211; Mobile-Friendly Image Gallery isn't activated.  expect(received).toBeTruthy()  Received: false",
-    "result_2025": "ok"
+    "result_2025": "Error: The plugin Photo Gallery by 10Web &#8211; Mobile-Friendly Image Gallery isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - php-code-widget should load",
@@ -3519,7 +3519,7 @@
     "title": "Playground from November 6th 2024 - qi-addons-for-elementor should load",
     "slug": "qi-addons-for-elementor",
     "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2025": "Error: The plugin Qi Addons For Elementor isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - qi-blocks should load",
@@ -3530,7 +3530,7 @@
   {
     "title": "Playground from November 6th 2024 - query-monitor should load",
     "slug": "query-monitor",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Query Monitor &#8211; The developer tools panel for WordPress isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -3896,8 +3896,8 @@
   {
     "title": "Playground from November 6th 2024 - seo-ultimate should load",
     "slug": "seo-ultimate",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin SEO Ultimate isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin SEO Ultimate isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - seraphinite-accelerator should load",
@@ -3914,7 +3914,7 @@
   {
     "title": "Playground from November 6th 2024 - sg-security should load",
     "slug": "sg-security",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Security Optimizer &#8211; The All-In-One Protection Plugin isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -4160,7 +4160,7 @@
   {
     "title": "Playground from November 6th 2024 - smart-slider-3 should load",
     "slug": "smart-slider-3",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Smart Slider 3 isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -4232,8 +4232,8 @@
   {
     "title": "Playground from November 6th 2024 - spiderblocker should load",
     "slug": "spiderblocker",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin Spider Blocker isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Spider Blocker isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - spotlight-social-photo-feeds should load",
@@ -4652,7 +4652,7 @@
   {
     "title": "Playground from November 6th 2024 - ultimate-social-media-icons should load",
     "slug": "ultimate-social-media-icons",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
+    "result_2024": "Error: The plugin Social Media Share Buttons &amp; Social Sharing Icons isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -4688,8 +4688,8 @@
   {
     "title": "Playground from November 6th 2024 - upload-max-file-size should load",
     "slug": "upload-max-file-size",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: Failed to activate upload-max-file-size after 10 attempts  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: Failed to activate upload-max-file-size after 10 attempts  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - use-any-font should load",
@@ -5132,8 +5132,8 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-mercadopago should load",
     "slug": "woocommerce-mercadopago",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin Mercado Pago payments for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Mercado Pago payments for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-multilingual should load",
@@ -5198,8 +5198,8 @@
   {
     "title": "Playground from November 6th 2024 - wordfence should load",
     "slug": "wordfence",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin Wordfence Security &#8211; Firewall, Malware Scan, and Login Security isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Wordfence Security &#8211; Firewall, Malware Scan, and Login Security isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - wordfence-login-security should load",
@@ -5234,7 +5234,7 @@
   {
     "title": "Playground from November 6th 2024 - worker should load",
     "slug": "worker",
-    "result_2024": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible ",
+    "result_2024": "Error: The plugin ManageWP Worker isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -5408,8 +5408,8 @@
   {
     "title": "Playground from November 6th 2024 - wp-force-ssl should load",
     "slug": "wp-force-ssl",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin WP Force SSL &amp; HTTPS SSL Redirect isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin WP Force SSL &amp; HTTPS SSL Redirect isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - wp-google-map-plugin should load",
@@ -5438,7 +5438,7 @@
   {
     "title": "Playground from November 6th 2024 - wp-hide-security-enhancer should load",
     "slug": "wp-hide-security-enhancer",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin WP Hide &amp; Security Enhancer isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -5456,8 +5456,8 @@
   {
     "title": "Playground from November 6th 2024 - wp-jalali should load",
     "slug": "wp-jalali",
-    "result_2024": "ok",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin wp-jalali isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin wp-jalali isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - wp-job-manager should load",
@@ -5690,8 +5690,8 @@
   {
     "title": "Playground from November 6th 2024 - wp-simple-firewall should load",
     "slug": "wp-simple-firewall",
-    "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "ok"
+    "result_2024": "Error: The plugin Shield: Blocks Bots, Protects Users, and Prevents Security Breaches isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "Error: The plugin Shield: Blocks Bots, Protects Users, and Prevents Security Breaches isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - wp-sitemap-page should load",
@@ -5702,7 +5702,7 @@
   {
     "title": "Playground from November 6th 2024 - wp-slimstat should load",
     "slug": "wp-slimstat",
-    "result_2024": "ok",
+    "result_2024": "Error: The plugin SlimStat Analytics isn't activated.  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -5727,7 +5727,7 @@
     "title": "Playground from November 6th 2024 - wp-staging should load",
     "slug": "wp-staging",
     "result_2024": "ok",
-    "result_2025": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() "
+    "result_2025": "Error: The plugin WP STAGING WordPress Backup Plugin &#8211; Migration Backup Restore isn't activated.  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - wp-statistics should load",
