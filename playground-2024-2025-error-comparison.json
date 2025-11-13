@@ -591,7 +591,7 @@
     "title": "Playground from November 6th 2024 - bing-webmaster-tools should load",
     "slug": "bing-webmaster-tools",
     "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() "
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - bj-lazy-load should load",
@@ -2343,7 +2343,7 @@
     "title": "Playground from November 6th 2024 - indexnow should load",
     "slug": "indexnow",
     "result_2024": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() ",
-    "result_2025": "TimeoutError: locator.textContent: Timeout 120000ms exceeded. Call log:   - waiting for locator('#playground-viewport:visible,.playground-viewport:visible').contentFrame().locator('#wp').contentFrame().locator('h1').first() "
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - insert-headers-and-footers should load",

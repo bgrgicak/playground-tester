@@ -5,8 +5,8 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | Year | Tested | Success | Failed | Error Rate |
 |------|--------|---------|--------|------------|
 | 2024 | 1000 | 977 | 23 | 2.30% |
-| 2025 | 1000 | 995 | 5 | 0.50% |
-| Improvement | - | - | - | 78.26% |
+| 2025 | 1000 | 997 | 3 | 0.30% |
+| Improvement | - | - | - | 86.95% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -109,7 +109,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | better-search-replace | ✅ | ✅ |
 | better-wp-security | ✅ | ✅ |
 | betterdocs | ✅ | ✅ |
-| bing-webmaster-tools | ❌ | ❌ |
+| bing-webmaster-tools | ❌ | ✅ |
 | bj-lazy-load | ✅ | ✅ |
 | black-studio-tinymce-widget | ✅ | ✅ |
 | blackhole-bad-bots | ✅ | ✅ |
@@ -401,7 +401,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | imsanity | ✅ | ✅ |
 | independent-analytics | ✅ | ✅ |
 | index-wp-mysql-for-speed | ✅ | ✅ |
-| indexnow | ❌ | ❌ |
+| indexnow | ❌ | ✅ |
 | insert-headers-and-footers | ✅ | ✅ |
 | insert-pages | ✅ | ✅ |
 | insert-php | ✅ | ✅ |
