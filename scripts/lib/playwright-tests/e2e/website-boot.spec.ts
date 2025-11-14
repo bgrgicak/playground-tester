@@ -87,6 +87,11 @@ function guessDependencies(slug: string): string[] {
     dependencies.push("woocommerce");
   }
 
+  // if name contains loco-translate add loco-translate as dependency
+  if (slug.includes("loco-translate") && slug !== "loco-translate") {
+    dependencies.push("loco-translate");
+  }
+
   return dependencies;
 }
 
