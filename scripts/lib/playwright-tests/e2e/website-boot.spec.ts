@@ -103,6 +103,10 @@ pluginsToTest.forEach((plugin: any) => {
       plugin.requires_plugins = guessedDeps;
     }
   }
+
+  if (plugin.slug === "hello-plus") {
+    plugin.requires_theme = "hello-elementor";
+  }
 });
 
 pluginsToTest.forEach((plugin) => {
@@ -139,9 +143,11 @@ pluginsToTest.forEach((plugin) => {
           while (attempts < maxAttempts && !activationSuccess) {
             attempts++;
             try {
-              const activateLink = wordpress.locator(
-                `tr[data-slug="${pluginSlug}"] a[href*="action=activate"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
-              ).first();
+              const activateLink = wordpress
+                .locator(
+                  `tr[data-slug="${pluginSlug}"] a[href*="action=activate"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
+                )
+                .first();
               await activateLink.click({ timeout: 5000 }); // 5-second timeout per attempt
               activationSuccess = true;
             } catch (error) {
@@ -241,6 +247,19 @@ pluginsToTest.forEach((plugin) => {
         steps: [] as any[],
       };
 
+      if (plugin.requires_theme) {
+        blueprint.steps.push({
+          step: "installTheme",
+          themeData: {
+            resource: "wordpress.org/themes",
+            slug: plugin.requires_theme,
+          },
+          options: {
+            activate: true,
+          },
+        });
+      }
+
       const slug = plugin.slug;
       const pluginInstallStep = (slug: string) => ({
         step: "installPlugin",
@@ -258,7 +277,6 @@ pluginsToTest.forEach((plugin) => {
         }
       }
       blueprint.steps.push(pluginInstallStep(slug));
-
       console.log(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.goto(`${playgroundUrl.url}#${JSON.stringify(blueprint)}`);
       await website.waitForNestedIframes();
@@ -306,9 +324,11 @@ pluginsToTest.forEach((plugin) => {
         // - slug/ (folder plugin, URL-encoded as %2F)
         // - slug.php (single-file plugin)
         // - #deactivate-slug (WordPress standard ID)
-        const deactivateButton = wordpress.locator(
-          `tr[data-slug="${slug}"] a[href*="action=deactivate"], a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
-        ).first();
+        const deactivateButton = wordpress
+          .locator(
+            `tr[data-slug="${slug}"] a[href*="action=deactivate"], a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
+          )
+          .first();
         const buttonCount = await deactivateButton.count();
         if (buttonCount > 0) {
           deactivateButtonFound = true;
