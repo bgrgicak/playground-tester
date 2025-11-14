@@ -1815,7 +1815,7 @@
     "title": "Playground from November 6th 2024 - feedzy-rss-feeds should load",
     "slug": "feedzy-rss-feeds",
     "result_2024": "ok",
-    "result_2025": "Error: The plugin RSS Aggregator by Feedzy – Feed to Post, Autoblogging, News &amp; YouTube Video Feeds Aggregator isn't activated.  expect(received).toBeTruthy()  Received: false"
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - file-manager-advanced should load",
@@ -2708,7 +2708,7 @@
   {
     "title": "Playground from November 6th 2024 - mailchimp-for-woocommerce should load",
     "slug": "mailchimp-for-woocommerce",
-    "result_2024": "Error: The plugin Mailchimp for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2024": "Error: Failed to activate woocommerce after 10 attempts  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -3260,7 +3260,7 @@
   {
     "title": "Playground from November 6th 2024 - persian-woocommerce should load",
     "slug": "persian-woocommerce",
-    "result_2024": "Error: The plugin ووکامرس فارسی isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2024": "Error: Failed to activate woocommerce after 10 attempts  expect(received).toBeTruthy()  Received: false",
     "result_2025": "ok"
   },
   {
@@ -3519,7 +3519,7 @@
     "title": "Playground from November 6th 2024 - qi-addons-for-elementor should load",
     "slug": "qi-addons-for-elementor",
     "result_2024": "ok",
-    "result_2025": "Error: The plugin Qi Addons For Elementor isn't activated.  expect(received).toBeTruthy()  Received: false"
+    "result_2025": "Error: Failed to activate elementor after 10 attempts  expect(received).toBeTruthy()  Received: false"
   },
   {
     "title": "Playground from November 6th 2024 - qi-blocks should load",
@@ -5132,8 +5132,8 @@
   {
     "title": "Playground from November 6th 2024 - woocommerce-mercadopago should load",
     "slug": "woocommerce-mercadopago",
-    "result_2024": "Error: The plugin Mercado Pago payments for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false",
-    "result_2025": "Error: The plugin Mercado Pago payments for WooCommerce isn't activated.  expect(received).toBeTruthy()  Received: false"
+    "result_2024": "Error: Failed to activate woocommerce after 10 attempts  expect(received).toBeTruthy()  Received: false",
+    "result_2025": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible "
   },
   {
     "title": "Playground from November 6th 2024 - woocommerce-multilingual should load",
@@ -5409,7 +5409,7 @@
     "title": "Playground from November 6th 2024 - wp-force-ssl should load",
     "slug": "wp-force-ssl",
     "result_2024": "Error: The plugin WP Force SSL &amp; HTTPS SSL Redirect isn't activated.  expect(received).toBeTruthy()  Received: false",
-    "result_2025": "Error: The plugin WP Force SSL &amp; HTTPS SSL Redirect isn't activated.  expect(received).toBeTruthy()  Received: false"
+    "result_2025": "TimeoutError: locator.waitFor: Timeout 120000ms exceeded. Call log:   - waiting for locator('h1').filter({ hasText: 'Report error' }) to be visible "
   },
   {
     "title": "Playground from November 6th 2024 - wp-google-map-plugin should load",
@@ -5438,7 +5438,7 @@
   {
     "title": "Playground from November 6th 2024 - wp-hide-security-enhancer should load",
     "slug": "wp-hide-security-enhancer",
-    "result_2024": "Error: The plugin WP Hide &amp; Security Enhancer isn't activated.  expect(received).toBeTruthy()  Received: false",
+    "result_2024": "ok",
     "result_2025": "ok"
   },
   {

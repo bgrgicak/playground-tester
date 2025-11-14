@@ -148,7 +148,9 @@ pluginsToTest.forEach((plugin) => {
                   `tr[data-slug="${pluginSlug}"] a[href*="action=activate"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
                 )
                 .first();
-              await activateLink.click({ timeout: 5000 }); // 5-second timeout per attempt
+              await activateLink.click({ timeout: 5000 });
+
+              await website.page.waitForLoadState("networkidle");
               activationSuccess = true;
             } catch (error) {
               if (attempts < maxAttempts) {

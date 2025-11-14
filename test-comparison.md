@@ -4,9 +4,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 ## Stats
 | Year | Tested | Success | Failed | Error Rate |
 |------|--------|---------|--------|------------|
-| 2024 | 1000 | 970 | 30 | 3.00% |
-| 2025 | 1000 | 989 | 11 | 1.10% |
-| Improvement | - | - | - | 63.33% |
+| 2024 | 1000 | 971 | 29 | 2.90% |
+| 2025 | 1000 | 990 | 10 | 1.00% |
+| Improvement | - | - | - | 65.51% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -313,7 +313,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | featured-image-from-url | ✅ | ✅ |
 | feeds-for-tiktok | ✅ | ✅ |
 | feeds-for-youtube | ✅ | ✅ |
-| feedzy-rss-feeds | ✅ | ❌ |
+| feedzy-rss-feeds | ✅ | ✅ |
 | file-manager-advanced | ✅ | ✅ |
 | filebird | ✅ | ✅ |
 | fileorganizer | ✅ | ✅ |
@@ -917,7 +917,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | wp-google-maps | ✅ | ✅ |
 | wp-headers-and-footers | ✅ | ✅ |
 | wp-health | ✅ | ✅ |
-| wp-hide-security-enhancer | ❌ | ✅ |
+| wp-hide-security-enhancer | ✅ | ✅ |
 | wp-htaccess-editor | ✅ | ✅ |
 | wp-import-export-lite | ✅ | ✅ |
 | wp-jalali | ❌ | ❌ |
