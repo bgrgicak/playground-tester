@@ -140,7 +140,7 @@ pluginsToTest.forEach((plugin) => {
             attempts++;
             try {
               const activateLink = wordpress.locator(
-                `a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
+                `tr[data-slug="${pluginSlug}"] a[href*="action=activate"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}%2F"], a[href*="plugins.php?action=activate&plugin=${pluginSlug}.php"], #activate-${pluginSlug}`
               );
               await activateLink.click({ timeout: 5000 }); // 5-second timeout per attempt
               activationSuccess = true;
@@ -307,7 +307,7 @@ pluginsToTest.forEach((plugin) => {
         // - slug.php (single-file plugin)
         // - #deactivate-slug (WordPress standard ID)
         const deactivateButton = wordpress.locator(
-          `a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
+          `tr[data-slug="${slug}"] a[href*="action=deactivate"], a[href*="plugins.php?action=deactivate&plugin=${slug}%2F"], a[href*="plugins.php?action=deactivate&plugin=${slug}.php"], #deactivate-${slug}`
         );
         const buttonCount = await deactivateButton.count();
         if (buttonCount > 0) {
