@@ -4,9 +4,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 ## Stats
 | Year | Tested | Success | Failed | Error Rate |
 |------|--------|---------|--------|------------|
-| 2024 | 1000 | 969 | 31 | 3.10% |
-| 2025 | 1000 | 988 | 12 | 1.20% |
-| Improvement | - | - | - | 61.29% |
+| 2024 | 1000 | 970 | 30 | 3.00% |
+| 2025 | 1000 | 989 | 11 | 1.10% |
+| Improvement | - | - | - | 63.33% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -375,7 +375,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | health-check | ✅ | ✅ |
 | heartbeat-control | ✅ | ✅ |
 | hello-dolly | ✅ | ✅ |
-| hello-plus | ❌ | ❌ |
+| hello-plus | ✅ | ✅ |
 | hide-my-wp | ✅ | ✅ |
 | hide-page-and-post-title | ✅ | ✅ |
 | hide-title | ✅ | ✅ |

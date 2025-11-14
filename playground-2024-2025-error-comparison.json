@@ -2186,8 +2186,8 @@
   {
     "title": "Playground from November 6th 2024 - hello-plus should load",
     "slug": "hello-plus",
-    "result_2024": "Error: The plugin Hello Plus isn't activated.  expect(received).toBeTruthy()  Received: false",
-    "result_2025": "Error: The plugin Hello Plus isn't activated.  expect(received).toBeTruthy()  Received: false"
+    "result_2024": "ok",
+    "result_2025": "ok"
   },
   {
     "title": "Playground from November 6th 2024 - hide-my-wp should load",
