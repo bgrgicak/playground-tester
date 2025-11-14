@@ -4,9 +4,9 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 ## Stats
 | Year | Tested | Success | Failed | Error Rate |
 |------|--------|---------|--------|------------|
-| 2024 | 1000 | 964 | 36 | 3.60% |
-| 2025 | 1000 | 983 | 17 | 1.70% |
-| Improvement | - | - | - | 52.77% |
+| 2024 | 1000 | 969 | 31 | 3.10% |
+| 2025 | 1000 | 988 | 12 | 1.20% |
+| Improvement | - | - | - | 61.29% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result |
@@ -90,7 +90,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | auto-terms-of-service-and-privacy-policy | ✅ | ✅ |
 | autocomplete-woocommerce-orders | ✅ | ✅ |
 | autodescription | ✅ | ✅ |
-| automatic-translator-addon-for-loco-translate | ❌ | ❌ |
+| automatic-translator-addon-for-loco-translate | ✅ | ✅ |
 | autoptimize | ✅ | ✅ |
 | auxin-elements | ✅ | ✅ |
 | auxin-portfolio | ✅ | ✅ |
@@ -331,7 +331,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | foobox-image-lightbox | ✅ | ✅ |
 | foogallery | ✅ | ✅ |
 | force-regenerate-thumbnails | ✅ | ✅ |
-| form-maker | ❌ | ❌ |
+| form-maker | ✅ | ✅ |
 | formidable | ✅ | ✅ |
 | forminator | ✅ | ✅ |
 | full-site-editing | ✅ | ✅ |
@@ -374,7 +374,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | headers-security-advanced-hsts-wp | ✅ | ✅ |
 | health-check | ✅ | ✅ |
 | heartbeat-control | ✅ | ✅ |
-| hello-dolly | ❌ | ❌ |
+| hello-dolly | ✅ | ✅ |
 | hello-plus | ❌ | ❌ |
 | hide-my-wp | ✅ | ✅ |
 | hide-page-and-post-title | ✅ | ✅ |
@@ -558,7 +558,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | persian-woocommerce-sms | ✅ | ✅ |
 | peters-login-redirect | ✅ | ✅ |
 | phoenix-media-rename | ✅ | ✅ |
-| photo-gallery | ❌ | ❌ |
+| photo-gallery | ✅ | ✅ |
 | php-code-widget | ✅ | ✅ |
 | php-compatibility-checker | ✅ | ✅ |
 | pinterest-for-woocommerce | ✅ | ✅ |
@@ -792,7 +792,7 @@ To determine if a plugin is compatible, we use End to End tests where we activat
 | underconstruction | ✅ | ✅ |
 | unlimited-elements-for-elementor | ✅ | ✅ |
 | updraftplus | ✅ | ✅ |
-| upload-max-file-size | ❌ | ❌ |
+| upload-max-file-size | ✅ | ✅ |
 | use-any-font | ✅ | ✅ |
 | user-menus | ✅ | ✅ |
 | user-registration | ✅ | ✅ |
