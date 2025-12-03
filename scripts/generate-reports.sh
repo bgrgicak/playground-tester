@@ -90,6 +90,9 @@ function generate_test_comparison_report() {
     local report_without_wp_version_errors=$(mktemp)
     get_report_without_wp_version_errors > "$report_without_wp_version_errors"
 
+    # List of plugins that fail in native WP
+    local native_wp_failed_plugins=("seo-ultimate" "spiderblocker" "wp-jalali")
+
     echo "# Playground MySQL and PHP compatibility improvements between 2024 and 2025" > "$report_file"
     echo "This report compares Playground from December 2024 and December 2025 by analyzing how many of the top 1000 plugins from WordPress.org can be activated in Playground." >> "$report_file"
     echo "To determine if a plugin is compatible, we use End to End tests where we activate the plugin together it's dependencies and check if it was successfully activated in Playground." >> "$report_file"
@@ -116,19 +119,23 @@ function generate_test_comparison_report() {
 
     echo "## Report" >> "$report_file"
     echo "" >> "$report_file"
-    echo "| Test Item | 2024 Result | 2025 Result |" >> "$report_file"
-    echo "|-----------|-------------|-------------|" >> "$report_file"
+    echo "| Test Item | 2024 Result | 2025 Result | Works in native WP |" >> "$report_file"
+    echo "|-----------|-------------|-------------|---------------------|" >> "$report_file"
 
-    jq -r '
+    # Convert bash array to jq-compatible JSON array
+    local failed_plugins_json=$(printf '%s\n' "${native_wp_failed_plugins[@]}" | jq -R . | jq -s .)
+
+    jq -r --argjson failed_plugins "$failed_plugins_json" '
     . as $data |
     map(select(.slug != null)) |  # Ensure slug is present
     map({
-        title: .slug,
+        slug: .slug,
         result_2024: (.result_2024 | if . == "ok" then "✅" else "❌" end),
-        result_2025: (.result_2025 | if . == "ok" then "✅" else "❌" end)
+        result_2025: (.result_2025 | if . == "ok" then "✅" else "❌" end),
+        native_wp: (if (. as $item | $failed_plugins | map(. == $item.slug) | any) then "❌" else "✅" end)
     }) |
     .[] |
-    "| \(.title) | \(.result_2024) | \(.result_2025) |"
+    "| \(.slug) | \(.result_2024) | \(.result_2025) | \(.native_wp) |"
     ' "$report_without_wp_version_errors" >> "$report_file"
 
     # Optionally, remove the temporary file after use
