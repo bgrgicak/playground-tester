@@ -98,24 +98,30 @@ function generate_test_comparison_report() {
     echo "To determine if a plugin is compatible, we use End to End tests where we activate the plugin together it's dependencies and check if it was successfully activated in Playground." >> "$report_file"
 
     # Calculate error rates using the filtered data
-    local total_2024=$(jq length "$report_without_wp_version_errors")
+    local total=$(jq length "$report_without_wp_version_errors")
     local errors_2024=$(jq '[.[] | select(.result_2024 != "ok")] | length' "$report_without_wp_version_errors")
-    local total_2025=$(jq length "$report_without_wp_version_errors")
     local errors_2025=$(jq '[.[] | select(.result_2025 != "ok")] | length' "$report_without_wp_version_errors")
+    local success_2024=$((total - errors_2024))
+    local success_2025=$((total - errors_2025))
 
-    local success_2024=$((total_2024 - errors_2024))
-    local success_2025=$((total_2025 - errors_2025))
+    # Count how many failed tests also fail in native WP (hardcoded list)
+    local failed_in_wp_count=${#native_wp_failed_plugins[@]}
 
-    local error_rate_2024=$(printf "%.2f" $(echo "scale=4; ($errors_2024 / $total_2024) * 100" | bc))
-    local error_rate_2025=$(printf "%.2f" $(echo "scale=4; ($errors_2025 / $total_2025) * 100" | bc))
-    local improvement=$(printf "%.2f" $(echo "scale=4; (($error_rate_2024 - $error_rate_2025) / $error_rate_2024) * 100" | bc))
+    # Calculate error rates: (Failed - Failed in WP) / (Tested - Failed in WP)
+    local testable=$((total - failed_in_wp_count))
+    local actual_errors_2024=$((errors_2024 - failed_in_wp_count))
+    local actual_errors_2025=$((errors_2025 - failed_in_wp_count))
+
+    local error_rate_2024=$(echo "scale=6; ($actual_errors_2024 / $testable) * 100" | bc | xargs printf "%.2f")
+    local error_rate_2025=$(echo "scale=6; ($actual_errors_2025 / $testable) * 100" | bc | xargs printf "%.2f")
+    local improvement=$(echo "scale=6; (($error_rate_2024 - $error_rate_2025) / $error_rate_2024) * 100" | bc | xargs printf "%.2f")
 
     echo "## Stats" >> "$report_file"
-    echo "| Year | Tested | Success | Failed | Error Rate |" >> "$report_file"
-    echo "|------|--------|---------|--------|------------|" >> "$report_file"
-    echo "| 2024 | ${total_2024} | ${success_2024} | ${errors_2024} | ${error_rate_2024}% |" >> "$report_file"
-    echo "| 2025 | ${total_2025} | ${success_2025} | ${errors_2025} | ${error_rate_2025}% |" >> "$report_file"
-    echo "| Improvement | - | - | - | ${improvement}% |" >> "$report_file"
+    echo "| Year | Tested | Works in Playground | Failed in Playground | Failed in WP | Error Rate |" >> "$report_file"
+    echo "|------|--------|---------------------|----------------------|--------------|------------|" >> "$report_file"
+    echo "| 2024 | ${total} | ${success_2024} | ${errors_2024} | ${failed_in_wp_count} | ${error_rate_2024}% |" >> "$report_file"
+    echo "| 2025 | ${total} | ${success_2025} | ${errors_2025} | ${failed_in_wp_count} | ${error_rate_2025}% |" >> "$report_file"
+    echo "| Improvement | - | - | - | - | ${improvement}% |" >> "$report_file"
 
     echo "## Report" >> "$report_file"
     echo "" >> "$report_file"

@@ -2,11 +2,11 @@
 This report compares Playground from December 2024 and December 2025 by analyzing how many of the top 1000 plugins from WordPress.org can be activated in Playground.
 To determine if a plugin is compatible, we use End to End tests where we activate the plugin together it's dependencies and check if it was successfully activated in Playground.
 ## Stats
-| Year | Tested | Success | Failed | Error Rate |
-|------|--------|---------|--------|------------|
-| 2024 | 1000 | 971 | 29 | 2.90% |
-| 2025 | 1000 | 990 | 10 | 1.00% |
-| Improvement | - | - | - | 65.51% |
+| Year | Tested | Works in Playground | Failed in Playground | Failed in WP | Error Rate |
+|------|--------|---------------------|----------------------|--------------|------------|
+| 2024 | 1000 | 971 | 29 | 3 | 2.61% |
+| 2025 | 1000 | 990 | 10 | 3 | 0.70% |
+| Improvement | - | - | - | - | 73.18% |
 ## Report
 
 | Test Item | 2024 Result | 2025 Result | Works in native WP |
